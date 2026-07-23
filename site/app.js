@@ -8,8 +8,8 @@
   }
 
   const state = {
-    mode: "week",
-    group: data.weeks[0]?.id || "all",
+    mode: "theme",
+    group: data.themes[0]?.id || "all",
     query: "",
     sort: "recent",
   };

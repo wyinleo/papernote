@@ -17,8 +17,8 @@
       </span>
     </a>
     <nav class="mode-tabs" aria-label="内容分类方式">
-      <button class="mode-tab is-active" type="button" data-mode="week">按周</button>
-      <button class="mode-tab" type="button" data-mode="theme">按主题</button>
+      <button class="mode-tab" type="button" data-mode="week">按周</button>
+      <button class="mode-tab is-active" type="button" data-mode="theme">按主题</button>
       <button class="mode-tab" type="button" data-mode="viewpoints">行业观点</button>
     </nav>
     <label class="search">
@@ -30,19 +30,10 @@
   </header>
 
   <main>
-    <section class="intro" aria-labelledby="pageTitle">
-      <div>
-        <p class="eyebrow">RESEARCH INDEX / 2026</p>
-        <h1 id="pageTitle">把每周追踪，<br>整理成可回看的研究脉络。</h1>
-        <p class="intro-copy">聚合智能体安全、移动安全与应用安全论文。点击条目可读取仓库中已经缓存的中文精读内容。</p>
-      </div>
-      <dl class="stats" id="stats"></dl>
-    </section>
-
     <section class="workspace" aria-live="polite">
       <aside class="filters">
         <div class="section-heading">
-          <span id="filterTitle">周次</span>
+          <span id="filterTitle">论文主题</span>
           <span id="resultCount"></span>
         </div>
         <div class="filter-list" id="filterList"></div>
@@ -55,8 +46,8 @@
       <div class="content">
         <div class="content-header">
           <div>
-            <p class="eyebrow" id="contentEyebrow">WEEKLY READING</p>
-            <h2 id="contentTitle">本周论文</h2>
+            <p class="eyebrow" id="contentEyebrow">TOPIC COLLECTION</p>
+            <h2 id="contentTitle">论文主题</h2>
           </div>
           <select id="sortSelect" aria-label="排序方式">
             <option value="recent">按收录时间</option>
@@ -78,8 +69,11 @@
   </dialog>
 
   <footer>
-    <span>papernote</span>
-    <span>数据来自仓库缓存 · <span id="generatedAt"></span></span>
+    <div class="footer-meta">
+      <span class="footer-brand">papernote</span>
+      <span>数据来自仓库缓存 · <span id="generatedAt"></span></span>
+    </div>
+    <dl class="stats" id="stats"></dl>
   </footer>
 
   <script src="./data.js"></script>
