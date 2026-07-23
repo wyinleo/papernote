@@ -40,20 +40,5 @@
       "评测覆盖功能正确性、过程质量、效率成本、鲁棒安全、体验对齐五个维度。",
       "区分能力测评与回归测评，把已稳定掌握的能力沉淀为持续运行的回归门禁。"
     ]
-  },
-  {
-    "id": "long-horizon-agents-survey",
-    "title": "百页综述梳理 Long-Horizon Agents 最新进展",
-    "source": "Xiaoxi / 小红书",
-    "published_at": "2026-07-17",
-    "url": "https://www.xiaohongshu.com/explore/6a59efef0000000010026a8f",
-    "project_url": "https://github.com/RUC-NLPIR/Awesome-Long-Horizon-Agents",
-    "topics": ["Long-Horizon Agent", "Harness", "综述"],
-    "summary": "从外部 Harness Engineering 与内部 Model Optimization 的协同演化理解长程智能体。",
-    "highlights": [
-      "发展路径从 Prompt Engineering 扩展到 Context Engineering，再到 Runtime Harness。",
-      "Harness 包含工作流、上下文与记忆、工具/MCP/Skills、编排、Hooks 和验证。",
-      "应用覆盖软件工程、信息检索、Computer Use、多模态和通用智能体。"
-    ]
   }
 ]

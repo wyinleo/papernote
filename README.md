@@ -6,6 +6,7 @@
 
 - `weekly/`：按周发布的中文论文动态汇总。
 - `papers/index.jsonl`：论文主索引，用 DOI、arXiv ID、正式出版链接和规范化标题去重。
+- `papers/watchlist.jsonl`：内部待检索清单；记录后续周次需要核验的候选论文，不参与网页构建。
 - `inquiries/`：与论文有关的问询记录及后续追踪。
 - `industry/viewpoints.json`：行业文章与综述的观点摘要。
 - `scripts/build_site.py`：从论文索引、周报和行业观点生成网页数据。
@@ -58,6 +59,14 @@ python3 -m http.server 8000 -d site
 ## 去重规则
 
 按以下顺序匹配：DOI → arXiv ID → 正式论文 URL → 规范化标题。预印本后续正式发表时，更新原条目并链接两个版本，不新增重复记录。
+
+## 待检索清单
+
+`papers/watchlist.jsonl` 每行保存一个候选论文对象。每周检索应优先处理 `target_week`
+不晚于本期的条目：核验原文、发表状态、安全相关性和证据质量。正式收录后写入
+`papers/index.jsonl` 并从清单移除；暂缓或不收录时保留条目，并更新 `status`、
+`last_checked` 和 `decision_note`。该清单是内部工作队列，不由
+`scripts/build_site.py` 读取，也不发布到 GitHub Pages。
 
 ## 文件命名
 
