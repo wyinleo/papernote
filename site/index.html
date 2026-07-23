@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="papernote：按周与主题浏览安全论文精读和行业观点。">
+  <title>papernote · 安全研究笔记</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="papernote 首页">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span>
+        <strong>papernote</strong>
+        <small>安全研究笔记</small>
+      </span>
+    </a>
+    <nav class="mode-tabs" aria-label="内容分类方式">
+      <button class="mode-tab is-active" type="button" data-mode="week">按周</button>
+      <button class="mode-tab" type="button" data-mode="theme">按主题</button>
+      <button class="mode-tab" type="button" data-mode="viewpoints">行业观点</button>
+    </nav>
+    <label class="search">
+      <span class="sr-only">搜索</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"/></svg>
+      <input id="searchInput" type="search" placeholder="搜索标题、作者或关键词">
+      <kbd>/</kbd>
+    </label>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="pageTitle">
+      <div>
+        <p class="eyebrow">RESEARCH INDEX / 2026</p>
+        <h1 id="pageTitle">把每周追踪，<br>整理成可回看的研究脉络。</h1>
+        <p class="intro-copy">聚合智能体安全、移动安全与应用安全论文。点击条目可读取仓库中已经缓存的中文精读内容。</p>
+      </div>
+      <dl class="stats" id="stats"></dl>
+    </section>
+
+    <section class="workspace" aria-live="polite">
+      <aside class="filters">
+        <div class="section-heading">
+          <span id="filterTitle">周次</span>
+          <span id="resultCount"></span>
+        </div>
+        <div class="filter-list" id="filterList"></div>
+        <div class="cache-note">
+          <span class="cache-dot" aria-hidden="true"></span>
+          <p><strong>本地缓存</strong><br><span id="cacheStatus">正在读取…</span></p>
+        </div>
+      </aside>
+
+      <div class="content">
+        <div class="content-header">
+          <div>
+            <p class="eyebrow" id="contentEyebrow">WEEKLY READING</p>
+            <h2 id="contentTitle">本周论文</h2>
+          </div>
+          <select id="sortSelect" aria-label="排序方式">
+            <option value="recent">按收录时间</option>
+            <option value="title">按标题</option>
+          </select>
+        </div>
+        <div class="card-list" id="cardList"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <p>没有找到匹配内容。</p>
+          <button type="button" id="clearSearch">清除搜索</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="paper-dialog" id="paperDialog">
+    <button class="dialog-close" type="button" aria-label="关闭详情">×</button>
+    <article id="dialogContent"></article>
+  </dialog>
+
+  <footer>
+    <span>papernote</span>
+    <span>数据来自仓库缓存 · <span id="generatedAt"></span></span>
+  </footer>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
