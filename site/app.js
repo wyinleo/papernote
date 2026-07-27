@@ -12,6 +12,8 @@
     group: data.themes[0]?.id || "all",
     query: "",
     sort: "recent",
+    academicYear: "all",
+    academicInstitution: "",
   };
 
   const topicLabels = {
@@ -72,6 +74,7 @@
     contentEyebrow: $("#contentEyebrow"),
     search: $("#searchInput"),
     sort: $("#sortSelect"),
+    academicYear: $("#academicYear"),
     empty: $("#emptyState"),
     dialog: $("#paperDialog"),
     dialogContent: $("#dialogContent"),
@@ -119,6 +122,7 @@
       ["收录论文", data.counts.papers],
       ["缓存精读", data.counts.cached],
       ["研究主题", data.counts.themes],
+      ["学术单位", data.academic?.institutions?.length || 0],
       ["行业观点", data.counts.viewpoints],
     ];
     elements.stats.innerHTML = stats.map(([label, value]) =>
@@ -131,13 +135,28 @@
   function groupsForMode() {
     if (state.mode === "week") return data.weeks;
     if (state.mode === "theme") return data.themes;
+    if (state.mode === "academic") {
+      return [
+        { id: "all", label: "全部顶会类别", count: data.academic?.coverage?.scored_top_venue_papers || 0 },
+        ...(data.academic?.categories || []).map((item) => ({
+          ...item,
+          count: (data.academic?.publications || []).filter((paper) => paper.venue_group === item.id).length,
+        })),
+      ];
+    }
     return [{ id: "all", label: "全部观点", count: data.viewpoints.length }];
   }
 
   function renderFilters() {
     const groups = groupsForMode();
     elements.filterTitle.textContent =
-      state.mode === "week" ? "周次" : state.mode === "theme" ? "论文主题" : "观点来源";
+      state.mode === "week"
+        ? "周次"
+        : state.mode === "theme"
+          ? "论文主题"
+          : state.mode === "academic"
+            ? "顶会类别"
+            : "观点来源";
     elements.filterList.innerHTML = groups.map((group) => `
       <button class="filter-button ${state.group === group.id ? "is-active" : ""}"
               type="button" data-group="${escapeHtml(group.id)}">
@@ -216,7 +235,148 @@
     `;
   }
 
+  function academicScore(item) {
+    const years = state.academicYear === "all"
+      ? Object.values(item.annual_scores || {})
+      : [item.annual_scores?.[state.academicYear]].filter(Boolean);
+    return years.reduce((sum, year) =>
+      sum + (state.group === "all" ? (year.total || 0) : (year[state.group] || 0)), 0);
+  }
+
+  function academicPaperMatches(paper) {
+    const yearMatches = state.academicYear === "all" || String(paper.year) === state.academicYear;
+    const categoryMatches = state.group === "all" || paper.venue_group === state.group;
+    return yearMatches && categoryMatches;
+  }
+
+  function renderAcademic() {
+    const academic = data.academic || {};
+    const query = state.query.toLocaleLowerCase("zh-CN");
+    const institutions = [...(academic.institutions || [])]
+      .filter((item) => !query || searchable(item).includes(query))
+      .map((item) => ({ ...item, score: academicScore(item) }))
+      .filter((item) => item.score > 0 || (state.group === "all" && state.academicYear === "all"))
+      .sort((a, b) => b.score - a.score || b.papers.length - a.papers.length || a.name.localeCompare(b.name));
+    const scholars = [...(academic.scholars || [])]
+      .filter((item) => !query || searchable(item).includes(query))
+      .map((item) => ({ ...item, score: academicScore(item) }))
+      .filter((item) => item.score > 0 || (state.group === "all" && state.academicYear === "all"))
+      .sort((a, b) => b.score - a.score || b.papers.length - a.papers.length || a.name.localeCompare(b.name));
+    const graphNodes = institutions.slice(0, 12);
+    const nodeNames = new Set(graphNodes.map((item) => item.name));
+    const positions = new Map(graphNodes.map((item, index) => {
+      const angle = (Math.PI * 2 * index / Math.max(graphNodes.length, 1)) - Math.PI / 2;
+      const radiusX = graphNodes.length < 5 ? 260 : 340;
+      const radiusY = graphNodes.length < 5 ? 150 : 195;
+      return [item.name, {
+        x: 450 + Math.cos(angle) * radiusX,
+        y: 260 + Math.sin(angle) * radiusY,
+      }];
+    }));
+    const edges = (academic.collaborations || []).filter((edge) =>
+      nodeNames.has(edge.source)
+      && nodeNames.has(edge.target)
+      && edge.papers.some(academicPaperMatches)
+    );
+    if (!state.academicInstitution || !institutions.some((item) => item.name === state.academicInstitution)) {
+      state.academicInstitution = institutions[0]?.name || "";
+    }
+    const selected = institutions.find((item) => item.name === state.academicInstitution);
+    const partners = selected
+      ? edges.filter((edge) => edge.source === selected.name || edge.target === selected.name)
+        .map((edge) => ({
+          name: edge.source === selected.name ? edge.target : edge.source,
+          weight: edge.papers.filter(academicPaperMatches).length,
+        }))
+        .sort((a, b) => b.weight - a.weight || a.name.localeCompare(b.name))
+      : [];
+
+    elements.contentEyebrow.textContent = "ACADEMIC NETWORK";
+    elements.contentTitle.textContent = "学术关系";
+    elements.resultCount.textContent = `${institutions.length} 个单位`;
+    elements.sort.hidden = true;
+    elements.academicYear.hidden = false;
+    elements.empty.hidden = institutions.length > 0;
+    elements.cardList.innerHTML = institutions.length ? `
+      <section class="academic-intro">
+        <div>
+          <p class="eyebrow">VERIFIED LOWER BOUND</p>
+          <h3>用已核验论文连接单位、学者与合作关系</h3>
+        </div>
+        <p>${escapeHtml(academic.coverage?.score_definition || "")}</p>
+        <dl>
+          <div><dt>可解析论文</dt><dd>${academic.coverage?.papers_with_affiliations || 0}</dd></div>
+          <div><dt>计分顶会论文</dt><dd>${academic.coverage?.scored_top_venue_papers || 0}</dd></div>
+          <div><dt>合作单位</dt><dd>${academic.institutions?.length || 0}</dd></div>
+        </dl>
+      </section>
+      <section class="network-section" aria-labelledby="networkTitle">
+        <div class="subsection-heading">
+          <div><p class="eyebrow">COLLABORATION MAP</p><h3 id="networkTitle">单位合作网络</h3></div>
+          <p>节点优先展示当前筛选下分数较高的单位；连线粗细表示 papernote 库内共同论文数。</p>
+        </div>
+        <div class="network-board">
+          <svg viewBox="0 0 900 520" role="img" aria-label="学术单位合作连线">
+            ${edges.map((edge) => {
+              const left = positions.get(edge.source);
+              const right = positions.get(edge.target);
+              const weight = edge.papers.filter(academicPaperMatches).length;
+              return `<line x1="${left.x}" y1="${left.y}" x2="${right.x}" y2="${right.y}" style="--weight:${Math.min(weight, 4)}"></line>`;
+            }).join("")}
+          </svg>
+          ${graphNodes.map((item) => {
+            const point = positions.get(item.name);
+            return `<button class="network-node ${item.name === state.academicInstitution ? "is-selected" : ""}"
+              type="button" data-institution="${escapeHtml(item.name)}"
+              style="--x:${point.x / 9}%;--y:${point.y / 5.2}%">
+              <strong>${escapeHtml(item.name)}</strong><span>${item.score} 分 · ${item.papers.length} 篇</span>
+            </button>`;
+          }).join("")}
+        </div>
+        ${selected ? `
+          <article class="network-detail">
+            <div><p class="eyebrow">SELECTED GROUP</p><h3>${escapeHtml(selected.name)}</h3>
+              <p>${selected.score} 分 · ${selected.papers.length} 篇库内论文 · ${selected.scholars.length} 位关联学者</p>
+            </div>
+            <div><strong>关联学者</strong><p>${selected.scholars.slice(0, 16).map(escapeHtml).join("、")}</p></div>
+            <div><strong>主要合作单位</strong><p>${partners.length ? partners.slice(0, 8).map((item) => `${escapeHtml(item.name)}（${item.weight}）`).join("、") : "当前筛选下暂无跨单位合作边"}</p></div>
+          </article>` : ""}
+      </section>
+      <section class="rankings">
+        <div>
+          <div class="subsection-heading compact"><div><p class="eyebrow">INSTITUTIONS</p><h3>单位优先检索序列</h3></div></div>
+          <ol class="ranking-list">
+            ${institutions.slice(0, 12).map((item, index) => `
+              <li><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHtml(item.name)}</strong>
+              <small>${item.scholars.length} 位学者 · ${item.papers.length} 篇库内论文</small></div><b>${item.score}</b></li>
+            `).join("")}
+          </ol>
+        </div>
+        <div>
+          <div class="subsection-heading compact"><div><p class="eyebrow">SCHOLARS</p><h3>学者优先检索序列</h3></div></div>
+          <ol class="ranking-list">
+            ${scholars.slice(0, 12).map((item, index) => `
+              <li><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHtml(item.name)}</strong>
+              <small>${item.institutions.map(escapeHtml).join(" · ")}</small></div><b>${item.score}</b></li>
+            `).join("")}
+          </ol>
+        </div>
+      </section>
+    ` : "";
+    $$(".network-node").forEach((button) => {
+      button.addEventListener("click", () => {
+        state.academicInstitution = button.dataset.institution;
+        renderAcademic();
+      });
+    });
+  }
+
   function renderContent() {
+    elements.academicYear.hidden = state.mode !== "academic";
+    if (state.mode === "academic") {
+      renderAcademic();
+      return;
+    }
     if (state.mode === "viewpoints") {
       const query = state.query.toLocaleLowerCase("zh-CN");
       const items = data.viewpoints.filter((item) => !query || searchable(item).includes(query));
@@ -303,6 +463,7 @@
     tab.addEventListener("click", () => {
       state.mode = tab.dataset.mode;
       state.group = groupsForMode()[0]?.id || "all";
+      if (state.mode === "academic") state.academicInstitution = "";
       $$(".mode-tab").forEach((item) => item.classList.toggle("is-active", item === tab));
       render();
     });
@@ -315,6 +476,15 @@
   elements.sort.addEventListener("change", () => {
     state.sort = elements.sort.value;
     renderContent();
+  });
+  elements.academicYear.innerHTML = [
+    `<option value="all">全部年份</option>`,
+    ...(data.academic?.years || []).map((year) => `<option value="${escapeHtml(year)}">${escapeHtml(year)} 年</option>`),
+  ].join("");
+  elements.academicYear.addEventListener("change", () => {
+    state.academicYear = elements.academicYear.value;
+    state.academicInstitution = "";
+    renderAcademic();
   });
   $("#clearSearch").addEventListener("click", () => {
     state.query = "";

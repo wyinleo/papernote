@@ -19,6 +19,7 @@
     <nav class="mode-tabs" aria-label="内容分类方式">
       <button class="mode-tab" type="button" data-mode="week">按周</button>
       <button class="mode-tab is-active" type="button" data-mode="theme">按主题</button>
+      <button class="mode-tab" type="button" data-mode="academic">学术关系</button>
       <button class="mode-tab" type="button" data-mode="viewpoints">行业观点</button>
     </nav>
     <label class="search">
@@ -49,10 +50,13 @@
             <p class="eyebrow" id="contentEyebrow">TOPIC COLLECTION</p>
             <h2 id="contentTitle">论文主题</h2>
           </div>
-          <select id="sortSelect" aria-label="排序方式">
-            <option value="recent">按收录时间</option>
-            <option value="title">按标题</option>
-          </select>
+          <div class="content-controls">
+            <select id="academicYear" aria-label="学术关系年份" hidden></select>
+            <select id="sortSelect" aria-label="排序方式">
+              <option value="recent">按收录时间</option>
+              <option value="title">按标题</option>
+            </select>
+          </div>
         </div>
         <div class="card-list" id="cardList"></div>
         <div class="empty-state" id="emptyState" hidden>

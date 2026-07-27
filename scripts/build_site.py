@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import itertools
 import json
 import re
 from pathlib import Path
@@ -15,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX_PATH = ROOT / "papers" / "index.jsonl"
 WEEKLY_ROOT = ROOT / "weekly"
 VIEWPOINTS_PATH = ROOT / "industry" / "viewpoints.json"
+GRAPH_PATH = ROOT / "papers" / "academic_graph.json"
 OUTPUT_PATH = ROOT / "site" / "data.js"
 
 FIELD_ALIASES = {
@@ -64,6 +66,22 @@ THEME_RULES = [
          "desynchronization", "tls", "software-supply-chain", "secure-code-generation"},
     ),
 ]
+
+TOP_VENUE_GROUPS = {
+    "security": {
+        "label": "安全四大",
+        "signals": ("usenix security", "ieee s&p", "ieee symposium on security and privacy",
+                    "acm ccs", "computer and communications security", "ndss"),
+    },
+    "software": {
+        "label": "软件工程 CCF-A",
+        "signals": ("icse", "fse", "ase", "issta"),
+    },
+    "ai": {
+        "label": "AI CCF-A",
+        "signals": ("neurips", "icml", "aaai", "ijcai", "acl", "cvpr"),
+    },
+}
 
 
 def normalize_title(value: str) -> str:
@@ -157,6 +175,175 @@ def iso_week(date_value: str) -> str:
     return f"{year}-W{week:02d}"
 
 
+def parse_affiliations(value: str) -> list[dict[str, Any]]:
+    """Parse the current institution-first weekly format into graph records."""
+    rows = []
+    for raw in re.split(r"[；\n]+", value or ""):
+        raw = raw.strip()
+        if not raw or "：" not in raw:
+            continue
+        institution, author_text = raw.split("：", 1)
+        authors = [
+            item.strip()
+            for item in re.split(r"[、,]", author_text)
+            if item.strip()
+        ]
+        if institution.strip() and authors:
+            rows.append({"institution": institution.strip(), "authors": authors})
+    return rows
+
+
+def accepted_venue_group(paper: dict[str, Any]) -> str | None:
+    status = str(paper.get("status", "")).casefold()
+    if "accepted" not in status:
+        return None
+    venue_text = " ".join(paper.get("venues") or []).casefold()
+    for group_id, group in TOP_VENUE_GROUPS.items():
+        if any(signal in venue_text for signal in group["signals"]):
+            return group_id
+    return None
+
+
+def publication_year(paper: dict[str, Any]) -> int:
+    venue_text = " ".join(paper.get("venues") or [])
+    match = re.search(r"\b(20\d{2})\b", venue_text)
+    if match:
+        return int(match.group(1))
+    return int(str(paper.get("first_seen", dt.date.today().isoformat()))[:4])
+
+
+def build_academic_graph(papers: list[dict[str, Any]]) -> dict[str, Any]:
+    institutions: dict[str, dict[str, Any]] = {}
+    scholars: dict[str, dict[str, Any]] = {}
+    collaborations: dict[tuple[str, str], dict[str, Any]] = {}
+    publications = []
+
+    for paper in papers:
+        affiliations = parse_affiliations(paper.get("details", {}).get("author_affiliations", ""))
+        if not affiliations:
+            continue
+        year = publication_year(paper)
+        venue_group = accepted_venue_group(paper)
+        publication = {
+            "id": paper["id"],
+            "title": paper["title"],
+            "year": year,
+            "venue": (paper.get("venues") or [""])[0],
+            "venue_group": venue_group,
+            "status": paper.get("status", ""),
+            "institutions": [row["institution"] for row in affiliations],
+            "authors": paper.get("authors", []),
+        }
+        publications.append(publication)
+
+        scored_institutions: set[str] = set()
+        scored_scholars: set[str] = set()
+        for row in affiliations:
+            institution = row["institution"]
+            entry = institutions.setdefault(institution, {
+                "id": institution,
+                "name": institution,
+                "papers": set(),
+                "scholars": set(),
+                "annual_scores": {},
+            })
+            entry["papers"].add(paper["id"])
+            entry["scholars"].update(row["authors"])
+            if venue_group and institution not in scored_institutions:
+                annual = entry["annual_scores"].setdefault(str(year), {
+                    "security": 0,
+                    "software": 0,
+                    "ai": 0,
+                    "total": 0,
+                })
+                annual[venue_group] += 1
+                annual["total"] += 1
+                scored_institutions.add(institution)
+
+            for author in row["authors"]:
+                scholar = scholars.setdefault(author, {
+                    "id": author,
+                    "name": author,
+                    "institutions": set(),
+                    "papers": set(),
+                    "annual_scores": {},
+                })
+                scholar["institutions"].add(institution)
+                scholar["papers"].add(paper["id"])
+                if venue_group and author not in scored_scholars:
+                    annual = scholar["annual_scores"].setdefault(str(year), {
+                        "security": 0,
+                        "software": 0,
+                        "ai": 0,
+                        "total": 0,
+                    })
+                    annual[venue_group] += 1
+                    annual["total"] += 1
+                    scored_scholars.add(author)
+
+        institution_names = sorted({row["institution"] for row in affiliations})
+        for left, right in itertools.combinations(institution_names, 2):
+            edge = collaborations.setdefault((left, right), {
+                "source": left,
+                "target": right,
+                "papers": [],
+            })
+            edge["papers"].append({
+                "id": paper["id"],
+                "year": year,
+                "venue_group": venue_group,
+            })
+
+    def finalize_node(node: dict[str, Any], collection_key: str) -> dict[str, Any]:
+        annual_scores = node["annual_scores"]
+        return {
+            **node,
+            collection_key: sorted(node[collection_key]),
+            "papers": sorted(node["papers"]),
+            "verified_score": sum(item["total"] for item in annual_scores.values()),
+        }
+
+    institution_rows = [
+        finalize_node(node, "scholars")
+        for node in institutions.values()
+    ]
+    scholar_rows = [
+        finalize_node(node, "institutions")
+        for node in scholars.values()
+    ]
+    institution_rows.sort(key=lambda item: (-item["verified_score"], -len(item["papers"]), item["name"]))
+    scholar_rows.sort(key=lambda item: (-item["verified_score"], -len(item["papers"]), item["name"]))
+    collaboration_rows = [
+        {**edge, "weight": len(edge["papers"])}
+        for edge in collaborations.values()
+    ]
+    collaboration_rows.sort(key=lambda item: (-item["weight"], item["source"], item["target"]))
+
+    years = sorted(
+        {str(item["year"]) for item in publications if item["venue_group"]},
+        reverse=True,
+    )
+    return {
+        "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
+        "coverage": {
+            "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
+            "score_definition": "年度评价分数为库内经正式接收核验的安全四大、软件工程 CCF-A 与 AI CCF-A 论文数；当前是已核验下界，不代表单位完整产出。",
+            "indexed_papers": len(papers),
+            "papers_with_affiliations": len(publications),
+            "scored_top_venue_papers": sum(1 for item in publications if item["venue_group"]),
+        },
+        "categories": [
+            {"id": group_id, "label": group["label"]}
+            for group_id, group in TOP_VENUE_GROUPS.items()
+        ],
+        "years": years,
+        "institutions": institution_rows,
+        "scholars": scholar_rows,
+        "collaborations": collaboration_rows,
+        "publications": publications,
+    }
+
+
 def build_payload() -> dict[str, Any]:
     papers = load_index()
     cache = parse_weekly_cache()
@@ -187,6 +374,7 @@ def build_payload() -> dict[str, Any]:
     ]
     themes = sorted(theme_counts.values(), key=lambda item: (-item["count"], item["label"]))
     viewpoints = json.loads(VIEWPOINTS_PATH.read_text(encoding="utf-8"))
+    academic = build_academic_graph(papers)
 
     return {
         "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -201,6 +389,7 @@ def build_payload() -> dict[str, Any]:
         "themes": themes,
         "papers": papers,
         "viewpoints": viewpoints,
+        "academic": academic,
     }
 
 
@@ -210,6 +399,10 @@ def main() -> None:
     args = parser.parse_args()
 
     payload = build_payload()
+    GRAPH_PATH.write_text(
+        json.dumps(payload["academic"], ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     serialized = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
     args.output.write_text(
@@ -221,7 +414,8 @@ def main() -> None:
         f"Built {args.output.relative_to(ROOT)}: "
         f"{payload['counts']['papers']} papers, "
         f"{payload['counts']['cached']} cached summaries, "
-        f"{payload['counts']['viewpoints']} viewpoints."
+        f"{payload['counts']['viewpoints']} viewpoints, "
+        f"{len(payload['academic']['institutions'])} institutions."
     )
 
 

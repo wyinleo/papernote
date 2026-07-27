@@ -1,0 +1,2093 @@
+{
+  "generated_at": "2026-07-27T16:42:50+08:00",
+  "coverage": {
+    "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
+    "score_definition": "年度评价分数为库内经正式接收核验的安全四大、软件工程 CCF-A 与 AI CCF-A 论文数；当前是已核验下界，不代表单位完整产出。",
+    "indexed_papers": 21,
+    "papers_with_affiliations": 13,
+    "scored_top_venue_papers": 6
+  },
+  "categories": [
+    {
+      "id": "security",
+      "label": "安全四大"
+    },
+    {
+      "id": "software",
+      "label": "软件工程 CCF-A"
+    },
+    {
+      "id": "ai",
+      "label": "AI CCF-A"
+    }
+  ],
+  "years": [
+    "2026",
+    "2025"
+  ],
+  "institutions": [
+    {
+      "id": "复旦大学",
+      "name": "复旦大学",
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky"
+      ],
+      "scholars": [
+        "Chengyuan Zhou",
+        "Feng Xue",
+        "Fengyu Liu",
+        "Jiaqi Luo",
+        "Jiarun Dai",
+        "Ke Li",
+        "Lei Zhang",
+        "Letian Yuan",
+        "Min Yang",
+        "Tian Chen",
+        "Tianhao Bai",
+        "Youkun Shi",
+        "Yuan Zhang",
+        "Zhengmin Yu"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "加州大学戴维斯分校",
+      "name": "加州大学戴维斯分校",
+      "papers": [
+        "usenix-sec25-liu-agentfuzz"
+      ],
+      "scholars": [
+        "Hao Chen"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "南京大学",
+      "name": "南京大学",
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "scholars": [
+        "Baowen Xu",
+        "Chunrong Fang",
+        "Yuan Xiao",
+        "Yuchen Chen",
+        "Zhenyu Chen"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "南京航空航天大学",
+      "name": "南京航空航天大学",
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "scholars": [
+        "Wei Cheng"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "南通大学",
+      "name": "南通大学",
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "scholars": [
+        "Xiang Chen"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "拜罗伊特大学",
+      "name": "拜罗伊特大学",
+      "papers": [
+        "usenix-sec25-beer-taptrap"
+      ],
+      "scholars": [
+        "Sebastian Roth"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "新加坡管理大学",
+      "name": "新加坡管理大学",
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "scholars": [
+        "David Lo",
+        "Weifeng Sun"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "本-古里安大学",
+      "name": "本-古里安大学",
+      "papers": [
+        "usenix-sec25-ayzenshteyn-cheat"
+      ],
+      "scholars": [
+        "Daniel Ayzenshteyn",
+        "Roy Weiss",
+        "Yisroel Mirsky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "穆罕默德·本·扎耶德人工智能大学",
+      "name": "穆罕默德·本·扎耶德人工智能大学",
+      "papers": [
+        "usenix-sec26-chang-retrieval-barrier"
+      ],
+      "scholars": [
+        "Ergute Bao",
+        "Hongyan Chang",
+        "Ting Yu",
+        "Xinjian Luo"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "维也纳工业大学",
+      "name": "维也纳工业大学",
+      "papers": [
+        "usenix-sec25-beer-taptrap"
+      ],
+      "scholars": [
+        "Marco Squarcina",
+        "Martina Lindorfer",
+        "Philipp Beer"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "阿尔伯塔大学及阿尔伯塔机器智能研究院",
+      "name": "阿尔伯塔大学及阿尔伯塔机器智能研究院",
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "scholars": [
+        "Zhou Yang"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "香港理工大学",
+      "name": "香港理工大学",
+      "papers": [
+        "usenix-sec25-shi-xssky"
+      ],
+      "scholars": [
+        "Xiapu Luo",
+        "Youkun Shi"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Lambda",
+      "name": "Lambda",
+      "papers": [
+        "arxiv-2607-18063-adaptive-adversaries"
+      ],
+      "scholars": [
+        "Chuan Li",
+        "David Hartmann",
+        "Devina Jain"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Largosoft",
+      "name": "Largosoft",
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "scholars": [
+        "Jihyeon Jeong"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "伊利诺伊大学厄巴纳—香槟分校",
+      "name": "伊利诺伊大学厄巴纳—香槟分校",
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "scholars": [
+        "Luyi Xing"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "克莱姆森大学",
+      "name": "克莱姆森大学",
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "scholars": [
+        "Fatemeh Moradihaghighi",
+        "Mashrur Chowdhury",
+        "Zhenkai Zhang"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "加州大学伯克利分校",
+      "name": "加州大学伯克利分校",
+      "papers": [
+        "arxiv-2607-18575-receipt"
+      ],
+      "scholars": [
+        "David Wagner",
+        "Hao Wang",
+        "Karen Shieh",
+        "Koushik Sen",
+        "Muxi Lyu",
+        "Yiwei Hou"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "华盛顿大学",
+      "name": "华盛顿大学",
+      "papers": [
+        "arxiv-2607-14611-bad-memory"
+      ],
+      "scholars": [
+        "David Alexander",
+        "Franziska Roesner",
+        "Sai Sunku",
+        "Soham Gadgil"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "康考迪亚大学",
+      "name": "康考迪亚大学",
+      "papers": [
+        "arxiv-2607-20759-issuetrojanbench"
+      ],
+      "scholars": [
+        "Ankur Singh",
+        "Jinqiu Yang",
+        "Tse-Hsun (Peter) Chen"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "得克萨斯理工大学",
+      "name": "得克萨斯理工大学",
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "scholars": [
+        "Zihao Zhan"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "瑞士人工智能实验室 IDSIA-USI/SUPSI",
+      "name": "瑞士人工智能实验室 IDSIA-USI/SUPSI",
+      "papers": [
+        "arxiv-2607-17986-self-state-attacks"
+      ],
+      "scholars": [
+        "Jürgen Schmidhuber"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "罗切斯特大学",
+      "name": "罗切斯特大学",
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "scholars": [
+        "Yanan Guo"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "美国东北大学",
+      "name": "美国东北大学",
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "scholars": [
+        "Ziming Zhao"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "阿卜杜拉国王科技大学生成式人工智能卓越中心",
+      "name": "阿卜杜拉国王科技大学生成式人工智能卓越中心",
+      "papers": [
+        "arxiv-2607-17986-self-state-attacks"
+      ],
+      "scholars": [
+        "Jürgen Schmidhuber",
+        "Nathanaël Denis",
+        "Roberto Di Pietro",
+        "Yimeng Chen"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "首尔大学",
+      "name": "首尔大学",
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "scholars": [
+        "Byoungyoung Lee",
+        "Juhee Kim",
+        "Taehyun Kang",
+        "Woohyuk Choi"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    }
+  ],
+  "scholars": [
+    {
+      "id": "Fengyu Liu",
+      "name": "Fengyu Liu",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "Jiarun Dai",
+      "name": "Jiarun Dai",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "Min Yang",
+      "name": "Min Yang",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "Youkun Shi",
+      "name": "Youkun Shi",
+      "institutions": [
+        "复旦大学",
+        "香港理工大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "Yuan Zhang",
+      "name": "Yuan Zhang",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "Baowen Xu",
+      "name": "Baowen Xu",
+      "institutions": [
+        "南京大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Chengyuan Zhou",
+      "name": "Chengyuan Zhou",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Chunrong Fang",
+      "name": "Chunrong Fang",
+      "institutions": [
+        "南京大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Daniel Ayzenshteyn",
+      "name": "Daniel Ayzenshteyn",
+      "institutions": [
+        "本-古里安大学"
+      ],
+      "papers": [
+        "usenix-sec25-ayzenshteyn-cheat"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "David Lo",
+      "name": "David Lo",
+      "institutions": [
+        "新加坡管理大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Ergute Bao",
+      "name": "Ergute Bao",
+      "institutions": [
+        "穆罕默德·本·扎耶德人工智能大学"
+      ],
+      "papers": [
+        "usenix-sec26-chang-retrieval-barrier"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Feng Xue",
+      "name": "Feng Xue",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Hao Chen",
+      "name": "Hao Chen",
+      "institutions": [
+        "加州大学戴维斯分校"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Hongyan Chang",
+      "name": "Hongyan Chang",
+      "institutions": [
+        "穆罕默德·本·扎耶德人工智能大学"
+      ],
+      "papers": [
+        "usenix-sec26-chang-retrieval-barrier"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Jiaqi Luo",
+      "name": "Jiaqi Luo",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Ke Li",
+      "name": "Ke Li",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Lei Zhang",
+      "name": "Lei Zhang",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Letian Yuan",
+      "name": "Letian Yuan",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Marco Squarcina",
+      "name": "Marco Squarcina",
+      "institutions": [
+        "维也纳工业大学"
+      ],
+      "papers": [
+        "usenix-sec25-beer-taptrap"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Martina Lindorfer",
+      "name": "Martina Lindorfer",
+      "institutions": [
+        "维也纳工业大学"
+      ],
+      "papers": [
+        "usenix-sec25-beer-taptrap"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Philipp Beer",
+      "name": "Philipp Beer",
+      "institutions": [
+        "维也纳工业大学"
+      ],
+      "papers": [
+        "usenix-sec25-beer-taptrap"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Roy Weiss",
+      "name": "Roy Weiss",
+      "institutions": [
+        "本-古里安大学"
+      ],
+      "papers": [
+        "usenix-sec25-ayzenshteyn-cheat"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Sebastian Roth",
+      "name": "Sebastian Roth",
+      "institutions": [
+        "拜罗伊特大学"
+      ],
+      "papers": [
+        "usenix-sec25-beer-taptrap"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Tian Chen",
+      "name": "Tian Chen",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Tianhao Bai",
+      "name": "Tianhao Bai",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Ting Yu",
+      "name": "Ting Yu",
+      "institutions": [
+        "穆罕默德·本·扎耶德人工智能大学"
+      ],
+      "papers": [
+        "usenix-sec26-chang-retrieval-barrier"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Wei Cheng",
+      "name": "Wei Cheng",
+      "institutions": [
+        "南京航空航天大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Weifeng Sun",
+      "name": "Weifeng Sun",
+      "institutions": [
+        "新加坡管理大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Xiang Chen",
+      "name": "Xiang Chen",
+      "institutions": [
+        "南通大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Xiapu Luo",
+      "name": "Xiapu Luo",
+      "institutions": [
+        "香港理工大学"
+      ],
+      "papers": [
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Xinjian Luo",
+      "name": "Xinjian Luo",
+      "institutions": [
+        "穆罕默德·本·扎耶德人工智能大学"
+      ],
+      "papers": [
+        "usenix-sec26-chang-retrieval-barrier"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Yisroel Mirsky",
+      "name": "Yisroel Mirsky",
+      "institutions": [
+        "本-古里安大学"
+      ],
+      "papers": [
+        "usenix-sec25-ayzenshteyn-cheat"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Yuan Xiao",
+      "name": "Yuan Xiao",
+      "institutions": [
+        "南京大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Yuchen Chen",
+      "name": "Yuchen Chen",
+      "institutions": [
+        "南京大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Zhengmin Yu",
+      "name": "Zhengmin Yu",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Zhenyu Chen",
+      "name": "Zhenyu Chen",
+      "institutions": [
+        "南京大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Zhou Yang",
+      "name": "Zhou Yang",
+      "institutions": [
+        "阿尔伯塔大学及阿尔伯塔机器智能研究院"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "Ankur Singh",
+      "name": "Ankur Singh",
+      "institutions": [
+        "康考迪亚大学"
+      ],
+      "papers": [
+        "arxiv-2607-20759-issuetrojanbench"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Byoungyoung Lee",
+      "name": "Byoungyoung Lee",
+      "institutions": [
+        "首尔大学"
+      ],
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Chuan Li",
+      "name": "Chuan Li",
+      "institutions": [
+        "Lambda"
+      ],
+      "papers": [
+        "arxiv-2607-18063-adaptive-adversaries"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "David Alexander",
+      "name": "David Alexander",
+      "institutions": [
+        "华盛顿大学"
+      ],
+      "papers": [
+        "arxiv-2607-14611-bad-memory"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "David Hartmann",
+      "name": "David Hartmann",
+      "institutions": [
+        "Lambda"
+      ],
+      "papers": [
+        "arxiv-2607-18063-adaptive-adversaries"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "David Wagner",
+      "name": "David Wagner",
+      "institutions": [
+        "加州大学伯克利分校"
+      ],
+      "papers": [
+        "arxiv-2607-18575-receipt"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Devina Jain",
+      "name": "Devina Jain",
+      "institutions": [
+        "Lambda"
+      ],
+      "papers": [
+        "arxiv-2607-18063-adaptive-adversaries"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Fatemeh Moradihaghighi",
+      "name": "Fatemeh Moradihaghighi",
+      "institutions": [
+        "克莱姆森大学"
+      ],
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Franziska Roesner",
+      "name": "Franziska Roesner",
+      "institutions": [
+        "华盛顿大学"
+      ],
+      "papers": [
+        "arxiv-2607-14611-bad-memory"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Hao Wang",
+      "name": "Hao Wang",
+      "institutions": [
+        "加州大学伯克利分校"
+      ],
+      "papers": [
+        "arxiv-2607-18575-receipt"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Jihyeon Jeong",
+      "name": "Jihyeon Jeong",
+      "institutions": [
+        "Largosoft"
+      ],
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Jinqiu Yang",
+      "name": "Jinqiu Yang",
+      "institutions": [
+        "康考迪亚大学"
+      ],
+      "papers": [
+        "arxiv-2607-20759-issuetrojanbench"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Juhee Kim",
+      "name": "Juhee Kim",
+      "institutions": [
+        "首尔大学"
+      ],
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Jürgen Schmidhuber",
+      "name": "Jürgen Schmidhuber",
+      "institutions": [
+        "瑞士人工智能实验室 IDSIA-USI/SUPSI",
+        "阿卜杜拉国王科技大学生成式人工智能卓越中心"
+      ],
+      "papers": [
+        "arxiv-2607-17986-self-state-attacks"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Karen Shieh",
+      "name": "Karen Shieh",
+      "institutions": [
+        "加州大学伯克利分校"
+      ],
+      "papers": [
+        "arxiv-2607-18575-receipt"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Koushik Sen",
+      "name": "Koushik Sen",
+      "institutions": [
+        "加州大学伯克利分校"
+      ],
+      "papers": [
+        "arxiv-2607-18575-receipt"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Luyi Xing",
+      "name": "Luyi Xing",
+      "institutions": [
+        "伊利诺伊大学厄巴纳—香槟分校"
+      ],
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Mashrur Chowdhury",
+      "name": "Mashrur Chowdhury",
+      "institutions": [
+        "克莱姆森大学"
+      ],
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Muxi Lyu",
+      "name": "Muxi Lyu",
+      "institutions": [
+        "加州大学伯克利分校"
+      ],
+      "papers": [
+        "arxiv-2607-18575-receipt"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Nathanaël Denis",
+      "name": "Nathanaël Denis",
+      "institutions": [
+        "阿卜杜拉国王科技大学生成式人工智能卓越中心"
+      ],
+      "papers": [
+        "arxiv-2607-17986-self-state-attacks"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Roberto Di Pietro",
+      "name": "Roberto Di Pietro",
+      "institutions": [
+        "阿卜杜拉国王科技大学生成式人工智能卓越中心"
+      ],
+      "papers": [
+        "arxiv-2607-17986-self-state-attacks"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Sai Sunku",
+      "name": "Sai Sunku",
+      "institutions": [
+        "华盛顿大学"
+      ],
+      "papers": [
+        "arxiv-2607-14611-bad-memory"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Soham Gadgil",
+      "name": "Soham Gadgil",
+      "institutions": [
+        "华盛顿大学"
+      ],
+      "papers": [
+        "arxiv-2607-14611-bad-memory"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Taehyun Kang",
+      "name": "Taehyun Kang",
+      "institutions": [
+        "首尔大学"
+      ],
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Tse-Hsun (Peter) Chen",
+      "name": "Tse-Hsun (Peter) Chen",
+      "institutions": [
+        "康考迪亚大学"
+      ],
+      "papers": [
+        "arxiv-2607-20759-issuetrojanbench"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Woohyuk Choi",
+      "name": "Woohyuk Choi",
+      "institutions": [
+        "首尔大学"
+      ],
+      "papers": [
+        "arxiv-2607-05120-agent-data-injection"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Yanan Guo",
+      "name": "Yanan Guo",
+      "institutions": [
+        "罗切斯特大学"
+      ],
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Yimeng Chen",
+      "name": "Yimeng Chen",
+      "institutions": [
+        "阿卜杜拉国王科技大学生成式人工智能卓越中心"
+      ],
+      "papers": [
+        "arxiv-2607-17986-self-state-attacks"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Yiwei Hou",
+      "name": "Yiwei Hou",
+      "institutions": [
+        "加州大学伯克利分校"
+      ],
+      "papers": [
+        "arxiv-2607-18575-receipt"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Zhenkai Zhang",
+      "name": "Zhenkai Zhang",
+      "institutions": [
+        "克莱姆森大学"
+      ],
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Zihao Zhan",
+      "name": "Zihao Zhan",
+      "institutions": [
+        "得克萨斯理工大学"
+      ],
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "Ziming Zhao",
+      "name": "Ziming Zhao",
+      "institutions": [
+        "美国东北大学"
+      ],
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    }
+  ],
+  "collaborations": [
+    {
+      "source": "Largosoft",
+      "target": "伊利诺伊大学厄巴纳—香槟分校",
+      "papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "Largosoft",
+      "target": "首尔大学",
+      "papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "伊利诺伊大学厄巴纳—香槟分校",
+      "target": "首尔大学",
+      "papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "克莱姆森大学",
+      "target": "得克萨斯理工大学",
+      "papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "克莱姆森大学",
+      "target": "罗切斯特大学",
+      "papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "克莱姆森大学",
+      "target": "美国东北大学",
+      "papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "加州大学戴维斯分校",
+      "target": "复旦大学",
+      "papers": [
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "year": 2025,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南京大学",
+      "target": "南京航空航天大学",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南京大学",
+      "target": "南通大学",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南京大学",
+      "target": "新加坡管理大学",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南京大学",
+      "target": "阿尔伯塔大学及阿尔伯塔机器智能研究院",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南京航空航天大学",
+      "target": "南通大学",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南京航空航天大学",
+      "target": "新加坡管理大学",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南京航空航天大学",
+      "target": "阿尔伯塔大学及阿尔伯塔机器智能研究院",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南通大学",
+      "target": "新加坡管理大学",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "南通大学",
+      "target": "阿尔伯塔大学及阿尔伯塔机器智能研究院",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "复旦大学",
+      "target": "香港理工大学",
+      "papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "year": 2025,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "得克萨斯理工大学",
+      "target": "罗切斯特大学",
+      "papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "得克萨斯理工大学",
+      "target": "美国东北大学",
+      "papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "拜罗伊特大学",
+      "target": "维也纳工业大学",
+      "papers": [
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "year": 2025,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "新加坡管理大学",
+      "target": "阿尔伯塔大学及阿尔伯塔机器智能研究院",
+      "papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "瑞士人工智能实验室 IDSIA-USI/SUPSI",
+      "target": "阿卜杜拉国王科技大学生成式人工智能卓越中心",
+      "papers": [
+        {
+          "id": "arxiv-2607-17986-self-state-attacks",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "罗切斯特大学",
+      "target": "美国东北大学",
+      "papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "year": 2026,
+          "venue_group": null
+        }
+      ],
+      "weight": 1
+    }
+  ],
+  "publications": [
+    {
+      "id": "usenix-sec25-shi-xssky",
+      "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+      "year": 2025,
+      "venue": "USENIX Security 2025",
+      "venue_group": "security",
+      "status": "accepted",
+      "institutions": [
+        "复旦大学",
+        "香港理工大学"
+      ],
+      "authors": [
+        "Youkun Shi",
+        "Yuan Zhang",
+        "Tianhao Bai",
+        "Feng Xue",
+        "Jiarun Dai",
+        "Fengyu Liu",
+        "Lei Zhang",
+        "Xiapu Luo",
+        "Min Yang"
+      ]
+    },
+    {
+      "id": "usenix-sec25-beer-taptrap",
+      "title": "TapTrap: Animation-Driven Tapjacking on Android",
+      "year": 2025,
+      "venue": "USENIX Security 2025",
+      "venue_group": "security",
+      "status": "accepted",
+      "institutions": [
+        "维也纳工业大学",
+        "拜罗伊特大学"
+      ],
+      "authors": [
+        "Philipp Beer",
+        "Marco Squarcina",
+        "Sebastian Roth",
+        "Martina Lindorfer"
+      ]
+    },
+    {
+      "id": "arxiv-2607-18575-receipt",
+      "title": "RECEIPT: Deterministic, Reward-Hacking-Resistant Verification for White-Box Agentic XSS Discovery",
+      "year": 2026,
+      "venue": "arXiv",
+      "venue_group": null,
+      "status": "preprint-unreviewed",
+      "institutions": [
+        "加州大学伯克利分校"
+      ],
+      "authors": [
+        "Muxi Lyu",
+        "Karen Shieh",
+        "Yiwei Hou",
+        "Hao Wang",
+        "Koushik Sen",
+        "David Wagner"
+      ]
+    },
+    {
+      "id": "usenix-sec25-liu-agentfuzz",
+      "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+      "year": 2025,
+      "venue": "USENIX Security 2025",
+      "venue_group": "security",
+      "status": "accepted",
+      "institutions": [
+        "复旦大学",
+        "加州大学戴维斯分校"
+      ],
+      "authors": [
+        "Fengyu Liu",
+        "Yuan Zhang",
+        "Jiaqi Luo",
+        "Jiarun Dai",
+        "Tian Chen",
+        "Letian Yuan",
+        "Zhengmin Yu",
+        "Youkun Shi",
+        "Ke Li",
+        "Chengyuan Zhou",
+        "Hao Chen",
+        "Min Yang"
+      ]
+    },
+    {
+      "id": "arxiv-2607-20759-issuetrojanbench",
+      "title": "IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests",
+      "year": 2026,
+      "venue": "arXiv",
+      "venue_group": null,
+      "status": "preprint-unreviewed",
+      "institutions": [
+        "康考迪亚大学"
+      ],
+      "authors": [
+        "Ankur Singh",
+        "Jinqiu Yang",
+        "Tse-Hsun Chen"
+      ]
+    },
+    {
+      "id": "usenix-sec25-ayzenshteyn-cheat",
+      "title": "Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",
+      "year": 2025,
+      "venue": "USENIX Security 2025",
+      "venue_group": "security",
+      "status": "accepted",
+      "institutions": [
+        "本-古里安大学"
+      ],
+      "authors": [
+        "Daniel Ayzenshteyn",
+        "Roy Weiss",
+        "Yisroel Mirsky"
+      ]
+    },
+    {
+      "id": "arxiv-2607-17986-self-state-attacks",
+      "title": "Self-State Attacks on Self-Hosted AI Agents: How Far Can OS Defenses Go?",
+      "year": 2026,
+      "venue": "arXiv",
+      "venue_group": null,
+      "status": "preprint-unreviewed",
+      "institutions": [
+        "阿卜杜拉国王科技大学生成式人工智能卓越中心",
+        "瑞士人工智能实验室 IDSIA-USI/SUPSI"
+      ],
+      "authors": [
+        "Yimeng Chen",
+        "Nathanael Denis",
+        "Roberto Di Pietro",
+        "Jurgen Schmidhuber"
+      ]
+    },
+    {
+      "id": "usenix-sec26-chang-retrieval-barrier",
+      "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "institutions": [
+        "穆罕默德·本·扎耶德人工智能大学"
+      ],
+      "authors": [
+        "Hongyan Chang",
+        "Ergute Bao",
+        "Xinjian Luo",
+        "Ting Yu"
+      ]
+    },
+    {
+      "id": "issta26-chen-insecure-memory",
+      "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+      "year": 2026,
+      "venue": "ISSTA 2026",
+      "venue_group": "software",
+      "status": "accepted",
+      "institutions": [
+        "南京大学",
+        "南京航空航天大学",
+        "阿尔伯塔大学及阿尔伯塔机器智能研究院",
+        "新加坡管理大学",
+        "南通大学"
+      ],
+      "authors": [
+        "Yuchen Chen",
+        "Wei Cheng",
+        "Yuan Xiao",
+        "Zhou Yang",
+        "Weifeng Sun",
+        "Chunrong Fang",
+        "Xiang Chen",
+        "Baowen Xu",
+        "David Lo",
+        "Zhenyu Chen"
+      ]
+    },
+    {
+      "id": "arxiv-2607-16487-fuzz-emup",
+      "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+      "year": 2026,
+      "venue": "arXiv",
+      "venue_group": null,
+      "status": "preprint-unreviewed",
+      "institutions": [
+        "克莱姆森大学",
+        "得克萨斯理工大学",
+        "罗切斯特大学",
+        "美国东北大学"
+      ],
+      "authors": [
+        "Fatemeh Moradihaghighi",
+        "Zihao Zhan",
+        "Yanan Guo",
+        "Ziming Zhao",
+        "Mashrur Chowdhury",
+        "Zhenkai Zhang"
+      ]
+    },
+    {
+      "id": "arxiv-2607-14611-bad-memory",
+      "title": "Bad Memory: Evaluating Prompt Injection Risks from Memory in Agentic Systems",
+      "year": 2026,
+      "venue": "arXiv",
+      "venue_group": null,
+      "status": "preprint-unreviewed",
+      "institutions": [
+        "华盛顿大学"
+      ],
+      "authors": [
+        "Soham Gadgil",
+        "David Alexander",
+        "Sai Sunku",
+        "Franziska Roesner"
+      ]
+    },
+    {
+      "id": "arxiv-2607-05120-agent-data-injection",
+      "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+      "year": 2026,
+      "venue": "arXiv",
+      "venue_group": null,
+      "status": "preprint-unreviewed",
+      "institutions": [
+        "首尔大学",
+        "Largosoft",
+        "伊利诺伊大学厄巴纳—香槟分校"
+      ],
+      "authors": [
+        "Woohyuk Choi",
+        "Juhee Kim",
+        "Taehyun Kang",
+        "Jihyeon Jeong",
+        "Luyi Xing",
+        "Byoungyoung Lee"
+      ]
+    },
+    {
+      "id": "arxiv-2607-18063-adaptive-adversaries",
+      "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
+      "year": 2026,
+      "venue": "arXiv",
+      "venue_group": null,
+      "status": "preprint-unreviewed",
+      "institutions": [
+        "Lambda"
+      ],
+      "authors": [
+        "Devina Jain",
+        "David Hartmann",
+        "Chuan Li"
+      ]
+    }
+  ]
+}
