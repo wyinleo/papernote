@@ -8,59 +8,18 @@
   }
 
   const state = {
-    mode: "theme",
-    group: data.themes[0]?.id || "all",
+    mode: "week",
+    paperMode: "week",
+    group: data.weeks[0]?.id || "all",
     query: "",
     sort: "recent",
     academicYear: "all",
     academicInstitution: "",
   };
 
-  const topicLabels = {
-    "adaptive-red-teaming": "自适应红队",
-    "agent-memory": "智能体记忆",
-    "agent-security": "智能体安全",
-    "android": "安卓",
-    "api-misuse": "接口误用",
-    "application-security": "应用安全",
-    "authentication": "身份认证",
-    "benchmark": "评测基准",
-    "black-box-attack": "黑盒攻击",
-    "coding-agent": "编程智能体",
-    "data-integrity": "数据完整性",
-    "desynchronization": "协议不同步",
-    "em-side-channel": "电磁侧信道",
-    "embedded-security": "嵌入式安全",
-    "firmware-fuzzing": "固件模糊测试",
-    "indirect-prompt-injection": "间接提示注入",
-    "ios": "iOS",
-    "ip-leakage": "网络地址泄漏",
-    "java": "Java",
-    "llm-security": "大模型安全",
-    "mobile-security": "移动安全",
-    "multi-agent-security": "多智能体安全",
-    "network-side-channel": "网络侧信道",
-    "operating-system-security": "操作系统安全",
-    "passkeys": "通行密钥",
-    "patch-mining": "补丁挖掘",
-    "persistent-memory": "持久记忆",
-    "persistent-state": "持久状态",
-    "privacy": "隐私",
-    "program-analysis": "程序分析",
-    "prompt-injection": "提示注入",
-    "protocol-security": "协议安全",
-    "rag-security": "检索增强生成安全",
-    "retrieval-poisoning": "检索投毒",
-    "secure-code-generation": "安全代码生成",
-    "self-hosted-agent": "自托管智能体",
-    "sideloading": "侧载",
-    "software-supply-chain": "软件供应链",
-    "systematization-of-knowledge": "知识体系化",
-    "tls": "TLS",
-    "web-agent": "网页智能体",
-    "web-to-app-tracking": "网页至应用追踪",
-    "webauthn": "WebAuthn",
-  };
+  const topicLabels = Object.fromEntries(
+    Object.entries(data.taxonomy?.topics || {}).map(([id, item]) => [id, item.label])
+  );
 
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -75,6 +34,7 @@
     search: $("#searchInput"),
     sort: $("#sortSelect"),
     academicYear: $("#academicYear"),
+    paperViewTabs: $("#paperViewTabs"),
     empty: $("#emptyState"),
     dialog: $("#paperDialog"),
     dialogContent: $("#dialogContent"),
@@ -121,7 +81,7 @@
     const stats = [
       ["收录论文", data.counts.papers],
       ["缓存精读", data.counts.cached],
-      ["研究主题", data.counts.themes],
+      ["主领域", data.counts.themes],
       ["学术单位", data.academic?.institutions?.length || 0],
       ["行业观点", data.counts.viewpoints],
     ];
@@ -137,14 +97,21 @@
     if (state.mode === "theme") return data.themes;
     if (state.mode === "academic") {
       return [
-        { id: "all", label: "全部顶会类别", count: data.academic?.coverage?.scored_top_venue_papers || 0 },
+        { id: "all", label: "全部学科领域", count: data.academic?.coverage?.scored_top_venue_papers || 0 },
         ...(data.academic?.categories || []).map((item) => ({
           ...item,
           count: (data.academic?.publications || []).filter((paper) => paper.venue_group === item.id).length,
         })),
       ];
     }
-    return [{ id: "all", label: "全部观点", count: data.viewpoints.length }];
+    const sourceTypes = new Map();
+    data.viewpoints.forEach((item) => {
+      sourceTypes.set(item.source_type, (sourceTypes.get(item.source_type) || 0) + 1);
+    });
+    return [
+      { id: "all", label: "全部来源", count: data.viewpoints.length },
+      ...[...sourceTypes].map(([id, count]) => ({ id, label: id, count })),
+    ];
   }
 
   function renderFilters() {
@@ -153,10 +120,10 @@
       state.mode === "week"
         ? "周次"
         : state.mode === "theme"
-          ? "论文主题"
+          ? "主领域"
           : state.mode === "academic"
-            ? "顶会类别"
-            : "观点来源";
+            ? "学科领域"
+            : "来源类型";
     elements.filterList.innerHTML = groups.map((group) => `
       <button class="filter-button ${state.group === group.id ? "is-active" : ""}"
               type="button" data-group="${escapeHtml(group.id)}">
@@ -206,6 +173,7 @@
           <h3>${escapeHtml(paper.title)}</h3>
           <p class="card-summary">${escapeHtml(paperSummary(paper))}</p>
           <div class="tags">
+            <span class="tag domain">${escapeHtml(paper.theme_label)}</span>
             ${paperTags(paper).slice(0, 4).map((topic) => `<span class="tag">${escapeHtml(topic)}</span>`).join("")}
             <span class="tag status">${escapeHtml(paperStatusLabel(paper))}</span>
           </div>
@@ -224,6 +192,12 @@
         <div class="card-body">
           <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a></h3>
           <p class="card-summary">${escapeHtml(item.summary)}</p>
+          <dl class="viewpoint-evidence">
+            <div><dt>内容类型</dt><dd>${escapeHtml(item.content_type)}</dd></div>
+            <div><dt>证据基础</dt><dd>${escapeHtml(item.evidence_basis)}</dd></div>
+            <div><dt>局限</dt><dd>${escapeHtml(item.limitations)}</dd></div>
+            <div><dt>利益相关</dt><dd>${escapeHtml(item.commercial_interest)}</dd></div>
+          </dl>
           <ul class="highlights">
             ${item.highlights.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}
           </ul>
@@ -263,30 +237,34 @@
       .filter((item) => item.score > 0 || (state.group === "all" && state.academicYear === "all"))
       .sort((a, b) => b.score - a.score || b.papers.length - a.papers.length || a.name.localeCompare(b.name));
     const graphNodes = institutions.slice(0, 12);
-    const nodeNames = new Set(graphNodes.map((item) => item.name));
+    const nodeIds = new Set(graphNodes.map((item) => item.id));
     const positions = new Map(graphNodes.map((item, index) => {
       const angle = (Math.PI * 2 * index / Math.max(graphNodes.length, 1)) - Math.PI / 2;
       const radiusX = graphNodes.length < 5 ? 260 : 340;
       const radiusY = graphNodes.length < 5 ? 150 : 195;
-      return [item.name, {
+      return [item.id, {
         x: 450 + Math.cos(angle) * radiusX,
         y: 260 + Math.sin(angle) * radiusY,
       }];
     }));
     const edges = (academic.collaborations || []).filter((edge) =>
-      nodeNames.has(edge.source)
-      && nodeNames.has(edge.target)
+      nodeIds.has(edge.source)
+      && nodeIds.has(edge.target)
       && edge.papers.some(academicPaperMatches)
     );
-    if (!state.academicInstitution || !institutions.some((item) => item.name === state.academicInstitution)) {
-      state.academicInstitution = institutions[0]?.name || "";
+    if (!state.academicInstitution || !institutions.some((item) => item.id === state.academicInstitution)) {
+      state.academicInstitution = institutions[0]?.id || "";
     }
-    const selected = institutions.find((item) => item.name === state.academicInstitution);
+    const selected = institutions.find((item) => item.id === state.academicInstitution);
     const partners = selected
-      ? edges.filter((edge) => edge.source === selected.name || edge.target === selected.name)
+      ? edges.filter((edge) => edge.source === selected.id || edge.target === selected.id)
         .map((edge) => ({
-          name: edge.source === selected.name ? edge.target : edge.source,
+          id: edge.source === selected.id ? edge.target : edge.source,
           weight: edge.papers.filter(academicPaperMatches).length,
+        }))
+        .map((item) => ({
+          ...item,
+          name: institutions.find((institution) => institution.id === item.id)?.name || item.id,
         }))
         .sort((a, b) => b.weight - a.weight || a.name.localeCompare(b.name))
       : [];
@@ -325,9 +303,9 @@
             }).join("")}
           </svg>
           ${graphNodes.map((item) => {
-            const point = positions.get(item.name);
-            return `<button class="network-node ${item.name === state.academicInstitution ? "is-selected" : ""}"
-              type="button" data-institution="${escapeHtml(item.name)}"
+            const point = positions.get(item.id);
+            return `<button class="network-node ${item.id === state.academicInstitution ? "is-selected" : ""}"
+              type="button" data-institution="${escapeHtml(item.id)}"
               style="--x:${point.x / 9}%;--y:${point.y / 5.2}%">
               <strong>${escapeHtml(item.name)}</strong><span>${item.score} 分 · ${item.papers.length} 篇</span>
             </button>`;
@@ -373,13 +351,17 @@
 
   function renderContent() {
     elements.academicYear.hidden = state.mode !== "academic";
+    elements.paperViewTabs.hidden = !["week", "theme"].includes(state.mode);
     if (state.mode === "academic") {
       renderAcademic();
       return;
     }
     if (state.mode === "viewpoints") {
       const query = state.query.toLocaleLowerCase("zh-CN");
-      const items = data.viewpoints.filter((item) => !query || searchable(item).includes(query));
+      const items = data.viewpoints.filter((item) =>
+        (state.group === "all" || item.source_type === state.group)
+        && (!query || searchable(item).includes(query))
+      );
       elements.contentEyebrow.textContent = "INDUSTRY NOTES";
       elements.contentTitle.textContent = "行业观点";
       elements.resultCount.textContent = `${items.length} 条`;
@@ -461,10 +443,19 @@
 
   $$(".mode-tab").forEach((tab) => {
     tab.addEventListener("click", () => {
-      state.mode = tab.dataset.mode;
+      state.mode = tab.dataset.section === "papers" ? state.paperMode : tab.dataset.section;
       state.group = groupsForMode()[0]?.id || "all";
       if (state.mode === "academic") state.academicInstitution = "";
       $$(".mode-tab").forEach((item) => item.classList.toggle("is-active", item === tab));
+      render();
+    });
+  });
+  $$(".paper-view-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      state.paperMode = tab.dataset.mode;
+      state.mode = state.paperMode;
+      state.group = groupsForMode()[0]?.id || "all";
+      $$(".paper-view-tab").forEach((item) => item.classList.toggle("is-active", item === tab));
       render();
     });
   });

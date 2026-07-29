@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "selection_policy": {
+    "include": "优先收录有原创方法、数据、事件证据、漏洞细节或可复用工程经验的公开内容。",
+    "exclude": "默认排除纯营销软文、无方法说明的预测、只有二手转述或无法访问正文的内容。",
+    "cadence": "每周扫描固定来源池，宁缺毋滥，通常精选 2—5 篇。"
+  },
+  "sources": [
+    {"id": "google-project-zero", "name": "Google Project Zero", "type": "安全研究实验室", "priority": 1, "url": "https://googleprojectzero.blogspot.com/", "focus": ["漏洞研究", "零日漏洞"]},
+    {"id": "google-threat-intelligence", "name": "Google Threat Intelligence / Mandiant", "type": "威胁情报与咨询", "priority": 1, "url": "https://cloud.google.com/blog/topics/threat-intelligence", "focus": ["威胁情报", "事件响应", "趋势报告"]},
+    {"id": "microsoft-security", "name": "Microsoft Security / MSRC", "type": "安全研究实验室", "priority": 1, "url": "https://www.microsoft.com/security/blog/", "focus": ["漏洞研究", "威胁情报", "AI 安全"]},
+    {"id": "unit-42", "name": "Unit 42", "type": "威胁情报与咨询", "priority": 1, "url": "https://unit42.paloaltonetworks.com/", "focus": ["事件响应", "威胁研究", "漏洞分析"]},
+    {"id": "cisco-talos", "name": "Cisco Talos", "type": "安全研究实验室", "priority": 1, "url": "https://blog.talosintelligence.com/", "focus": ["恶意软件", "供应链", "漏洞研究"]},
+    {"id": "tencent-xuanwu", "name": "腾讯玄武实验室", "type": "安全研究实验室", "priority": 1, "url": "https://xlab.tencent.com/cn/", "focus": ["移动安全", "浏览器安全", "AI 安全"]},
+    {"id": "tencent-keen", "name": "腾讯科恩实验室", "type": "安全研究实验室", "priority": 1, "url": "https://keenlab.tencent.com/zh/", "focus": ["移动安全", "车联网", "系统安全"]},
+    {"id": "anthropic-research", "name": "Anthropic Research / Frontier Red Team", "type": "模型机构研究", "priority": 1, "url": "https://www.anthropic.com/research", "focus": ["智能体安全", "网络安全能力", "红队评测"]},
+    {"id": "openai-security", "name": "OpenAI Security Research", "type": "模型机构研究", "priority": 1, "url": "https://openai.com/research/", "focus": ["智能体安全", "模型安全", "软件安全"]},
+    {"id": "nist", "name": "NIST Cybersecurity", "type": "标准与公共机构", "priority": 2, "url": "https://www.nist.gov/cybersecurity", "focus": ["标准", "风险治理", "技术指南"]},
+    {"id": "cisa", "name": "CISA", "type": "标准与公共机构", "priority": 2, "url": "https://www.cisa.gov/news-events/cybersecurity-advisories", "focus": ["安全通告", "已利用漏洞", "防御指南"]},
+    {"id": "gartner", "name": "Gartner", "type": "行业咨询", "priority": 3, "url": "https://www.gartner.com/en/cybersecurity", "focus": ["市场趋势", "治理"]},
+    {"id": "forrester", "name": "Forrester", "type": "行业咨询", "priority": 3, "url": "https://www.forrester.com/security-risk/", "focus": ["市场趋势", "风险管理"]},
+    {"id": "idc", "name": "IDC Security", "type": "行业咨询", "priority": 3, "url": "https://www.idc.com/", "focus": ["市场趋势", "产业数据"]}
+  ]
+}

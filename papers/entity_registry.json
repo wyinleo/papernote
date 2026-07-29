@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "policy": {
+    "zh": "中国单位使用官方中文全称；中国学者仅在权威来源可核验中文姓名时使用中文。",
+    "other": "非中文单位和学者保留官方拉丁字母名称，不自行翻译。",
+    "unverified": "无法可靠核验的名称保留论文原文，并进入待核验清单。"
+  },
+  "institutions": {
+    "复旦大学": {"id": "fudan-university", "display_name": "复旦大学", "language": "zh"},
+    "南京大学": {"id": "nanjing-university", "display_name": "南京大学", "language": "zh"},
+    "南京航空航天大学": {"id": "nanjing-university-aeronautics-astronautics", "display_name": "南京航空航天大学", "language": "zh"},
+    "南通大学": {"id": "nantong-university", "display_name": "南通大学", "language": "zh"},
+    "香港理工大学": {"id": "hong-kong-polytechnic-university", "display_name": "香港理工大学", "language": "zh"},
+    "加州大学戴维斯分校": {"id": "uc-davis", "display_name": "University of California, Davis", "language": "en"},
+    "新加坡管理大学": {"id": "singapore-management-university", "display_name": "Singapore Management University", "language": "en"},
+    "本-古里安大学": {"id": "ben-gurion-university", "display_name": "Ben-Gurion University of the Negev", "language": "en"},
+    "穆罕默德·本·扎耶德人工智能大学": {"id": "mbzuai", "display_name": "Mohamed bin Zayed University of Artificial Intelligence", "language": "en"},
+    "维也纳工业大学": {"id": "tu-wien", "display_name": "TU Wien", "language": "en"},
+    "拜罗伊特大学": {"id": "university-bayreuth", "display_name": "University of Bayreuth", "language": "en"},
+    "阿尔伯塔大学及阿尔伯塔机器智能研究院": {"id": "ualberta-amii", "display_name": "University of Alberta / Alberta Machine Intelligence Institute (Amii)", "language": "en"},
+    "伊利诺伊大学厄巴纳—香槟分校": {"id": "uiuc", "display_name": "University of Illinois Urbana-Champaign", "language": "en"},
+    "克莱姆森大学": {"id": "clemson-university", "display_name": "Clemson University", "language": "en"},
+    "加州大学伯克利分校": {"id": "uc-berkeley", "display_name": "University of California, Berkeley", "language": "en"},
+    "华盛顿大学": {"id": "university-washington", "display_name": "University of Washington", "language": "en"},
+    "康考迪亚大学": {"id": "concordia-university", "display_name": "Concordia University", "language": "en"},
+    "得克萨斯理工大学": {"id": "texas-tech-university", "display_name": "Texas Tech University", "language": "en"},
+    "瑞士人工智能实验室 IDSIA-USI/SUPSI": {"id": "idsia-usi-supsi", "display_name": "Swiss AI Lab IDSIA-USI/SUPSI", "language": "en"},
+    "罗切斯特大学": {"id": "university-rochester", "display_name": "University of Rochester", "language": "en"},
+    "美国东北大学": {"id": "northeastern-university", "display_name": "Northeastern University", "language": "en"},
+    "阿卜杜拉国王科技大学生成式人工智能卓越中心": {"id": "kaust-genai-center", "display_name": "KAUST Center of Excellence for Generative AI", "language": "en"},
+    "首尔大学": {"id": "seoul-national-university", "display_name": "Seoul National University", "language": "en"},
+    "Lambda": {"id": "lambda", "display_name": "Lambda", "language": "en"},
+    "Largosoft": {"id": "largosoft", "display_name": "Largosoft", "language": "en"}
+  },
+  "scholars": {
+    "Min Yang": {"id": "min-yang-fudan", "display_name": "杨珉", "publication_name": "Min Yang", "language": "zh", "source": "https://secsys.fudan.edu.cn/"},
+    "Xiapu Luo": {"id": "xiapu-luo", "display_name": "罗侠普", "publication_name": "Xiapu Luo", "language": "zh", "source": "https://www.comp.polyu.edu.hk/~csxluo/"},
+    "Baowen Xu": {"id": "baowen-xu", "display_name": "徐宝文", "publication_name": "Baowen Xu", "language": "zh", "source": "https://cs.nju.edu.cn/"},
+    "Chunrong Fang": {"id": "chunrong-fang", "display_name": "方春荣", "publication_name": "Chunrong Fang", "language": "zh", "source": "https://cs.nju.edu.cn/"},
+    "Zhenyu Chen": {"id": "zhenyu-chen-nju", "display_name": "陈振宇", "publication_name": "Zhenyu Chen", "language": "zh", "source": "https://cs.nju.edu.cn/"},
+    "Jorg Schwenk": {"id": "joerg-schwenk", "display_name": "Jörg Schwenk", "publication_name": "Jörg Schwenk", "language": "de"},
+    "Jürgen Schmidhuber": {"id": "juergen-schmidhuber", "display_name": "Jürgen Schmidhuber", "publication_name": "Jürgen Schmidhuber", "language": "de"},
+    "Jurgen Schmidhuber": {"id": "juergen-schmidhuber", "display_name": "Jürgen Schmidhuber", "publication_name": "Jürgen Schmidhuber", "language": "de"},
+    "Nathanaël Denis": {"id": "nathanael-denis", "display_name": "Nathanaël Denis", "publication_name": "Nathanaël Denis", "language": "fr"},
+    "Nathanael Denis": {"id": "nathanael-denis", "display_name": "Nathanaël Denis", "publication_name": "Nathanaël Denis", "language": "fr"},
+    "Tse-Hsun Chen": {"id": "tse-hsun-chen", "display_name": "Tse-Hsun (Peter) Chen", "publication_name": "Tse-Hsun (Peter) Chen", "language": "en"},
+    "Tse-Hsun (Peter) Chen": {"id": "tse-hsun-chen", "display_name": "Tse-Hsun (Peter) Chen", "publication_name": "Tse-Hsun (Peter) Chen", "language": "en"}
+  }
+}

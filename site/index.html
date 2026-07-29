@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="papernote：按周与主题浏览安全论文精读和行业观点。">
+  <meta name="description" content="papernote：浏览安全论文精读、学术关系与有证据评价的行业观点。">
   <title>papernote · 安全研究笔记</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -16,11 +16,10 @@
         <small>安全研究笔记</small>
       </span>
     </a>
-    <nav class="mode-tabs" aria-label="内容分类方式">
-      <button class="mode-tab" type="button" data-mode="week">按周</button>
-      <button class="mode-tab is-active" type="button" data-mode="theme">按主题</button>
-      <button class="mode-tab" type="button" data-mode="academic">学术关系</button>
-      <button class="mode-tab" type="button" data-mode="viewpoints">行业观点</button>
+    <nav class="mode-tabs" aria-label="内容类型">
+      <button class="mode-tab is-active" type="button" data-section="papers">学术论文</button>
+      <button class="mode-tab" type="button" data-section="academic">学术关系</button>
+      <button class="mode-tab" type="button" data-section="viewpoints">行业观点</button>
     </nav>
     <label class="search">
       <span class="sr-only">搜索</span>
@@ -47,10 +46,14 @@
       <div class="content">
         <div class="content-header">
           <div>
-            <p class="eyebrow" id="contentEyebrow">TOPIC COLLECTION</p>
-            <h2 id="contentTitle">论文主题</h2>
+            <p class="eyebrow" id="contentEyebrow">WEEKLY READING</p>
+            <h2 id="contentTitle">学术论文</h2>
           </div>
           <div class="content-controls">
+            <div class="paper-view-tabs" id="paperViewTabs" aria-label="论文浏览方式">
+              <button class="paper-view-tab is-active" type="button" data-mode="week">按周</button>
+              <button class="paper-view-tab" type="button" data-mode="theme">按主题</button>
+            </div>
             <select id="academicYear" aria-label="学术关系年份" hidden></select>
             <select id="sortSelect" aria-label="排序方式">
               <option value="recent">按收录时间</option>

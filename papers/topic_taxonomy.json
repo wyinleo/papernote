@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "reference_systems": [
+    {
+      "name": "ACM Computing Classification System",
+      "url": "https://dl.acm.org/ccs"
+    },
+    {
+      "name": "IEEE Taxonomy",
+      "url": "https://ieeeauthorcenter.ieee.org/wp-content/uploads/taxonomy_v101.pdf"
+    },
+    {
+      "name": "CCF 推荐国际学术刊物目录",
+      "url": "https://www.ccf.org.cn/Academic_Evaluation/By_category/"
+    }
+  ],
+  "domains": [
+    {
+      "id": "ai-security",
+      "label": "人工智能安全",
+      "description": "大模型、智能体、机器学习系统及其运行环境的安全。",
+      "signals": [
+        "agent-security",
+        "multi-agent-security",
+        "agent-memory",
+        "persistent-memory",
+        "self-hosted-agent",
+        "rag-security",
+        "indirect-prompt-injection",
+        "prompt-injection",
+        "adaptive-red-teaming",
+        "llm-security",
+        "web-agent",
+        "coding-agent",
+        "reward-hacking"
+      ]
+    },
+    {
+      "id": "mobile-iot-security",
+      "label": "移动与物联网安全",
+      "description": "移动平台、应用生态、嵌入式设备与物联网终端安全。",
+      "signals": [
+        "mobile-security",
+        "android",
+        "ios",
+        "sideloading",
+        "web-to-app-tracking",
+        "tapjacking",
+        "ui-security",
+        "permission-bypass"
+      ]
+    },
+    {
+      "id": "identity-privacy",
+      "label": "身份与隐私",
+      "description": "认证、身份凭据、访问控制、跟踪与隐私保护。",
+      "signals": [
+        "authentication",
+        "passkeys",
+        "webauthn",
+        "privacy"
+      ]
+    },
+    {
+      "id": "software-application-security",
+      "label": "软件与应用安全",
+      "description": "软件实现、应用程序、开发链路和软件供应链安全。",
+      "signals": [
+        "application-security",
+        "program-analysis",
+        "api-misuse",
+        "software-supply-chain",
+        "secure-code-generation",
+        "xss",
+        "php",
+        "java",
+        "taint-analysis",
+        "patch-mining",
+        "fuzzing"
+      ]
+    },
+    {
+      "id": "systems-hardware-security",
+      "label": "系统与硬件安全",
+      "description": "操作系统、固件、嵌入式平台与硬件侧信道安全。",
+      "signals": [
+        "operating-system-security",
+        "embedded-security",
+        "firmware-fuzzing",
+        "em-side-channel",
+        "persistent-state"
+      ]
+    },
+    {
+      "id": "network-communication-security",
+      "label": "网络与通信安全",
+      "description": "网络协议、加密通信、流量与网络侧信道安全。",
+      "signals": [
+        "protocol-security",
+        "desynchronization",
+        "tls",
+        "network-side-channel",
+        "ip-leakage"
+      ]
+    }
+  ],
+  "facets": {
+    "object": "研究对象",
+    "problem": "安全问题",
+    "method": "研究方法",
+    "artifact": "成果类型"
+  },
+  "topics": {
+    "adaptive-red-teaming": {"label": "自适应红队", "facet": "method"},
+    "agent-memory": {"label": "智能体记忆", "facet": "object"},
+    "agent-security": {"label": "智能体安全", "facet": "object"},
+    "android": {"label": "Android", "facet": "object"},
+    "api-misuse": {"label": "API 误用", "facet": "problem"},
+    "application-security": {"label": "应用安全", "facet": "object"},
+    "authentication": {"label": "身份认证", "facet": "object"},
+    "autonomous-penetration-testing": {"label": "自动化渗透测试", "facet": "object"},
+    "benchmark": {"label": "评测基准", "facet": "artifact"},
+    "black-box-attack": {"label": "黑盒攻击", "facet": "method"},
+    "coding-agent": {"label": "编程智能体", "facet": "object"},
+    "data-integrity": {"label": "数据完整性", "facet": "problem"},
+    "deception-defense": {"label": "欺骗防御", "facet": "method"},
+    "desynchronization": {"label": "协议不同步", "facet": "problem"},
+    "em-side-channel": {"label": "电磁侧信道", "facet": "problem"},
+    "embedded-security": {"label": "嵌入式安全", "facet": "object"},
+    "firmware-fuzzing": {"label": "固件模糊测试", "facet": "method"},
+    "fuzzing": {"label": "模糊测试", "facet": "method"},
+    "honeypot": {"label": "蜜罐", "facet": "method"},
+    "indirect-prompt-injection": {"label": "间接提示注入", "facet": "problem"},
+    "ios": {"label": "iOS", "facet": "object"},
+    "ip-leakage": {"label": "网络地址泄漏", "facet": "problem"},
+    "java": {"label": "Java", "facet": "object"},
+    "llm-security": {"label": "大模型安全", "facet": "object"},
+    "mobile-security": {"label": "移动安全", "facet": "object"},
+    "multi-agent-security": {"label": "多智能体安全", "facet": "object"},
+    "network-side-channel": {"label": "网络侧信道", "facet": "problem"},
+    "operating-system-security": {"label": "操作系统安全", "facet": "object"},
+    "passkeys": {"label": "通行密钥", "facet": "object"},
+    "patch-mining": {"label": "补丁挖掘", "facet": "method"},
+    "permission-bypass": {"label": "权限绕过", "facet": "problem"},
+    "persistent-memory": {"label": "持久记忆", "facet": "object"},
+    "persistent-state": {"label": "持久状态", "facet": "object"},
+    "php": {"label": "PHP", "facet": "object"},
+    "privacy": {"label": "隐私", "facet": "problem"},
+    "program-analysis": {"label": "程序分析", "facet": "method"},
+    "prompt-injection": {"label": "提示注入", "facet": "problem"},
+    "protocol-security": {"label": "协议安全", "facet": "object"},
+    "rag-security": {"label": "检索增强生成安全", "facet": "object"},
+    "retrieval-poisoning": {"label": "检索投毒", "facet": "problem"},
+    "reward-hacking": {"label": "奖励投机", "facet": "problem"},
+    "secure-code-generation": {"label": "安全代码生成", "facet": "object"},
+    "self-hosted-agent": {"label": "自托管智能体", "facet": "object"},
+    "sideloading": {"label": "侧载", "facet": "problem"},
+    "software-supply-chain": {"label": "软件供应链", "facet": "object"},
+    "systematization-of-knowledge": {"label": "知识体系化", "facet": "artifact"},
+    "taint-analysis": {"label": "污点分析", "facet": "method"},
+    "tapjacking": {"label": "点击劫持", "facet": "problem"},
+    "tls": {"label": "TLS", "facet": "object"},
+    "ui-security": {"label": "界面安全", "facet": "object"},
+    "verification": {"label": "验证", "facet": "method"},
+    "web-agent": {"label": "网页智能体", "facet": "object"},
+    "web-to-app-tracking": {"label": "网页至应用跟踪", "facet": "problem"},
+    "webauthn": {"label": "WebAuthn", "facet": "object"},
+    "xss": {"label": "跨站脚本", "facet": "problem"},
+    "zero-day": {"label": "零日漏洞", "facet": "problem"}
+  },
+  "primary_domain_overrides": {
+    "usenix-sec26-kim-agentic": "ai-security",
+    "usenix-sec26-wang-masleak": "ai-security",
+    "usenix-sec26-jeong-network-agent": "ai-security",
+    "usenix-sec26-vlummens-bridges": "mobile-iot-security",
+    "usenix-sec26-liu-ios": "mobile-iot-security",
+    "usenix-sec26-jannett-passkeys": "identity-privacy",
+    "usenix-sec26-chen-vulgenie": "software-application-security",
+    "usenix-sec26-merget-opossum": "network-communication-security",
+    "usenix-sec26-chang-retrieval-barrier": "ai-security",
+    "issta26-chen-insecure-memory": "ai-security",
+    "arxiv-2607-05120-agent-data-injection": "ai-security",
+    "arxiv-2607-18063-adaptive-adversaries": "ai-security",
+    "arxiv-2607-14611-bad-memory": "ai-security",
+    "arxiv-2607-17986-self-state-attacks": "ai-security",
+    "arxiv-2607-16487-fuzz-emup": "systems-hardware-security",
+    "usenix-sec25-liu-agentfuzz": "ai-security",
+    "usenix-sec25-ayzenshteyn-cheat": "ai-security",
+    "usenix-sec25-beer-taptrap": "mobile-iot-security",
+    "usenix-sec25-shi-xssky": "software-application-security",
+    "arxiv-2607-20759-issuetrojanbench": "ai-security",
+    "arxiv-2607-18575-receipt": "ai-security"
+  }
+}

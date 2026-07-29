@@ -3,6 +3,8 @@
     "id": "alibaba-skill-up",
     "title": "阿里开源 skill-up：让 Agent Skill 可评测可回归",
     "source": "阿里技术",
+    "source_type": "产业技术团队",
+    "content_type": "工程实践",
     "published_at": "2026-07-23",
     "url": "https://mp.weixin.qq.com/s/lTdRNB3vTJoU0nAPBkHNtw",
     "topics": ["Agent Skill", "评测", "CI"],
@@ -11,12 +13,17 @@
       "用 expect 承担确定性硬检查，用 rule/script/agent judge 处理更复杂的判定。",
       "支持多轮会话、工具调用断言和真实仓库上的重型端到端评测。",
       "CI 负责环境与调度，评测框架负责用例语义、执行、证据和报告。"
-    ]
+    ],
+    "evidence_basis": "开源项目、声明式用例和 CI 工作流示例。",
+    "limitations": "主要是项目团队的工程总结，尚缺跨组织、跨场景的独立对比数据。",
+    "commercial_interest": "由阿里技术团队发布，与其开源项目和工程实践有关。"
   },
   {
     "id": "alibaba-skill-architecture",
     "title": "面向复杂业务场景的智能分析 Skills 架构设计与演进实践",
     "source": "阿里技术",
+    "source_type": "产业技术团队",
+    "content_type": "工程实践",
     "published_at": "2026-07-17",
     "url": "https://mp.weixin.qq.com/s/mF3TyV_GzkBdoyYfK14fWQ",
     "topics": ["Skill 架构", "知识工程", "Context"],
@@ -25,12 +32,17 @@
       "知识应尽量收拢并按需加载，避免照搬微服务式的碎片化分层。",
       "稳定知识与高频变化知识分开管理，写入粒度和运行时读取粒度可以不同。",
       "少选项、强信号、约束骨架但释放内容，并把 Token 经济性作为架构硬约束。"
-    ]
+    ],
+    "evidence_basis": "团队三轮内部架构演进及其工程复盘。",
+    "limitations": "缺少可公开复现的完整业务数据，结论更适合作为架构经验而非通用基准。",
+    "commercial_interest": "由阿里技术团队发布，案例来自其自身业务实践。"
   },
   {
     "id": "tencent-agent-evaluation",
     "title": "AI Agent & Skill 测评方案及落地实践",
     "source": "腾讯技术工程",
+    "source_type": "产业技术团队",
+    "content_type": "评测方法",
     "published_at": "2026-06-16",
     "url": "https://mp.weixin.qq.com/s/PUbGqheJhFMmb6hGj1ZtOw",
     "topics": ["Agent 评测", "Rubric", "稳定性"],
@@ -39,6 +51,66 @@
       "确定性评分器优先，Rubric 处理开放式语义，人工用于校准、诊断和高风险兜底。",
       "评测覆盖功能正确性、过程质量、效率成本、鲁棒安全、体验对齐五个维度。",
       "区分能力测评与回归测评，把已稳定掌握的能力沉淀为持续运行的回归门禁。"
-    ]
+    ],
+    "evidence_basis": "内部测评框架、评分器分层和落地流程总结。",
+    "limitations": "公开文章未提供足以独立复现全部结论的数据集与逐项结果。",
+    "commercial_interest": "由腾讯技术团队发布，与其 Agent 工程实践有关。"
+  },
+  {
+    "id": "gtig-ai-threat-tracker-2026-q2",
+    "title": "GTIG：生成式 AI 正从辅助工具进入漏洞利用与规模化攻击流程",
+    "source": "Google Threat Intelligence Group",
+    "source_type": "威胁情报与咨询",
+    "content_type": "威胁趋势报告",
+    "published_at": "2026-05-11",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access/",
+    "topics": ["AI 威胁", "漏洞利用", "威胁情报"],
+    "summary": "报告认为攻击者对生成式 AI 的使用正在从内容生成和辅助操作，发展到漏洞利用、初始访问和更大规模的攻击工作流。",
+    "highlights": [
+      "报告把 AI 同时视为攻击能力放大器和高价值攻击目标，而不是单一的新型恶意软件类别。",
+      "分析覆盖漏洞发现与利用、攻击行动增强、初始访问等环节，强调防守方需要按完整攻击链评估影响。",
+      "GTIG 表示首次观察到其认为由 AI 协助开发的零日利用，但这一归因属于基于调查证据的判断。"
+    ],
+    "evidence_basis": "Google Threat Intelligence、Mandiant 事件响应、Gemini 滥用观察和主动威胁研究。",
+    "limitations": "大量底层遥测和调查材料不可公开复核；对 AI 在具体利用开发中作用大小的判断包含归因推断。",
+    "commercial_interest": "发布方同时提供 Google Threat Intelligence、Mandiant 咨询和安全产品。"
+  },
+  {
+    "id": "microsoft-agentic-security-benchmark-2026",
+    "title": "Microsoft：多模型安全智能体开始进入大规模漏洞发现评测",
+    "source": "Microsoft Security",
+    "source_type": "安全研究实验室",
+    "content_type": "产品研究与评测",
+    "published_at": "2026-05-12",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
+    "topics": ["安全智能体", "漏洞发现", "CyberGym"],
+    "summary": "Microsoft 介绍多模型智能体安全系统，并用内部漏洞集合与公开 CyberGym 基准展示自动化漏洞发现能力。",
+    "highlights": [
+      "系统把不同模型和工具组合为研究流程，目标是把漏洞研究从单次实验推进到可持续工程。",
+      "文章报告在 1,507 个真实漏洞组成的公开 CyberGym 基准上取得 88.45% 得分。",
+      "内部测试还覆盖历史 MSRC 案例，但这些结果与公开基准应分开看待。"
+    ],
+    "evidence_basis": "公开 CyberGym 基准、内部植入漏洞测试和历史 MSRC 确认案例。",
+    "limitations": "关键内部测试集、运行成本和完整复现实验未全部公开；结果由系统开发方自行报告。",
+    "commercial_interest": "发布方正在推广 Microsoft 安全产品与自主代码安全能力。"
+  },
+  {
+    "id": "anthropic-trustworthy-agents-2026",
+    "title": "Anthropic：可信智能体需要权限、模型训练与运行监测共同约束",
+    "source": "Anthropic Research",
+    "source_type": "模型机构研究",
+    "content_type": "安全框架与产品实践",
+    "published_at": "2026-04-09",
+    "url": "https://www.anthropic.com/research/trustworthy-agents",
+    "topics": ["可信智能体", "人类控制", "提示注入"],
+    "summary": "文章从人类控制、期望对齐和安全三个方面说明，智能体越能自主调用工具，越需要把权限选择、训练、监测和外部红队组合起来。",
+    "highlights": [
+      "权限应按动作区分为自动允许、需要批准和禁止，不能只给智能体一个笼统的工具开关。",
+      "提示注入没有单一防线可以保证解决，环境越开放、工具权限越强，攻击后的潜在影响越大。",
+      "模型训练、生产流量监测和外部红队是互补层，但仍不能替代最小权限与人工控制。"
+    ],
+    "evidence_basis": "Anthropic 的智能体产品设计、训练场景、内部使用研究和外部红队实践。",
+    "limitations": "以原则与自身产品经验为主，缺少跨厂商统一基准，无法直接证明框架对所有智能体有效。",
+    "commercial_interest": "发布方同时开发和销售 Claude 智能体产品。"
   }
 ]

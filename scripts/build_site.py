@@ -8,6 +8,7 @@ import datetime as dt
 import itertools
 import json
 import re
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -16,7 +17,10 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX_PATH = ROOT / "papers" / "index.jsonl"
 WEEKLY_ROOT = ROOT / "weekly"
 VIEWPOINTS_PATH = ROOT / "industry" / "viewpoints.json"
+VIEWPOINT_SOURCES_PATH = ROOT / "industry" / "sources.json"
 GRAPH_PATH = ROOT / "papers" / "academic_graph.json"
+TAXONOMY_PATH = ROOT / "papers" / "topic_taxonomy.json"
+ENTITY_REGISTRY_PATH = ROOT / "papers" / "entity_registry.json"
 OUTPUT_PATH = ROOT / "site" / "data.js"
 
 FIELD_ALIASES = {
@@ -38,47 +42,18 @@ FIELD_ALIASES = {
     "事实与主张边界": "claim_boundary",
 }
 
-THEME_RULES = [
-    (
-        "mobile-security",
-        "移动与身份安全",
-        {"mobile-security", "android", "ios", "sideloading", "web-to-app-tracking",
-         "passkeys", "webauthn", "authentication"},
-    ),
-    (
-        "agent-security",
-        "智能体与大模型安全",
-        {"agent-security", "multi-agent-security", "agent-memory", "persistent-memory",
-         "self-hosted-agent", "rag-security", "indirect-prompt-injection",
-         "prompt-injection", "adaptive-red-teaming", "llm-security", "web-agent",
-         "coding-agent"},
-    ),
-    (
-        "systems-security",
-        "系统、固件与侧信道",
-        {"operating-system-security", "embedded-security", "firmware-fuzzing",
-         "em-side-channel", "network-side-channel"},
-    ),
-    (
-        "application-security",
-        "应用与协议安全",
-        {"application-security", "program-analysis", "api-misuse", "protocol-security",
-         "desynchronization", "tls", "software-supply-chain", "secure-code-generation"},
-    ),
-]
-
 TOP_VENUE_GROUPS = {
     "security": {
-        "label": "安全四大",
+        "label": "网络与信息安全",
         "signals": ("usenix security", "ieee s&p", "ieee symposium on security and privacy",
                     "acm ccs", "computer and communications security", "ndss"),
     },
     "software": {
-        "label": "软件工程 CCF-A",
+        "label": "软件工程/系统软件/程序设计语言",
         "signals": ("icse", "fse", "ase", "issta"),
     },
     "ai": {
-        "label": "AI CCF-A",
+        "label": "人工智能",
         "signals": ("neurips", "icml", "aaai", "ijcai", "acl", "cvpr"),
     },
 }
@@ -161,12 +136,29 @@ def parse_weekly_cache() -> dict[str, dict[str, Any]]:
     return cached
 
 
-def choose_theme(topics: list[str]) -> tuple[str, str]:
-    topic_set = set(topics)
-    for theme_id, label, signals in THEME_RULES:
-        if topic_set & signals:
-            return theme_id, label
-    return "other-security", "其他安全研究"
+def load_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def choose_theme(paper: dict[str, Any], taxonomy: dict[str, Any]) -> tuple[str, str]:
+    domains = {item["id"]: item for item in taxonomy["domains"]}
+    override = taxonomy.get("primary_domain_overrides", {}).get(paper["id"])
+    if override:
+        if override not in domains:
+            raise ValueError(f"{TAXONOMY_PATH}: unknown domain {override!r} for {paper['id']}")
+        return override, domains[override]["label"]
+
+    topic_set = set(paper.get("topics", []))
+    matches = [
+        domain for domain in taxonomy["domains"]
+        if topic_set & set(domain.get("signals", []))
+    ]
+    if len(matches) != 1:
+        raise ValueError(
+            f"{paper['id']}: primary domain is ambiguous or missing; "
+            f"add it to primary_domain_overrides"
+        )
+    return matches[0]["id"], matches[0]["label"]
 
 
 def iso_week(date_value: str) -> str:
@@ -175,22 +167,78 @@ def iso_week(date_value: str) -> str:
     return f"{year}-W{week:02d}"
 
 
-def parse_affiliations(value: str) -> list[dict[str, Any]]:
-    """Parse the current institution-first weekly format into graph records."""
+def normalize_person_name(value: str) -> str:
+    value = re.sub(r"\([^)]*\)", "", value)
+    value = "".join(
+        char for char in unicodedata.normalize("NFKD", value)
+        if not unicodedata.combining(char)
+    )
+    return "".join(char for char in normalize_title(value) if char.isalnum())
+
+
+def registry_lookup(registry: dict[str, Any], section: str) -> dict[str, dict[str, Any]]:
+    lookup: dict[str, dict[str, Any]] = {}
+    for source_name, record in registry.get(section, {}).items():
+        for alias in [source_name, record.get("display_name", ""), *(record.get("aliases") or [])]:
+            if alias:
+                lookup[alias] = record
+    return lookup
+
+
+def parse_affiliations(
+    value: str,
+    registry: dict[str, Any],
+    paper_authors: list[str] | None = None,
+) -> list[dict[str, Any]]:
+    """Parse, normalize and validate the institution-first weekly format."""
     rows = []
+    institution_lookup = registry_lookup(registry, "institutions")
+    scholar_lookup = registry_lookup(registry, "scholars")
+    paper_author_keys = {normalize_person_name(item) for item in (paper_authors or [])}
     for raw in re.split(r"[；\n]+", value or ""):
         raw = raw.strip()
         if not raw or "：" not in raw:
             continue
         institution, author_text = raw.split("：", 1)
-        authors = [
+        institution = institution.strip()
+        institution_record = institution_lookup.get(institution)
+        if not institution_record:
+            raise ValueError(
+                f"Unregistered institution {institution!r}; "
+                f"add a verified entry to {ENTITY_REGISTRY_PATH.relative_to(ROOT)}"
+            )
+        source_authors = [
             item.strip()
             for item in re.split(r"[、,]", author_text)
             if item.strip()
         ]
-        if institution.strip() and authors:
-            rows.append({"institution": institution.strip(), "authors": authors})
+        authors = []
+        for source_author in source_authors:
+            record = scholar_lookup.get(source_author, {})
+            publication_name = record.get("publication_name") or source_author
+            if paper_author_keys and normalize_person_name(publication_name) not in paper_author_keys:
+                raise ValueError(
+                    f"Affiliation author {source_author!r} does not match the paper author list"
+                )
+            authors.append({
+                "id": record.get("id") or f"scholar:{normalize_person_name(source_author)}",
+                "name": record.get("display_name") or source_author,
+                "publication_name": publication_name,
+            })
+        if authors:
+            rows.append({
+                "institution_id": institution_record["id"],
+                "institution": institution_record["display_name"],
+                "authors": authors,
+            })
     return rows
+
+
+def format_affiliations(rows: list[dict[str, Any]]) -> str:
+    return "；".join(
+        f"{row['institution']}：{'、'.join(author['name'] for author in row['authors'])}"
+        for row in rows
+    )
 
 
 def accepted_venue_group(paper: dict[str, Any]) -> str | None:
@@ -212,14 +260,21 @@ def publication_year(paper: dict[str, Any]) -> int:
     return int(str(paper.get("first_seen", dt.date.today().isoformat()))[:4])
 
 
-def build_academic_graph(papers: list[dict[str, Any]]) -> dict[str, Any]:
+def build_academic_graph(
+    papers: list[dict[str, Any]],
+    registry: dict[str, Any],
+) -> dict[str, Any]:
     institutions: dict[str, dict[str, Any]] = {}
     scholars: dict[str, dict[str, Any]] = {}
     collaborations: dict[tuple[str, str], dict[str, Any]] = {}
     publications = []
 
     for paper in papers:
-        affiliations = parse_affiliations(paper.get("details", {}).get("author_affiliations", ""))
+        affiliations = parse_affiliations(
+            paper.get("details", {}).get("author_affiliations", ""),
+            registry,
+            paper.get("authors", []),
+        )
         if not affiliations:
             continue
         year = publication_year(paper)
@@ -231,25 +286,26 @@ def build_academic_graph(papers: list[dict[str, Any]]) -> dict[str, Any]:
             "venue": (paper.get("venues") or [""])[0],
             "venue_group": venue_group,
             "status": paper.get("status", ""),
-            "institutions": [row["institution"] for row in affiliations],
-            "authors": paper.get("authors", []),
+            "institutions": [row["institution_id"] for row in affiliations],
+            "authors": [author["id"] for row in affiliations for author in row["authors"]],
         }
         publications.append(publication)
 
         scored_institutions: set[str] = set()
         scored_scholars: set[str] = set()
         for row in affiliations:
-            institution = row["institution"]
-            entry = institutions.setdefault(institution, {
-                "id": institution,
-                "name": institution,
+            institution_id = row["institution_id"]
+            institution_name = row["institution"]
+            entry = institutions.setdefault(institution_id, {
+                "id": institution_id,
+                "name": institution_name,
                 "papers": set(),
                 "scholars": set(),
                 "annual_scores": {},
             })
             entry["papers"].add(paper["id"])
-            entry["scholars"].update(row["authors"])
-            if venue_group and institution not in scored_institutions:
+            entry["scholars"].update(author["name"] for author in row["authors"])
+            if venue_group and institution_id not in scored_institutions:
                 annual = entry["annual_scores"].setdefault(str(year), {
                     "security": 0,
                     "software": 0,
@@ -258,19 +314,21 @@ def build_academic_graph(papers: list[dict[str, Any]]) -> dict[str, Any]:
                 })
                 annual[venue_group] += 1
                 annual["total"] += 1
-                scored_institutions.add(institution)
+                scored_institutions.add(institution_id)
 
             for author in row["authors"]:
-                scholar = scholars.setdefault(author, {
-                    "id": author,
-                    "name": author,
+                author_id = author["id"]
+                scholar = scholars.setdefault(author_id, {
+                    "id": author_id,
+                    "name": author["name"],
+                    "publication_name": author["publication_name"],
                     "institutions": set(),
                     "papers": set(),
                     "annual_scores": {},
                 })
-                scholar["institutions"].add(institution)
+                scholar["institutions"].add(institution_name)
                 scholar["papers"].add(paper["id"])
-                if venue_group and author not in scored_scholars:
+                if venue_group and author_id not in scored_scholars:
                     annual = scholar["annual_scores"].setdefault(str(year), {
                         "security": 0,
                         "software": 0,
@@ -279,10 +337,10 @@ def build_academic_graph(papers: list[dict[str, Any]]) -> dict[str, Any]:
                     })
                     annual[venue_group] += 1
                     annual["total"] += 1
-                    scored_scholars.add(author)
+                    scored_scholars.add(author_id)
 
-        institution_names = sorted({row["institution"] for row in affiliations})
-        for left, right in itertools.combinations(institution_names, 2):
+        institution_ids = sorted({row["institution_id"] for row in affiliations})
+        for left, right in itertools.combinations(institution_ids, 2):
             edge = collaborations.setdefault((left, right), {
                 "source": left,
                 "target": right,
@@ -327,7 +385,7 @@ def build_academic_graph(papers: list[dict[str, Any]]) -> dict[str, Any]:
         "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
         "coverage": {
             "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
-            "score_definition": "年度评价分数为库内经正式接收核验的安全四大、软件工程 CCF-A 与 AI CCF-A 论文数；当前是已核验下界，不代表单位完整产出。",
+            "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程/系统软件/程序设计语言、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
             "indexed_papers": len(papers),
             "papers_with_affiliations": len(publications),
             "scored_top_venue_papers": sum(1 for item in publications if item["venue_group"]),
@@ -347,14 +405,31 @@ def build_academic_graph(papers: list[dict[str, Any]]) -> dict[str, Any]:
 def build_payload() -> dict[str, Any]:
     papers = load_index()
     cache = parse_weekly_cache()
+    taxonomy = load_json(TAXONOMY_PATH)
+    registry = load_json(ENTITY_REGISTRY_PATH)
     week_counts: dict[str, int] = {}
     theme_counts: dict[str, dict[str, Any]] = {}
+    known_topics = set(taxonomy["topics"])
 
     for paper in papers:
+        unknown_topics = set(paper.get("topics", [])) - known_topics
+        if unknown_topics:
+            raise ValueError(
+                f"{paper['id']}: unknown controlled topics {sorted(unknown_topics)}; "
+                f"update {TAXONOMY_PATH.relative_to(ROOT)} before ingesting"
+            )
         note_path = (paper.get("weekly_notes") or [""])[-1]
         week = Path(note_path).stem if note_path else iso_week(paper["first_seen"])
-        theme_id, theme_label = choose_theme(paper.get("topics", []))
+        theme_id, theme_label = choose_theme(paper, taxonomy)
         details = cache.get(normalize_title(paper["title"]), {})
+        if details.get("author_affiliations"):
+            details["author_affiliations"] = format_affiliations(
+                parse_affiliations(
+                    details["author_affiliations"],
+                    registry,
+                    paper.get("authors", []),
+                )
+            )
 
         paper["week"] = week
         paper["theme"] = theme_id
@@ -373,8 +448,18 @@ def build_payload() -> dict[str, Any]:
         for week, count in sorted(week_counts.items(), reverse=True)
     ]
     themes = sorted(theme_counts.values(), key=lambda item: (-item["count"], item["label"]))
-    viewpoints = json.loads(VIEWPOINTS_PATH.read_text(encoding="utf-8"))
-    academic = build_academic_graph(papers)
+    viewpoints = load_json(VIEWPOINTS_PATH)
+    viewpoint_sources = load_json(VIEWPOINT_SOURCES_PATH)
+    required_viewpoint_fields = {
+        "id", "title", "source", "source_type", "content_type", "published_at",
+        "url", "topics", "summary", "highlights", "evidence_basis", "limitations",
+        "commercial_interest",
+    }
+    for item in viewpoints:
+        missing = required_viewpoint_fields - set(item)
+        if missing:
+            raise ValueError(f"{VIEWPOINTS_PATH}: {item.get('id', '<unknown>')} missing {sorted(missing)}")
+    academic = build_academic_graph(papers, registry)
 
     return {
         "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -389,16 +474,30 @@ def build_payload() -> dict[str, Any]:
         "themes": themes,
         "papers": papers,
         "viewpoints": viewpoints,
+        "viewpoint_sources": viewpoint_sources,
         "academic": academic,
+        "taxonomy": {
+            "version": taxonomy["version"],
+            "facets": taxonomy["facets"],
+            "topics": taxonomy["topics"],
+        },
     }
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
+    parser.add_argument("--check", action="store_true", help="validate inputs without writing generated files")
     args = parser.parse_args()
 
     payload = build_payload()
+    if args.check:
+        print(
+            f"Validated {payload['counts']['papers']} papers, "
+            f"{payload['counts']['themes']} domains and "
+            f"{payload['counts']['viewpoints']} viewpoints."
+        )
+        return
     GRAPH_PATH.write_text(
         json.dumps(payload["academic"], ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
