@@ -271,7 +271,7 @@
 
     elements.contentEyebrow.textContent = "ACADEMIC NETWORK";
     elements.contentTitle.textContent = "学术关系";
-    elements.resultCount.textContent = `${institutions.length} 个单位`;
+    elements.resultCount.textContent = `${institutions.length} 个单位 · ${scholars.length} 位学者`;
     elements.sort.hidden = true;
     elements.academicYear.hidden = false;
     elements.empty.hidden = institutions.length > 0;
@@ -338,6 +338,50 @@
               <small>${item.institutions.map(escapeHtml).join(" · ")}</small></div><b>${item.score}</b></li>
             `).join("")}
           </ol>
+        </div>
+      </section>
+      <section class="scholar-directory" aria-labelledby="scholarDirectoryTitle">
+        <div class="subsection-heading">
+          <div><p class="eyebrow">SCHOLAR PROFILES</p><h3 id="scholarDirectoryTitle">学者卡片</h3></div>
+          <p>姓名与主页仅在可靠来源能够对应时规范化；论文数量和最近入库记录均以 papernote 当前库为准。</p>
+        </div>
+        <div class="scholar-grid">
+          ${scholars.map((item) => `
+            <article class="scholar-card">
+              <header>
+                <div>
+                  <h4>${escapeHtml(item.name)}</h4>
+                  ${item.publication_name && item.publication_name !== item.name
+                    ? `<p class="publication-name">论文署名：${escapeHtml(item.publication_name)}</p>`
+                    : ""}
+                </div>
+                <span class="scholar-score">${item.score} 分</span>
+              </header>
+              <p class="scholar-affiliation">${item.institutions.map(escapeHtml).join(" · ") || "单位待核验"}</p>
+              <dl class="scholar-stats">
+                <div><dt>库内论文</dt><dd>${item.papers.length}</dd></div>
+                <div><dt>最近年份</dt><dd>${item.recent_papers?.[0]?.year || "—"}</dd></div>
+              </dl>
+              <div class="scholar-actions">
+                ${item.homepage
+                  ? `<a href="${escapeHtml(item.homepage)}" target="_blank" rel="noreferrer">个人主页 ↗</a>`
+                  : `<span>主页待核验</span>`}
+              </div>
+              <div class="recent-papers">
+                <strong>最近入库</strong>
+                <ol>
+                  ${(item.recent_papers || []).slice(0, 3).map((paper) => `
+                    <li>
+                      ${paper.url
+                        ? `<a href="${escapeHtml(paper.url)}" target="_blank" rel="noreferrer">${escapeHtml(paper.title)}</a>`
+                        : `<span>${escapeHtml(paper.title)}</span>`}
+                      <small>${escapeHtml(paper.venue || "")}${paper.year ? ` · ${paper.year}` : ""}</small>
+                    </li>
+                  `).join("") || "<li class=\"no-paper\">暂无可展示论文</li>"}
+                </ol>
+              </div>
+            </article>
+          `).join("")}
         </div>
       </section>
     ` : "";

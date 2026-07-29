@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-29T19:48:51+08:00",
+  "generated_at": "2026-07-29T20:11:17+08:00",
   "coverage": {
     "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
-    "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程/系统软件/程序设计语言、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
+    "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程与系统、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
     "indexed_papers": 21,
     "papers_with_affiliations": 13,
     "scored_top_venue_papers": 6
@@ -14,7 +14,7 @@
     },
     {
       "id": "software",
-      "label": "软件工程/系统软件/程序设计语言"
+      "label": "软件工程与系统"
     },
     {
       "id": "ai",
@@ -36,17 +36,17 @@
       "scholars": [
         "Chengyuan Zhou",
         "Feng Xue",
-        "Fengyu Liu",
         "Jiaqi Luo",
-        "Jiarun Dai",
         "Ke Li",
-        "Lei Zhang",
         "Letian Yuan",
         "Tian Chen",
         "Tianhao Bai",
         "Youkun Shi",
-        "Yuan Zhang",
         "Zhengmin Yu",
+        "刘丰毓",
+        "张源",
+        "张磊",
+        "戴嘉润",
         "杨珉"
       ],
       "annual_scores": {
@@ -208,10 +208,10 @@
       ],
       "scholars": [
         "Yuan Xiao",
-        "Yuchen Chen",
         "徐宝文",
-        "方春荣",
-        "陈振宇"
+        "房春荣",
+        "陈振宇",
+        "陈雨辰"
       ],
       "annual_scores": {
         "2026": {
@@ -249,7 +249,7 @@
         "issta26-chen-insecure-memory"
       ],
       "scholars": [
-        "Xiang Chen"
+        "陈翔"
       ],
       "annual_scores": {
         "2026": {
@@ -269,7 +269,7 @@
       ],
       "scholars": [
         "Youkun Shi",
-        "罗侠普"
+        "羅夏樸"
       ],
       "annual_scores": {
         "2025": {
@@ -460,51 +460,11 @@
   ],
   "scholars": [
     {
-      "id": "scholar:fengyuliu",
-      "name": "Fengyu Liu",
-      "publication_name": "Fengyu Liu",
-      "institutions": [
-        "复旦大学"
-      ],
-      "papers": [
-        "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky"
-      ],
-      "annual_scores": {
-        "2025": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2
-    },
-    {
-      "id": "scholar:jiarundai",
-      "name": "Jiarun Dai",
-      "publication_name": "Jiarun Dai",
-      "institutions": [
-        "复旦大学"
-      ],
-      "papers": [
-        "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky"
-      ],
-      "annual_scores": {
-        "2025": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2
-    },
-    {
       "id": "scholar:youkunshi",
       "name": "Youkun Shi",
       "publication_name": "Youkun Shi",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学",
         "香港理工大学"
@@ -521,12 +481,30 @@
           "total": 2
         }
       },
-      "verified_score": 2
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        },
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
-      "id": "scholar:yuanzhang",
-      "name": "Yuan Zhang",
-      "publication_name": "Yuan Zhang",
+      "id": "fengyu-liu-fudan",
+      "name": "刘丰毓",
+      "publication_name": "Fengyu Liu",
+      "homepage": "https://lfysec.github.io/",
+      "profile_source": "https://lfysec.github.io/",
       "institutions": [
         "复旦大学"
       ],
@@ -542,12 +520,108 @@
           "total": 2
         }
       },
-      "verified_score": 2
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        },
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
+    },
+    {
+      "id": "yuan-zhang-fudan",
+      "name": "张源",
+      "publication_name": "Yuan Zhang",
+      "homepage": "https://yuanxzhang.github.io/",
+      "profile_source": "https://secsys.fudan.edu.cn/members/faculty/zy",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        },
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
+    },
+    {
+      "id": "jiarun-dai-fudan",
+      "name": "戴嘉润",
+      "publication_name": "Jiarun Dai",
+      "homepage": "https://secsys.fudan.edu.cn/members/faculty/djr",
+      "profile_source": "https://secsys.fudan.edu.cn/members/faculty/djr",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        },
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
       "id": "min-yang-fudan",
       "name": "杨珉",
       "publication_name": "Min Yang",
+      "homepage": "https://min-yang-fudan.github.io/",
+      "profile_source": "https://secsys.fudan.edu.cn/members",
       "institutions": [
         "复旦大学"
       ],
@@ -563,12 +637,30 @@
           "total": 2
         }
       },
-      "verified_score": 2
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        },
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:chengyuanzhou",
       "name": "Chengyuan Zhou",
       "publication_name": "Chengyuan Zhou",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学"
       ],
@@ -583,12 +675,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:danielayzenshteyn",
       "name": "Daniel Ayzenshteyn",
       "publication_name": "Daniel Ayzenshteyn",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Ben-Gurion University of the Negev"
       ],
@@ -603,12 +706,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-ayzenshteyn-cheat",
+          "title": "Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-ayzenshteyn.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:davidlo",
       "name": "David Lo",
       "publication_name": "David Lo",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Singapore Management University"
       ],
@@ -623,12 +737,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
     },
     {
       "id": "scholar:ergutebao",
       "name": "Ergute Bao",
       "publication_name": "Ergute Bao",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Mohamed bin Zayed University of Artificial Intelligence"
       ],
@@ -643,12 +768,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-chang-retrieval-barrier",
+          "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan"
+        }
+      ]
     },
     {
       "id": "scholar:fengxue",
       "name": "Feng Xue",
       "publication_name": "Feng Xue",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学"
       ],
@@ -663,12 +799,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:haochen",
       "name": "Hao Chen",
       "publication_name": "Hao Chen",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of California, Davis"
       ],
@@ -683,12 +830,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:hongyanchang",
       "name": "Hongyan Chang",
       "publication_name": "Hongyan Chang",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Mohamed bin Zayed University of Artificial Intelligence"
       ],
@@ -703,12 +861,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-chang-retrieval-barrier",
+          "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan"
+        }
+      ]
     },
     {
       "id": "scholar:jiaqiluo",
       "name": "Jiaqi Luo",
       "publication_name": "Jiaqi Luo",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学"
       ],
@@ -723,12 +892,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:keli",
       "name": "Ke Li",
       "publication_name": "Ke Li",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学"
       ],
@@ -743,32 +923,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
-    },
-    {
-      "id": "scholar:leizhang",
-      "name": "Lei Zhang",
-      "publication_name": "Lei Zhang",
-      "institutions": [
-        "复旦大学"
-      ],
-      "papers": [
-        "usenix-sec25-shi-xssky"
-      ],
-      "annual_scores": {
-        "2025": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
         }
-      },
-      "verified_score": 1
+      ]
     },
     {
       "id": "scholar:letianyuan",
       "name": "Letian Yuan",
       "publication_name": "Letian Yuan",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学"
       ],
@@ -783,12 +954,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:marcosquarcina",
       "name": "Marco Squarcina",
       "publication_name": "Marco Squarcina",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "TU Wien"
       ],
@@ -803,12 +985,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "title": "TapTrap: Animation-Driven Tapjacking on Android",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:martinalindorfer",
       "name": "Martina Lindorfer",
       "publication_name": "Martina Lindorfer",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "TU Wien"
       ],
@@ -823,12 +1016,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "title": "TapTrap: Animation-Driven Tapjacking on Android",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:philippbeer",
       "name": "Philipp Beer",
       "publication_name": "Philipp Beer",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "TU Wien"
       ],
@@ -843,12 +1047,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "title": "TapTrap: Animation-Driven Tapjacking on Android",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:royweiss",
       "name": "Roy Weiss",
       "publication_name": "Roy Weiss",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Ben-Gurion University of the Negev"
       ],
@@ -863,12 +1078,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-ayzenshteyn-cheat",
+          "title": "Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-ayzenshteyn.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:sebastianroth",
       "name": "Sebastian Roth",
       "publication_name": "Sebastian Roth",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of Bayreuth"
       ],
@@ -883,12 +1109,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "title": "TapTrap: Animation-Driven Tapjacking on Android",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:tianchen",
       "name": "Tian Chen",
       "publication_name": "Tian Chen",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学"
       ],
@@ -903,12 +1140,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:tianhaobai",
       "name": "Tianhao Bai",
       "publication_name": "Tianhao Bai",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学"
       ],
@@ -923,12 +1171,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:tingyu",
       "name": "Ting Yu",
       "publication_name": "Ting Yu",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Mohamed bin Zayed University of Artificial Intelligence"
       ],
@@ -943,12 +1202,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-chang-retrieval-barrier",
+          "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan"
+        }
+      ]
     },
     {
       "id": "scholar:weicheng",
       "name": "Wei Cheng",
       "publication_name": "Wei Cheng",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "南京航空航天大学"
       ],
@@ -963,12 +1233,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
     },
     {
       "id": "scholar:weifengsun",
       "name": "Weifeng Sun",
       "publication_name": "Weifeng Sun",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Singapore Management University"
       ],
@@ -983,32 +1264,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
-    },
-    {
-      "id": "scholar:xiangchen",
-      "name": "Xiang Chen",
-      "publication_name": "Xiang Chen",
-      "institutions": [
-        "南通大学"
-      ],
-      "papers": [
-        "issta26-chen-insecure-memory"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 0,
-          "software": 1,
-          "ai": 0,
-          "total": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
         }
-      },
-      "verified_score": 1
+      ]
     },
     {
       "id": "scholar:xinjianluo",
       "name": "Xinjian Luo",
       "publication_name": "Xinjian Luo",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Mohamed bin Zayed University of Artificial Intelligence"
       ],
@@ -1023,12 +1295,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-chang-retrieval-barrier",
+          "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan"
+        }
+      ]
     },
     {
       "id": "scholar:yisroelmirsky",
       "name": "Yisroel Mirsky",
       "publication_name": "Yisroel Mirsky",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Ben-Gurion University of the Negev"
       ],
@@ -1043,12 +1326,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-ayzenshteyn-cheat",
+          "title": "Cloak, Honey, Trap: Proactive Defenses Against LLM Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-ayzenshteyn.pdf"
+        }
+      ]
     },
     {
-      "id": "scholar:yuanxiao",
+      "id": "yuan-xiao-nju",
       "name": "Yuan Xiao",
       "publication_name": "Yuan Xiao",
+      "homepage": "https://xiaoyuanpigo.github.io/",
+      "profile_source": "https://xiaoyuanpigo.github.io/",
       "institutions": [
         "南京大学"
       ],
@@ -1063,32 +1357,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
-    },
-    {
-      "id": "scholar:yuchenchen",
-      "name": "Yuchen Chen",
-      "publication_name": "Yuchen Chen",
-      "institutions": [
-        "南京大学"
-      ],
-      "papers": [
-        "issta26-chen-insecure-memory"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 0,
-          "software": 1,
-          "ai": 0,
-          "total": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
         }
-      },
-      "verified_score": 1
+      ]
     },
     {
       "id": "scholar:zhengminyu",
       "name": "Zhengmin Yu",
       "publication_name": "Zhengmin Yu",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "复旦大学"
       ],
@@ -1103,12 +1388,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
     },
     {
       "id": "scholar:zhouyang",
       "name": "Zhou Yang",
       "publication_name": "Zhou Yang",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of Alberta / Alberta Machine Intelligence Institute (Amii)"
       ],
@@ -1123,12 +1419,54 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
+    },
+    {
+      "id": "lei-zhang-fudan",
+      "name": "张磊",
+      "publication_name": "Lei Zhang",
+      "homepage": "https://secsys.fudan.edu.cn/members/faculty/zl",
+      "profile_source": "https://secsys.fudan.edu.cn/members/faculty/zl",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-shi-xssky"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        }
+      ]
     },
     {
       "id": "baowen-xu",
       "name": "徐宝文",
       "publication_name": "Baowen Xu",
+      "homepage": "https://cs.nju.edu.cn/xubaowen/",
+      "profile_source": "https://cs.nju.edu.cn/xubaowen/bwxu-zh/",
       "institutions": [
         "南京大学"
       ],
@@ -1143,12 +1481,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
     },
     {
       "id": "chunrong-fang",
-      "name": "方春荣",
+      "name": "房春荣",
       "publication_name": "Chunrong Fang",
+      "homepage": "https://chunrong.github.io/",
+      "profile_source": "https://software.nju.edu.cn/fangchunrong/",
       "institutions": [
         "南京大学"
       ],
@@ -1163,12 +1512,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
     },
     {
       "id": "xiapu-luo",
-      "name": "罗侠普",
+      "name": "羅夏樸",
       "publication_name": "Xiapu Luo",
+      "homepage": "https://www4.comp.polyu.edu.hk/~csxluo/",
+      "profile_source": "https://www4.comp.polyu.edu.hk/~csxluo/",
       "institutions": [
         "香港理工大学"
       ],
@@ -1183,12 +1543,23 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        }
+      ]
     },
     {
       "id": "zhenyu-chen-nju",
       "name": "陈振宇",
       "publication_name": "Zhenyu Chen",
+      "homepage": "https://software.nju.edu.cn/zychen/",
+      "profile_source": "https://software.nju.edu.cn/zychen/",
       "institutions": [
         "南京大学"
       ],
@@ -1203,12 +1574,85 @@
           "total": 1
         }
       },
-      "verified_score": 1
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
+    },
+    {
+      "id": "xiang-chen-ntu",
+      "name": "陈翔",
+      "publication_name": "Xiang Chen",
+      "homepage": "https://xchencs.github.io/",
+      "profile_source": "https://xchencs.github.io/",
+      "institutions": [
+        "南通大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
+    },
+    {
+      "id": "yuchen-chen-nju",
+      "name": "陈雨辰",
+      "publication_name": "Yuchen Chen",
+      "homepage": "https://ics.nju.edu.cn/allpeople/index.html",
+      "profile_source": "https://ics.nju.edu.cn/allpeople/index.html",
+      "institutions": [
+        "南京大学"
+      ],
+      "papers": [
+        "issta26-chen-insecure-memory"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-chen-insecure-memory",
+          "title": "Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
     },
     {
       "id": "scholar:ankursingh",
       "name": "Ankur Singh",
       "publication_name": "Ankur Singh",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Concordia University"
       ],
@@ -1216,12 +1660,23 @@
         "arxiv-2607-20759-issuetrojanbench"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-20759-issuetrojanbench",
+          "title": "IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.20759"
+        }
+      ]
     },
     {
       "id": "scholar:byoungyounglee",
       "name": "Byoungyoung Lee",
       "publication_name": "Byoungyoung Lee",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Seoul National University"
       ],
@@ -1229,12 +1684,23 @@
         "arxiv-2607-05120-agent-data-injection"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.05120"
+        }
+      ]
     },
     {
       "id": "scholar:chuanli",
       "name": "Chuan Li",
       "publication_name": "Chuan Li",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Lambda"
       ],
@@ -1242,12 +1708,23 @@
         "arxiv-2607-18063-adaptive-adversaries"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18063-adaptive-adversaries",
+          "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18063"
+        }
+      ]
     },
     {
       "id": "scholar:davidalexander",
       "name": "David Alexander",
       "publication_name": "David Alexander",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of Washington"
       ],
@@ -1255,12 +1732,23 @@
         "arxiv-2607-14611-bad-memory"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-14611-bad-memory",
+          "title": "Bad Memory: Evaluating Prompt Injection Risks from Memory in Agentic Systems",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.14611"
+        }
+      ]
     },
     {
       "id": "scholar:davidhartmann",
       "name": "David Hartmann",
       "publication_name": "David Hartmann",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Lambda"
       ],
@@ -1268,12 +1756,23 @@
         "arxiv-2607-18063-adaptive-adversaries"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18063-adaptive-adversaries",
+          "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18063"
+        }
+      ]
     },
     {
       "id": "scholar:davidwagner",
       "name": "David Wagner",
       "publication_name": "David Wagner",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of California, Berkeley"
       ],
@@ -1281,12 +1780,23 @@
         "arxiv-2607-18575-receipt"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18575-receipt",
+          "title": "RECEIPT: Deterministic, Reward-Hacking-Resistant Verification for White-Box Agentic XSS Discovery",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18575"
+        }
+      ]
     },
     {
       "id": "scholar:devinajain",
       "name": "Devina Jain",
       "publication_name": "Devina Jain",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Lambda"
       ],
@@ -1294,12 +1804,23 @@
         "arxiv-2607-18063-adaptive-adversaries"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18063-adaptive-adversaries",
+          "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18063"
+        }
+      ]
     },
     {
       "id": "scholar:fatemehmoradihaghighi",
       "name": "Fatemeh Moradihaghighi",
       "publication_name": "Fatemeh Moradihaghighi",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Clemson University"
       ],
@@ -1307,12 +1828,23 @@
         "arxiv-2607-16487-fuzz-emup"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.16487"
+        }
+      ]
     },
     {
       "id": "scholar:franziskaroesner",
       "name": "Franziska Roesner",
       "publication_name": "Franziska Roesner",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of Washington"
       ],
@@ -1320,12 +1852,23 @@
         "arxiv-2607-14611-bad-memory"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-14611-bad-memory",
+          "title": "Bad Memory: Evaluating Prompt Injection Risks from Memory in Agentic Systems",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.14611"
+        }
+      ]
     },
     {
       "id": "scholar:haowang",
       "name": "Hao Wang",
       "publication_name": "Hao Wang",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of California, Berkeley"
       ],
@@ -1333,12 +1876,23 @@
         "arxiv-2607-18575-receipt"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18575-receipt",
+          "title": "RECEIPT: Deterministic, Reward-Hacking-Resistant Verification for White-Box Agentic XSS Discovery",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18575"
+        }
+      ]
     },
     {
       "id": "scholar:jihyeonjeong",
       "name": "Jihyeon Jeong",
       "publication_name": "Jihyeon Jeong",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Largosoft"
       ],
@@ -1346,12 +1900,23 @@
         "arxiv-2607-05120-agent-data-injection"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.05120"
+        }
+      ]
     },
     {
       "id": "scholar:jinqiuyang",
       "name": "Jinqiu Yang",
       "publication_name": "Jinqiu Yang",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Concordia University"
       ],
@@ -1359,12 +1924,23 @@
         "arxiv-2607-20759-issuetrojanbench"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-20759-issuetrojanbench",
+          "title": "IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.20759"
+        }
+      ]
     },
     {
       "id": "scholar:juheekim",
       "name": "Juhee Kim",
       "publication_name": "Juhee Kim",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Seoul National University"
       ],
@@ -1372,12 +1948,23 @@
         "arxiv-2607-05120-agent-data-injection"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.05120"
+        }
+      ]
     },
     {
       "id": "juergen-schmidhuber",
       "name": "Jürgen Schmidhuber",
       "publication_name": "Jürgen Schmidhuber",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "KAUST Center of Excellence for Generative AI",
         "Swiss AI Lab IDSIA-USI/SUPSI"
@@ -1386,12 +1973,23 @@
         "arxiv-2607-17986-self-state-attacks"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-17986-self-state-attacks",
+          "title": "Self-State Attacks on Self-Hosted AI Agents: How Far Can OS Defenses Go?",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.17986"
+        }
+      ]
     },
     {
       "id": "scholar:karenshieh",
       "name": "Karen Shieh",
       "publication_name": "Karen Shieh",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of California, Berkeley"
       ],
@@ -1399,12 +1997,23 @@
         "arxiv-2607-18575-receipt"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18575-receipt",
+          "title": "RECEIPT: Deterministic, Reward-Hacking-Resistant Verification for White-Box Agentic XSS Discovery",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18575"
+        }
+      ]
     },
     {
       "id": "scholar:koushiksen",
       "name": "Koushik Sen",
       "publication_name": "Koushik Sen",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of California, Berkeley"
       ],
@@ -1412,12 +2021,23 @@
         "arxiv-2607-18575-receipt"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18575-receipt",
+          "title": "RECEIPT: Deterministic, Reward-Hacking-Resistant Verification for White-Box Agentic XSS Discovery",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18575"
+        }
+      ]
     },
     {
       "id": "scholar:luyixing",
       "name": "Luyi Xing",
       "publication_name": "Luyi Xing",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of Illinois Urbana-Champaign"
       ],
@@ -1425,12 +2045,23 @@
         "arxiv-2607-05120-agent-data-injection"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.05120"
+        }
+      ]
     },
     {
       "id": "scholar:mashrurchowdhury",
       "name": "Mashrur Chowdhury",
       "publication_name": "Mashrur Chowdhury",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Clemson University"
       ],
@@ -1438,12 +2069,23 @@
         "arxiv-2607-16487-fuzz-emup"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.16487"
+        }
+      ]
     },
     {
       "id": "scholar:muxilyu",
       "name": "Muxi Lyu",
       "publication_name": "Muxi Lyu",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of California, Berkeley"
       ],
@@ -1451,12 +2093,23 @@
         "arxiv-2607-18575-receipt"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18575-receipt",
+          "title": "RECEIPT: Deterministic, Reward-Hacking-Resistant Verification for White-Box Agentic XSS Discovery",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18575"
+        }
+      ]
     },
     {
       "id": "nathanael-denis",
       "name": "Nathanaël Denis",
       "publication_name": "Nathanaël Denis",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "KAUST Center of Excellence for Generative AI"
       ],
@@ -1464,12 +2117,23 @@
         "arxiv-2607-17986-self-state-attacks"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-17986-self-state-attacks",
+          "title": "Self-State Attacks on Self-Hosted AI Agents: How Far Can OS Defenses Go?",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.17986"
+        }
+      ]
     },
     {
       "id": "scholar:robertodipietro",
       "name": "Roberto Di Pietro",
       "publication_name": "Roberto Di Pietro",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "KAUST Center of Excellence for Generative AI"
       ],
@@ -1477,12 +2141,23 @@
         "arxiv-2607-17986-self-state-attacks"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-17986-self-state-attacks",
+          "title": "Self-State Attacks on Self-Hosted AI Agents: How Far Can OS Defenses Go?",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.17986"
+        }
+      ]
     },
     {
       "id": "scholar:saisunku",
       "name": "Sai Sunku",
       "publication_name": "Sai Sunku",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of Washington"
       ],
@@ -1490,12 +2165,23 @@
         "arxiv-2607-14611-bad-memory"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-14611-bad-memory",
+          "title": "Bad Memory: Evaluating Prompt Injection Risks from Memory in Agentic Systems",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.14611"
+        }
+      ]
     },
     {
       "id": "scholar:sohamgadgil",
       "name": "Soham Gadgil",
       "publication_name": "Soham Gadgil",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of Washington"
       ],
@@ -1503,12 +2189,23 @@
         "arxiv-2607-14611-bad-memory"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-14611-bad-memory",
+          "title": "Bad Memory: Evaluating Prompt Injection Risks from Memory in Agentic Systems",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.14611"
+        }
+      ]
     },
     {
       "id": "scholar:taehyunkang",
       "name": "Taehyun Kang",
       "publication_name": "Taehyun Kang",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Seoul National University"
       ],
@@ -1516,12 +2213,23 @@
         "arxiv-2607-05120-agent-data-injection"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.05120"
+        }
+      ]
     },
     {
       "id": "tse-hsun-chen",
       "name": "Tse-Hsun (Peter) Chen",
       "publication_name": "Tse-Hsun (Peter) Chen",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Concordia University"
       ],
@@ -1529,12 +2237,23 @@
         "arxiv-2607-20759-issuetrojanbench"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-20759-issuetrojanbench",
+          "title": "IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.20759"
+        }
+      ]
     },
     {
       "id": "scholar:woohyukchoi",
       "name": "Woohyuk Choi",
       "publication_name": "Woohyuk Choi",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Seoul National University"
       ],
@@ -1542,12 +2261,23 @@
         "arxiv-2607-05120-agent-data-injection"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-05120-agent-data-injection",
+          "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.05120"
+        }
+      ]
     },
     {
       "id": "scholar:yananguo",
       "name": "Yanan Guo",
       "publication_name": "Yanan Guo",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of Rochester"
       ],
@@ -1555,12 +2285,23 @@
         "arxiv-2607-16487-fuzz-emup"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.16487"
+        }
+      ]
     },
     {
       "id": "scholar:yimengchen",
       "name": "Yimeng Chen",
       "publication_name": "Yimeng Chen",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "KAUST Center of Excellence for Generative AI"
       ],
@@ -1568,12 +2309,23 @@
         "arxiv-2607-17986-self-state-attacks"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-17986-self-state-attacks",
+          "title": "Self-State Attacks on Self-Hosted AI Agents: How Far Can OS Defenses Go?",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.17986"
+        }
+      ]
     },
     {
       "id": "scholar:yiweihou",
       "name": "Yiwei Hou",
       "publication_name": "Yiwei Hou",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "University of California, Berkeley"
       ],
@@ -1581,12 +2333,23 @@
         "arxiv-2607-18575-receipt"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-18575-receipt",
+          "title": "RECEIPT: Deterministic, Reward-Hacking-Resistant Verification for White-Box Agentic XSS Discovery",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.18575"
+        }
+      ]
     },
     {
       "id": "scholar:zhenkaizhang",
       "name": "Zhenkai Zhang",
       "publication_name": "Zhenkai Zhang",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Clemson University"
       ],
@@ -1594,12 +2357,23 @@
         "arxiv-2607-16487-fuzz-emup"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.16487"
+        }
+      ]
     },
     {
       "id": "scholar:zihaozhan",
       "name": "Zihao Zhan",
       "publication_name": "Zihao Zhan",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Texas Tech University"
       ],
@@ -1607,12 +2381,23 @@
         "arxiv-2607-16487-fuzz-emup"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.16487"
+        }
+      ]
     },
     {
       "id": "scholar:zimingzhao",
       "name": "Ziming Zhao",
       "publication_name": "Ziming Zhao",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
         "Northeastern University"
       ],
@@ -1620,7 +2405,16 @@
         "arxiv-2607-16487-fuzz-emup"
       ],
       "annual_scores": {},
-      "verified_score": 0
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2607-16487-fuzz-emup",
+          "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.16487"
+        }
+      ]
     }
   ],
   "collaborations": [
@@ -1909,18 +2703,20 @@
       "venue": "USENIX Security 2025",
       "venue_group": "security",
       "status": "accepted",
+      "first_seen": "2026-07-27",
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf",
       "institutions": [
         "fudan-university",
         "hong-kong-polytechnic-university"
       ],
       "authors": [
         "scholar:youkunshi",
-        "scholar:yuanzhang",
+        "yuan-zhang-fudan",
         "scholar:tianhaobai",
         "scholar:fengxue",
-        "scholar:jiarundai",
-        "scholar:fengyuliu",
-        "scholar:leizhang",
+        "jiarun-dai-fudan",
+        "fengyu-liu-fudan",
+        "lei-zhang-fudan",
         "min-yang-fudan",
         "scholar:youkunshi",
         "xiapu-luo"
@@ -1933,6 +2729,8 @@
       "venue": "USENIX Security 2025",
       "venue_group": "security",
       "status": "accepted",
+      "first_seen": "2026-07-27",
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf",
       "institutions": [
         "tu-wien",
         "university-bayreuth"
@@ -1951,6 +2749,8 @@
       "venue": "arXiv",
       "venue_group": null,
       "status": "preprint-unreviewed",
+      "first_seen": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.18575",
       "institutions": [
         "uc-berkeley"
       ],
@@ -1970,15 +2770,17 @@
       "venue": "USENIX Security 2025",
       "venue_group": "security",
       "status": "accepted",
+      "first_seen": "2026-07-27",
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf",
       "institutions": [
         "fudan-university",
         "uc-davis"
       ],
       "authors": [
-        "scholar:fengyuliu",
-        "scholar:yuanzhang",
+        "fengyu-liu-fudan",
+        "yuan-zhang-fudan",
         "scholar:jiaqiluo",
-        "scholar:jiarundai",
+        "jiarun-dai-fudan",
         "scholar:tianchen",
         "scholar:letianyuan",
         "scholar:zhengminyu",
@@ -1996,6 +2798,8 @@
       "venue": "arXiv",
       "venue_group": null,
       "status": "preprint-unreviewed",
+      "first_seen": "2026-07-27",
+      "url": "https://arxiv.org/abs/2607.20759",
       "institutions": [
         "concordia-university"
       ],
@@ -2012,6 +2816,8 @@
       "venue": "USENIX Security 2025",
       "venue_group": "security",
       "status": "accepted",
+      "first_seen": "2026-07-27",
+      "url": "https://www.usenix.org/system/files/usenixsecurity25-ayzenshteyn.pdf",
       "institutions": [
         "ben-gurion-university"
       ],
@@ -2028,6 +2834,8 @@
       "venue": "arXiv",
       "venue_group": null,
       "status": "preprint-unreviewed",
+      "first_seen": "2026-07-21",
+      "url": "https://arxiv.org/abs/2607.17986",
       "institutions": [
         "kaust-genai-center",
         "idsia-usi-supsi"
@@ -2047,6 +2855,8 @@
       "venue": "USENIX Security 2026",
       "venue_group": "security",
       "status": "accepted-prepublication",
+      "first_seen": "2026-07-21",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan",
       "institutions": [
         "mbzuai"
       ],
@@ -2064,6 +2874,8 @@
       "venue": "ISSTA 2026",
       "venue_group": "software",
       "status": "accepted",
+      "first_seen": "2026-07-21",
+      "url": "https://arxiv.org/abs/2607.17619",
       "institutions": [
         "nanjing-university",
         "nanjing-university-aeronautics-astronautics",
@@ -2072,8 +2884,8 @@
         "nantong-university"
       ],
       "authors": [
-        "scholar:yuchenchen",
-        "scholar:yuanxiao",
+        "yuchen-chen-nju",
+        "yuan-xiao-nju",
         "chunrong-fang",
         "baowen-xu",
         "zhenyu-chen-nju",
@@ -2081,7 +2893,7 @@
         "scholar:zhouyang",
         "scholar:weifengsun",
         "scholar:davidlo",
-        "scholar:xiangchen"
+        "xiang-chen-ntu"
       ]
     },
     {
@@ -2091,6 +2903,8 @@
       "venue": "arXiv",
       "venue_group": null,
       "status": "preprint-unreviewed",
+      "first_seen": "2026-07-21",
+      "url": "https://arxiv.org/abs/2607.16487",
       "institutions": [
         "clemson-university",
         "texas-tech-university",
@@ -2113,6 +2927,8 @@
       "venue": "arXiv",
       "venue_group": null,
       "status": "preprint-unreviewed",
+      "first_seen": "2026-07-21",
+      "url": "https://arxiv.org/abs/2607.14611",
       "institutions": [
         "university-washington"
       ],
@@ -2130,6 +2946,8 @@
       "venue": "arXiv",
       "venue_group": null,
       "status": "preprint-unreviewed",
+      "first_seen": "2026-07-21",
+      "url": "https://arxiv.org/abs/2607.05120",
       "institutions": [
         "seoul-national-university",
         "largosoft",
@@ -2151,6 +2969,8 @@
       "venue": "arXiv",
       "venue_group": null,
       "status": "preprint-unreviewed",
+      "first_seen": "2026-07-21",
+      "url": "https://arxiv.org/abs/2607.18063",
       "institutions": [
         "lambda"
       ],

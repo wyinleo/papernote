@@ -49,7 +49,7 @@ TOP_VENUE_GROUPS = {
                     "acm ccs", "computer and communications security", "ndss"),
     },
     "software": {
-        "label": "软件工程/系统软件/程序设计语言",
+        "label": "软件工程与系统",
         "signals": ("icse", "fse", "ase", "issta"),
     },
     "ai": {
@@ -185,6 +185,40 @@ def registry_lookup(registry: dict[str, Any], section: str) -> dict[str, dict[st
     return lookup
 
 
+def validate_entity_registry(registry: dict[str, Any]) -> None:
+    """Fail closed on incomplete or unsupported public entity metadata."""
+    for source_name, record in registry.get("institutions", {}).items():
+        missing = {"id", "display_name", "language"} - set(record)
+        if missing:
+            raise ValueError(
+                f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: institution "
+                f"{source_name!r} missing {sorted(missing)}"
+            )
+    for source_name, record in registry.get("scholars", {}).items():
+        missing = {"id", "display_name", "publication_name", "language"} - set(record)
+        if missing:
+            raise ValueError(
+                f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: scholar "
+                f"{source_name!r} missing {sorted(missing)}"
+            )
+        for field in ("homepage", "source"):
+            value = record.get(field, "")
+            if value and not re.match(r"^https?://", value):
+                raise ValueError(
+                    f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: scholar "
+                    f"{source_name!r} has invalid {field} URL"
+                )
+        if (
+            str(record["language"]).startswith("zh")
+            and record["display_name"] != record["publication_name"]
+            and not record.get("source")
+        ):
+            raise ValueError(
+                f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: translated scholar "
+                f"{source_name!r} requires a verification source"
+            )
+
+
 def parse_affiliations(
     value: str,
     registry: dict[str, Any],
@@ -224,6 +258,8 @@ def parse_affiliations(
                 "id": record.get("id") or f"scholar:{normalize_person_name(source_author)}",
                 "name": record.get("display_name") or source_author,
                 "publication_name": publication_name,
+                "homepage": record.get("homepage", ""),
+                "profile_source": record.get("source", ""),
             })
         if authors:
             rows.append({
@@ -286,6 +322,8 @@ def build_academic_graph(
             "venue": (paper.get("venues") or [""])[0],
             "venue_group": venue_group,
             "status": paper.get("status", ""),
+            "first_seen": paper.get("first_seen", ""),
+            "url": paper.get("primary_url") or ((paper.get("urls") or [""])[0]),
             "institutions": [row["institution_id"] for row in affiliations],
             "authors": [author["id"] for row in affiliations for author in row["authors"]],
         }
@@ -322,10 +360,15 @@ def build_academic_graph(
                     "id": author_id,
                     "name": author["name"],
                     "publication_name": author["publication_name"],
+                    "homepage": author["homepage"],
+                    "profile_source": author["profile_source"],
                     "institutions": set(),
                     "papers": set(),
                     "annual_scores": {},
                 })
+                if author["homepage"] and not scholar["homepage"]:
+                    scholar["homepage"] = author["homepage"]
+                    scholar["profile_source"] = author["profile_source"]
                 scholar["institutions"].add(institution_name)
                 scholar["papers"].add(paper["id"])
                 if venue_group and author_id not in scored_scholars:
@@ -352,14 +395,33 @@ def build_academic_graph(
                 "venue_group": venue_group,
             })
 
+    publication_lookup = {item["id"]: item for item in publications}
+
     def finalize_node(node: dict[str, Any], collection_key: str) -> dict[str, Any]:
         annual_scores = node["annual_scores"]
-        return {
+        result = {
             **node,
             collection_key: sorted(node[collection_key]),
             "papers": sorted(node["papers"]),
             "verified_score": sum(item["total"] for item in annual_scores.values()),
         }
+        if collection_key == "institutions":
+            recent_papers = sorted(
+                (publication_lookup[paper_id] for paper_id in node["papers"]),
+                key=lambda item: (item.get("first_seen", ""), item["year"], item["title"]),
+                reverse=True,
+            )[:3]
+            result["recent_papers"] = [
+                {
+                    "id": paper["id"],
+                    "title": paper["title"],
+                    "year": paper["year"],
+                    "venue": paper["venue"],
+                    "url": paper["url"],
+                }
+                for paper in recent_papers
+            ]
+        return result
 
     institution_rows = [
         finalize_node(node, "scholars")
@@ -385,7 +447,7 @@ def build_academic_graph(
         "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
         "coverage": {
             "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
-            "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程/系统软件/程序设计语言、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
+            "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程与系统、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
             "indexed_papers": len(papers),
             "papers_with_affiliations": len(publications),
             "scored_top_venue_papers": sum(1 for item in publications if item["venue_group"]),
@@ -407,6 +469,7 @@ def build_payload() -> dict[str, Any]:
     cache = parse_weekly_cache()
     taxonomy = load_json(TAXONOMY_PATH)
     registry = load_json(ENTITY_REGISTRY_PATH)
+    validate_entity_registry(registry)
     week_counts: dict[str, int] = {}
     theme_counts: dict[str, dict[str, Any]] = {}
     known_topics = set(taxonomy["topics"])
