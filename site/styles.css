@@ -273,7 +273,7 @@ main {
   cursor: pointer;
 }
 
-.paper-card:hover h3 { color: var(--accent); }
+.paper-card:hover .paper-title-button { color: var(--accent); }
 .paper-card::after {
   content: "↗";
   position: absolute;
@@ -287,6 +287,17 @@ main {
 .card-meta { color: var(--muted); font-size: 12px; line-height: 1.7; }
 .card-meta strong { display: block; margin-bottom: 7px; color: var(--teal); font-weight: 700; }
 .card-body h3 { max-width: 850px; margin: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: clamp(19px, 2vw, 25px); font-weight: 500; line-height: 1.35; }
+.paper-title-button {
+  padding: 0;
+  color: inherit;
+  background: none;
+  border: 0;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.paper-author-list { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .card-summary { max-width: 850px; margin: 13px 0 0; color: var(--muted); font-size: 14px; line-height: 1.72; }
 
 .tags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
@@ -454,76 +465,18 @@ main {
 .ranking-list small { margin-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.4; }
 .ranking-list b { font-family: Georgia, serif; font-size: 24px; font-weight: 500; }
 
-.scholar-directory { margin-top: 62px; }
-.scholar-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.scholar-card {
-  min-width: 0;
-  padding: 22px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 13px;
-}
-
-.scholar-card header {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 16px;
-}
-
-.scholar-card h4 {
-  margin: 0;
-  font-family: Georgia, "Noto Serif SC", serif;
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.publication-name,
-.scholar-affiliation {
-  margin: 5px 0 0;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.55;
-}
-
-.scholar-score {
-  flex: 0 0 auto;
-  padding: 5px 8px;
+.scholar-link {
+  padding: 0;
   color: var(--teal);
-  background: var(--soft-teal);
-  border-radius: 999px;
-  font-family: Georgia, serif;
-  font-size: 12px;
+  background: none;
+  border: 0;
+  border-bottom: 1px dotted #8db3aa;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
 }
-
-.scholar-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 17px 0 0;
-  padding: 13px 0;
-  border-block: 1px solid var(--line);
-}
-
-.scholar-stats div + div { padding-left: 16px; border-left: 1px solid var(--line); }
-.scholar-stats dt { color: var(--muted); font-size: 10px; }
-.scholar-stats dd { margin: 3px 0 0; font-family: Georgia, serif; font-size: 20px; }
-.scholar-actions { min-height: 20px; margin-top: 13px; font-size: 12px; }
-.scholar-actions a { color: var(--teal); font-weight: 700; text-underline-offset: 4px; }
-.scholar-actions span { color: var(--muted); }
-.recent-papers { margin-top: 17px; }
-.recent-papers > strong { font-size: 11px; }
-.recent-papers ol { margin: 8px 0 0; padding-left: 19px; }
-.recent-papers li { padding-left: 4px; font-size: 12px; line-height: 1.45; }
-.recent-papers li + li { margin-top: 9px; }
-.recent-papers a { color: var(--ink); text-decoration-color: #a9c1ba; text-underline-offset: 3px; }
-.recent-papers small { display: block; margin-top: 2px; color: var(--muted); font-size: 10px; }
-.recent-papers .no-paper { color: var(--muted); }
+.scholar-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.ranking-scholar-link { color: var(--ink); font-weight: 700; text-align: left; }
 
 .empty-state { padding: 70px 0; text-align: center; color: var(--muted); }
 .empty-state button { padding: 8px 13px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); cursor: pointer; }
@@ -542,11 +495,24 @@ main {
 .paper-dialog::backdrop { background: rgba(10, 31, 28, .58); backdrop-filter: blur(3px); }
 .paper-dialog article { padding: clamp(28px, 6vw, 64px); }
 .dialog-close { position: sticky; top: 14px; float: right; z-index: 2; width: 38px; height: 38px; margin: 14px 14px 0 0; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); cursor: pointer; font-size: 24px; }
+.dialog-back { position: sticky; top: 14px; float: left; z-index: 2; width: 38px; height: 38px; margin: 14px 0 0 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 50%; cursor: pointer; font-size: 20px; }
 .dialog-title { max-width: 650px; margin: 12px 0 18px; font-family: Georgia, "Noto Serif SC", serif; font-size: clamp(28px, 4vw, 42px); font-weight: 500; line-height: 1.2; letter-spacing: -.035em; }
 .dialog-byline { padding-bottom: 24px; color: var(--muted); border-bottom: 1px solid var(--line); font-size: 13px; line-height: 1.6; }
 .detail-section { margin-top: 26px; }
 .detail-section h3 { margin: 0 0 9px; color: var(--accent); font-size: 12px; letter-spacing: .1em; }
 .detail-section p { margin: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: 16px; line-height: 1.85; }
+.affiliation-list { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.85; }
+.affiliation-list li + li { margin-top: 6px; }
+.dialog-scholar-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 24px 0 0; padding: 18px 0; border-block: 1px solid var(--line); }
+.dialog-scholar-stats div + div { padding-left: 18px; border-left: 1px solid var(--line); }
+.dialog-scholar-stats dt { color: var(--muted); font-size: 11px; }
+.dialog-scholar-stats dd { margin: 4px 0 0; font-family: Georgia, serif; font-size: 26px; }
+.dialog-recent-papers { margin: 0; padding-left: 20px; }
+.dialog-recent-papers li + li { margin-top: 13px; }
+.dialog-recent-papers button { padding: 0; color: var(--ink); background: none; border: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: 16px; line-height: 1.45; text-align: left; text-decoration: underline; text-decoration-color: #a9c1ba; text-underline-offset: 4px; cursor: pointer; }
+.dialog-recent-papers button:hover { color: var(--accent); }
+.dialog-recent-papers small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+.homepage-pending { color: var(--muted); font-size: 13px; }
 .dialog-actions { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 10px; }
 .dialog-actions a { padding: 10px 14px; color: var(--surface); background: var(--ink); border-radius: 8px; text-decoration: none; font-size: 13px; }
 .dialog-actions a.secondary { color: var(--ink); background: transparent; border: 1px solid var(--line); }
@@ -616,7 +582,9 @@ footer {
   .network-board { height: auto; padding: 14px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .network-board svg { display: none; }
   .network-node { position: static; width: 100%; min-height: 68px; transform: none; }
-  .network-detail, .rankings, .scholar-grid { grid-template-columns: 1fr; }
+  .network-detail, .rankings { grid-template-columns: 1fr; }
+  .dialog-scholar-stats { grid-template-columns: 1fr; gap: 12px; }
+  .dialog-scholar-stats div + div { padding: 12px 0 0; border-top: 1px solid var(--line); border-left: 0; }
   .network-detail { gap: 16px; }
   .subsection-heading { align-items: start; flex-direction: column; gap: 10px; }
 }

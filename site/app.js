@@ -15,6 +15,7 @@
     sort: "recent",
     academicYear: "all",
     academicInstitution: "",
+    dialogTrail: [],
   };
 
   const topicLabels = Object.fromEntries(
@@ -38,7 +39,24 @@
     empty: $("#emptyState"),
     dialog: $("#paperDialog"),
     dialogContent: $("#dialogContent"),
+    dialogBack: $(".dialog-back"),
   };
+
+  const scholarsById = new Map(
+    (data.academic?.scholars || []).map((scholar) => [scholar.id, scholar])
+  );
+  const scholarIdsByName = new Map();
+  scholarsById.forEach((scholar) => {
+    [scholar.name, scholar.publication_name].filter(Boolean).forEach((name) => {
+      scholarIdsByName.set(name, scholar.id);
+    });
+  });
+  const scholarIdsByPaperId = new Map(
+    (data.academic?.publications || []).map((publication) => [
+      publication.id,
+      [...new Set(publication.authors || [])],
+    ])
+  );
 
   const escapeHtml = (value = "") => String(value)
     .replaceAll("&", "&amp;")
@@ -160,17 +178,38 @@
       || `${paper.authors.slice(0, 3).join("、")}${paper.authors.length > 3 ? " 等" : ""}`;
   }
 
+  function scholarButton(name, extraClass = "") {
+    const scholarId = scholarIdsByName.get(name);
+    if (!scholarId) return `<span>${escapeHtml(name)}</span>`;
+    const scholar = scholarsById.get(scholarId);
+    return `<button class="scholar-link ${extraClass}" type="button" data-open-scholar="${escapeHtml(scholarId)}">${escapeHtml(scholar?.name || name)}</button>`;
+  }
+
+  function scholarButtonById(scholarId, extraClass = "") {
+    const scholar = scholarsById.get(scholarId);
+    return scholar
+      ? `<button class="scholar-link ${extraClass}" type="button" data-open-scholar="${escapeHtml(scholarId)}">${escapeHtml(scholar.name)}</button>`
+      : "";
+  }
+
+  function paperAuthorButtons(paper) {
+    const scholarIds = scholarIdsByPaperId.get(paper.id);
+    return scholarIds?.length
+      ? scholarIds.map((scholarId) => scholarButtonById(scholarId)).filter(Boolean).join("、")
+      : paper.authors.map((author) => scholarButton(author)).join("、");
+  }
+
   function renderPaperCard(paper) {
     return `
-      <article class="paper-card" tabindex="0" role="button" data-paper="${escapeHtml(paper.id)}"
-               aria-label="查看 ${escapeHtml(paper.title)} 的缓存精读">
+      <article class="paper-card" data-paper="${escapeHtml(paper.id)}">
         <div class="card-meta">
           <strong>${escapeHtml(paper.week)}</strong>
           <span>${escapeHtml((paper.venues || []).join(" · "))}</span><br>
           <span>${dateText(paper.first_seen)}</span>
         </div>
         <div class="card-body">
-          <h3>${escapeHtml(paper.title)}</h3>
+          <h3><button class="paper-title-button" type="button" data-open-paper="${escapeHtml(paper.id)}">${escapeHtml(paper.title)}</button></h3>
+          <p class="paper-author-list">${paperAuthorButtons(paper)}</p>
           <p class="card-summary">${escapeHtml(paperSummary(paper))}</p>
           <div class="tags">
             <span class="tag domain">${escapeHtml(paper.theme_label)}</span>
@@ -316,7 +355,7 @@
             <div><p class="eyebrow">SELECTED GROUP</p><h3>${escapeHtml(selected.name)}</h3>
               <p>${selected.score} 分 · ${selected.papers.length} 篇库内论文 · ${selected.scholars.length} 位关联学者</p>
             </div>
-            <div><strong>关联学者</strong><p>${selected.scholars.slice(0, 16).map(escapeHtml).join("、")}</p></div>
+            <div><strong>关联学者</strong><p>${selected.scholars.slice(0, 16).map((name) => scholarButton(name)).join("、")}</p></div>
             <div><strong>主要合作单位</strong><p>${partners.length ? partners.slice(0, 8).map((item) => `${escapeHtml(item.name)}（${item.weight}）`).join("、") : "当前筛选下暂无跨单位合作边"}</p></div>
           </article>` : ""}
       </section>
@@ -334,54 +373,10 @@
           <div class="subsection-heading compact"><div><p class="eyebrow">SCHOLARS</p><h3>学者优先检索序列</h3></div></div>
           <ol class="ranking-list">
             ${scholars.slice(0, 12).map((item, index) => `
-              <li><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHtml(item.name)}</strong>
+              <li><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${scholarButton(item.name, "ranking-scholar-link")}</strong>
               <small>${item.institutions.map(escapeHtml).join(" · ")}</small></div><b>${item.score}</b></li>
             `).join("")}
           </ol>
-        </div>
-      </section>
-      <section class="scholar-directory" aria-labelledby="scholarDirectoryTitle">
-        <div class="subsection-heading">
-          <div><p class="eyebrow">SCHOLAR PROFILES</p><h3 id="scholarDirectoryTitle">学者卡片</h3></div>
-          <p>姓名与主页仅在可靠来源能够对应时规范化；论文数量和最近入库记录均以 papernote 当前库为准。</p>
-        </div>
-        <div class="scholar-grid">
-          ${scholars.map((item) => `
-            <article class="scholar-card">
-              <header>
-                <div>
-                  <h4>${escapeHtml(item.name)}</h4>
-                  ${item.publication_name && item.publication_name !== item.name
-                    ? `<p class="publication-name">论文署名：${escapeHtml(item.publication_name)}</p>`
-                    : ""}
-                </div>
-                <span class="scholar-score">${item.score} 分</span>
-              </header>
-              <p class="scholar-affiliation">${item.institutions.map(escapeHtml).join(" · ") || "单位待核验"}</p>
-              <dl class="scholar-stats">
-                <div><dt>库内论文</dt><dd>${item.papers.length}</dd></div>
-                <div><dt>最近年份</dt><dd>${item.recent_papers?.[0]?.year || "—"}</dd></div>
-              </dl>
-              <div class="scholar-actions">
-                ${item.homepage
-                  ? `<a href="${escapeHtml(item.homepage)}" target="_blank" rel="noreferrer">个人主页 ↗</a>`
-                  : `<span>主页待核验</span>`}
-              </div>
-              <div class="recent-papers">
-                <strong>最近入库</strong>
-                <ol>
-                  ${(item.recent_papers || []).slice(0, 3).map((paper) => `
-                    <li>
-                      ${paper.url
-                        ? `<a href="${escapeHtml(paper.url)}" target="_blank" rel="noreferrer">${escapeHtml(paper.title)}</a>`
-                        : `<span>${escapeHtml(paper.title)}</span>`}
-                      <small>${escapeHtml(paper.venue || "")}${paper.year ? ` · ${paper.year}` : ""}</small>
-                    </li>
-                  `).join("") || "<li class=\"no-paper\">暂无可展示论文</li>"}
-                </ol>
-              </div>
-            </article>
-          `).join("")}
         </div>
       </section>
     ` : "";
@@ -391,6 +386,7 @@
         renderAcademic();
       });
     });
+    bindScholarLinks(elements.cardList);
   }
 
   function renderContent() {
@@ -425,24 +421,31 @@
     elements.empty.hidden = papers.length > 0;
 
     $$(".paper-card[data-paper]").forEach((card) => {
-      const open = () => openPaper(card.dataset.paper);
-      card.addEventListener("click", open);
-      card.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          open();
-        }
+      card.addEventListener("click", (event) => {
+        if (event.target.closest("button, a")) return;
+        openDialogEntity("paper", card.dataset.paper, true);
       });
     });
+    bindEntityLinks(elements.cardList);
   }
 
   function detailSection(label, value) {
     return value ? `<section class="detail-section"><h3>${label}</h3><p>${escapeHtml(value)}</p></section>` : "";
   }
 
-  function openPaper(id) {
+  function affiliationSection(value) {
+    if (!value) return "";
+    const rows = value.split("；").map((row) => {
+      const [institution, authorText = ""] = row.split("：", 2);
+      const authors = authorText.split("、").filter(Boolean).map((name) => scholarButton(name)).join("、");
+      return `<li><strong>${escapeHtml(institution)}</strong>${authors ? `：${authors}` : ""}</li>`;
+    });
+    return `<section class="detail-section"><h3>单位与作者</h3><ul class="affiliation-list">${rows.join("")}</ul></section>`;
+  }
+
+  function renderPaperDialog(id) {
     const paper = data.papers.find((item) => item.id === id);
-    if (!paper) return;
+    if (!paper) return false;
     const details = paper.details || {};
     const sourceLinks = details.original_links?.length
       ? details.original_links
@@ -454,12 +457,12 @@
       <p class="eyebrow">${escapeHtml(paper.theme_label)} · ${escapeHtml(paper.week)}</p>
       <h2 class="dialog-title">${escapeHtml(paper.title)}</h2>
       <p class="dialog-byline">
-        ${escapeHtml(paper.authors.join("、"))}<br>
+        ${paperAuthorButtons(paper)}<br>
         ${escapeHtml(details.venue_status || `${(paper.venues || []).join(" · ")} · ${paperStatusLabel(paper)}`)}
       </p>
       ${detailSection("方向", details.direction)}
       ${detailSection("关键词", details.keywords)}
-      ${detailSection("单位与作者", details.author_affiliations)}
+      ${affiliationSection(details.author_affiliations)}
       ${detailSection("公开或更新时间", details.public_date)}
       ${detailSection("核心问题", details.question)}
       ${detailSection("方法与贡献", details.method)}
@@ -477,7 +480,88 @@
         `).join("")}
       </div>
     `;
-    elements.dialog.showModal();
+    return true;
+  }
+
+  function renderScholarDialog(id) {
+    const scholar = scholarsById.get(id);
+    if (!scholar) return false;
+    elements.dialogContent.innerHTML = `
+      <p class="eyebrow">SCHOLAR PROFILE · VERIFIED LIBRARY VIEW</p>
+      <h2 class="dialog-title">${escapeHtml(scholar.name)}</h2>
+      <p class="dialog-byline">
+        ${scholar.publication_name && scholar.publication_name !== scholar.name
+          ? `论文署名：${escapeHtml(scholar.publication_name)}<br>`
+          : ""}
+        ${scholar.institutions.map(escapeHtml).join(" · ") || "单位待核验"}
+      </p>
+      <dl class="dialog-scholar-stats">
+        <div><dt>库内论文</dt><dd>${scholar.papers.length}</dd></div>
+        <div><dt>已核验计分</dt><dd>${scholar.verified_score || 0}</dd></div>
+        <div><dt>最近年份</dt><dd>${scholar.recent_papers?.[0]?.year || "—"}</dd></div>
+      </dl>
+      <section class="detail-section">
+        <h3>最近入库</h3>
+        <ol class="dialog-recent-papers">
+          ${(scholar.recent_papers || []).slice(0, 3).map((paper) => `
+            <li>
+              <button type="button" data-open-paper="${escapeHtml(paper.id)}">${escapeHtml(paper.title)}</button>
+              <small>${escapeHtml(paper.venue || "")}${paper.year ? ` · ${paper.year}` : ""}</small>
+            </li>
+          `).join("") || "<li>暂无可展示论文</li>"}
+        </ol>
+      </section>
+      <div class="dialog-actions">
+        ${scholar.homepage
+          ? `<a href="${escapeHtml(scholar.homepage)}" target="_blank" rel="noreferrer">访问个人主页 ↗</a>`
+          : `<span class="homepage-pending">个人主页待核验</span>`}
+      </div>
+    `;
+    return true;
+  }
+
+  function renderDialogEntity() {
+    const current = state.dialogTrail.at(-1);
+    if (!current) return;
+    const rendered = current.type === "paper"
+      ? renderPaperDialog(current.id)
+      : renderScholarDialog(current.id);
+    if (!rendered) return;
+    elements.dialogBack.hidden = state.dialogTrail.length < 2;
+    bindEntityLinks(elements.dialogContent);
+    if (!elements.dialog.open) elements.dialog.showModal();
+    elements.dialog.scrollTop = 0;
+  }
+
+  function openDialogEntity(type, id, reset = false) {
+    const key = `${type}:${id}`;
+    if (reset) state.dialogTrail = [];
+    const existingIndex = state.dialogTrail.findIndex((item) => item.key === key);
+    if (existingIndex >= 0) {
+      state.dialogTrail = state.dialogTrail.slice(0, existingIndex + 1);
+    } else {
+      state.dialogTrail.push({ type, id, key });
+    }
+    renderDialogEntity();
+  }
+
+  function bindScholarLinks(container) {
+    container.querySelectorAll("[data-open-scholar]").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        openDialogEntity("scholar", button.dataset.openScholar, !elements.dialog.open);
+      });
+    });
+  }
+
+  function bindEntityLinks(container) {
+    bindScholarLinks(container);
+    container.querySelectorAll("[data-open-paper]").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        openDialogEntity("paper", button.dataset.openPaper, !elements.dialog.open);
+      });
+    });
   }
 
   function render() {
@@ -527,7 +611,17 @@
     renderContent();
     elements.search.focus();
   });
+  elements.dialogBack.addEventListener("click", () => {
+    if (state.dialogTrail.length > 1) {
+      state.dialogTrail.pop();
+      renderDialogEntity();
+    }
+  });
   $(".dialog-close").addEventListener("click", () => elements.dialog.close());
+  elements.dialog.addEventListener("close", () => {
+    state.dialogTrail = [];
+    elements.dialogBack.hidden = true;
+  });
   elements.dialog.addEventListener("click", (event) => {
     if (event.target === elements.dialog) elements.dialog.close();
   });
