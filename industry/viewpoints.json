@@ -112,5 +112,81 @@
     "evidence_basis": "Anthropic 的智能体产品设计、训练场景、内部使用研究和外部红队实践。",
     "limitations": "以原则与自身产品经验为主，缺少跨厂商统一基准，无法直接证明框架对所有智能体有效。",
     "commercial_interest": "发布方同时开发和销售 Claude 智能体产品。"
+  },
+  {
+    "id": "microsoft-captivecrunch-2026",
+    "title": "Microsoft：CaptiveCrunch 利用旅行业 Wi-Fi 门户劫持认证与投递恶意软件",
+    "source": "Microsoft Threat Intelligence",
+    "source_type": "安全研究实验室",
+    "content_type": "威胁调查与恶意软件分析",
+    "published_at": "2026-07-31",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/",
+    "topics": ["Wi-Fi 门户", "流量劫持", "设备码钓鱼", "恶意软件"],
+    "summary": "Microsoft 报告 Storm-2945 自 2026 年 5 月起操纵酒店等共享场所的 DNS 与 HTTP 流量，把旅客重定向到设备码钓鱼和伪更新恶意软件链。",
+    "highlights": [
+      "受影响网络使用 captive portal；调查认为共同设备和管理系统可能意味着共享服务层面的入口，而不只是单个酒店被攻陷。",
+      "CornFlake Go 语言 RAT 提供持久化、键盘与剪贴板记录、浏览器凭据和会话窃取、音视频监控、文件外传与远程 shell。",
+      "文章给出 Defender 检测、狩猎查询和 IOC，并建议旅途中避免信任门户更新提示、强化设备码与 OAuth 流程监控。"
+    ],
+    "evidence_basis": "Microsoft Threat Intelligence 自 2026 年 2 月起的活动观测、恶意软件逆向、受影响网络共同特征、合作伙伴情报与公开 IOC。",
+    "limitations": "门户网络的最初入侵向量仍在调查；Storm-2945 与 Midnight Blizzard 的关联以及部分 Android 目标判断属于基于技术与受害者重叠的归因评估，底层遥测无法完全公开复核。",
+    "commercial_interest": "发布方同时提供 Microsoft Defender、Entra ID 与安全服务，防护建议与其产品生态有关。"
+  },
+  {
+    "id": "unit42-xcsset-v40-2026",
+    "title": "Unit 42：XCSSET v40 以 Xcode 项目传播并转向内存驻留与浏览器劫持",
+    "source": "Unit 42",
+    "source_type": "威胁情报与咨询",
+    "content_type": "恶意软件逆向分析",
+    "published_at": "2026-07-31",
+    "url": "https://unit42.paloaltonetworks.com/xcsset-v40-malware-analysis/",
+    "topics": ["macOS", "Xcode", "软件供应链", "浏览器劫持"],
+    "summary": "Unit 42 分析 2026 年 4 月起活动的 XCSSET v40：恶意代码注入 Xcode 项目，构建时启动四阶段加载链，随后删除落地文件并以内存模块持续窃取数据。",
+    "highlights": [
+      "报告观察到数十个合法应用项目受污染，并称这些应用合计有数千名活跃用户；新版本还会感染受害主机上的其他 Xcode 项目。",
+      "作者拆解 17 个按需下发模块，包括利用 Chrome DevTools Protocol 劫持会话、执行 JavaScript 和建立文件less reverse shell 的组件。",
+      "文章公开 C2、文件哈希、路径与检测建议，并指出 Telegram 替换模块的加密配置在采集期未取得，因此没有推断其具体内容。"
+    ],
+    "evidence_basis": "Xcode 项目样本、四阶段载荷逆向、模块与网络基础设施分析、AI 与模式匹配辅助去混淆、IOC 和向 Google 的协作披露。",
+    "limitations": "活跃用户和受污染项目数量来自 Unit 42 自身可见性；部分服务器端配置与受害范围不可见，攻击者身份和所有传播路径没有独立确认。",
+    "commercial_interest": "发布方推广 Cortex XDR、XSIAM、DNS Security、URL Filtering 与 Unit 42 事件响应服务。"
+  },
+  {
+    "id": "unit42-autonomous-ai-attacks-2026",
+    "title": "Unit 42：攻击者已把多模型与智能体工具拼成半自主漏洞利用流水线",
+    "source": "Unit 42",
+    "source_type": "威胁情报与咨询",
+    "content_type": "攻击活动调查",
+    "published_at": "2026-07-30",
+    "url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/",
+    "topics": ["攻击智能体", "漏洞利用", "Hermes Agent", "模型滥用"],
+    "summary": "Unit 42 从攻击者意外暴露的工作区还原出一套由 Hermes Agent、DeepSeek、自定义技能、MCP、代理和 Telegram 控制组成的攻击环境。",
+    "highlights": [
+      "调查确认攻击者尝试覆盖 460 多个目标，并维护 7 个漏洞的利用工具；AI 会从大批暴露系统中抽样、探测版本并自动尝试利用。",
+      "自动化 Langflow 与 n8n 攻击因目标配置和认证要求失败；确认的数据外传与 11 个 Marimo 端点命令执行来自另行开展的人工活动，二者不能混为 AI 自动攻击成功。",
+      "Hermes Agent 错把攻击者主目录开放为 HTTP 文件服务，暴露配置、密钥、脚本、目标、shell 历史与会话日志，说明自动化也会放大攻击者自身操作安全风险。"
+    ],
+    "evidence_basis": "意外公开的攻击者工作区、智能体会话日志、脚本、目标列表、基础设施痕迹与漏洞利用结果；文章链接相关 GitHub 公告和 CVE 来源。",
+    "limitations": "关键证据由单一厂商掌握，部分被攻击者删除的主机清单无法恢复；地理与行为归因是调查判断；自动化攻击未实现完整入侵，不能据此声称 AI 已独立完成端到端攻陷。",
+    "commercial_interest": "发布方同时销售 Cortex、Xpanse、威胁防护订阅和 Unit 42 AI 安全评估与事件响应服务。"
+  },
+  {
+    "id": "talos-ir-trends-2026-q2",
+    "title": "Cisco Talos Q2 事件响应：钓鱼、认证滥用与合法远程管理工具主导攻击链",
+    "source": "Cisco Talos",
+    "source_type": "安全研究实验室",
+    "content_type": "季度事件响应趋势",
+    "published_at": "2026-07-28",
+    "url": "https://blog.talosintelligence.com/ir-trends-q2-2026/",
+    "topics": ["事件响应", "钓鱼", "认证滥用", "勒索软件"],
+    "summary": "Talos 汇总 2026 年第二季度事件响应，报告钓鱼在可判断初始入口的事件中超过一半，认证滥用出现在 65% 的响应中。",
+    "highlights": [
+      "攻击者把二维码嵌入 PDF、利用受信云平台和被盗 Microsoft 365 账户传播，并用 AitM、设备码、会话令牌和自注册设备绕过 MFA。",
+      "勒索与勒索前活动占响应的 20% 以上，Sinobi 使用被木马化的 MeshAgent，Warlock 使用 Zoho Assist 无人值守代理维持远程访问。",
+      "42% 的响应存在集中日志或保留期不足；Talos 建议至少保留 90 天并把身份、网络、端点和云 API 日志送到不可由单机攻击者删除的位置。"
+    ],
+    "evidence_basis": "Cisco Talos Incident Response 2026 年第二季度案件、具体 QR 钓鱼与 ARToken 平台分析、勒索事件时间线及 MITRE ATT&CK 映射。",
+    "limitations": "公开文章未披露响应案件总数，百分比只能代表 Talos 客户与其可见性；部分攻击者归因和未来行为为分析判断，不能外推为全球基准。",
+    "commercial_interest": "发布方属于 Cisco，并推广 Talos 情报集成、事件响应和 Cisco/Splunk 安全能力。"
   }
 ]
