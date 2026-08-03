@@ -2,6 +2,7 @@
 
 - **记录类型**：完整讨论
 - **记录状态**：已完成
+- **记录来源**：用户对话
 
 ## Measuring Real-World Prompt Injection Attacks in LLM-based Resume Screening
 
