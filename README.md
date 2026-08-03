@@ -11,7 +11,7 @@
 - `papers/academic_graph.json`：由已收录论文生成的单位、学者、合作边和年度顶会计数；会公开到网页。
 - `papers/topic_taxonomy.json`：版本化的主领域与细分标签受控词表。
 - `papers/entity_registry.json`：单位与学者的稳定 ID、规范显示名和别名。
-- `inquiries/`：与论文有关的问询记录及后续追踪。
+- `inquiries/`：针对具体论文内容的问询、讨论与正文核验待办；不保存任务运行、网站改造或实体审计记录。
 - `industry/viewpoints.json`：行业文章与综述的观点摘要。
 - `industry/sources.json`：长期扫描的安全研究、威胁情报、模型机构、标准组织和咨询来源池。
 - `scripts/build_site.py`：从论文索引、周报和行业观点生成网页数据。
@@ -149,6 +149,9 @@ Classification System、IEEE Taxonomy 和 CCF 学科目录，但按本站的安�
 若运行环境只能读取题目或摘要、无法稳定取得完整正文，应在 `inquiries/YYYY/` 生成
 带官方或作者来源的人工补充名单，说明需要核验的章节和证据。用户补充 PDF 后再精读；
 在此之前不根据题目、摘要或作者自述补全方法和实验。
+
+所有问询使用 `templates/inquiry.md` 的统一格式，并且必须对应至少一篇明确论文。检索过程、
+自动化运行、站点结构、名称核验和发布状态等非论文内容不进入 `inquiries/`。
 
 稿件页眉、作者评论或未生效 DOI 即使写有会议名称，也不单独构成正式接收证据。会议
 官方程序不可访问且 DOI 尚未注册时，条目继续按 arXiv“预印”保存，并在当期问询中记录
