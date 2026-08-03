@@ -522,6 +522,7 @@ def build_payload() -> dict[str, Any]:
         missing = required_viewpoint_fields - set(item)
         if missing:
             raise ValueError(f"{VIEWPOINTS_PATH}: {item.get('id', '<unknown>')} missing {sorted(missing)}")
+    viewpoints.sort(key=lambda item: (item["published_at"], item["id"]), reverse=True)
     academic = build_academic_graph(papers, registry)
 
     return {

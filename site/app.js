@@ -398,10 +398,15 @@
     }
     if (state.mode === "viewpoints") {
       const query = state.query.toLocaleLowerCase("zh-CN");
-      const items = data.viewpoints.filter((item) =>
-        (state.group === "all" || item.source_type === state.group)
-        && (!query || searchable(item).includes(query))
-      );
+      const items = data.viewpoints
+        .filter((item) =>
+          (state.group === "all" || item.source_type === state.group)
+          && (!query || searchable(item).includes(query))
+        )
+        .sort((a, b) =>
+          b.published_at.localeCompare(a.published_at)
+          || a.title.localeCompare(b.title, "zh-CN")
+        );
       elements.contentEyebrow.textContent = "INDUSTRY NOTES";
       elements.contentTitle.textContent = "行业观点";
       elements.resultCount.textContent = `${items.length} 条`;
