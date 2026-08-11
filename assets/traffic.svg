@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="270" viewBox="0 0 900 270" role="img" aria-labelledby="title desc">
+  <title id="title">papernote 访问趋势等待配置</title>
+  <desc id="desc">配置 GoatCounter 后，此处将显示最近 30 天访问趋势。</desc>
+  <rect width="900" height="270" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="450" y="118" text-anchor="middle" fill="#24292f" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="20" font-weight="600">访问趋势等待统计服务配置</text>
+  <text x="450" y="151" text-anchor="middle" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="13">设置 GOATCOUNTER_CODE 与 GOATCOUNTER_API_TOKEN 后每日自动更新</text>
+</svg>

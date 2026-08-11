@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - assets/traffic.svg
   workflow_dispatch:
 
 permissions:
@@ -24,6 +26,12 @@ jobs:
 
       - name: Build site data
         run: python3 scripts/build_site.py
+
+      - name: Configure private analytics
+        if: ${{ vars.GOATCOUNTER_CODE != '' }}
+        env:
+          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+        run: python3 scripts/configure_analytics.py --site-code "$GOATCOUNTER_CODE"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6

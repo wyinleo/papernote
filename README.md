@@ -35,6 +35,30 @@ python3 -m http.server 8000 -d site
 随后访问 <http://localhost:8000>。推送到 `main` 后，GitHub Actions 会重新生成
 `site/data.js` 并自动发布 `site/` 到 GitHub Pages。
 
+## 访问趋势
+
+![papernote 最近 30 天访问趋势](assets/traffic.svg)
+
+网站的后台访问统计采用 GoatCounter，页面前端不显示访问数字。图表由
+`.github/workflows/traffic.yml` 每日读取最近 30 天的聚合数据并更新；统计 API token
+只保存在 GitHub Actions Secret 中，不进入仓库或网页。
+
+首次启用需要在 GoatCounter 创建站点，然后在 GitHub 仓库中配置：
+
+- Actions variable `GOATCOUNTER_CODE`：GoatCounter 站点代码，即
+  `https://<code>.goatcounter.com/` 中的 `<code>`；
+- Actions secret `GOATCOUNTER_API_TOKEN`：具有统计读取权限的 API token。
+
+配置后手动运行一次 **Update traffic chart** 和 **Deploy papernote to GitHub Pages**。
+未配置变量时，Pages 仍会正常部署，但不会加载统计脚本；趋势工作流会安全跳过。
+
+## 隐私
+
+本站的访问统计不使用 Cookie、`localStorage` 或跨站跟踪标识，并尊重浏览器的
+“请勿跟踪”（DNT）设置。GoatCounter 只向仓库提供按日期汇总的访问量；README
+图表不包含 IP 地址、来源明细或任何个人访问记录。统计服务的具体数据处理规则以
+[GoatCounter 隐私说明](https://www.goatcounter.com/help/privacy)为准。
+
 网页的“学术关系”视图按 CCF 学科口径展示“网络与信息安全”“软件工程与系统”
 “人工智能”，并展示单位排行、学者列表和跨单位合作网络。学者姓名在论文卡片、论文
 精读、单位关联学者和排行中作为统一入口；点击后以弹层显示规范姓名、论文署名、当前
