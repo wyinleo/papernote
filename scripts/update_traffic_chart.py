@@ -8,6 +8,7 @@ import datetime as dt
 import json
 import os
 import re
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -41,8 +42,20 @@ def fetch_stats(site_code: str, token: str, today: dt.date) -> dict:
             "User-Agent": "papernote-traffic-chart/1.0",
         },
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as error:
+        response_text = error.read().decode("utf-8", errors="replace").strip()
+        try:
+            response_payload = json.loads(response_text)
+            detail = response_payload.get("error") or response_payload.get("errors")
+        except json.JSONDecodeError:
+            detail = response_text
+        message = f"GoatCounter API returned HTTP {error.code}"
+        if detail:
+            message += f": {detail}"
+        raise SystemExit(message) from None
 
 
 def daily_series(payload: dict, today: dt.date) -> list[tuple[dt.date, int]]:

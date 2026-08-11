@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - .github/workflows/traffic.yml
+      - scripts/update_traffic_chart.py
   schedule:
     - cron: "17 1 * * *"
   workflow_dispatch:
