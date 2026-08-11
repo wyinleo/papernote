@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "reference_systems": [
     {
       "name": "ACM Computing Classification System",
@@ -32,7 +32,9 @@
         "llm-security",
         "web-agent",
         "coding-agent",
-        "reward-hacking"
+        "reward-hacking",
+        "aiops",
+        "resource-exhaustion"
       ]
     },
     {
@@ -47,7 +49,9 @@
         "web-to-app-tracking",
         "tapjacking",
         "ui-security",
-        "permission-bypass"
+        "permission-bypass",
+        "mobile-agent",
+        "android-accessibility"
       ]
     },
     {
@@ -88,7 +92,13 @@
         "embedded-security",
         "firmware-fuzzing",
         "em-side-channel",
-        "persistent-state"
+        "persistent-state",
+        "gpu",
+        "fpga",
+        "confidential-computing",
+        "side-channel",
+        "privilege-escalation",
+        "integrity-violation"
       ]
     },
     {
@@ -100,7 +110,10 @@
         "desynchronization",
         "tls",
         "network-side-channel",
-        "ip-leakage"
+        "ip-leakage",
+        "dns",
+        "dns-cache-poisoning",
+        "dns-amplification"
       ]
     }
   ],
@@ -114,7 +127,9 @@
     "adaptive-red-teaming": {"label": "自适应红队", "facet": "method"},
     "agent-memory": {"label": "智能体记忆", "facet": "object"},
     "agent-security": {"label": "智能体安全", "facet": "object"},
+    "aiops": {"label": "智能运维系统", "facet": "object"},
     "android": {"label": "Android", "facet": "object"},
+    "android-accessibility": {"label": "Android 无障碍服务", "facet": "object"},
     "api-misuse": {"label": "API 误用", "facet": "problem"},
     "application-security": {"label": "应用安全", "facet": "object"},
     "authentication": {"label": "身份认证", "facet": "object"},
@@ -125,6 +140,9 @@
     "coding-agent": {"label": "编程智能体", "facet": "object"},
     "data-integrity": {"label": "数据完整性", "facet": "problem"},
     "denial-of-service": {"label": "拒绝服务", "facet": "problem"},
+    "dns": {"label": "域名系统", "facet": "object"},
+    "dns-amplification": {"label": "DNS 放大攻击", "facet": "problem"},
+    "dns-cache-poisoning": {"label": "DNS 缓存投毒", "facet": "problem"},
     "document-security": {"label": "文档安全", "facet": "object"},
     "dynamic-analysis": {"label": "动态分析", "facet": "method"},
     "end-to-end-encryption": {"label": "端到端加密", "facet": "object"},
@@ -133,8 +151,11 @@
     "em-side-channel": {"label": "电磁侧信道", "facet": "problem"},
     "embedded-security": {"label": "嵌入式安全", "facet": "object"},
     "firmware-fuzzing": {"label": "固件模糊测试", "facet": "method"},
+    "fpga": {"label": "FPGA", "facet": "object"},
     "fuzzing": {"label": "模糊测试", "facet": "method"},
     "honeypot": {"label": "蜜罐", "facet": "method"},
+    "internet-measurement": {"label": "互联网测量", "facet": "method"},
+    "integrity-violation": {"label": "完整性破坏", "facet": "problem"},
     "knowledge-mining": {"label": "知识挖掘", "facet": "method"},
     "indirect-prompt-injection": {"label": "间接提示注入", "facet": "problem"},
     "ios": {"label": "iOS", "facet": "object"},
@@ -148,6 +169,7 @@
     "memory-poisoning": {"label": "记忆投毒", "facet": "problem"},
     "multimodal-analysis": {"label": "多模态分析", "facet": "method"},
     "mobile-security": {"label": "移动安全", "facet": "object"},
+    "mobile-agent": {"label": "移动智能体", "facet": "object"},
     "multi-agent-security": {"label": "多智能体安全", "facet": "object"},
     "network-side-channel": {"label": "网络侧信道", "facet": "problem"},
     "operating-system-security": {"label": "操作系统安全", "facet": "object"},
@@ -156,6 +178,7 @@
     "permission-bypass": {"label": "权限绕过", "facet": "problem"},
     "persistent-memory": {"label": "持久记忆", "facet": "object"},
     "persistent-state": {"label": "持久状态", "facet": "object"},
+    "privilege-escalation": {"label": "权限提升", "facet": "problem"},
     "php": {"label": "PHP", "facet": "object"},
     "privacy": {"label": "隐私", "facet": "problem"},
     "program-analysis": {"label": "程序分析", "facet": "method"},
@@ -164,11 +187,13 @@
     "protocol-analysis": {"label": "协议分析", "facet": "method"},
     "rag-security": {"label": "检索增强生成安全", "facet": "object"},
     "retrieval-poisoning": {"label": "检索投毒", "facet": "problem"},
+    "resource-exhaustion": {"label": "资源耗尽", "facet": "problem"},
     "reward-hacking": {"label": "奖励投机", "facet": "problem"},
     "secure-code-generation": {"label": "安全代码生成", "facet": "object"},
     "self-hosted-agent": {"label": "自托管智能体", "facet": "object"},
     "sideloading": {"label": "侧载", "facet": "problem"},
     "semantic-testing": {"label": "语义约束测试", "facet": "method"},
+    "side-channel": {"label": "侧信道", "facet": "problem"},
     "software-supply-chain": {"label": "软件供应链", "facet": "object"},
     "systematization-of-knowledge": {"label": "知识体系化", "facet": "artifact"},
     "taint-analysis": {"label": "污点分析", "facet": "method"},
@@ -180,6 +205,8 @@
     "web-agent": {"label": "网页智能体", "facet": "object"},
     "web-to-app-tracking": {"label": "网页至应用跟踪", "facet": "problem"},
     "webauthn": {"label": "WebAuthn", "facet": "object"},
+    "gpu": {"label": "GPU", "facet": "object"},
+    "confidential-computing": {"label": "机密计算", "facet": "object"},
     "xss": {"label": "跨站脚本", "facet": "problem"},
     "zero-day": {"label": "零日漏洞", "facet": "problem"},
     "5g": {"label": "5G", "facet": "object"},
@@ -214,6 +241,16 @@
     "usenix-sec26-guo-pyguard": "software-application-security",
     "usenix-sec26-gegenhuber-transcript": "network-communication-security",
     "arxiv-2607-26719-lily": "software-application-security",
-    "arxiv-2607-27080-memsecbench": "ai-security"
+    "arxiv-2607-27080-memsecbench": "ai-security",
+    "usenix-sec26-luo-agent-dos": "ai-security",
+    "usenix-sec26-pasquini-aiops": "ai-security",
+    "usenix-sec26-jia-pangolin": "mobile-iot-security",
+    "usenix-sec26-duong-firmrebugger": "systems-hardware-security",
+    "usenix-sec26-ben-simhon-dns": "network-communication-security",
+    "usenix-sec26-xu-dalens": "network-communication-security",
+    "usenix-sec26-kim-timeslice-sandwich": "systems-hardware-security",
+    "usenix-sec26-klix-silicon-heist": "systems-hardware-security",
+    "usenix-sec26-zhang-stackwarp": "systems-hardware-security",
+    "arxiv-2608-08939-not-a11y": "mobile-iot-security"
   }
 }

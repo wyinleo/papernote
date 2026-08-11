@@ -188,5 +188,81 @@
     "evidence_basis": "Cisco Talos Incident Response 2026 年第二季度案件、具体 QR 钓鱼与 ARToken 平台分析、勒索事件时间线及 MITRE ATT&CK 映射。",
     "limitations": "公开文章未披露响应案件总数，百分比只能代表 Talos 客户与其可见性；部分攻击者归因和未来行为为分析判断，不能外推为全球基准。",
     "commercial_interest": "发布方属于 Cisco，并推广 Talos 情报集成、事件响应和 Cisco/Splunk 安全能力。"
+  },
+  {
+    "id": "microsoft-deadlock-ransomware-2026",
+    "title": "Microsoft：DeadLock 用 Rust 加密器、Session 与链上配置构建去中心化勒索恢复体系",
+    "source": "Microsoft Threat Intelligence",
+    "source_type": "安全研究实验室",
+    "content_type": "恶意软件逆向与威胁调查",
+    "published_at": "2026-08-10",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/",
+    "topics": ["勒索软件", "Rust", "区块链基础设施", "Session"],
+    "summary": "Microsoft 逆向 DeadLock 的 Rust 加密器及恢复站，说明攻击者怎样把 Polygon 链上配置、Session 去中心化消息和对象存储组合为较难整体中断的勒索基础设施。",
+    "highlights": [
+      "Microsoft 称该家族 2025 年 7 月首次出现；截至 2026 年 7 月，其泄露站声称超过 80 个受害组织，且多组攻击者包括 Lynx/INC 生态关联方使用过该载荷。",
+      "样本在内存占用超过 29% 或 CPU 负载超过 70% 时暂停新文件派发，并按文件大小选择全量或分块 XChaCha20 加密，以维持主机可操作性。",
+      "恢复体系从 Polygon 合约读取可更新代理与泄露内容，使用 Session 传递协商消息；加密器以 Curve25519 封装每文件密钥，文章未发现无需攻击者私钥的实用解密路径。"
+    ],
+    "evidence_basis": "Microsoft 威胁遥测、DeadLock Windows 样本逆向、文件格式与密码流程复现、链上合约和恢复站代码分析。",
+    "limitations": "受害组织数来自攻击者泄露站声称，底层客户遥测与归因证据不能公开复核；分析的是特定样本，其中提权逻辑未成功，不能据此概括所有部署链。",
+    "commercial_interest": "发布方同时推广 Microsoft Defender XDR、Defender for Endpoint 与相关威胁防护能力。"
+  },
+  {
+    "id": "unit42-aeternum-blockchain-c2-2026",
+    "title": "Unit 42：Aeternum 把 Polygon 智能合约变成恶意软件 C2 解析层",
+    "source": "Unit 42",
+    "source_type": "威胁情报与咨询",
+    "content_type": "恶意软件逆向分析",
+    "published_at": "2026-08-10",
+    "url": "https://unit42.paloaltonetworks.com/aeternum-blockchain-c2-analysis/",
+    "topics": ["区块链 C2", "Polygon", "恶意加载器", "Telegram"],
+    "summary": "Unit 42 分析三组 Aeternum 相关样本：恶意程序通过公共 Polygon RPC 查询智能合约得到后续命令或域名，再从 GitHub 取载荷并用 Telegram 等渠道外传。",
+    "highlights": [
+      "首个 UPX 打包的 C++ 加载器在动态分析中访问 22 个合约地址，并以公开 RPC 的 `eth_call` 查询固定函数选择器。",
+      "载荷用以自身为盐的 PBKDF2-HMAC-SHA256 和 AES-GCM 解密，设计强度不足；后续 DLL 含硬编码 Telegram bot token 与 chat ID，可直接关联其外传流程。",
+      "另外两组样本包含 XWorm、XMRig 与 Python 后门；三个合约版本保留相同核心函数选择器，但部分行为与 ZingoStealer 相似不足以完成归因。"
+    ],
+    "evidence_basis": "三个恶意样本的静态与动态逆向、Polygon JSON-RPC 流量、EVM 字节码、GitHub 载荷、Telegram 请求和受控 XWorm 面板复现。",
+    "limitations": "三组样本由代码与合约模式关联，不能证明全部由同一操作者部署；其中一个样本未从静态代码恢复合约地址，受害范围和实际命令执行规模也不可见。",
+    "commercial_interest": "发布方推广 Advanced WildFire、Cortex XDR/XSIAM、Prisma Cloud 与 Unit 42 事件响应服务。"
+  },
+  {
+    "id": "unit42-chaindrop-npm-worm-2026",
+    "title": "Unit 42：ChainDrop npm 蠕虫窃取 CI 内存凭据并用链上交易轮换 C2",
+    "source": "Unit 42",
+    "source_type": "威胁情报与咨询",
+    "content_type": "软件供应链事件分析",
+    "published_at": "2026-08-06",
+    "url": "https://unit42.paloaltonetworks.com/chaindrop-npm-worm-analysis/",
+    "topics": ["npm", "软件供应链", "CI 凭据", "区块链 C2"],
+    "summary": "ChainDrop 在保留合法包功能的同时加入 preinstall 钩子，窃取 npm、GitHub、云与 CI 凭据并自动重发感染版本；其 C2 域名可通过一次 Ethereum 合约交易整体轮换。",
+    "highlights": [
+      "Unit 42 称感染版本涉及 400 多个 npm 包；调查观察到 10 个环境中的执行，并发现 5 个候选受害账户下 453 个符合外传模式的公开 GitHub 仓库。",
+      "嵌入式 Python 辅助程序读取 GitHub Actions `Runner.Worker` 的 `/proc` 内存以抓取短时 OIDC token；另一条路径能用可信发布交换获取 npm 发布凭据，使恶意包仍带有效 provenance。",
+      "2026 年 8 月 4 日，操作者用一次链上交易把活动 C2 域名换成新注册域名；仅回滚 latest 标签不能清除 lockfile、缓存、镜像和 CI tarball 中已固定的恶意版本。"
+    ],
+    "evidence_basis": "感染 npm 包与混淆载荷逆向、进程行为检测、GitHub 仓库模式、npm 发布链、智能合约交易和受害网络连接观测。",
+    "limitations": "453 个仓库所属账户只是候选受害者，不能全部确认；与 Shai-Hulud 的代码谱系相似但源码已公开，无法据此确认同一操作者；分析重点来自一个感染包样本。",
+    "commercial_interest": "发布方推广 Koi Agentic Endpoint Security、Cortex XDR、Prisma Cloud、Idira 与 Unit 42 服务。"
+  },
+  {
+    "id": "talos-ai-weaponization-evidence-2026",
+    "title": "Cisco Talos：从攻击者工作区还原 AI 在漏洞利用与恶意自动化中的真实作用",
+    "source": "Cisco Talos",
+    "source_type": "安全研究实验室",
+    "content_type": "攻击活动与工具链调查",
+    "published_at": "2026-08-04",
+    "url": "https://blog.talosintelligence.com/keep-going-bro-youve-got-this-a-data-driven-look-at-how-adversaries-are-weaponizing-ai/",
+    "topics": ["攻击智能体", "漏洞利用", "模型护栏", "威胁调查"],
+    "summary": "Talos 基于泄露或回收的提示记录、工作区和工具输出区分 AI 辅助开发、持久自主 Agent、合法漏洞赏金与恶意利用，强调不能把所有自动化攻击都归因于 AI。",
+    "highlights": [
+      "一个名为 Alex 的持久 OpenClaw Agent 对 Telegram Mini Apps 利用真实认证和授权缺陷，其中一例导出 1,300 多名用户与数百条钱包记录并准备提现。",
+      "React2Shell 流水线处理来源规模达 9,000 万 URL 的列表，当前目标集含 9,180 台主机，已收集 3,048 个源码文件、312 MB；代码仍存在错误标签、脆弱检测与夸大功能，显示 AI 放大吞吐而非自动创造高水平漏洞研究。",
+      "另一挖矿链控制最多 582 个矿工，但会话只证明 AI 充当系统管理与开发助手，不能直接证明其创建或部署整条攻击链；合法 Bugcrowd 工作区则形成 40 多条有证据树的发现。"
+    ],
+    "evidence_basis": "攻击者提示与会话日志、Agent 配置和持久记忆、源码与扫描输出、目标清单、数据库导出、矿池遥测及漏洞赏金证据目录。",
+    "limitations": "材料来自 Talos 可见的少量工作区，样本选择有偏；部分目标授权状态和操作者身份无法确认，重建链路含分析推断，且多项底层证据不能公开供独立复现。",
+    "commercial_interest": "发布方属于 Cisco，并推广 Talos 情报、事件响应及 Cisco 安全能力。"
   }
 ]

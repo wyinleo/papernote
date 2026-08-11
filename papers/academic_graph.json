@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-03T14:13:29+08:00",
+  "generated_at": "2026-08-11T10:55:02+08:00",
   "coverage": {
     "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
     "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程与系统、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
-    "indexed_papers": 28,
-    "papers_with_affiliations": 20,
-    "scored_top_venue_papers": 11
+    "indexed_papers": 38,
+    "papers_with_affiliations": 30,
+    "scored_top_venue_papers": 20
   },
   "categories": [
     {
@@ -27,6 +27,50 @@
   ],
   "institutions": [
     {
+      "id": "fudan-university",
+      "name": "复旦大学",
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky",
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "scholars": [
+        "Chengyuan Zhou",
+        "Feng Xue",
+        "Geng Hong",
+        "Jiaqi Luo",
+        "Ke Li",
+        "Letian Yuan",
+        "Songyang Peng",
+        "Tian Chen",
+        "Tianhao Bai",
+        "Tong Bu",
+        "Xudong Pan",
+        "Youkun Shi",
+        "Zhengmin Yu",
+        "刘丰毓",
+        "张源",
+        "张磊",
+        "戴嘉润",
+        "杨珉"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
+        "2025": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 3
+    },
+    {
       "id": "nanyang-technological-university",
       "name": "Nanyang Technological University",
       "papers": [
@@ -43,39 +87,6 @@
       ],
       "annual_scores": {
         "2026": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2
-    },
-    {
-      "id": "fudan-university",
-      "name": "复旦大学",
-      "papers": [
-        "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky"
-      ],
-      "scholars": [
-        "Chengyuan Zhou",
-        "Feng Xue",
-        "Jiaqi Luo",
-        "Ke Li",
-        "Letian Yuan",
-        "Tian Chen",
-        "Tianhao Bai",
-        "Youkun Shi",
-        "Zhengmin Yu",
-        "刘丰毓",
-        "张源",
-        "张磊",
-        "戴嘉润",
-        "杨珉"
-      ],
-      "annual_scores": {
-        "2025": {
           "security": 2,
           "software": 0,
           "ai": 0,
@@ -170,6 +181,48 @@
       "verified_score": 1
     },
     {
+      "id": "cispa",
+      "name": "CISPA Helmholtz Center for Information Security",
+      "papers": [
+        "usenix-sec26-zhang-stackwarp"
+      ],
+      "scholars": [
+        "Daniel Weber",
+        "Fabian Thomas",
+        "Michael Schwarz",
+        "Ruiyi Zhang",
+        "Tristan Hornetz"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "data61-csiro",
+      "name": "Data61 CSIRO",
+      "papers": [
+        "usenix-sec26-duong-firmrebugger"
+      ],
+      "scholars": [
+        "Surya Nepal"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "duke-university",
       "name": "Duke University",
       "papers": [
@@ -178,6 +231,47 @@
       "scholars": [
         "Neil Zhenqiang Gong",
         "Yuqi Jia"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "eth-zurich",
+      "name": "ETH Zurich",
+      "papers": [
+        "usenix-sec26-xu-dalens"
+      ],
+      "scholars": [
+        "Adrian Perrig",
+        "Liwen Xu",
+        "Zechao Cai"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "george-mason-university",
+      "name": "George Mason University",
+      "papers": [
+        "usenix-sec26-pasquini-aiops"
+      ],
+      "scholars": [
+        "Evgenios M. Kornaropoulos",
+        "Giuseppe Ateniese"
       ],
       "annual_scores": {
         "2026": {
@@ -200,6 +294,26 @@
         "Yanjun Zhang",
         "Yi Liu",
         "Zhihao Chen"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "hebrew-university-jerusalem",
+      "name": "Hebrew University of Jerusalem",
+      "papers": [
+        "usenix-sec26-ben-simhon-dns"
+      ],
+      "scholars": [
+        "Amit Klein",
+        "Omer Ben-Simhon"
       ],
       "annual_scores": {
         "2026": {
@@ -250,6 +364,51 @@
       "verified_score": 1
     },
     {
+      "id": "korea-university",
+      "name": "Korea University",
+      "papers": [
+        "usenix-sec26-kim-timeslice-sandwich"
+      ],
+      "scholars": [
+        "Gyeongsup Lim",
+        "Hodong Kim",
+        "Junbeom Hur",
+        "Youngjoo Shin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "mpi-security-privacy",
+      "name": "Max Planck Institute for Security and Privacy",
+      "papers": [
+        "usenix-sec26-klix-silicon-heist"
+      ],
+      "scholars": [
+        "Christof Paar",
+        "Felix Hahn",
+        "Maik Ender",
+        "Nils Albartus",
+        "Simon Klix"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "mbzuai",
       "name": "Mohamed bin Zayed University of Artificial Intelligence",
       "papers": [
@@ -260,6 +419,28 @@
         "Hongyan Chang",
         "Ting Yu",
         "Xinjian Luo"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "rsac-labs",
+      "name": "RSAC Labs",
+      "papers": [
+        "usenix-sec26-pasquini-aiops"
+      ],
+      "scholars": [
+        "Athanasios Theocharis",
+        "Dario Pasquini",
+        "Omer Akgul",
+        "Petros Efstathopoulos"
       ],
       "annual_scores": {
         "2026": {
@@ -304,6 +485,25 @@
         "2026": {
           "security": 0,
           "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "suny-binghamton",
+      "name": "State University of New York at Binghamton",
+      "papers": [
+        "usenix-sec26-kim-timeslice-sandwich"
+      ],
+      "scholars": [
+        "Seunghee Shin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
           "ai": 0,
           "total": 1
         }
@@ -373,6 +573,28 @@
       "verified_score": 1
     },
     {
+      "id": "university-of-adelaide",
+      "name": "University of Adelaide",
+      "papers": [
+        "usenix-sec26-duong-firmrebugger"
+      ],
+      "scholars": [
+        "Damith C. Ranasinghe",
+        "Guy Farrelly",
+        "Mathew Duong",
+        "Michael Chesser"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "ualberta-amii",
       "name": "University of Alberta / Alberta Machine Intelligence Institute (Amii)",
       "papers": [
@@ -421,6 +643,25 @@
       ],
       "annual_scores": {
         "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "university-of-massachusetts",
+      "name": "University of Massachusetts",
+      "papers": [
+        "usenix-sec26-klix-silicon-heist"
+      ],
+      "scholars": [
+        "Russell Tessier"
+      ],
+      "annual_scores": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -498,6 +739,68 @@
       ],
       "scholars": [
         "Steven Jiang"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "shanghai-innovation-institute",
+      "name": "上海创智学院",
+      "papers": [
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "scholars": [
+        "Xudong Pan"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "information-engineering-university",
+      "name": "中国人民解放军信息工程大学",
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "scholars": [
+        "Enzhou Song",
+        "Jiangan Ji",
+        "Ruijie Cai",
+        "Shengli Liu",
+        "Xiaokang Yin",
+        "Zhipeng Jia"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "advanced-computing-intelligence-engineering-lab",
+      "name": "先进计算与智能工程实验室",
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "scholars": [
+        "Shuitao Gan"
       ],
       "annual_scores": {
         "2026": {
@@ -609,6 +912,26 @@
       "verified_score": 1
     },
     {
+      "id": "skl-mathematical-engineering-advanced-computing",
+      "name": "数学工程与先进计算国家重点实验室",
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "scholars": [
+        "Hangtian Liu",
+        "Jinglei Tan"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "zhejiang-sci-tech-university",
       "name": "浙江理工大学",
       "papers": [
@@ -616,6 +939,44 @@
       ],
       "scholars": [
         "Jianting Ning"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "tsinghua-insc",
+      "name": "清华大学网络科学与网络空间研究院",
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "scholars": [
+        "Chao Zhang"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "jcss-tsinghua-science-city",
+      "name": "清华大学网络科学与网络空间研究院—科学城（广州）数字科技集团有限公司系统安全联合研究中心",
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "scholars": [
+        "Chao Zhang"
       ],
       "annual_scores": {
         "2026": {
@@ -639,6 +1000,25 @@
       ],
       "annual_scores": {
         "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "hkust-guangzhou",
+      "name": "香港科技大学（广州）",
+      "papers": [
+        "usenix-sec26-xu-dalens"
+      ],
+      "scholars": [
+        "Huayi Duan"
+      ],
+      "annual_scores": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -749,6 +1129,22 @@
       ],
       "scholars": [
         "Ziming Zhao"
+      ],
+      "annual_scores": {},
+      "verified_score": 0
+    },
+    {
+      "id": "radboud-university",
+      "name": "Radboud University",
+      "papers": [
+        "arxiv-2608-08939-not-a11y"
+      ],
+      "scholars": [
+        "Derqui Andrea",
+        "Faatin Alvi",
+        "Kaushal Punjabi",
+        "Rahul Deivasigamani",
+        "Stjepan Picek"
       ],
       "annual_scores": {},
       "verified_score": 0
@@ -876,20 +1272,27 @@
   ],
   "scholars": [
     {
-      "id": "scholar:youkunshi",
+      "id": "youkun-shi-fudan",
       "name": "Youkun Shi",
       "publication_name": "Youkun Shi",
       "homepage": "",
-      "profile_source": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
       "institutions": [
         "复旦大学",
         "香港理工大学"
       ],
       "papers": [
         "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky"
+        "usenix-sec25-shi-xssky",
+        "usenix-sec26-luo-agent-dos"
       ],
       "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
         "2025": {
           "security": 2,
           "software": 0,
@@ -897,8 +1300,15 @@
           "total": 2
         }
       },
-      "verified_score": 2,
+      "verified_score": 3,
       "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        },
         {
           "id": "usenix-sec25-shi-xssky",
           "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
@@ -926,9 +1336,16 @@
       ],
       "papers": [
         "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky"
+        "usenix-sec25-shi-xssky",
+        "usenix-sec26-luo-agent-dos"
       ],
       "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
         "2025": {
           "security": 2,
           "software": 0,
@@ -936,8 +1353,15 @@
           "total": 2
         }
       },
-      "verified_score": 2,
+      "verified_score": 3,
       "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        },
         {
           "id": "usenix-sec25-shi-xssky",
           "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
@@ -965,9 +1389,16 @@
       ],
       "papers": [
         "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky"
+        "usenix-sec25-shi-xssky",
+        "usenix-sec26-luo-agent-dos"
       ],
       "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
         "2025": {
           "security": 2,
           "software": 0,
@@ -975,8 +1406,15 @@
           "total": 2
         }
       },
-      "verified_score": 2,
+      "verified_score": 3,
       "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        },
         {
           "id": "usenix-sec25-shi-xssky",
           "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
@@ -1004,9 +1442,16 @@
       ],
       "papers": [
         "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky"
+        "usenix-sec25-shi-xssky",
+        "usenix-sec26-luo-agent-dos"
       ],
       "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
         "2025": {
           "security": 2,
           "software": 0,
@@ -1014,14 +1459,66 @@
           "total": 2
         }
       },
-      "verified_score": 2,
+      "verified_score": 3,
       "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        },
         {
           "id": "usenix-sec25-shi-xssky",
           "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
           "year": 2025,
           "venue": "USENIX Security 2025",
           "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        },
+        {
+          "id": "usenix-sec25-liu-agentfuzz",
+          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
+    },
+    {
+      "id": "jiaqi-luo-fudan",
+      "name": "Jiaqi Luo",
+      "publication_name": "Jiaqi Luo",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
         },
         {
           "id": "usenix-sec25-liu-agentfuzz",
@@ -1072,6 +1569,37 @@
       ]
     },
     {
+      "id": "adrian-perrig",
+      "name": "Adrian Perrig",
+      "publication_name": "Adrian Perrig",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen",
+      "institutions": [
+        "ETH Zurich"
+      ],
+      "papers": [
+        "usenix-sec26-xu-dalens"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-xu-dalens",
+          "title": "DaLens: Charting DNS Self-Amplification Threats at Large",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen"
+        }
+      ]
+    },
+    {
       "id": "aljosha-judmayer",
       "name": "Aljosha Judmayer",
       "publication_name": "Aljosha Judmayer",
@@ -1099,6 +1627,100 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/gegenhuber"
+        }
+      ]
+    },
+    {
+      "id": "amit-klein",
+      "name": "Amit Klein",
+      "publication_name": "Amit Klein",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon",
+      "institutions": [
+        "Hebrew University of Jerusalem"
+      ],
+      "papers": [
+        "usenix-sec26-ben-simhon-dns"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-ben-simhon-dns",
+          "title": "DNS Cache Poisoning Like it’s 2006",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon"
+        }
+      ]
+    },
+    {
+      "id": "athanasios-theocharis",
+      "name": "Athanasios Theocharis",
+      "publication_name": "Athanasios Theocharis",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini",
+      "institutions": [
+        "RSAC Labs"
+      ],
+      "papers": [
+        "usenix-sec26-pasquini-aiops"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-pasquini-aiops",
+          "title": "When AIOps Become “AI Oops”: Subverting LLM-driven IT Operations via Telemetry Manipulation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
+      "id": "chao-zhang-tsinghua",
+      "name": "Chao Zhang",
+      "publication_name": "Chao Zhang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "清华大学网络科学与网络空间研究院",
+        "清华大学网络科学与网络空间研究院—科学城（广州）数字科技集团有限公司系统安全联合研究中心"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
         }
       ]
     },
@@ -1165,6 +1787,68 @@
       ]
     },
     {
+      "id": "christof-paar",
+      "name": "Christof Paar",
+      "publication_name": "Christof Paar",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix",
+      "institutions": [
+        "Max Planck Institute for Security and Privacy"
+      ],
+      "papers": [
+        "usenix-sec26-klix-silicon-heist"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-klix-silicon-heist",
+          "title": "Silicon Heist: (Ransom) Attacks for AMD Cloud FPGAs via Privilege Escalation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix"
+        }
+      ]
+    },
+    {
+      "id": "damith-ranasinghe",
+      "name": "Damith C. Ranasinghe",
+      "publication_name": "Damith C. Ranasinghe",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
+      "institutions": [
+        "University of Adelaide"
+      ],
+      "papers": [
+        "usenix-sec26-duong-firmrebugger"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-duong-firmrebugger",
+          "title": "FirmReBugger: A Benchmark Framework for Monolithic Firmware Fuzzers",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong"
+        }
+      ]
+    },
+    {
       "id": "scholar:danielayzenshteyn",
       "name": "Daniel Ayzenshteyn",
       "publication_name": "Daniel Ayzenshteyn",
@@ -1192,6 +1876,68 @@
           "year": 2025,
           "venue": "USENIX Security 2025",
           "url": "https://www.usenix.org/system/files/usenixsecurity25-ayzenshteyn.pdf"
+        }
+      ]
+    },
+    {
+      "id": "daniel-weber-cispa",
+      "name": "Daniel Weber",
+      "publication_name": "Daniel Weber",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi",
+      "institutions": [
+        "CISPA Helmholtz Center for Information Security"
+      ],
+      "papers": [
+        "usenix-sec26-zhang-stackwarp"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-zhang-stackwarp",
+          "title": "StackWarp: Breaking AMD SEV-SNP Integrity via Deterministic Stack-Pointer Manipulation through the CPU’s Stack Engine",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
+        }
+      ]
+    },
+    {
+      "id": "dario-pasquini",
+      "name": "Dario Pasquini",
+      "publication_name": "Dario Pasquini",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini",
+      "institutions": [
+        "RSAC Labs"
+      ],
+      "papers": [
+        "usenix-sec26-pasquini-aiops"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-pasquini-aiops",
+          "title": "When AIOps Become “AI Oops”: Subverting LLM-driven IT Operations via Telemetry Manipulation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
         }
       ]
     },
@@ -1290,6 +2036,37 @@
       ]
     },
     {
+      "id": "enzhou-song-ieu",
+      "name": "Enzhou Song",
+      "publication_name": "Enzhou Song",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "中国人民解放军信息工程大学"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
       "id": "scholar:ergutebao",
       "name": "Ergute Bao",
       "publication_name": "Ergute Bao",
@@ -1317,6 +2094,99 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan"
+        }
+      ]
+    },
+    {
+      "id": "evgenios-kornaropoulos",
+      "name": "Evgenios M. Kornaropoulos",
+      "publication_name": "Evgenios M. Kornaropoulos",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini",
+      "institutions": [
+        "George Mason University"
+      ],
+      "papers": [
+        "usenix-sec26-pasquini-aiops"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-pasquini-aiops",
+          "title": "When AIOps Become “AI Oops”: Subverting LLM-driven IT Operations via Telemetry Manipulation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
+      "id": "fabian-thomas",
+      "name": "Fabian Thomas",
+      "publication_name": "Fabian Thomas",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi",
+      "institutions": [
+        "CISPA Helmholtz Center for Information Security"
+      ],
+      "papers": [
+        "usenix-sec26-zhang-stackwarp"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-zhang-stackwarp",
+          "title": "StackWarp: Breaking AMD SEV-SNP Integrity via Deterministic Stack-Pointer Manipulation through the CPU’s Stack Engine",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
+        }
+      ]
+    },
+    {
+      "id": "felix-hahn",
+      "name": "Felix Hahn",
+      "publication_name": "Felix Hahn",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix",
+      "institutions": [
+        "Max Planck Institute for Security and Privacy"
+      ],
+      "papers": [
+        "usenix-sec26-klix-silicon-heist"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-klix-silicon-heist",
+          "title": "Silicon Heist: (Ransom) Attacks for AMD Cloud FPGAs via Privilege Escalation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix"
         }
       ]
     },
@@ -1414,6 +2284,68 @@
       ]
     },
     {
+      "id": "geng-hong-fudan",
+      "name": "Geng Hong",
+      "publication_name": "Geng Hong",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        }
+      ]
+    },
+    {
+      "id": "giuseppe-ateniese",
+      "name": "Giuseppe Ateniese",
+      "publication_name": "Giuseppe Ateniese",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini",
+      "institutions": [
+        "George Mason University"
+      ],
+      "papers": [
+        "usenix-sec26-pasquini-aiops"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-pasquini-aiops",
+          "title": "When AIOps Become “AI Oops”: Subverting LLM-driven IT Operations via Telemetry Manipulation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
       "id": "guofei-gu",
       "name": "Guofei Gu",
       "publication_name": "Guofei Gu",
@@ -1445,6 +2377,99 @@
       ]
     },
     {
+      "id": "guy-farrelly",
+      "name": "Guy Farrelly",
+      "publication_name": "Guy Farrelly",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
+      "institutions": [
+        "University of Adelaide"
+      ],
+      "papers": [
+        "usenix-sec26-duong-firmrebugger"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-duong-firmrebugger",
+          "title": "FirmReBugger: A Benchmark Framework for Monolithic Firmware Fuzzers",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong"
+        }
+      ]
+    },
+    {
+      "id": "gyeongsup-lim",
+      "name": "Gyeongsup Lim",
+      "publication_name": "Gyeongsup Lim",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong",
+      "institutions": [
+        "Korea University"
+      ],
+      "papers": [
+        "usenix-sec26-kim-timeslice-sandwich"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-kim-timeslice-sandwich",
+          "title": "TIMESLICE-SANDWICH: A GPU Side-Channel Attack Exploiting Time-Sliced Scheduling",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong"
+        }
+      ]
+    },
+    {
+      "id": "hangtian-liu",
+      "name": "Hangtian Liu",
+      "publication_name": "Hangtian Liu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "数学工程与先进计算国家重点实验室"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
       "id": "scholar:haochen",
       "name": "Hao Chen",
       "publication_name": "Hao Chen",
@@ -1472,6 +2497,37 @@
           "year": 2025,
           "venue": "USENIX Security 2025",
           "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
+    },
+    {
+      "id": "hodong-kim",
+      "name": "Hodong Kim",
+      "publication_name": "Hodong Kim",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong",
+      "institutions": [
+        "Korea University"
+      ],
+      "papers": [
+        "usenix-sec26-kim-timeslice-sandwich"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-kim-timeslice-sandwich",
+          "title": "TIMESLICE-SANDWICH: A GPU Side-Channel Attack Exploiting Time-Sliced Scheduling",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong"
         }
       ]
     },
@@ -1538,6 +2594,37 @@
       ]
     },
     {
+      "id": "huayi-duan-hkust-gz",
+      "name": "Huayi Duan",
+      "publication_name": "Huayi Duan",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen",
+      "institutions": [
+        "香港科技大学（广州）"
+      ],
+      "papers": [
+        "usenix-sec26-xu-dalens"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-xu-dalens",
+          "title": "DaLens: Charting DNS Self-Amplification Threats at Large",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen"
+        }
+      ]
+    },
+    {
       "id": "jiahui-wu-ntu",
       "name": "Jiahui Wu",
       "publication_name": "Jiahui Wu",
@@ -1565,6 +2652,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/guo-wenbo"
+        }
+      ]
+    },
+    {
+      "id": "jiangan-ji-ieu",
+      "name": "Jiangan Ji",
+      "publication_name": "Jiangan Ji",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "中国人民解放军信息工程大学"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
         }
       ]
     },
@@ -1600,19 +2718,19 @@
       ]
     },
     {
-      "id": "scholar:jiaqiluo",
-      "name": "Jiaqi Luo",
-      "publication_name": "Jiaqi Luo",
+      "id": "jinglei-tan",
+      "name": "Jinglei Tan",
+      "publication_name": "Jinglei Tan",
       "homepage": "",
-      "profile_source": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
       "institutions": [
-        "复旦大学"
+        "数学工程与先进计算国家重点实验室"
       ],
       "papers": [
-        "usenix-sec25-liu-agentfuzz"
+        "usenix-sec26-jia-pangolin"
       ],
       "annual_scores": {
-        "2025": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -1622,11 +2740,42 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec25-liu-agentfuzz",
-          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
-          "year": 2025,
-          "venue": "USENIX Security 2025",
-          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
+      "id": "junbeom-hur",
+      "name": "Junbeom Hur",
+      "publication_name": "Junbeom Hur",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong",
+      "institutions": [
+        "Korea University"
+      ],
+      "papers": [
+        "usenix-sec26-kim-timeslice-sandwich"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-kim-timeslice-sandwich",
+          "title": "TIMESLICE-SANDWICH: A GPU Side-Channel Attack Exploiting Time-Sliced Scheduling",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong"
         }
       ]
     },
@@ -1724,6 +2873,68 @@
       ]
     },
     {
+      "id": "liwen-xu-eth",
+      "name": "Liwen Xu",
+      "publication_name": "Liwen Xu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen",
+      "institutions": [
+        "ETH Zurich"
+      ],
+      "papers": [
+        "usenix-sec26-xu-dalens"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-xu-dalens",
+          "title": "DaLens: Charting DNS Self-Amplification Threats at Large",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen"
+        }
+      ]
+    },
+    {
+      "id": "maik-ender",
+      "name": "Maik Ender",
+      "publication_name": "Maik Ender",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix",
+      "institutions": [
+        "Max Planck Institute for Security and Privacy"
+      ],
+      "papers": [
+        "usenix-sec26-klix-silicon-heist"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-klix-silicon-heist",
+          "title": "Silicon Heist: (Ransom) Attacks for AMD Cloud FPGAs via Privilege Escalation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix"
+        }
+      ]
+    },
+    {
       "id": "scholar:marcosquarcina",
       "name": "Marco Squarcina",
       "publication_name": "Marco Squarcina",
@@ -1786,6 +2997,37 @@
       ]
     },
     {
+      "id": "mathew-duong",
+      "name": "Mathew Duong",
+      "publication_name": "Mathew Duong",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
+      "institutions": [
+        "University of Adelaide"
+      ],
+      "papers": [
+        "usenix-sec26-duong-firmrebugger"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-duong-firmrebugger",
+          "title": "FirmReBugger: A Benchmark Framework for Monolithic Firmware Fuzzers",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong"
+        }
+      ]
+    },
+    {
       "id": "matthaeus-wininger",
       "name": "Matthäus Wininger",
       "publication_name": "Matthäus Wininger",
@@ -1844,6 +3086,68 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/gegenhuber"
+        }
+      ]
+    },
+    {
+      "id": "michael-chesser",
+      "name": "Michael Chesser",
+      "publication_name": "Michael Chesser",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
+      "institutions": [
+        "University of Adelaide"
+      ],
+      "papers": [
+        "usenix-sec26-duong-firmrebugger"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-duong-firmrebugger",
+          "title": "FirmReBugger: A Benchmark Framework for Monolithic Firmware Fuzzers",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong"
+        }
+      ]
+    },
+    {
+      "id": "michael-schwarz-cispa",
+      "name": "Michael Schwarz",
+      "publication_name": "Michael Schwarz",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi",
+      "institutions": [
+        "CISPA Helmholtz Center for Information Security"
+      ],
+      "papers": [
+        "usenix-sec26-zhang-stackwarp"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-zhang-stackwarp",
+          "title": "StackWarp: Breaking AMD SEV-SNP Integrity via Deterministic Stack-Pointer Manipulation through the CPU’s Stack Engine",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
         }
       ]
     },
@@ -1972,6 +3276,130 @@
       ]
     },
     {
+      "id": "nils-albartus",
+      "name": "Nils Albartus",
+      "publication_name": "Nils Albartus",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix",
+      "institutions": [
+        "Max Planck Institute for Security and Privacy"
+      ],
+      "papers": [
+        "usenix-sec26-klix-silicon-heist"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-klix-silicon-heist",
+          "title": "Silicon Heist: (Ransom) Attacks for AMD Cloud FPGAs via Privilege Escalation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix"
+        }
+      ]
+    },
+    {
+      "id": "omer-akgul",
+      "name": "Omer Akgul",
+      "publication_name": "Omer Akgul",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini",
+      "institutions": [
+        "RSAC Labs"
+      ],
+      "papers": [
+        "usenix-sec26-pasquini-aiops"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-pasquini-aiops",
+          "title": "When AIOps Become “AI Oops”: Subverting LLM-driven IT Operations via Telemetry Manipulation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
+      "id": "omer-ben-simhon",
+      "name": "Omer Ben-Simhon",
+      "publication_name": "Omer Ben-Simhon",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon",
+      "institutions": [
+        "Hebrew University of Jerusalem"
+      ],
+      "papers": [
+        "usenix-sec26-ben-simhon-dns"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-ben-simhon-dns",
+          "title": "DNS Cache Poisoning Like it’s 2006",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon"
+        }
+      ]
+    },
+    {
+      "id": "petros-efstathopoulos",
+      "name": "Petros Efstathopoulos",
+      "publication_name": "Petros Efstathopoulos",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini",
+      "institutions": [
+        "RSAC Labs"
+      ],
+      "papers": [
+        "usenix-sec26-pasquini-aiops"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-pasquini-aiops",
+          "title": "When AIOps Become “AI Oops”: Subverting LLM-driven IT Operations via Telemetry Manipulation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
       "id": "scholar:philippbeer",
       "name": "Philipp Beer",
       "publication_name": "Philipp Beer",
@@ -2065,6 +3493,99 @@
       ]
     },
     {
+      "id": "ruijie-cai-ieu",
+      "name": "Ruijie Cai",
+      "publication_name": "Ruijie Cai",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "中国人民解放军信息工程大学"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
+      "id": "ruiyi-zhang-cispa",
+      "name": "Ruiyi Zhang",
+      "publication_name": "Ruiyi Zhang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi",
+      "institutions": [
+        "CISPA Helmholtz Center for Information Security"
+      ],
+      "papers": [
+        "usenix-sec26-zhang-stackwarp"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-zhang-stackwarp",
+          "title": "StackWarp: Breaking AMD SEV-SNP Integrity via Deterministic Stack-Pointer Manipulation through the CPU’s Stack Engine",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
+        }
+      ]
+    },
+    {
+      "id": "russell-tessier",
+      "name": "Russell Tessier",
+      "publication_name": "Russell Tessier",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix",
+      "institutions": [
+        "University of Massachusetts"
+      ],
+      "papers": [
+        "usenix-sec26-klix-silicon-heist"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-klix-silicon-heist",
+          "title": "Silicon Heist: (Ransom) Attacks for AMD Cloud FPGAs via Privilege Escalation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix"
+        }
+      ]
+    },
+    {
       "id": "scholar:sebastianroth",
       "name": "Sebastian Roth",
       "publication_name": "Sebastian Roth",
@@ -2096,6 +3617,161 @@
       ]
     },
     {
+      "id": "seunghee-shin",
+      "name": "Seunghee Shin",
+      "publication_name": "Seunghee Shin",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong",
+      "institutions": [
+        "State University of New York at Binghamton"
+      ],
+      "papers": [
+        "usenix-sec26-kim-timeslice-sandwich"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-kim-timeslice-sandwich",
+          "title": "TIMESLICE-SANDWICH: A GPU Side-Channel Attack Exploiting Time-Sliced Scheduling",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong"
+        }
+      ]
+    },
+    {
+      "id": "shengli-liu-ieu",
+      "name": "Shengli Liu",
+      "publication_name": "Shengli Liu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "中国人民解放军信息工程大学"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
+      "id": "shuitao-gan",
+      "name": "Shuitao Gan",
+      "publication_name": "Shuitao Gan",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "先进计算与智能工程实验室"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
+      "id": "simon-klix",
+      "name": "Simon Klix",
+      "publication_name": "Simon Klix",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix",
+      "institutions": [
+        "Max Planck Institute for Security and Privacy"
+      ],
+      "papers": [
+        "usenix-sec26-klix-silicon-heist"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-klix-silicon-heist",
+          "title": "Silicon Heist: (Ransom) Attacks for AMD Cloud FPGAs via Privilege Escalation",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix"
+        }
+      ]
+    },
+    {
+      "id": "songyang-peng-fudan",
+      "name": "Songyang Peng",
+      "publication_name": "Songyang Peng",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        }
+      ]
+    },
+    {
       "id": "steven-jiang-hireez",
       "name": "Steven Jiang",
       "publication_name": "Steven Jiang",
@@ -2123,6 +3799,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-mohan"
+        }
+      ]
+    },
+    {
+      "id": "surya-nepal",
+      "name": "Surya Nepal",
+      "publication_name": "Surya Nepal",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
+      "institutions": [
+        "Data61 CSIRO"
+      ],
+      "papers": [
+        "usenix-sec26-duong-firmrebugger"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-duong-firmrebugger",
+          "title": "FirmReBugger: A Benchmark Framework for Monolithic Firmware Fuzzers",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong"
         }
       ]
     },
@@ -2247,6 +3954,68 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan"
+        }
+      ]
+    },
+    {
+      "id": "tong-bu-fudan",
+      "name": "Tong Bu",
+      "publication_name": "Tong Bu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        }
+      ]
+    },
+    {
+      "id": "tristan-hornetz",
+      "name": "Tristan Hornetz",
+      "publication_name": "Tristan Hornetz",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi",
+      "institutions": [
+        "CISPA Helmholtz Center for Information Security"
+      ],
+      "papers": [
+        "usenix-sec26-zhang-stackwarp"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-zhang-stackwarp",
+          "title": "StackWarp: Breaking AMD SEV-SNP Integrity via Deterministic Stack-Pointer Manipulation through the CPU’s Stack Engine",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
         }
       ]
     },
@@ -2406,6 +4175,37 @@
       ]
     },
     {
+      "id": "xiaokang-yin-ieu",
+      "name": "Xiaokang Yin",
+      "publication_name": "Xiaokang Yin",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "中国人民解放军信息工程大学"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
       "id": "xingyu-wang-ub",
       "name": "Xingyu Wang",
       "publication_name": "Xingyu Wang",
@@ -2464,6 +4264,38 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan"
+        }
+      ]
+    },
+    {
+      "id": "xudong-pan-fudan",
+      "name": "Xudong Pan",
+      "publication_name": "Xudong Pan",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
+      "institutions": [
+        "上海创智学院",
+        "复旦大学"
+      ],
+      "papers": [
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
         }
       ]
     },
@@ -2623,6 +4455,37 @@
       ]
     },
     {
+      "id": "youngjoo-shin",
+      "name": "Youngjoo Shin",
+      "publication_name": "Youngjoo Shin",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong",
+      "institutions": [
+        "Korea University"
+      ],
+      "papers": [
+        "usenix-sec26-kim-timeslice-sandwich"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-kim-timeslice-sandwich",
+          "title": "TIMESLICE-SANDWICH: A GPU Side-Channel Attack Exploiting Time-Sliced Scheduling",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong"
+        }
+      ]
+    },
+    {
       "id": "yuan-xiao-nju",
       "name": "Yuan Xiao",
       "publication_name": "Yuan Xiao",
@@ -2712,6 +4575,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-mohan"
+        }
+      ]
+    },
+    {
+      "id": "zechao-cai-eth",
+      "name": "Zechao Cai",
+      "publication_name": "Zechao Cai",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen",
+      "institutions": [
+        "ETH Zurich"
+      ],
+      "papers": [
+        "usenix-sec26-xu-dalens"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-xu-dalens",
+          "title": "DaLens: Charting DNS Self-Amplification Threats at Large",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen"
         }
       ]
     },
@@ -2836,6 +4730,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yi"
+        }
+      ]
+    },
+    {
+      "id": "zhipeng-jia-ieu",
+      "name": "Zhipeng Jia",
+      "publication_name": "Zhipeng Jia",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "中国人民解放军信息工程大学"
+      ],
+      "papers": [
+        "usenix-sec26-jia-pangolin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
         }
       ]
     },
@@ -3232,6 +5157,30 @@
       ]
     },
     {
+      "id": "derqui-andrea",
+      "name": "Derqui Andrea",
+      "publication_name": "Derqui Andrea",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2608.08939",
+      "institutions": [
+        "Radboud University"
+      ],
+      "papers": [
+        "arxiv-2608-08939-not-a11y"
+      ],
+      "annual_scores": {},
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2608-08939-not-a11y",
+          "title": "Not an A11y: How Android Accessibility Exposes Mobile AI Agents to Indirect Prompt Injection",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2608.08939"
+        }
+      ]
+    },
+    {
       "id": "scholar:devinajain",
       "name": "Devina Jain",
       "publication_name": "Devina Jain",
@@ -3277,6 +5226,30 @@
           "year": 2026,
           "venue": "arXiv",
           "url": "https://arxiv.org/abs/2607.26719"
+        }
+      ]
+    },
+    {
+      "id": "faatin-alvi",
+      "name": "Faatin Alvi",
+      "publication_name": "Faatin Alvi",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2608.08939",
+      "institutions": [
+        "Radboud University"
+      ],
+      "papers": [
+        "arxiv-2608-08939-not-a11y"
+      ],
+      "annual_scores": {},
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2608-08939-not-a11y",
+          "title": "Not an A11y: How Android Accessibility Exposes Mobile AI Agents to Indirect Prompt Injection",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2608.08939"
         }
       ]
     },
@@ -3498,6 +5471,30 @@
       ]
     },
     {
+      "id": "kaushal-punjabi",
+      "name": "Kaushal Punjabi",
+      "publication_name": "Kaushal Punjabi",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2608.08939",
+      "institutions": [
+        "Radboud University"
+      ],
+      "papers": [
+        "arxiv-2608-08939-not-a11y"
+      ],
+      "annual_scores": {},
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2608-08939-not-a11y",
+          "title": "Not an A11y: How Android Accessibility Exposes Mobile AI Agents to Indirect Prompt Injection",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2608.08939"
+        }
+      ]
+    },
+    {
       "id": "scholar:koushiksen",
       "name": "Koushik Sen",
       "publication_name": "Koushik Sen",
@@ -3667,6 +5664,30 @@
       ]
     },
     {
+      "id": "rahul-deivasigamani",
+      "name": "Rahul Deivasigamani",
+      "publication_name": "Rahul Deivasigamani",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2608.08939",
+      "institutions": [
+        "Radboud University"
+      ],
+      "papers": [
+        "arxiv-2608-08939-not-a11y"
+      ],
+      "annual_scores": {},
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2608-08939-not-a11y",
+          "title": "Not an A11y: How Android Accessibility Exposes Mobile AI Agents to Indirect Prompt Injection",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2608.08939"
+        }
+      ]
+    },
+    {
       "id": "scholar:robertodipietro",
       "name": "Roberto Di Pietro",
       "publication_name": "Roberto Di Pietro",
@@ -3784,6 +5805,30 @@
           "year": 2026,
           "venue": "arXiv",
           "url": "https://arxiv.org/abs/2607.26719"
+        }
+      ]
+    },
+    {
+      "id": "stjepan-picek",
+      "name": "Stjepan Picek",
+      "publication_name": "Stjepan Picek",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2608.08939",
+      "institutions": [
+        "Radboud University"
+      ],
+      "papers": [
+        "arxiv-2608-08939-not-a11y"
+      ],
+      "annual_scores": {},
+      "verified_score": 0,
+      "recent_papers": [
+        {
+          "id": "arxiv-2608-08939-not-a11y",
+          "title": "Not an A11y: How Android Accessibility Exposes Mobile AI Agents to Indirect Prompt Injection",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2608.08939"
         }
       ]
     },
@@ -4078,6 +6123,54 @@
   ],
   "collaborations": [
     {
+      "source": "advanced-computing-intelligence-engineering-lab",
+      "target": "information-engineering-university",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "advanced-computing-intelligence-engineering-lab",
+      "target": "jcss-tsinghua-science-city",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "advanced-computing-intelligence-engineering-lab",
+      "target": "skl-mathematical-engineering-advanced-computing",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "advanced-computing-intelligence-engineering-lab",
+      "target": "tsinghua-insc",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "arizona-state-university",
       "target": "duke-university",
       "papers": [
@@ -4234,6 +6327,18 @@
       "weight": 1
     },
     {
+      "source": "data61-csiro",
+      "target": "university-of-adelaide",
+      "papers": [
+        {
+          "id": "usenix-sec26-duong-firmrebugger",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "duke-university",
       "target": "hireez",
       "papers": [
@@ -4270,6 +6375,18 @@
       "weight": 1
     },
     {
+      "source": "eth-zurich",
+      "target": "hkust-guangzhou",
+      "papers": [
+        {
+          "id": "usenix-sec26-xu-dalens",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "fudan-university",
       "target": "hong-kong-polytechnic-university",
       "papers": [
@@ -4283,11 +6400,35 @@
     },
     {
       "source": "fudan-university",
+      "target": "shanghai-innovation-institute",
+      "papers": [
+        {
+          "id": "usenix-sec26-luo-agent-dos",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "fudan-university",
       "target": "uc-davis",
       "papers": [
         {
           "id": "usenix-sec25-liu-agentfuzz",
           "year": 2025,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "george-mason-university",
+      "target": "rsac-labs",
+      "papers": [
+        {
+          "id": "usenix-sec26-pasquini-aiops",
+          "year": 2026,
           "venue_group": "security"
         }
       ],
@@ -4402,6 +6543,42 @@
       "weight": 1
     },
     {
+      "source": "information-engineering-university",
+      "target": "jcss-tsinghua-science-city",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "information-engineering-university",
+      "target": "skl-mathematical-engineering-advanced-computing",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "information-engineering-university",
+      "target": "tsinghua-insc",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "institut-polytechnique-paris",
       "target": "telecom-paris",
       "papers": [
@@ -4450,6 +6627,42 @@
       "weight": 1
     },
     {
+      "source": "jcss-tsinghua-science-city",
+      "target": "skl-mathematical-engineering-advanced-computing",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "jcss-tsinghua-science-city",
+      "target": "tsinghua-insc",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "korea-university",
+      "target": "suny-binghamton",
+      "papers": [
+        {
+          "id": "usenix-sec26-kim-timeslice-sandwich",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "largosoft",
       "target": "seoul-national-university",
       "papers": [
@@ -4469,6 +6682,18 @@
           "id": "arxiv-2607-05120-agent-data-injection",
           "year": 2026,
           "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "mpi-security-privacy",
+      "target": "university-of-massachusetts",
+      "papers": [
+        {
+          "id": "usenix-sec26-klix-silicon-heist",
+          "year": 2026,
+          "venue_group": "security"
         }
       ],
       "weight": 1
@@ -4702,6 +6927,18 @@
       "weight": 1
     },
     {
+      "source": "skl-mathematical-engineering-advanced-computing",
+      "target": "tsinghua-insc",
+      "papers": [
+        {
+          "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "telecom-paris",
       "target": "universite-paris-saclay",
       "papers": [
@@ -4775,6 +7012,225 @@
     }
   ],
   "publications": [
+    {
+      "id": "usenix-sec26-pasquini-aiops",
+      "title": "When AIOps Become “AI Oops”: Subverting LLM-driven IT Operations via Telemetry Manipulation",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini",
+      "institutions": [
+        "rsac-labs",
+        "george-mason-university"
+      ],
+      "authors": [
+        "dario-pasquini",
+        "omer-akgul",
+        "athanasios-theocharis",
+        "petros-efstathopoulos",
+        "evgenios-kornaropoulos",
+        "giuseppe-ateniese"
+      ]
+    },
+    {
+      "id": "usenix-sec26-kim-timeslice-sandwich",
+      "title": "TIMESLICE-SANDWICH: A GPU Side-Channel Attack Exploiting Time-Sliced Scheduling",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong",
+      "institutions": [
+        "korea-university",
+        "suny-binghamton"
+      ],
+      "authors": [
+        "hodong-kim",
+        "gyeongsup-lim",
+        "youngjoo-shin",
+        "junbeom-hur",
+        "seunghee-shin"
+      ]
+    },
+    {
+      "id": "usenix-sec26-zhang-stackwarp",
+      "title": "StackWarp: Breaking AMD SEV-SNP Integrity via Deterministic Stack-Pointer Manipulation through the CPU’s Stack Engine",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi",
+      "institutions": [
+        "cispa"
+      ],
+      "authors": [
+        "ruiyi-zhang-cispa",
+        "tristan-hornetz",
+        "daniel-weber-cispa",
+        "fabian-thomas",
+        "michael-schwarz-cispa"
+      ]
+    },
+    {
+      "id": "usenix-sec26-klix-silicon-heist",
+      "title": "Silicon Heist: (Ransom) Attacks for AMD Cloud FPGAs via Privilege Escalation",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix",
+      "institutions": [
+        "mpi-security-privacy",
+        "university-of-massachusetts"
+      ],
+      "authors": [
+        "simon-klix",
+        "felix-hahn",
+        "maik-ender",
+        "nils-albartus",
+        "christof-paar",
+        "russell-tessier"
+      ]
+    },
+    {
+      "id": "usenix-sec26-jia-pangolin",
+      "title": "PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
+      "institutions": [
+        "information-engineering-university",
+        "advanced-computing-intelligence-engineering-lab",
+        "tsinghua-insc",
+        "jcss-tsinghua-science-city",
+        "skl-mathematical-engineering-advanced-computing"
+      ],
+      "authors": [
+        "zhipeng-jia-ieu",
+        "xiaokang-yin-ieu",
+        "jiangan-ji-ieu",
+        "enzhou-song-ieu",
+        "ruijie-cai-ieu",
+        "shengli-liu-ieu",
+        "shuitao-gan",
+        "chao-zhang-tsinghua",
+        "chao-zhang-tsinghua",
+        "hangtian-liu",
+        "jinglei-tan"
+      ]
+    },
+    {
+      "id": "arxiv-2608-08939-not-a11y",
+      "title": "Not an A11y: How Android Accessibility Exposes Mobile AI Agents to Indirect Prompt Injection",
+      "year": 2026,
+      "venue": "arXiv",
+      "venue_group": null,
+      "status": "preprint-unreviewed",
+      "first_seen": "2026-08-11",
+      "url": "https://arxiv.org/abs/2608.08939",
+      "institutions": [
+        "radboud-university"
+      ],
+      "authors": [
+        "rahul-deivasigamani",
+        "faatin-alvi",
+        "derqui-andrea",
+        "kaushal-punjabi",
+        "stjepan-picek"
+      ]
+    },
+    {
+      "id": "usenix-sec26-duong-firmrebugger",
+      "title": "FirmReBugger: A Benchmark Framework for Monolithic Firmware Fuzzers",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
+      "institutions": [
+        "university-of-adelaide",
+        "data61-csiro"
+      ],
+      "authors": [
+        "mathew-duong",
+        "michael-chesser",
+        "guy-farrelly",
+        "damith-ranasinghe",
+        "surya-nepal"
+      ]
+    },
+    {
+      "id": "usenix-sec26-xu-dalens",
+      "title": "DaLens: Charting DNS Self-Amplification Threats at Large",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen",
+      "institutions": [
+        "eth-zurich",
+        "hkust-guangzhou"
+      ],
+      "authors": [
+        "liwen-xu-eth",
+        "zechao-cai-eth",
+        "adrian-perrig",
+        "huayi-duan-hkust-gz"
+      ]
+    },
+    {
+      "id": "usenix-sec26-ben-simhon-dns",
+      "title": "DNS Cache Poisoning Like it’s 2006",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon",
+      "institutions": [
+        "hebrew-university-jerusalem"
+      ],
+      "authors": [
+        "omer-ben-simhon",
+        "amit-klein"
+      ]
+    },
+    {
+      "id": "usenix-sec26-luo-agent-dos",
+      "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted-prepublication",
+      "first_seen": "2026-08-11",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
+      "institutions": [
+        "fudan-university",
+        "shanghai-innovation-institute"
+      ],
+      "authors": [
+        "jiaqi-luo-fudan",
+        "jiarun-dai-fudan",
+        "fengyu-liu-fudan",
+        "songyang-peng-fudan",
+        "youkun-shi-fudan",
+        "tong-bu-fudan",
+        "geng-hong-fudan",
+        "xudong-pan-fudan",
+        "yuan-zhang-fudan",
+        "xudong-pan-fudan"
+      ]
+    },
     {
       "id": "usenix-sec26-gegenhuber-transcript",
       "title": "Send and Pretend: Exploiting Transcript Consistency Issues in End-to-End Encrypted Group Chats",
@@ -4957,7 +7413,7 @@
         "hong-kong-polytechnic-university"
       ],
       "authors": [
-        "scholar:youkunshi",
+        "youkun-shi-fudan",
         "yuan-zhang-fudan",
         "scholar:tianhaobai",
         "scholar:fengxue",
@@ -4965,7 +7421,7 @@
         "fengyu-liu-fudan",
         "lei-zhang-fudan",
         "min-yang-fudan",
-        "scholar:youkunshi",
+        "youkun-shi-fudan",
         "xiapu-luo"
       ]
     },
@@ -5026,12 +7482,12 @@
       "authors": [
         "fengyu-liu-fudan",
         "yuan-zhang-fudan",
-        "scholar:jiaqiluo",
+        "jiaqi-luo-fudan",
         "jiarun-dai-fudan",
         "scholar:tianchen",
         "scholar:letianyuan",
         "scholar:zhengminyu",
-        "scholar:youkunshi",
+        "youkun-shi-fudan",
         "scholar:keli",
         "scholar:chengyuanzhou",
         "min-yang-fudan",
