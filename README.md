@@ -43,13 +43,14 @@ python3 -m http.server 8000 -d site
 `.github/workflows/traffic.yml` 每日读取最近 30 天的聚合数据并更新；统计 API token
 只保存在 GitHub Actions Secret 中，不进入仓库或网页。
 
-首次启用需要在 GoatCounter 创建站点，然后在 GitHub 仓库中配置：
+部署时从 GitHub 仓库的以下设置注入统计配置，仓库源码只保留空的默认值：
 
 - Actions variable `GOATCOUNTER_CODE`：GoatCounter 站点代码，即
   `https://<code>.goatcounter.com/` 中的 `<code>`；
 - Actions secret `GOATCOUNTER_API_TOKEN`：具有统计读取权限的 API token。
 
-配置后手动运行一次 **Update traffic chart** 和 **Deploy papernote to GitHub Pages**。
+首次配置或轮换变量与 Secret 后，手动运行一次 **Update traffic chart** 和
+**Deploy papernote to GitHub Pages**。
 未配置变量时，Pages 仍会正常部署，但不会加载统计脚本；趋势工作流会安全跳过。
 
 ## 隐私
