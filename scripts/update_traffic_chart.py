@@ -8,6 +8,7 @@ import datetime as dt
 import json
 import os
 import re
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -22,9 +23,31 @@ LEFT = 62
 RIGHT = 30
 TOP = 82
 BOTTOM = 50
+MAX_FETCH_ATTEMPTS = 4
+RETRYABLE_HTTP_STATUS = {404, 408, 429, 500, 502, 503, 504}
 
 
-def fetch_stats(site_code: str, token: str, today: dt.date) -> dict:
+def api_error_detail(error: urllib.error.HTTPError) -> str:
+    response_text = error.read().decode("utf-8", errors="replace").strip()
+    try:
+        response_payload = json.loads(response_text)
+        detail = response_payload.get("error") or response_payload.get("errors")
+    except json.JSONDecodeError:
+        detail = response_text
+    message = f"GoatCounter API returned HTTP {error.code}"
+    if detail:
+        message += f": {detail}"
+    return message
+
+
+def fetch_stats(
+    site_code: str,
+    token: str,
+    today: dt.date,
+    *,
+    urlopen=urllib.request.urlopen,
+    sleep=time.sleep,
+) -> dict:
     start = today - dt.timedelta(days=CHART_DAYS - 1)
     end = today + dt.timedelta(days=1)
     query = urllib.parse.urlencode(
@@ -42,20 +65,29 @@ def fetch_stats(site_code: str, token: str, today: dt.date) -> dict:
             "User-Agent": "papernote-traffic-chart/1.0",
         },
     )
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            return json.load(response)
-    except urllib.error.HTTPError as error:
-        response_text = error.read().decode("utf-8", errors="replace").strip()
+    for attempt in range(1, MAX_FETCH_ATTEMPTS + 1):
         try:
-            response_payload = json.loads(response_text)
-            detail = response_payload.get("error") or response_payload.get("errors")
-        except json.JSONDecodeError:
-            detail = response_text
-        message = f"GoatCounter API returned HTTP {error.code}"
-        if detail:
-            message += f": {detail}"
-        raise SystemExit(message) from None
+            with urlopen(request, timeout=30) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as error:
+            message = api_error_detail(error)
+            retryable = error.code in RETRYABLE_HTTP_STATUS
+        except (urllib.error.URLError, TimeoutError) as error:
+            message = f"GoatCounter API request failed: {error.reason if hasattr(error, 'reason') else error}"
+            retryable = True
+
+        if not retryable or attempt == MAX_FETCH_ATTEMPTS:
+            raise SystemExit(message) from None
+
+        delay = 2 ** (attempt - 1)
+        print(
+            f"{message}; retrying in {delay}s "
+            f"({attempt}/{MAX_FETCH_ATTEMPTS})",
+            flush=True,
+        )
+        sleep(delay)
+
+    raise AssertionError("unreachable")
 
 
 def daily_series(payload: dict, today: dt.date) -> list[tuple[dt.date, int]]:
