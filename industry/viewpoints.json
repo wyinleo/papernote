@@ -264,5 +264,81 @@
     "evidence_basis": "攻击者提示与会话日志、Agent 配置和持久记忆、源码与扫描输出、目标清单、数据库导出、矿池遥测及漏洞赏金证据目录。",
     "limitations": "材料来自 Talos 可见的少量工作区，样本选择有偏；部分目标授权状态和操作者身份无法确认，重建链路含分析推断，且多项底层证据不能公开供独立复现。",
     "commercial_interest": "发布方属于 Cisco，并推广 Talos 情报、事件响应及 Cisco 安全能力。"
+  },
+  {
+    "id": "microsoft-macsync-infrastructure-2026",
+    "title": "Microsoft：用行为枢轴追踪 MacSync Stealer 的轮换基础设施",
+    "source": "Microsoft Threat Intelligence",
+    "source_type": "安全研究实验室",
+    "content_type": "威胁基础设施调查",
+    "published_at": "2026-08-18",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/18/hunting-macsync-stealer-infrastructure-through-behavioral-pivots/",
+    "topics": ["macOS", "信息窃取", "ClickFix", "基础设施追踪"],
+    "summary": "Microsoft 从 MacSync Stealer 固定的请求路径、参数和分块上传协议出发，在域名快速轮换时仍关联出 30 多个基础设施节点，并还原其 ClickFix 投递、凭据收集与外传链。",
+    "highlights": [
+      "基础设施反复暴露 `/curl/`、`/dynamic?txd=` 与 `/gate?buildtxd=` 等路径、同一 API key 和 curl 参数，研究者据此关联 30 多个轮换域名。",
+      "投递页诱导用户把命令粘贴到 Terminal，脚本再调用 osascript、收集浏览器与系统凭据，把结果打包到 `/tmp/osalogging.zip`。",
+      "外传端使用 HTTP PUT，并以 `upload_id`、`chunk_index` 和 `total_chunks` 标记分块；这些协议特征比单个域名更适合持续检测。"
+    ],
+    "evidence_basis": "Microsoft 威胁遥测、恶意脚本和网络请求逆向、域名与 TLS/HTTP 行为聚类，以及受控环境中的投递和分块外传复现。",
+    "limitations": "文章未公开底层遥测样本、受害数量和完整域名清单，基础设施归并仍依赖发布方可见性；路径或参数也可能被攻击者更换。",
+    "commercial_interest": "发布方同时推广 Microsoft Defender for Endpoint、Defender XDR 与相关检测能力。"
+  },
+  {
+    "id": "unit42-kimwolf-v7-botnet-2026",
+    "title": "Unit 42：Kimwolf v7 用 ENS、Tor 与浏览器指纹强化 Android/IoT 僵尸网络韧性",
+    "source": "Unit 42",
+    "source_type": "威胁情报与咨询",
+    "content_type": "恶意软件逆向与基础设施分析",
+    "published_at": "2026-08-11",
+    "url": "https://unit42.paloaltonetworks.com/kimwolf-v7-botnet-malware/",
+    "topics": ["Android", "IoT", "僵尸网络", "ENS", "DDoS"],
+    "summary": "Unit 42 逆向 Kimwolf v7 的六个 ELF 组件，说明其面向 Android 电视盒等设备，以 HTTP/2 浏览器指纹、ENS 多 RPC 解析和 Tor 后备通道维持 C2，并提供 DDoS 与传播能力。",
+    "highlights": [
+      "样本为 HTTP/2 请求构造完整浏览器式指纹，并通过五个公共 RPC 节点解析 ENS；失败时切换 Tor，本地代理监听 `127.0.0.1:23075`。",
+      "研究关联 22 个 C2 主机，它们共享 SSH 密钥；功能包含 15 种 DDoS 方法、远程命令和代理。",
+      "传播链会探测开放的 Android Debug Bridge 5555 端口，并借住宅代理扩大对电视盒与 IoT 设备的可达面。"
+    ],
+    "evidence_basis": "六个 ELF 样本的静态与动态逆向、HTTP/2 与 ENS/Tor 流量、C2 主机和共享 SSH 密钥关联，以及命令处理与传播逻辑分析。",
+    "limitations": "文章给出的活动基线始于 2026-02-03，但未披露感染设备或实际 DDoS 规模；样本和基础设施视图不能覆盖所有版本与操作者。",
+    "commercial_interest": "发布方推广 Palo Alto Networks Advanced WildFire、Cortex XDR/XSIAM 与 Unit 42 服务。"
+  },
+  {
+    "id": "talos-uat10147-agentic-ai-2026",
+    "title": "Cisco Talos：UAT-10147 把智能体式 AI 纳入入侵后的批量作业流",
+    "source": "Cisco Talos",
+    "source_type": "安全研究实验室",
+    "content_type": "攻击活动与工作流调查",
+    "published_at": "2026-08-20",
+    "url": "https://blog.talosintelligence.com/uat-10147-chinese-speaking-adversary-integrates-agentic-ai-into-post-compromise-operations/",
+    "topics": ["攻击智能体", "Web 漏洞利用", "PentestGPT", "批量扫描"],
+    "summary": "Talos 从 UAT-10147 暴露的作业文件、脚本和服务器痕迹还原一条半自主入侵流程：操作者把约 17 万个 URL 分批交给 AI 生成的手册与脚本，并在已入侵主机上使用 PentestGPT 辅助后续操作。",
+    "highlights": [
+      "目标清单约含 17 万个 URL，被拆成 17 组、每组约 1 万条；受影响服务器位于巴西、玻利维亚、中国、加拿大和越南。",
+      "工作区包含 AI 生成的操作手册、脚本和 PentestGPT 使用痕迹；DeepAudit 已安装，但 Talos 没有看到它直接完成漏洞利用。",
+      "回收的 ViewState 材料包含 12 个以上带外回连和四条 gadget chain，支持 AI 参与编排与加速，却不足以证明全自主攻击。"
+    ],
+    "evidence_basis": "攻击者遗留工作区、目标列表、AI 生成文档与脚本、PentestGPT/DeepAudit 安装和运行痕迹、ViewState 利用材料及多国服务器调查。",
+    "limitations": "“半自主”判断为中高置信分析，不等于模型独立发现或执行全部攻击；材料来自单一操作者可见窗口，中文使用和工具痕迹也不能单独完成身份归因。",
+    "commercial_interest": "发布方属于 Cisco，并推广 Talos 威胁情报、事件响应与 Cisco 防护产品。"
+  },
+  {
+    "id": "talos-uat10147-spectre-implant-2026",
+    "title": "Cisco Talos：SPECTRE 跨平台植入体结合 Linux rootkit 与 Windows BYOVD",
+    "source": "Cisco Talos",
+    "source_type": "安全研究实验室",
+    "content_type": "跨平台后门与 rootkit 逆向",
+    "published_at": "2026-08-20",
+    "url": "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/",
+    "topics": ["跨平台后门", "Linux rootkit", "BYOVD", "内核逃避"],
+    "summary": "Talos 对 UAT-10147 的 SPECTRE 植入体做独立逆向：Windows 版本以易受攻击驱动实现内核级规避，Linux 版本用 ftrace rootkit 隐藏进程并通过 systemd 持久化，两端共享广泛远控能力。",
+    "highlights": [
+      "Windows C 植入体支持 45 个命令，并滥用 RTCore64 的 CVE-2019-16098 或 DBUtil 的 CVE-2021-21551 修改内核回调与安全控制。",
+      "Linux 版本支持 29 个命令，以 ftrace hook 隐藏带 magic PID 的进程，并创建 systemd 服务维持启动持久化。",
+      "源码注释、实现风格和方法完整度使 Talos 以中等置信度判断开发获得 AI 辅助，但这些迹象不是可验证的生成来源证明。"
+    ],
+    "evidence_basis": "Windows 与 Linux 样本和部分源码的逆向、命令处理器、驱动与内核回调行为、ftrace hook、systemd 持久化及同一活动基础设施关联。",
+    "limitations": "样本分析不能说明所有部署链和受害范围；AI 辅助开发仅为中等置信判断，不能从代码风格推导特定模型、生成比例或完全自动化。",
+    "commercial_interest": "发布方属于 Cisco，并推广 Talos 情报、事件响应及 Cisco 端点与网络防护能力。"
   }
 ]

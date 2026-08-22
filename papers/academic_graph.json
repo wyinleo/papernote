@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-11T10:55:02+08:00",
+  "generated_at": "2026-08-22T09:24:50+08:00",
   "coverage": {
     "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
     "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程与系统、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
-    "indexed_papers": 38,
-    "papers_with_affiliations": 30,
-    "scored_top_venue_papers": 20
+    "indexed_papers": 48,
+    "papers_with_affiliations": 40,
+    "scored_top_venue_papers": 30
   },
   "categories": [
     {
@@ -84,6 +84,114 @@
         "Wenbo Guo",
         "Yang Liu",
         "Yiran Zhang"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "tu-wien",
+      "name": "TU Wien",
+      "papers": [
+        "usenix-sec25-beer-taptrap",
+        "usenix-sec26-beer-webview-http"
+      ],
+      "scholars": [
+        "Marco Squarcina",
+        "Martina Lindorfer",
+        "Philipp Beer"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "university-bayreuth",
+      "name": "University of Bayreuth",
+      "papers": [
+        "usenix-sec25-beer-taptrap",
+        "usenix-sec26-beer-webview-http"
+      ],
+      "scholars": [
+        "Sebastian Roth"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "bnrist",
+      "name": "北京信息科学与技术国家研究中心",
+      "papers": [
+        "usenix-sec26-li-aliasleap",
+        "usenix-sec26-peng-kintsugi"
+      ],
+      "scholars": [
+        "Baojun Liu",
+        "Hai Wan",
+        "Jiatian Hu",
+        "Jiaxu Wang",
+        "Xibin Zhao",
+        "Yihao Peng",
+        "Zizhen Zhu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "tsinghua-university",
+      "name": "清华大学",
+      "papers": [
+        "usenix-sec26-li-aliasleap",
+        "usenix-sec26-peng-kintsugi"
+      ],
+      "scholars": [
+        "Baojun Liu",
+        "Hai Wan",
+        "Jiatian Hu",
+        "Jiaxu Wang",
+        "Ruixuan Li",
+        "Xibin Zhao",
+        "Yihao Peng",
+        "Yunyi Zhang",
+        "Zizhen Zhu"
       ],
       "annual_scores": {
         "2026": {
@@ -204,6 +312,25 @@
       "verified_score": 1
     },
     {
+      "id": "csiro",
+      "name": "CSIRO",
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "scholars": [
+        "Alsharif Abuadbba"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "data61-csiro",
       "name": "Data61 CSIRO",
       "papers": [
@@ -284,6 +411,27 @@
       "verified_score": 1
     },
     {
+      "id": "georgia-tech",
+      "name": "Georgia Institute of Technology",
+      "papers": [
+        "usenix-sec26-kumar-tile"
+      ],
+      "scholars": [
+        "Akshaya Kumar",
+        "Anna Raymaker",
+        "Michael A. Specter"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "griffith-university",
       "name": "Griffith University",
       "papers": [
@@ -314,6 +462,30 @@
       "scholars": [
         "Amit Klein",
         "Omer Ben-Simhon"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "ibm-research-europe",
+      "name": "IBM Research Europe",
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "scholars": [
+        "Alessandro Sorniotti",
+        "Andrea Mambretti",
+        "Anil Kurmus",
+        "Claudio Migliorelli",
+        "Jakob Koschel",
+        "Pietro Moretto"
       ],
       "annual_scores": {
         "2026": {
@@ -386,6 +558,26 @@
       "verified_score": 1
     },
     {
+      "id": "mit-csail",
+      "name": "MIT Computer Science and Artificial Intelligence Laboratory",
+      "papers": [
+        "usenix-sec26-trujillo-tontou"
+      ],
+      "scholars": [
+        "Daniël Trujillo",
+        "Mengjia Yan"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "mpi-security-privacy",
       "name": "Max Planck Institute for Security and Privacy",
       "papers": [
@@ -431,6 +623,25 @@
       "verified_score": 1
     },
     {
+      "id": "oberlin-college",
+      "name": "Oberlin College",
+      "papers": [
+        "usenix-sec26-crow-boeing-implant"
+      ],
+      "scholars": [
+        "Stephen Checkoway"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "rsac-labs",
       "name": "RSAC Labs",
       "papers": [
@@ -441,6 +652,25 @@
         "Dario Pasquini",
         "Omer Akgul",
         "Petros Efstathopoulos"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "ruhr-university-bochum",
+      "name": "Ruhr University Bochum",
+      "papers": [
+        "usenix-sec26-bach-webrtc"
+      ],
+      "scholars": [
+        "Lukas Knittel"
       ],
       "annual_scores": {
         "2026": {
@@ -511,18 +741,60 @@
       "verified_score": 1
     },
     {
-      "id": "tu-wien",
-      "name": "TU Wien",
+      "id": "swinburne-university-technology",
+      "name": "Swinburne University of Technology",
       "papers": [
-        "usenix-sec25-beer-taptrap"
+        "usenix-sec26-nguyen-menta"
       ],
       "scholars": [
-        "Marco Squarcina",
-        "Martina Lindorfer",
-        "Philipp Beer"
+        "Jun Zhang",
+        "Nguyen Linh Bao Nguyen",
+        "Viet Vo",
+        "Wanlun Ma",
+        "Yang Xiang"
       ],
       "annual_scores": {
-        "2025": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "tu-darmstadt",
+      "name": "TU Darmstadt",
+      "papers": [
+        "usenix-sec26-bach-webrtc"
+      ],
+      "scholars": [
+        "Vukašin Karadžić"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "technology-innovation-institute",
+      "name": "Technology Innovation Institute",
+      "papers": [
+        "usenix-sec26-bach-webrtc"
+      ],
+      "scholars": [
+        "Jean Paul Degabriele",
+        "Martin Bach",
+        "Robert Merget"
+      ],
+      "annual_scores": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -614,16 +886,20 @@
       "verified_score": 1
     },
     {
-      "id": "university-bayreuth",
-      "name": "University of Bayreuth",
+      "id": "uc-san-diego",
+      "name": "University of California San Diego",
       "papers": [
-        "usenix-sec25-beer-taptrap"
+        "usenix-sec26-crow-boeing-implant"
       ],
       "scholars": [
-        "Sebastian Roth"
+        "Aaron Schulman",
+        "Pat Pannuto",
+        "Patrick Mercier",
+        "Sam Crow",
+        "Stefan Savage"
       ],
       "annual_scores": {
-        "2025": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -643,6 +919,25 @@
       ],
       "annual_scores": {
         "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "university-of-louisville",
+      "name": "University of Louisville",
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "scholars": [
+        "Minghong Fang"
+      ],
+      "annual_scores": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -732,6 +1027,26 @@
       "verified_score": 1
     },
     {
+      "id": "vrije-universiteit-amsterdam",
+      "name": "Vrije Universiteit Amsterdam",
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "scholars": [
+        "Andrea Di Dio",
+        "Cristiano Giuffrida"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "hireez",
       "name": "hireEZ",
       "papers": [
@@ -770,6 +1085,25 @@
       "verified_score": 1
     },
     {
+      "id": "shanghai-university",
+      "name": "上海大学",
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "scholars": [
+        "Peng Zhou"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "information-engineering-university",
       "name": "中国人民解放军信息工程大学",
       "papers": [
@@ -782,6 +1116,50 @@
         "Shengli Liu",
         "Xiaokang Yin",
         "Zhipeng Jia"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "iie-cas",
+      "name": "中国科学院信息工程研究所",
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "scholars": [
+        "Guozhu Meng",
+        "Kai Chen",
+        "Shuaiyin Yao",
+        "Tong Liu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "ucas-school-cyber-security",
+      "name": "中国科学院大学网络空间安全学院",
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "scholars": [
+        "Guozhu Meng",
+        "Kai Chen",
+        "Shuaiyin Yao",
+        "Tong Liu"
       ],
       "annual_scores": {
         "2026": {
@@ -912,6 +1290,44 @@
       "verified_score": 1
     },
     {
+      "id": "skl-cryptography-digital-economy-security",
+      "name": "密码技术与数字经济安全全国重点实验室",
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "scholars": [
+        "Zizhuang Deng"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "shandong-university-school-cyber-science",
+      "name": "山东大学网络空间安全学院",
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "scholars": [
+        "Zizhuang Deng"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "skl-mathematical-engineering-advanced-computing",
       "name": "数学工程与先进计算国家重点实验室",
       "papers": [
@@ -932,6 +1348,26 @@
       "verified_score": 1
     },
     {
+      "id": "zhejiang-gongshang-university",
+      "name": "浙江工商大学",
+      "papers": [
+        "usenix-sec26-li-aliasleap"
+      ],
+      "scholars": [
+        "Jun Shao",
+        "Xingyu Zhao"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "zhejiang-sci-tech-university",
       "name": "浙江理工大学",
       "papers": [
@@ -939,6 +1375,25 @@
       ],
       "scholars": [
         "Jianting Ning"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "zhejiang-key-lab-big-data-future-ecommerce",
+      "name": "浙江省大数据与未来电子商务技术重点实验室",
+      "papers": [
+        "usenix-sec26-li-aliasleap"
+      ],
+      "scholars": [
+        "Jun Shao"
       ],
       "annual_scores": {
         "2026": {
@@ -1530,6 +1985,186 @@
       ]
     },
     {
+      "id": "marco-squarcina",
+      "name": "Marco Squarcina",
+      "publication_name": "Marco Squarcina",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer",
+      "institutions": [
+        "TU Wien"
+      ],
+      "papers": [
+        "usenix-sec25-beer-taptrap",
+        "usenix-sec26-beer-webview-http"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-beer-webview-http",
+          "title": "Plain Text, Plain Risks: Measuring HTTP Inclusion in Android WebViews at Scale",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer"
+        },
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "title": "TapTrap: Animation-Driven Tapjacking on Android",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+        }
+      ]
+    },
+    {
+      "id": "martina-lindorfer",
+      "name": "Martina Lindorfer",
+      "publication_name": "Martina Lindorfer",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer",
+      "institutions": [
+        "TU Wien"
+      ],
+      "papers": [
+        "usenix-sec25-beer-taptrap",
+        "usenix-sec26-beer-webview-http"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-beer-webview-http",
+          "title": "Plain Text, Plain Risks: Measuring HTTP Inclusion in Android WebViews at Scale",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer"
+        },
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "title": "TapTrap: Animation-Driven Tapjacking on Android",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+        }
+      ]
+    },
+    {
+      "id": "philipp-beer-tu-wien",
+      "name": "Philipp Beer",
+      "publication_name": "Philipp Beer",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer",
+      "institutions": [
+        "TU Wien"
+      ],
+      "papers": [
+        "usenix-sec25-beer-taptrap",
+        "usenix-sec26-beer-webview-http"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-beer-webview-http",
+          "title": "Plain Text, Plain Risks: Measuring HTTP Inclusion in Android WebViews at Scale",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer"
+        },
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "title": "TapTrap: Animation-Driven Tapjacking on Android",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+        }
+      ]
+    },
+    {
+      "id": "sebastian-roth-bayreuth",
+      "name": "Sebastian Roth",
+      "publication_name": "Sebastian Roth",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer",
+      "institutions": [
+        "University of Bayreuth"
+      ],
+      "papers": [
+        "usenix-sec25-beer-taptrap",
+        "usenix-sec26-beer-webview-http"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        },
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-beer-webview-http",
+          "title": "Plain Text, Plain Risks: Measuring HTTP Inclusion in Android WebViews at Scale",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer"
+        },
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "title": "TapTrap: Animation-Driven Tapjacking on Android",
+          "year": 2025,
+          "venue": "USENIX Security 2025",
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+        }
+      ]
+    },
+    {
       "id": "min-yang-fudan",
       "name": "杨珉",
       "publication_name": "Min Yang",
@@ -1569,6 +2204,37 @@
       ]
     },
     {
+      "id": "aaron-schulman",
+      "name": "Aaron Schulman",
+      "publication_name": "Aaron Schulman",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow",
+      "institutions": [
+        "University of California San Diego"
+      ],
+      "papers": [
+        "usenix-sec26-crow-boeing-implant"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-crow-boeing-implant",
+          "title": "Design and Implementation of a Physical Implant Attack on the Boeing 737",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow"
+        }
+      ]
+    },
+    {
       "id": "adrian-perrig",
       "name": "Adrian Perrig",
       "publication_name": "Adrian Perrig",
@@ -1596,6 +2262,68 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen"
+        }
+      ]
+    },
+    {
+      "id": "akshaya-kumar-gatech",
+      "name": "Akshaya Kumar",
+      "publication_name": "Akshaya Kumar",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/kumar-akshaya",
+      "institutions": [
+        "Georgia Institute of Technology"
+      ],
+      "papers": [
+        "usenix-sec26-kumar-tile"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-kumar-tile",
+          "title": "Security and Privacy Analysis of Tile’s Location Tracking Protocol",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kumar-akshaya"
+        }
+      ]
+    },
+    {
+      "id": "alessandro-sorniotti",
+      "name": "Alessandro Sorniotti",
+      "publication_name": "Alessandro Sorniotti",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
+      "institutions": [
+        "IBM Research Europe"
+      ],
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-koschel-copykat",
+          "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
         }
       ]
     },
@@ -1631,6 +2359,37 @@
       ]
     },
     {
+      "id": "alsharif-abuadbba",
+      "name": "Alsharif Abuadbba",
+      "publication_name": "Alsharif Abuadbba",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "CSIRO"
+      ],
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
+        }
+      ]
+    },
+    {
       "id": "amit-klein",
       "name": "Amit Klein",
       "publication_name": "Amit Klein",
@@ -1662,6 +2421,130 @@
       ]
     },
     {
+      "id": "andrea-di-dio",
+      "name": "Andrea Di Dio",
+      "publication_name": "Andrea Di Dio",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
+      "institutions": [
+        "Vrije Universiteit Amsterdam"
+      ],
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-koschel-copykat",
+          "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
+        }
+      ]
+    },
+    {
+      "id": "andrea-mambretti",
+      "name": "Andrea Mambretti",
+      "publication_name": "Andrea Mambretti",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
+      "institutions": [
+        "IBM Research Europe"
+      ],
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-koschel-copykat",
+          "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
+        }
+      ]
+    },
+    {
+      "id": "anil-kurmus",
+      "name": "Anil Kurmus",
+      "publication_name": "Anil Kurmus",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
+      "institutions": [
+        "IBM Research Europe"
+      ],
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-koschel-copykat",
+          "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
+        }
+      ]
+    },
+    {
+      "id": "anna-raymaker",
+      "name": "Anna Raymaker",
+      "publication_name": "Anna Raymaker",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/kumar-akshaya",
+      "institutions": [
+        "Georgia Institute of Technology"
+      ],
+      "papers": [
+        "usenix-sec26-kumar-tile"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-kumar-tile",
+          "title": "Security and Privacy Analysis of Tile’s Location Tracking Protocol",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kumar-akshaya"
+        }
+      ]
+    },
+    {
       "id": "athanasios-theocharis",
       "name": "Athanasios Theocharis",
       "publication_name": "Athanasios Theocharis",
@@ -1689,6 +2572,38 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
+      "id": "baojun-liu-tsinghua",
+      "name": "Baojun Liu",
+      "publication_name": "Baojun Liu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan",
+      "institutions": [
+        "北京信息科学与技术国家研究中心",
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-li-aliasleap"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "title": "Alias Equals Zone? Large-Scale and Stealthy Takeover of Domain Hosting Service via CNAME-Following Cross-Domain Verification",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan"
         }
       ]
     },
@@ -1818,6 +2733,68 @@
       ]
     },
     {
+      "id": "claudio-migliorelli",
+      "name": "Claudio Migliorelli",
+      "publication_name": "Claudio Migliorelli",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
+      "institutions": [
+        "IBM Research Europe"
+      ],
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-koschel-copykat",
+          "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
+        }
+      ]
+    },
+    {
+      "id": "cristiano-giuffrida",
+      "name": "Cristiano Giuffrida",
+      "publication_name": "Cristiano Giuffrida",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
+      "institutions": [
+        "Vrije Universiteit Amsterdam"
+      ],
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-koschel-copykat",
+          "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
+        }
+      ]
+    },
+    {
       "id": "damith-ranasinghe",
       "name": "Damith C. Ranasinghe",
       "publication_name": "Damith C. Ranasinghe",
@@ -1907,6 +2884,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
+        }
+      ]
+    },
+    {
+      "id": "daniel-trujillo-mit",
+      "name": "Daniël Trujillo",
+      "publication_name": "Daniël Trujillo",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo",
+      "institutions": [
+        "MIT Computer Science and Artificial Intelligence Laboratory"
+      ],
+      "papers": [
+        "usenix-sec26-trujillo-tontou"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-trujillo-tontou",
+          "title": "TONTOU: On the Exploitability of Time-of-Neutralization to Time-of-Use Windows",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo"
         }
       ]
     },
@@ -2377,6 +3385,38 @@
       ]
     },
     {
+      "id": "guozhu-meng-iie",
+      "name": "Guozhu Meng",
+      "publication_name": "Guozhu Meng",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
+      "institutions": [
+        "中国科学院信息工程研究所",
+        "中国科学院大学网络空间安全学院"
+      ],
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "title": "The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong"
+        }
+      ]
+    },
+    {
       "id": "guy-farrelly",
       "name": "Guy Farrelly",
       "publication_name": "Guy Farrelly",
@@ -2435,6 +3475,38 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong"
+        }
+      ]
+    },
+    {
+      "id": "hai-wan-tsinghua",
+      "name": "Hai Wan",
+      "publication_name": "Hai Wan",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
+      "institutions": [
+        "北京信息科学与技术国家研究中心",
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-peng-kintsugi"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-peng-kintsugi",
+          "title": "Kintsugi: Empowering LLMs to Mitigate Web Vulnerabilities via Runtime Policy Injection",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao"
         }
       ]
     },
@@ -2625,6 +3697,68 @@
       ]
     },
     {
+      "id": "jakob-koschel",
+      "name": "Jakob Koschel",
+      "publication_name": "Jakob Koschel",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
+      "institutions": [
+        "IBM Research Europe"
+      ],
+      "papers": [
+        "usenix-sec26-koschel-copykat"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-koschel-copykat",
+          "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
+        }
+      ]
+    },
+    {
+      "id": "jean-paul-degabriele",
+      "name": "Jean Paul Degabriele",
+      "publication_name": "Jean Paul Degabriele",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach",
+      "institutions": [
+        "Technology Innovation Institute"
+      ],
+      "papers": [
+        "usenix-sec26-bach-webrtc"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-bach-webrtc",
+          "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach"
+        }
+      ]
+    },
+    {
       "id": "jiahui-wu-ntu",
       "name": "Jiahui Wu",
       "publication_name": "Jiahui Wu",
@@ -2718,6 +3852,70 @@
       ]
     },
     {
+      "id": "jiatian-hu-tsinghua",
+      "name": "Jiatian Hu",
+      "publication_name": "Jiatian Hu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
+      "institutions": [
+        "北京信息科学与技术国家研究中心",
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-peng-kintsugi"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-peng-kintsugi",
+          "title": "Kintsugi: Empowering LLMs to Mitigate Web Vulnerabilities via Runtime Policy Injection",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao"
+        }
+      ]
+    },
+    {
+      "id": "jiaxu-wang-tsinghua",
+      "name": "Jiaxu Wang",
+      "publication_name": "Jiaxu Wang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
+      "institutions": [
+        "北京信息科学与技术国家研究中心",
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-peng-kintsugi"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-peng-kintsugi",
+          "title": "Kintsugi: Empowering LLMs to Mitigate Web Vulnerabilities via Runtime Policy Injection",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao"
+        }
+      ]
+    },
+    {
       "id": "jinglei-tan",
       "name": "Jinglei Tan",
       "publication_name": "Jinglei Tan",
@@ -2749,6 +3947,69 @@
       ]
     },
     {
+      "id": "jun-shao-zjgsu",
+      "name": "Jun Shao",
+      "publication_name": "Jun Shao",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan",
+      "institutions": [
+        "浙江工商大学",
+        "浙江省大数据与未来电子商务技术重点实验室"
+      ],
+      "papers": [
+        "usenix-sec26-li-aliasleap"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "title": "Alias Equals Zone? Large-Scale and Stealthy Takeover of Domain Hosting Service via CNAME-Following Cross-Domain Verification",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan"
+        }
+      ]
+    },
+    {
+      "id": "jun-zhang-swinburne",
+      "name": "Jun Zhang",
+      "publication_name": "Jun Zhang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "Swinburne University of Technology"
+      ],
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
+        }
+      ]
+    },
+    {
       "id": "junbeom-hur",
       "name": "Junbeom Hur",
       "publication_name": "Junbeom Hur",
@@ -2776,6 +4037,38 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong"
+        }
+      ]
+    },
+    {
+      "id": "kai-chen-iie",
+      "name": "Kai Chen",
+      "publication_name": "Kai Chen",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
+      "institutions": [
+        "中国科学院信息工程研究所",
+        "中国科学院大学网络空间安全学院"
+      ],
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "title": "The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong"
         }
       ]
     },
@@ -2904,6 +4197,37 @@
       ]
     },
     {
+      "id": "lukas-knittel",
+      "name": "Lukas Knittel",
+      "publication_name": "Lukas Knittel",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach",
+      "institutions": [
+        "Ruhr University Bochum"
+      ],
+      "papers": [
+        "usenix-sec26-bach-webrtc"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-bach-webrtc",
+          "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach"
+        }
+      ]
+    },
+    {
       "id": "maik-ender",
       "name": "Maik Ender",
       "publication_name": "Maik Ender",
@@ -2935,19 +4259,19 @@
       ]
     },
     {
-      "id": "scholar:marcosquarcina",
-      "name": "Marco Squarcina",
-      "publication_name": "Marco Squarcina",
+      "id": "martin-bach-tii",
+      "name": "Martin Bach",
+      "publication_name": "Martin Bach",
       "homepage": "",
-      "profile_source": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach",
       "institutions": [
-        "TU Wien"
+        "Technology Innovation Institute"
       ],
       "papers": [
-        "usenix-sec25-beer-taptrap"
+        "usenix-sec26-bach-webrtc"
       ],
       "annual_scores": {
-        "2025": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -2957,42 +4281,11 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec25-beer-taptrap",
-          "title": "TapTrap: Animation-Driven Tapjacking on Android",
-          "year": 2025,
-          "venue": "USENIX Security 2025",
-          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
-        }
-      ]
-    },
-    {
-      "id": "scholar:martinalindorfer",
-      "name": "Martina Lindorfer",
-      "publication_name": "Martina Lindorfer",
-      "homepage": "",
-      "profile_source": "",
-      "institutions": [
-        "TU Wien"
-      ],
-      "papers": [
-        "usenix-sec25-beer-taptrap"
-      ],
-      "annual_scores": {
-        "2025": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1,
-      "recent_papers": [
-        {
-          "id": "usenix-sec25-beer-taptrap",
-          "title": "TapTrap: Animation-Driven Tapjacking on Android",
-          "year": 2025,
-          "venue": "USENIX Security 2025",
-          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+          "id": "usenix-sec26-bach-webrtc",
+          "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach"
         }
       ]
     },
@@ -3090,6 +4383,68 @@
       ]
     },
     {
+      "id": "mengjia-yan-mit",
+      "name": "Mengjia Yan",
+      "publication_name": "Mengjia Yan",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo",
+      "institutions": [
+        "MIT Computer Science and Artificial Intelligence Laboratory"
+      ],
+      "papers": [
+        "usenix-sec26-trujillo-tontou"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-trujillo-tontou",
+          "title": "TONTOU: On the Exploitability of Time-of-Neutralization to Time-of-Use Windows",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo"
+        }
+      ]
+    },
+    {
+      "id": "michael-specter-gatech",
+      "name": "Michael A. Specter",
+      "publication_name": "Michael A. Specter",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/kumar-akshaya",
+      "institutions": [
+        "Georgia Institute of Technology"
+      ],
+      "papers": [
+        "usenix-sec26-kumar-tile"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-kumar-tile",
+          "title": "Security and Privacy Analysis of Tile’s Location Tracking Protocol",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kumar-akshaya"
+        }
+      ]
+    },
+    {
       "id": "michael-chesser",
       "name": "Michael Chesser",
       "publication_name": "Michael Chesser",
@@ -3179,6 +4534,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/guo-wenbo"
+        }
+      ]
+    },
+    {
+      "id": "minghong-fang-louisville",
+      "name": "Minghong Fang",
+      "publication_name": "Minghong Fang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "University of Louisville"
+      ],
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
         }
       ]
     },
@@ -3276,6 +4662,37 @@
       ]
     },
     {
+      "id": "nguyen-linh-bao-nguyen",
+      "name": "Nguyen Linh Bao Nguyen",
+      "publication_name": "Nguyen Linh Bao Nguyen",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "Swinburne University of Technology"
+      ],
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
+        }
+      ]
+    },
+    {
       "id": "nils-albartus",
       "name": "Nils Albartus",
       "publication_name": "Nils Albartus",
@@ -3369,6 +4786,99 @@
       ]
     },
     {
+      "id": "pat-pannuto",
+      "name": "Pat Pannuto",
+      "publication_name": "Pat Pannuto",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow",
+      "institutions": [
+        "University of California San Diego"
+      ],
+      "papers": [
+        "usenix-sec26-crow-boeing-implant"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-crow-boeing-implant",
+          "title": "Design and Implementation of a Physical Implant Attack on the Boeing 737",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow"
+        }
+      ]
+    },
+    {
+      "id": "patrick-mercier",
+      "name": "Patrick Mercier",
+      "publication_name": "Patrick Mercier",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow",
+      "institutions": [
+        "University of California San Diego"
+      ],
+      "papers": [
+        "usenix-sec26-crow-boeing-implant"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-crow-boeing-implant",
+          "title": "Design and Implementation of a Physical Implant Attack on the Boeing 737",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow"
+        }
+      ]
+    },
+    {
+      "id": "peng-zhou-shu",
+      "name": "Peng Zhou",
+      "publication_name": "Peng Zhou",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
+      "institutions": [
+        "上海大学"
+      ],
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "title": "The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong"
+        }
+      ]
+    },
+    {
       "id": "petros-efstathopoulos",
       "name": "Petros Efstathopoulos",
       "publication_name": "Petros Efstathopoulos",
@@ -3400,19 +4910,19 @@
       ]
     },
     {
-      "id": "scholar:philippbeer",
-      "name": "Philipp Beer",
-      "publication_name": "Philipp Beer",
+      "id": "pietro-moretto",
+      "name": "Pietro Moretto",
+      "publication_name": "Pietro Moretto",
       "homepage": "",
-      "profile_source": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
       "institutions": [
-        "TU Wien"
+        "IBM Research Europe"
       ],
       "papers": [
-        "usenix-sec25-beer-taptrap"
+        "usenix-sec26-koschel-copykat"
       ],
       "annual_scores": {
-        "2025": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -3422,11 +4932,11 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec25-beer-taptrap",
-          "title": "TapTrap: Animation-Driven Tapjacking on Android",
-          "year": 2025,
-          "venue": "USENIX Security 2025",
-          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+          "id": "usenix-sec26-koschel-copykat",
+          "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
         }
       ]
     },
@@ -3458,6 +4968,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/huang-qiqing"
+        }
+      ]
+    },
+    {
+      "id": "robert-merget-tii",
+      "name": "Robert Merget",
+      "publication_name": "Robert Merget",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach",
+      "institutions": [
+        "Technology Innovation Institute"
+      ],
+      "papers": [
+        "usenix-sec26-bach-webrtc"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-bach-webrtc",
+          "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach"
         }
       ]
     },
@@ -3524,6 +5065,37 @@
       ]
     },
     {
+      "id": "ruixuan-li-tsinghua",
+      "name": "Ruixuan Li",
+      "publication_name": "Ruixuan Li",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan",
+      "institutions": [
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-li-aliasleap"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "title": "Alias Equals Zone? Large-Scale and Stealthy Takeover of Domain Hosting Service via CNAME-Following Cross-Domain Verification",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan"
+        }
+      ]
+    },
+    {
       "id": "ruiyi-zhang-cispa",
       "name": "Ruiyi Zhang",
       "publication_name": "Ruiyi Zhang",
@@ -3586,19 +5158,19 @@
       ]
     },
     {
-      "id": "scholar:sebastianroth",
-      "name": "Sebastian Roth",
-      "publication_name": "Sebastian Roth",
+      "id": "sam-crow-ucsd",
+      "name": "Sam Crow",
+      "publication_name": "Sam Crow",
       "homepage": "",
-      "profile_source": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow",
       "institutions": [
-        "University of Bayreuth"
+        "University of California San Diego"
       ],
       "papers": [
-        "usenix-sec25-beer-taptrap"
+        "usenix-sec26-crow-boeing-implant"
       ],
       "annual_scores": {
-        "2025": {
+        "2026": {
           "security": 1,
           "software": 0,
           "ai": 0,
@@ -3608,11 +5180,11 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec25-beer-taptrap",
-          "title": "TapTrap: Animation-Driven Tapjacking on Android",
-          "year": 2025,
-          "venue": "USENIX Security 2025",
-          "url": "https://www.usenix.org/system/files/usenixsecurity25-beer.pdf"
+          "id": "usenix-sec26-crow-boeing-implant",
+          "title": "Design and Implementation of a Physical Implant Attack on the Boeing 737",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow"
         }
       ]
     },
@@ -3675,6 +5247,38 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
+      "id": "shuaiyin-yao-iie",
+      "name": "Shuaiyin Yao",
+      "publication_name": "Shuaiyin Yao",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
+      "institutions": [
+        "中国科学院信息工程研究所",
+        "中国科学院大学网络空间安全学院"
+      ],
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "title": "The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong"
         }
       ]
     },
@@ -3768,6 +5372,68 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        }
+      ]
+    },
+    {
+      "id": "stefan-savage",
+      "name": "Stefan Savage",
+      "publication_name": "Stefan Savage",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow",
+      "institutions": [
+        "University of California San Diego"
+      ],
+      "papers": [
+        "usenix-sec26-crow-boeing-implant"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-crow-boeing-implant",
+          "title": "Design and Implementation of a Physical Implant Attack on the Boeing 737",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow"
+        }
+      ]
+    },
+    {
+      "id": "stephen-checkoway",
+      "name": "Stephen Checkoway",
+      "publication_name": "Stephen Checkoway",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow",
+      "institutions": [
+        "Oberlin College"
+      ],
+      "papers": [
+        "usenix-sec26-crow-boeing-implant"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-crow-boeing-implant",
+          "title": "Design and Implementation of a Physical Implant Attack on the Boeing 737",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow"
         }
       ]
     },
@@ -3989,6 +5655,38 @@
       ]
     },
     {
+      "id": "tong-liu-iie",
+      "name": "Tong Liu",
+      "publication_name": "Tong Liu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
+      "institutions": [
+        "中国科学院信息工程研究所",
+        "中国科学院大学网络空间安全学院"
+      ],
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "title": "The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong"
+        }
+      ]
+    },
+    {
       "id": "tristan-hornetz",
       "name": "Tristan Hornetz",
       "publication_name": "Tristan Hornetz",
@@ -4016,6 +5714,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
+        }
+      ]
+    },
+    {
+      "id": "viet-vo-swinburne",
+      "name": "Viet Vo",
+      "publication_name": "Viet Vo",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "Swinburne University of Technology"
+      ],
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
         }
       ]
     },
@@ -4051,6 +5780,37 @@
       ]
     },
     {
+      "id": "vukasin-karadzic",
+      "name": "Vukašin Karadžić",
+      "publication_name": "Vukašin Karadžić",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach",
+      "institutions": [
+        "TU Darmstadt"
+      ],
+      "papers": [
+        "usenix-sec26-bach-webrtc"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-bach-webrtc",
+          "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach"
+        }
+      ]
+    },
+    {
       "id": "wanda-guo",
       "name": "Wanda Guo",
       "publication_name": "Wanda Guo",
@@ -4078,6 +5838,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/huang-qiqing"
+        }
+      ]
+    },
+    {
+      "id": "wanlun-ma-swinburne",
+      "name": "Wanlun Ma",
+      "publication_name": "Wanlun Ma",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "Swinburne University of Technology"
+      ],
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
         }
       ]
     },
@@ -4206,6 +5997,38 @@
       ]
     },
     {
+      "id": "xibin-zhao-tsinghua",
+      "name": "Xibin Zhao",
+      "publication_name": "Xibin Zhao",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
+      "institutions": [
+        "北京信息科学与技术国家研究中心",
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-peng-kintsugi"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-peng-kintsugi",
+          "title": "Kintsugi: Empowering LLMs to Mitigate Web Vulnerabilities via Runtime Policy Injection",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao"
+        }
+      ]
+    },
+    {
       "id": "xingyu-wang-ub",
       "name": "Xingyu Wang",
       "publication_name": "Xingyu Wang",
@@ -4233,6 +6056,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/huang-qiqing"
+        }
+      ]
+    },
+    {
+      "id": "xingyu-zhao-zjgsu",
+      "name": "Xingyu Zhao",
+      "publication_name": "Xingyu Zhao",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan",
+      "institutions": [
+        "浙江工商大学"
+      ],
+      "papers": [
+        "usenix-sec26-li-aliasleap"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "title": "Alias Equals Zone? Large-Scale and Stealthy Takeover of Domain Hosting Service via CNAME-Following Cross-Domain Verification",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan"
         }
       ]
     },
@@ -4331,6 +6185,37 @@
       ]
     },
     {
+      "id": "yang-xiang-swinburne",
+      "name": "Yang Xiang",
+      "publication_name": "Yang Xiang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "Swinburne University of Technology"
+      ],
+      "papers": [
+        "usenix-sec26-nguyen-menta"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
+        }
+      ]
+    },
+    {
       "id": "yanjun-zhang-griffith",
       "name": "Yanjun Zhang",
       "publication_name": "Yanjun Zhang",
@@ -4389,6 +6274,38 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yi"
+        }
+      ]
+    },
+    {
+      "id": "yihao-peng-tsinghua",
+      "name": "Yihao Peng",
+      "publication_name": "Yihao Peng",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
+      "institutions": [
+        "北京信息科学与技术国家研究中心",
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-peng-kintsugi"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-peng-kintsugi",
+          "title": "Kintsugi: Empowering LLMs to Mitigate Web Vulnerabilities via Runtime Policy Injection",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao"
         }
       ]
     },
@@ -4544,6 +6461,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yi"
+        }
+      ]
+    },
+    {
+      "id": "yunyi-zhang-tsinghua",
+      "name": "Yunyi Zhang",
+      "publication_name": "Yunyi Zhang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan",
+      "institutions": [
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-li-aliasleap"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "title": "Alias Equals Zone? Large-Scale and Stealthy Takeover of Domain Hosting Service via CNAME-Following Cross-Domain Verification",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan"
         }
       ]
     },
@@ -4792,6 +6740,70 @@
           "year": 2026,
           "venue": "ISSTA 2026",
           "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
+    },
+    {
+      "id": "zizhen-zhu-tsinghua",
+      "name": "Zizhen Zhu",
+      "publication_name": "Zizhen Zhu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
+      "institutions": [
+        "北京信息科学与技术国家研究中心",
+        "清华大学"
+      ],
+      "papers": [
+        "usenix-sec26-peng-kintsugi"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-peng-kintsugi",
+          "title": "Kintsugi: Empowering LLMs to Mitigate Web Vulnerabilities via Runtime Policy Injection",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao"
+        }
+      ]
+    },
+    {
+      "id": "zizhuang-deng-sdu",
+      "name": "Zizhuang Deng",
+      "publication_name": "Zizhuang Deng",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
+      "institutions": [
+        "密码技术与数字经济安全全国重点实验室",
+        "山东大学网络空间安全学院"
+      ],
+      "papers": [
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "title": "The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong"
         }
       ]
     },
@@ -6123,6 +8135,40 @@
   ],
   "collaborations": [
     {
+      "source": "bnrist",
+      "target": "tsinghua-university",
+      "papers": [
+        {
+          "id": "usenix-sec26-peng-kintsugi",
+          "year": 2026,
+          "venue_group": "security"
+        },
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 2
+    },
+    {
+      "source": "tu-wien",
+      "target": "university-bayreuth",
+      "papers": [
+        {
+          "id": "usenix-sec26-beer-webview-http",
+          "year": 2026,
+          "venue_group": "security"
+        },
+        {
+          "id": "usenix-sec25-beer-taptrap",
+          "year": 2025,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 2
+    },
+    {
       "source": "advanced-computing-intelligence-engineering-lab",
       "target": "information-engineering-university",
       "papers": [
@@ -6212,6 +8258,30 @@
       "papers": [
         {
           "id": "usenix-sec26-zhang-resume-injection",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "bnrist",
+      "target": "zhejiang-gongshang-university",
+      "papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "bnrist",
+      "target": "zhejiang-key-lab-big-data-future-ecommerce",
+      "papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
           "year": 2026,
           "venue_group": "security"
         }
@@ -6322,6 +8392,30 @@
           "id": "arxiv-2607-16487-fuzz-emup",
           "year": 2026,
           "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "csiro",
+      "target": "swinburne-university-technology",
+      "papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "csiro",
+      "target": "university-of-louisville",
+      "papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "year": 2026,
+          "venue_group": "security"
         }
       ],
       "weight": 1
@@ -6495,6 +8589,18 @@
       "weight": 1
     },
     {
+      "source": "ibm-research-europe",
+      "target": "vrije-universiteit-amsterdam",
+      "papers": [
+        {
+          "id": "usenix-sec26-koschel-copykat",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "idsia-usi-supsi",
       "target": "kaust-genai-center",
       "papers": [
@@ -6502,6 +8608,54 @@
           "id": "arxiv-2607-17986-self-state-attacks",
           "year": 2026,
           "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "iie-cas",
+      "target": "shandong-university-school-cyber-science",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "iie-cas",
+      "target": "shanghai-university",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "iie-cas",
+      "target": "skl-cryptography-digital-economy-security",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "iie-cas",
+      "target": "ucas-school-cyber-security",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
         }
       ],
       "weight": 1
@@ -6891,6 +9045,42 @@
       "weight": 1
     },
     {
+      "source": "oberlin-college",
+      "target": "uc-san-diego",
+      "papers": [
+        {
+          "id": "usenix-sec26-crow-boeing-implant",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "ruhr-university-bochum",
+      "target": "technology-innovation-institute",
+      "papers": [
+        {
+          "id": "usenix-sec26-bach-webrtc",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "ruhr-university-bochum",
+      "target": "tu-darmstadt",
+      "papers": [
+        {
+          "id": "usenix-sec26-bach-webrtc",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "sba-research",
       "target": "university-of-vienna",
       "papers": [
@@ -6915,6 +9105,66 @@
       "weight": 1
     },
     {
+      "source": "shandong-university-school-cyber-science",
+      "target": "shanghai-university",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "shandong-university-school-cyber-science",
+      "target": "skl-cryptography-digital-economy-security",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "shandong-university-school-cyber-science",
+      "target": "ucas-school-cyber-security",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "shanghai-university",
+      "target": "skl-cryptography-digital-economy-security",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "shanghai-university",
+      "target": "ucas-school-cyber-security",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "singapore-management-university",
       "target": "ualberta-amii",
       "papers": [
@@ -6927,11 +9177,47 @@
       "weight": 1
     },
     {
+      "source": "skl-cryptography-digital-economy-security",
+      "target": "ucas-school-cyber-security",
+      "papers": [
+        {
+          "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "skl-mathematical-engineering-advanced-computing",
       "target": "tsinghua-insc",
       "papers": [
         {
           "id": "usenix-sec26-jia-pangolin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "swinburne-university-technology",
+      "target": "university-of-louisville",
+      "papers": [
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "technology-innovation-institute",
+      "target": "tu-darmstadt",
+      "papers": [
+        {
+          "id": "usenix-sec26-bach-webrtc",
           "year": 2026,
           "venue_group": "security"
         }
@@ -6975,12 +9261,24 @@
       "weight": 1
     },
     {
-      "source": "tu-wien",
-      "target": "university-bayreuth",
+      "source": "tsinghua-university",
+      "target": "zhejiang-gongshang-university",
       "papers": [
         {
-          "id": "usenix-sec25-beer-taptrap",
-          "year": 2025,
+          "id": "usenix-sec26-li-aliasleap",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "tsinghua-university",
+      "target": "zhejiang-key-lab-big-data-future-ecommerce",
+      "papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "year": 2026,
           "venue_group": "security"
         }
       ],
@@ -7009,16 +9307,245 @@
         }
       ],
       "weight": 1
+    },
+    {
+      "source": "zhejiang-gongshang-university",
+      "target": "zhejiang-key-lab-big-data-future-ecommerce",
+      "papers": [
+        {
+          "id": "usenix-sec26-li-aliasleap",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
     }
   ],
   "publications": [
+    {
+      "id": "usenix-sec26-liu-picklecloak",
+      "title": "The Art of Hide and Seek: Making Pickle-Based Model Supply Chain Poisoning Stealthy Again",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
+      "institutions": [
+        "iie-cas",
+        "ucas-school-cyber-security",
+        "shanghai-university",
+        "shandong-university-school-cyber-science",
+        "skl-cryptography-digital-economy-security"
+      ],
+      "authors": [
+        "tong-liu-iie",
+        "guozhu-meng-iie",
+        "peng-zhou-shu",
+        "zizhuang-deng-sdu",
+        "shuaiyin-yao-iie",
+        "kai-chen-iie"
+      ]
+    },
+    {
+      "id": "usenix-sec26-trujillo-tontou",
+      "title": "TONTOU: On the Exploitability of Time-of-Neutralization to Time-of-Use Windows",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo",
+      "institutions": [
+        "mit-csail"
+      ],
+      "authors": [
+        "daniel-trujillo-mit",
+        "mengjia-yan-mit"
+      ]
+    },
+    {
+      "id": "usenix-sec26-kumar-tile",
+      "title": "Security and Privacy Analysis of Tile’s Location Tracking Protocol",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kumar-akshaya",
+      "institutions": [
+        "georgia-tech"
+      ],
+      "authors": [
+        "akshaya-kumar-gatech",
+        "anna-raymaker",
+        "michael-specter-gatech"
+      ]
+    },
+    {
+      "id": "usenix-sec26-beer-webview-http",
+      "title": "Plain Text, Plain Risks: Measuring HTTP Inclusion in Android WebViews at Scale",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/beer",
+      "institutions": [
+        "tu-wien",
+        "university-bayreuth"
+      ],
+      "authors": [
+        "philipp-beer-tu-wien",
+        "sebastian-roth-bayreuth",
+        "martina-lindorfer",
+        "marco-squarcina"
+      ]
+    },
+    {
+      "id": "usenix-sec26-peng-kintsugi",
+      "title": "Kintsugi: Empowering LLMs to Mitigate Web Vulnerabilities via Runtime Policy Injection",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
+      "institutions": [
+        "tsinghua-university",
+        "bnrist"
+      ],
+      "authors": [
+        "yihao-peng-tsinghua",
+        "zizhen-zhu-tsinghua",
+        "jiatian-hu-tsinghua",
+        "jiaxu-wang-tsinghua",
+        "hai-wan-tsinghua",
+        "xibin-zhao-tsinghua"
+      ]
+    },
+    {
+      "id": "usenix-sec26-nguyen-menta",
+      "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "swinburne-university-technology",
+        "csiro",
+        "university-of-louisville"
+      ],
+      "authors": [
+        "nguyen-linh-bao-nguyen",
+        "wanlun-ma-swinburne",
+        "viet-vo-swinburne",
+        "alsharif-abuadbba",
+        "minghong-fang-louisville",
+        "jun-zhang-swinburne",
+        "yang-xiang-swinburne"
+      ]
+    },
+    {
+      "id": "usenix-sec26-koschel-copykat",
+      "title": "Discovering, Characterizing and Exploiting Controllable-Copy Objects for Kernel Data-Only Attacks with CopyKat",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel",
+      "institutions": [
+        "ibm-research-europe",
+        "vrije-universiteit-amsterdam"
+      ],
+      "authors": [
+        "jakob-koschel",
+        "andrea-mambretti",
+        "alessandro-sorniotti",
+        "pietro-moretto",
+        "claudio-migliorelli",
+        "andrea-di-dio",
+        "cristiano-giuffrida",
+        "anil-kurmus"
+      ]
+    },
+    {
+      "id": "usenix-sec26-crow-boeing-implant",
+      "title": "Design and Implementation of a Physical Implant Attack on the Boeing 737",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/crow",
+      "institutions": [
+        "uc-san-diego",
+        "oberlin-college"
+      ],
+      "authors": [
+        "sam-crow-ucsd",
+        "stephen-checkoway",
+        "patrick-mercier",
+        "pat-pannuto",
+        "stefan-savage",
+        "aaron-schulman"
+      ]
+    },
+    {
+      "id": "usenix-sec26-bach-webrtc",
+      "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/bach",
+      "institutions": [
+        "technology-innovation-institute",
+        "tu-darmstadt",
+        "ruhr-university-bochum"
+      ],
+      "authors": [
+        "martin-bach-tii",
+        "vukasin-karadzic",
+        "lukas-knittel",
+        "robert-merget-tii",
+        "jean-paul-degabriele"
+      ]
+    },
+    {
+      "id": "usenix-sec26-li-aliasleap",
+      "title": "Alias Equals Zone? Large-Scale and Stealthy Takeover of Domain Hosting Service via CNAME-Following Cross-Domain Verification",
+      "year": 2026,
+      "venue": "USENIX Security 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-08-22",
+      "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan",
+      "institutions": [
+        "tsinghua-university",
+        "bnrist",
+        "zhejiang-gongshang-university",
+        "zhejiang-key-lab-big-data-future-ecommerce"
+      ],
+      "authors": [
+        "ruixuan-li-tsinghua",
+        "xingyu-zhao-zjgsu",
+        "yunyi-zhang-tsinghua",
+        "baojun-liu-tsinghua",
+        "jun-shao-zjgsu"
+      ]
+    },
     {
       "id": "usenix-sec26-pasquini-aiops",
       "title": "When AIOps Become “AI Oops”: Subverting LLM-driven IT Operations via Telemetry Manipulation",
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini",
       "institutions": [
@@ -7027,11 +9554,11 @@
       ],
       "authors": [
         "dario-pasquini",
+        "evgenios-kornaropoulos",
+        "giuseppe-ateniese",
         "omer-akgul",
         "athanasios-theocharis",
-        "petros-efstathopoulos",
-        "evgenios-kornaropoulos",
-        "giuseppe-ateniese"
+        "petros-efstathopoulos"
       ]
     },
     {
@@ -7040,7 +9567,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-hodong",
       "institutions": [
@@ -7050,9 +9577,9 @@
       "authors": [
         "hodong-kim",
         "gyeongsup-lim",
+        "seunghee-shin",
         "youngjoo-shin",
-        "junbeom-hur",
-        "seunghee-shin"
+        "junbeom-hur"
       ]
     },
     {
@@ -7061,7 +9588,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi",
       "institutions": [
@@ -7081,7 +9608,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix",
       "institutions": [
@@ -7103,7 +9630,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
       "institutions": [
@@ -7116,15 +9643,14 @@
       "authors": [
         "zhipeng-jia-ieu",
         "xiaokang-yin-ieu",
+        "shuitao-gan",
+        "chao-zhang-tsinghua",
+        "hangtian-liu",
         "jiangan-ji-ieu",
         "enzhou-song-ieu",
         "ruijie-cai-ieu",
-        "shengli-liu-ieu",
-        "shuitao-gan",
-        "chao-zhang-tsinghua",
-        "chao-zhang-tsinghua",
-        "hangtian-liu",
-        "jinglei-tan"
+        "jinglei-tan",
+        "shengli-liu-ieu"
       ]
     },
     {
@@ -7153,7 +9679,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
       "institutions": [
@@ -7164,8 +9690,8 @@
         "mathew-duong",
         "michael-chesser",
         "guy-farrelly",
-        "damith-ranasinghe",
-        "surya-nepal"
+        "surya-nepal",
+        "damith-ranasinghe"
       ]
     },
     {
@@ -7174,7 +9700,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen",
       "institutions": [
@@ -7184,8 +9710,8 @@
       "authors": [
         "liwen-xu-eth",
         "zechao-cai-eth",
-        "adrian-perrig",
-        "huayi-duan-hkust-gz"
+        "huayi-duan-hkust-gz",
+        "adrian-perrig"
       ]
     },
     {
@@ -7194,7 +9720,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon",
       "institutions": [
@@ -7211,7 +9737,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-11",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
       "institutions": [
@@ -7227,8 +9753,7 @@
         "tong-bu-fudan",
         "geng-hong-fudan",
         "xudong-pan-fudan",
-        "yuan-zhang-fudan",
-        "xudong-pan-fudan"
+        "yuan-zhang-fudan"
       ]
     },
     {
@@ -7237,7 +9762,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-03",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/gegenhuber",
       "institutions": [
@@ -7249,11 +9774,10 @@
       "authors": [
         "gabriel-gegenhuber",
         "moritz-grefner",
+        "maximilian-guenther",
         "matthaeus-wininger",
         "david-schmidt-univie",
-        "aljosha-judmayer",
-        "maximilian-guenther",
-        "david-schmidt-univie"
+        "aljosha-judmayer"
       ]
     },
     {
@@ -7262,7 +9786,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-03",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/huang-qiqing",
       "institutions": [
@@ -7272,9 +9796,9 @@
       "authors": [
         "qiqing-huang",
         "xingyu-wang-ub",
-        "hongxin-hu",
         "wanda-guo",
-        "guofei-gu"
+        "guofei-gu",
+        "hongxin-hu"
       ]
     },
     {
@@ -7295,9 +9819,6 @@
       "authors": [
         "dimitri-kokkonis",
         "michael-marcozzi",
-        "dimitri-kokkonis",
-        "michael-marcozzi",
-        "stefano-zacchiroli",
         "stefano-zacchiroli"
       ]
     },
@@ -7328,7 +9849,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-03",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-mohan",
       "institutions": [
@@ -7340,11 +9861,11 @@
       ],
       "authors": [
         "mohan-zhang",
-        "tianlong-chen-unc",
         "yuqi-jia",
-        "neil-zhenqiang-gong",
         "zhen-tan",
         "steven-jiang-hireez",
+        "neil-zhenqiang-gong",
+        "tianlong-chen-unc",
         "dawn-song"
       ]
     },
@@ -7354,7 +9875,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-03",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/guo-wenbo",
       "institutions": [
@@ -7365,13 +9886,13 @@
       ],
       "authors": [
         "wenbo-guo-ntu",
-        "yiran-zhang-ntu",
-        "jiahui-wu-ntu",
-        "vinay-sachidananda",
-        "yang-liu-ntu",
         "chengwei-liu-nankai",
         "ming-kang-scu",
-        "zhengzi-xu"
+        "yiran-zhang-ntu",
+        "jiahui-wu-ntu",
+        "zhengzi-xu",
+        "vinay-sachidananda",
+        "yang-liu-ntu"
       ]
     },
     {
@@ -7380,7 +9901,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-08-03",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yi",
       "institutions": [
@@ -7393,10 +9914,10 @@
         "yi-liu-griffith",
         "zhihao-chen-griffith",
         "yanjun-zhang-griffith",
-        "leo-yu-zhang",
         "gelei-deng",
         "yuekang-li",
-        "jianting-ning"
+        "jianting-ning",
+        "leo-yu-zhang"
       ]
     },
     {
@@ -7420,9 +9941,8 @@
         "jiarun-dai-fudan",
         "fengyu-liu-fudan",
         "lei-zhang-fudan",
-        "min-yang-fudan",
-        "youkun-shi-fudan",
-        "xiapu-luo"
+        "xiapu-luo",
+        "min-yang-fudan"
       ]
     },
     {
@@ -7439,10 +9959,10 @@
         "university-bayreuth"
       ],
       "authors": [
-        "scholar:philippbeer",
-        "scholar:marcosquarcina",
-        "scholar:martinalindorfer",
-        "scholar:sebastianroth"
+        "philipp-beer-tu-wien",
+        "marco-squarcina",
+        "sebastian-roth-bayreuth",
+        "martina-lindorfer"
       ]
     },
     {
@@ -7490,8 +10010,8 @@
         "youkun-shi-fudan",
         "scholar:keli",
         "scholar:chengyuanzhou",
-        "min-yang-fudan",
-        "scholar:haochen"
+        "scholar:haochen",
+        "min-yang-fudan"
       ]
     },
     {
@@ -7547,7 +10067,6 @@
         "scholar:yimengchen",
         "nathanael-denis",
         "scholar:robertodipietro",
-        "juergen-schmidhuber",
         "juergen-schmidhuber"
       ]
     },
@@ -7557,7 +10076,7 @@
       "year": 2026,
       "venue": "USENIX Security 2026",
       "venue_group": "security",
-      "status": "accepted-prepublication",
+      "status": "accepted",
       "first_seen": "2026-07-21",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan",
       "institutions": [
@@ -7588,15 +10107,15 @@
       ],
       "authors": [
         "yuchen-chen-nju",
-        "yuan-xiao-nju",
-        "chunrong-fang",
-        "baowen-xu",
-        "zhenyu-chen-nju",
         "scholar:weicheng",
+        "yuan-xiao-nju",
         "scholar:zhouyang",
         "scholar:weifengsun",
+        "chunrong-fang",
+        "xiang-chen-ntu",
+        "baowen-xu",
         "scholar:davidlo",
-        "xiang-chen-ntu"
+        "zhenyu-chen-nju"
       ]
     },
     {
@@ -7616,11 +10135,11 @@
       ],
       "authors": [
         "scholar:fatemehmoradihaghighi",
-        "scholar:mashrurchowdhury",
-        "scholar:zhenkaizhang",
         "scholar:zihaozhan",
         "scholar:yananguo",
-        "scholar:zimingzhao"
+        "scholar:zimingzhao",
+        "scholar:mashrurchowdhury",
+        "scholar:zhenkaizhang"
       ]
     },
     {
@@ -7660,9 +10179,9 @@
         "scholar:woohyukchoi",
         "scholar:juheekim",
         "scholar:taehyunkang",
-        "scholar:byoungyounglee",
         "scholar:jihyeonjeong",
-        "scholar:luyixing"
+        "scholar:luyixing",
+        "scholar:byoungyounglee"
       ]
     },
     {

@@ -315,6 +315,23 @@ def build_academic_graph(
             continue
         year = publication_year(paper)
         venue_group = accepted_venue_group(paper)
+        affiliated_author_ids = list(dict.fromkeys(
+            author["id"] for row in affiliations for author in row["authors"]
+        ))
+        author_id_by_publication_name = {
+            normalize_person_name(author["publication_name"]): author["id"]
+            for row in affiliations
+            for author in row["authors"]
+        }
+        publication_author_ids = list(dict.fromkeys(
+            author_id_by_publication_name[normalize_person_name(author)]
+            for author in paper.get("authors", [])
+            if normalize_person_name(author) in author_id_by_publication_name
+        ))
+        publication_author_ids.extend(
+            author_id for author_id in affiliated_author_ids
+            if author_id not in publication_author_ids
+        )
         publication = {
             "id": paper["id"],
             "title": paper["title"],
@@ -324,8 +341,10 @@ def build_academic_graph(
             "status": paper.get("status", ""),
             "first_seen": paper.get("first_seen", ""),
             "url": paper.get("primary_url") or ((paper.get("urls") or [""])[0]),
-            "institutions": [row["institution_id"] for row in affiliations],
-            "authors": [author["id"] for row in affiliations for author in row["authors"]],
+            "institutions": list(dict.fromkeys(
+                row["institution_id"] for row in affiliations
+            )),
+            "authors": publication_author_ids,
         }
         publications.append(publication)
 

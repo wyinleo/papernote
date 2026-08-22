@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "reference_systems": [
     {
       "name": "ACM Computing Classification System",
@@ -34,7 +34,8 @@
         "coding-agent",
         "reward-hacking",
         "aiops",
-        "resource-exhaustion"
+        "resource-exhaustion",
+        "model-serialization"
       ]
     },
     {
@@ -51,7 +52,9 @@
         "ui-security",
         "permission-bypass",
         "mobile-agent",
-        "android-accessibility"
+        "android-accessibility",
+        "android-webview",
+        "bluetooth-tracker"
       ]
     },
     {
@@ -62,7 +65,9 @@
         "authentication",
         "passkeys",
         "webauthn",
-        "privacy"
+        "privacy",
+        "membership-inference",
+        "stalking"
       ]
     },
     {
@@ -80,7 +85,11 @@
         "java",
         "taint-analysis",
         "patch-mining",
-        "fuzzing"
+        "fuzzing",
+        "model-serialization",
+        "deserialization",
+        "web-application",
+        "runtime-containment"
       ]
     },
     {
@@ -98,7 +107,11 @@
         "confidential-computing",
         "side-channel",
         "privilege-escalation",
-        "integrity-violation"
+        "integrity-violation",
+        "speculative-execution",
+        "linux-kernel",
+        "avionics",
+        "physical-implant"
       ]
     },
     {
@@ -113,7 +126,10 @@
         "ip-leakage",
         "dns",
         "dns-cache-poisoning",
-        "dns-amplification"
+        "dns-amplification",
+        "webrtc",
+        "domain-hosting",
+        "domain-takeover"
       ]
     }
   ],
@@ -211,7 +227,33 @@
     "zero-day": {"label": "零日漏洞", "facet": "problem"},
     "5g": {"label": "5G", "facet": "object"},
     "continuous-integration": {"label": "持续集成", "facet": "object"},
-    "pre-authentication": {"label": "认证前攻击面", "facet": "problem"}
+    "pre-authentication": {"label": "认证前攻击面", "facet": "problem"},
+    "android-webview": {"label": "Android WebView", "facet": "object"},
+    "authentication-bypass": {"label": "认证绕过", "facet": "problem"},
+    "avionics": {"label": "航空电子系统", "facet": "object"},
+    "bluetooth-tracker": {"label": "蓝牙定位追踪器", "facet": "object"},
+    "branch-predictor-poisoning": {"label": "分支预测器投毒", "facet": "problem"},
+    "bus-signal-manipulation": {"label": "总线信号操纵", "facet": "method"},
+    "cleartext-traffic": {"label": "明文传输", "facet": "problem"},
+    "concolic-execution": {"label": "混合符号执行", "facet": "method"},
+    "data-only-attack": {"label": "纯数据攻击", "facet": "problem"},
+    "deserialization": {"label": "不安全反序列化", "facet": "problem"},
+    "domain-hosting": {"label": "域名托管服务", "facet": "object"},
+    "domain-takeover": {"label": "域名接管", "facet": "problem"},
+    "exploit-generation": {"label": "利用生成系统", "facet": "artifact"},
+    "interrupt-injection": {"label": "中断注入", "facet": "method"},
+    "linux-kernel": {"label": "Linux 内核", "facet": "object"},
+    "membership-inference": {"label": "成员推断", "facet": "problem"},
+    "model-serialization": {"label": "模型序列化", "facet": "object"},
+    "natural-language-inference": {"label": "自然语言推断", "facet": "method"},
+    "physical-implant": {"label": "物理植入", "facet": "problem"},
+    "protocol-testing": {"label": "协议自动化测试", "facet": "method"},
+    "runtime-containment": {"label": "运行时遏制", "facet": "method"},
+    "speculative-execution": {"label": "推测执行", "facet": "object"},
+    "stalking": {"label": "跟踪与骚扰", "facet": "problem"},
+    "syscall-analysis": {"label": "系统调用分析", "facet": "method"},
+    "web-application": {"label": "Web 应用", "facet": "object"},
+    "webrtc": {"label": "WebRTC", "facet": "object"}
   },
   "primary_domain_overrides": {
     "usenix-sec26-kim-agentic": "ai-security",
@@ -251,6 +293,16 @@
     "usenix-sec26-kim-timeslice-sandwich": "systems-hardware-security",
     "usenix-sec26-klix-silicon-heist": "systems-hardware-security",
     "usenix-sec26-zhang-stackwarp": "systems-hardware-security",
-    "arxiv-2608-08939-not-a11y": "mobile-iot-security"
+    "arxiv-2608-08939-not-a11y": "mobile-iot-security",
+    "usenix-sec26-liu-picklecloak": "software-application-security",
+    "usenix-sec26-bach-webrtc": "network-communication-security",
+    "usenix-sec26-trujillo-tontou": "systems-hardware-security",
+    "usenix-sec26-peng-kintsugi": "software-application-security",
+    "usenix-sec26-koschel-copykat": "systems-hardware-security",
+    "usenix-sec26-nguyen-menta": "identity-privacy",
+    "usenix-sec26-kumar-tile": "identity-privacy",
+    "usenix-sec26-crow-boeing-implant": "systems-hardware-security",
+    "usenix-sec26-beer-webview-http": "mobile-iot-security",
+    "usenix-sec26-li-aliasleap": "network-communication-security"
   }
 }
