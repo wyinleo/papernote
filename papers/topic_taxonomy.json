@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "reference_systems": [
     {
       "name": "ACM Computing Classification System",
@@ -34,6 +34,7 @@
         "coding-agent",
         "reward-hacking",
         "aiops",
+        "security-operations",
         "resource-exhaustion",
         "model-serialization"
       ]
@@ -54,6 +55,8 @@
         "mobile-agent",
         "android-accessibility",
         "android-webview",
+        "connected-vehicle",
+        "wi-fi-positioning",
         "bluetooth-tracker"
       ]
     },
@@ -66,6 +69,7 @@
         "passkeys",
         "webauthn",
         "privacy",
+        "authorization-bypass",
         "membership-inference",
         "stalking"
       ]
@@ -89,7 +93,10 @@
         "model-serialization",
         "deserialization",
         "web-application",
-        "runtime-containment"
+        "runtime-containment",
+        "rust",
+        "memory-safety",
+        "sanitizer"
       ]
     },
     {
@@ -129,7 +136,11 @@
         "dns-amplification",
         "webrtc",
         "domain-hosting",
-        "domain-takeover"
+        "domain-takeover",
+        "ip-fragmentation",
+        "tcp-ip",
+        "off-path-attack",
+        "weak-verification"
       ]
     }
   ],
@@ -253,7 +264,21 @@
     "stalking": {"label": "跟踪与骚扰", "facet": "problem"},
     "syscall-analysis": {"label": "系统调用分析", "facet": "method"},
     "web-application": {"label": "Web 应用", "facet": "object"},
-    "webrtc": {"label": "WebRTC", "facet": "object"}
+    "webrtc": {"label": "WebRTC", "facet": "object"},
+    "authorization-bypass": {"label": "授权绕过", "facet": "problem"},
+    "causal-attribution": {"label": "因果归因", "facet": "method"},
+    "connected-vehicle": {"label": "联网汽车", "facet": "object"},
+    "formal-verification": {"label": "形式化验证", "facet": "method"},
+    "ip-fragmentation": {"label": "IP 分片", "facet": "object"},
+    "location-manipulation": {"label": "定位操纵", "facet": "problem"},
+    "memory-safety": {"label": "内存安全", "facet": "problem"},
+    "off-path-attack": {"label": "非路径攻击", "facet": "problem"},
+    "rust": {"label": "Rust", "facet": "object"},
+    "sanitizer": {"label": "内存安全检查器", "facet": "method"},
+    "security-operations": {"label": "安全运营", "facet": "object"},
+    "tcp-ip": {"label": "TCP/IP 协议栈", "facet": "object"},
+    "weak-verification": {"label": "弱校验", "facet": "problem"},
+    "wi-fi-positioning": {"label": "Wi-Fi 定位系统", "facet": "object"}
   },
   "primary_domain_overrides": {
     "usenix-sec26-kim-agentic": "ai-security",
@@ -303,6 +328,16 @@
     "usenix-sec26-kumar-tile": "identity-privacy",
     "usenix-sec26-crow-boeing-implant": "systems-hardware-security",
     "usenix-sec26-beer-webview-http": "mobile-iot-security",
-    "usenix-sec26-li-aliasleap": "network-communication-security"
+    "usenix-sec26-li-aliasleap": "network-communication-security",
+    "usenix-sec26-hu-confundo": "ai-security",
+    "usenix-sec26-karanjai-loginject": "ai-security",
+    "usenix-sec26-syros-muzzle": "ai-security",
+    "usenix-sec26-he-attriguard": "ai-security",
+    "usenix-sec26-liu-carjacking": "mobile-iot-security",
+    "usenix-sec26-xiao-payments": "identity-privacy",
+    "usenix-sec26-zhu-wild": "network-communication-security",
+    "usenix-sec26-braunsdorf-safeffi": "software-application-security",
+    "usenix-sec26-pan-fragjam": "network-communication-security",
+    "usenix-sec26-zhao-waved": "network-communication-security"
   }
 }

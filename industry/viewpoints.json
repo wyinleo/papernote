@@ -340,5 +340,62 @@
     "evidence_basis": "Windows 与 Linux 样本和部分源码的逆向、命令处理器、驱动与内核回调行为、ftrace hook、systemd 持久化及同一活动基础设施关联。",
     "limitations": "样本分析不能说明所有部署链和受害范围；AI 辅助开发仅为中等置信判断，不能从代码风格推导特定模型、生成比例或完全自动化。",
     "commercial_interest": "发布方属于 Cisco，并推广 Talos 情报、事件响应及 Cisco 端点与网络防护能力。"
+  },
+  {
+    "id": "gti-russia-interest-clusters-2026",
+    "title": "Google Threat Intelligence：三个活动簇持续定向窃取俄罗斯关注对象凭据",
+    "source": "Google Threat Intelligence Group",
+    "source_type": "模型机构与威胁情报",
+    "content_type": "定向攻击与基础设施调查",
+    "published_at": "2026-08-21",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/distinct-clusters-target-individuals-of-interest-to-russia/",
+    "topics": ["凭据窃取", "OAuth", "设备码钓鱼", "俄罗斯相关活动"],
+    "summary": "Google 将 UNC6293、UNC7005 与 UNC5976 三组活动按基础设施、诱饵和恶意软件区分，展示攻击者如何滥用应用专用密码、OAuth 设备码和 WhatsApp 设备链接，持续面向俄罗斯关注对象获取账号访问。",
+    "highlights": [
+      "UNC6293 与 UNC7005 被中等置信度关联到 ICE RELIC，活动利用合法登录流程、应用专用密码和设备码，弱化传统钓鱼域名检测的效果。",
+      "UNC5976 结合 VIDAR、ATOMIC 与 ENGINELIGHT 等工具，基础设施和载荷指标支持把不同感染链分开追踪。",
+      "文章公开域名、IP、路径、样本哈希与检测线索，并记录服务商干预，便于身份和网络团队复用狩猎。"
+    ],
+    "evidence_basis": "Google/Mandiant 身份与威胁遥测、钓鱼诱饵和恶意软件分析、基础设施关联、代码与样本哈希、服务商处置记录及公开 IOC。",
+    "limitations": "可见性集中于被定向的少量对象和 Google/Mandiant 数据；部分活动链不完整，UNC6293/UNC7005 与 ICE RELIC 的关系为中等置信度，不能外推总体规模或完整归因。",
+    "commercial_interest": "发布方属于 Google Cloud，并推广 Google Threat Intelligence、Mandiant 与相关身份和安全产品。"
+  },
+  {
+    "id": "gti-agentic-source-code-review-2026",
+    "title": "Google Threat Intelligence：用顺序专家智能体审查被盗源码",
+    "source": "Google Threat Intelligence Group",
+    "source_type": "模型机构与威胁情报",
+    "content_type": "智能体安全工程方法",
+    "published_at": "2026-08-19",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review/",
+    "topics": ["源码审计", "安全智能体", "漏洞验证", "威胁建模"],
+    "summary": "Google 披露十个月的 AVDH 源码审查流程：多个顺序专家智能体先做威胁建模和入口点发现，再生成数据流与访问控制假设，由高温度验证器交叉检验，最终只把有人类 PoC 的结果升级为关键发现。",
+    "highlights": [
+      "流程覆盖数千万行代码、数千条流水线和数万条候选发现，并把探索、富化、假设生成、反证与综合拆为不同专家角色。",
+      "在一次被盗代码库的两天演练中，经人工确认得到 100 多个关键真阳性；十个月运行期间促成 12 个 CVE。",
+      "发布方强调模型输出不是结论，关键结果仍需源码证据、独立验证器和人工概念验证共同通过。"
+    ],
+    "evidence_basis": "十个月内部运行记录、数千万行源码与数千条分析流水线、合成代码库和一次被盗代码库演练、人工 PoC 复核及 12 个 CVE 结果。",
+    "limitations": "没有公开底层数据集、逐项漏洞、精确率/召回率、推理成本或独立复现实验；关键规模与真阳性数字来自厂商自报，且只代表特定时间点和代码可见性。",
+    "commercial_interest": "发布方属于 Google/Mandiant，并提及 ADK、Antigravity、CodeMender、AI Threat Defense 等自有能力。"
+  },
+  {
+    "id": "unit42-collaboration-identity-abuse-2026",
+    "title": "Unit 42：协作工具正成为身份滥用与会话窃取入口",
+    "source": "Unit 42",
+    "source_type": "威胁情报与咨询",
+    "content_type": "身份攻击遥测与狩猎指南",
+    "published_at": "2026-08-20",
+    "url": "https://unit42.paloaltonetworks.com/communication-channel-identity-risks/",
+    "topics": ["身份滥用", "协作工具", "会话窃取", "钓鱼"],
+    "summary": "Unit 42 汇总十二个月协作工具攻击遥测与案例，指出 Teams、Slack 等可信频道被用于钓鱼、恶意包投递和 webhook 外传，并给出基于端点、身份和进程关系的 XQL 狩猎思路。",
+    "highlights": [
+      "其可见范围内，协作工具相关恶意端点告警在十二个月内增长超过四倍，其中 99% 与聊天钓鱼相关。",
+      "案例覆盖 Teams 远程协助诱导、Slack 会话或 webhook 滥用，以及 Axios npm、OpenSSF 和 CERT Polska 披露的生态事件。",
+      "狩猎建议把协作应用的子进程、浏览器凭据访问、异常网络目的地和身份登录事件关联，而不是只封禁单个 URL。"
+    ],
+    "evidence_basis": "Unit 42/Cortex 十二个月端点与网络告警、事件响应案例、进程和网络关系、XQL 狩猎查询，以及外部项目公开的 Slack 与供应链事件。",
+    "limitations": "四倍增长和 99% 比例只代表发布方告警与产品可见性，不是受害者数量或行业流行率；部分案例来自外部二手来源，狩猎命中是调查线索而非单独的入侵证明。",
+    "commercial_interest": "发布方属于 Palo Alto Networks，并推广 Cortex、Idira、Unit 42 事件响应及身份安全能力。"
   }
 ]

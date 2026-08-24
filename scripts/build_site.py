@@ -177,11 +177,15 @@ def normalize_person_name(value: str) -> str:
 
 
 def registry_lookup(registry: dict[str, Any], section: str) -> dict[str, dict[str, Any]]:
-    lookup: dict[str, dict[str, Any]] = {}
-    for source_name, record in registry.get(section, {}).items():
-        for alias in [source_name, record.get("display_name", ""), *(record.get("aliases") or [])]:
+    records = registry.get(section, {})
+    # Canonical source keys must win over display-name and alias collisions. This
+    # lets an existing exact-name entity remain stable when a same-name scholar
+    # is added under a qualified key and selected via a paper-level override.
+    lookup: dict[str, dict[str, Any]] = dict(records)
+    for record in records.values():
+        for alias in [record.get("display_name", ""), *(record.get("aliases") or [])]:
             if alias:
-                lookup[alias] = record
+                lookup.setdefault(alias, record)
     return lookup
 
 
@@ -217,17 +221,37 @@ def validate_entity_registry(registry: dict[str, Any]) -> None:
                 f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: translated scholar "
                 f"{source_name!r} requires a verification source"
             )
+    scholars = registry.get("scholars", {})
+    for paper_id, overrides in registry.get("paper_scholar_overrides", {}).items():
+        if not isinstance(overrides, dict):
+            raise ValueError(
+                f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: scholar overrides for "
+                f"{paper_id!r} must be an object"
+            )
+        for publication_name, scholar_key in overrides.items():
+            if scholar_key not in scholars:
+                raise ValueError(
+                    f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: scholar override "
+                    f"{paper_id!r}/{publication_name!r} references unknown key {scholar_key!r}"
+                )
+            if normalize_person_name(scholars[scholar_key]["publication_name"]) != normalize_person_name(publication_name):
+                raise ValueError(
+                    f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: scholar override "
+                    f"{paper_id!r}/{publication_name!r} has a mismatched publication name"
+                )
 
 
 def parse_affiliations(
     value: str,
     registry: dict[str, Any],
     paper_authors: list[str] | None = None,
+    paper_id: str = "",
 ) -> list[dict[str, Any]]:
     """Parse, normalize and validate the institution-first weekly format."""
     rows = []
     institution_lookup = registry_lookup(registry, "institutions")
     scholar_lookup = registry_lookup(registry, "scholars")
+    scholar_overrides = registry.get("paper_scholar_overrides", {}).get(paper_id, {})
     paper_author_keys = {normalize_person_name(item) for item in (paper_authors or [])}
     for raw in re.split(r"[；\n]+", value or ""):
         raw = raw.strip()
@@ -248,7 +272,12 @@ def parse_affiliations(
         ]
         authors = []
         for source_author in source_authors:
-            record = scholar_lookup.get(source_author, {})
+            override_key = scholar_overrides.get(source_author)
+            record = (
+                registry.get("scholars", {}).get(override_key, {})
+                if override_key
+                else scholar_lookup.get(source_author, {})
+            )
             publication_name = record.get("publication_name") or source_author
             if paper_author_keys and normalize_person_name(publication_name) not in paper_author_keys:
                 raise ValueError(
@@ -310,6 +339,7 @@ def build_academic_graph(
             paper.get("details", {}).get("author_affiliations", ""),
             registry,
             paper.get("authors", []),
+            paper.get("id", ""),
         )
         if not affiliations:
             continue
@@ -510,6 +540,7 @@ def build_payload() -> dict[str, Any]:
                     details["author_affiliations"],
                     registry,
                     paper.get("authors", []),
+                    paper.get("id", ""),
                 )
             )
 
