@@ -106,6 +106,20 @@ def parse_glossary(value: str | list[str], source: str) -> list[dict[str, str]]:
     return entries
 
 
+def validate_public_date(value: str, source: str) -> None:
+    """Keep discovery notes separate from the public version timeline."""
+    entry_pattern = re.compile(
+        r"^\d{4}(?:-\d{2}(?:-\d{2})?)?(?: \d{2}:\d{2})? "
+        r"(?:预印版本|正式发表)$"
+    )
+    entries = [entry.strip() for entry in value.split("；") if entry.strip()]
+    if not entries or any(not entry_pattern.fullmatch(entry) for entry in entries):
+        raise ValueError(
+            f"{source}: public date must use '时间 预印版本' or "
+            f"'时间 正式发表': {value!r}"
+        )
+
+
 def load_index() -> list[dict[str, Any]]:
     papers = []
     for line_number, raw in enumerate(INDEX_PATH.read_text(encoding="utf-8").splitlines(), 1):
@@ -166,6 +180,10 @@ def parse_weekly_cache() -> dict[str, dict[str, Any]]:
                     fields["glossary"],
                     f"{path.relative_to(ROOT)}: {title}",
                 )
+            validate_public_date(
+                fields.get("public_date", ""),
+                f"{path.relative_to(ROOT)}: {title}",
+            )
             cached[normalize_title(title)] = fields
     return cached
 
