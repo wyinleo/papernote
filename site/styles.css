@@ -498,11 +498,17 @@ main {
 .dialog-byline { padding-bottom: 24px; color: var(--muted); border-bottom: 1px solid var(--line); font-size: 13px; line-height: 1.6; }
 .detail-section { margin-top: 26px; }
 .detail-section h3 { margin: 0 0 9px; color: var(--accent); font-size: 12px; letter-spacing: .1em; }
-.detail-section p { margin: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: 16px; line-height: 1.85; }
+.detail-section p,
+.glossary-section dl {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.detail-section p { margin: 0; }
 .glossary-section dl { margin: 0; display: grid; gap: 10px; }
 .glossary-section dl div { display: grid; grid-template-columns: minmax(110px, .3fr) minmax(0, 1fr); gap: 18px; }
-.glossary-section dt { font-weight: 700; line-height: 1.7; }
-.glossary-section dd { margin: 0; color: var(--muted); line-height: 1.75; }
+.glossary-section dt { font-weight: 600; line-height: inherit; }
+.glossary-section dd { margin: 0; color: var(--ink); line-height: inherit; }
 .affiliation-list { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.85; }
 .affiliation-list li + li { margin-top: 6px; }
 .dialog-scholar-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 24px 0 0; padding: 18px 0; border-block: 1px solid var(--line); }
