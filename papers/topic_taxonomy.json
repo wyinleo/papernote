@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "reference_systems": [
     {
       "name": "ACM Computing Classification System",
@@ -278,7 +278,24 @@
     "security-operations": {"label": "安全运营", "facet": "object"},
     "tcp-ip": {"label": "TCP/IP 协议栈", "facet": "object"},
     "weak-verification": {"label": "弱校验", "facet": "problem"},
-    "wi-fi-positioning": {"label": "Wi-Fi 定位系统", "facet": "object"}
+    "wi-fi-positioning": {"label": "Wi-Fi 定位系统", "facet": "object"},
+    "test-generation": {"label": "测试生成系统", "facet": "artifact"},
+    "data-access-control": {"label": "数据访问控制", "facet": "object"},
+    "permission-prediction": {"label": "权限决策预测", "facet": "method"},
+    "user-study": {"label": "用户研究", "facet": "method"},
+    "knowledge-graph": {"label": "知识图谱", "facet": "object"},
+    "relation-poisoning": {"label": "关系投毒", "facet": "problem"},
+    "oauth": {"label": "OAuth / OpenID Connect", "facet": "object"},
+    "audience-injection": {"label": "受众注入", "facet": "problem"},
+    "bluetooth-fast-pair": {"label": "蓝牙快速配对", "facet": "object"},
+    "pairing-hijack": {"label": "配对劫持", "facet": "problem"},
+    "harness-generation": {"label": "测试桩生成", "facet": "method"},
+    "least-privilege": {"label": "最小权限失配", "facet": "problem"},
+    "static-analysis": {"label": "静态分析", "facet": "method"},
+    "cloud-computing": {"label": "公有云计算", "facet": "object"},
+    "cross-vm-leakage": {"label": "跨虚拟机泄漏", "facet": "problem"},
+    "dns-resolver": {"label": "递归 DNS 解析器", "facet": "object"},
+    "work-profiling": {"label": "工作量剖析", "facet": "method"}
   },
   "primary_domain_overrides": {
     "usenix-sec26-kim-agentic": "ai-security",
@@ -338,6 +355,16 @@
     "usenix-sec26-zhu-wild": "network-communication-security",
     "usenix-sec26-braunsdorf-safeffi": "software-application-security",
     "usenix-sec26-pan-fragjam": "network-communication-security",
-    "usenix-sec26-zhao-waved": "network-communication-security"
+    "usenix-sec26-zhao-waved": "network-communication-security",
+    "ieee-sp26-luo-agentic-concolic": "software-application-security",
+    "ieee-sp26-wu-agent-permissions": "ai-security",
+    "ieee-sp26-kaya-web-chatbot": "ai-security",
+    "ieee-sp26-liang-graphrag": "ai-security",
+    "ieee-sp26-hosseyni-audience-injection": "identity-privacy",
+    "ieee-sp26-duttagupta-fast-pair": "mobile-iot-security",
+    "ieee-sp26-androutsopoulos-deepsurf": "software-application-security",
+    "ieee-sp26-tystahl-cosseter": "software-application-security",
+    "ieee-sp26-hertogh-rain": "systems-hardware-security",
+    "ieee-sp26-xu-resolver-profiler": "network-communication-security"
   }
 }

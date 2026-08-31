@@ -397,5 +397,100 @@
     "evidence_basis": "Unit 42/Cortex 十二个月端点与网络告警、事件响应案例、进程和网络关系、XQL 狩猎查询，以及外部项目公开的 Slack 与供应链事件。",
     "limitations": "四倍增长和 99% 比例只代表发布方告警与产品可见性，不是受害者数量或行业流行率；部分案例来自外部二手来源，狩猎命中是调查线索而非单独的入侵证明。",
     "commercial_interest": "发布方属于 Palo Alto Networks，并推广 Cortex、Idira、Unit 42 事件响应及身份安全能力。"
+  },
+  {
+    "id": "microsoft-terminalfix-reverse-tunnel-2026",
+    "title": "Microsoft：TerminalFix 从假 CAPTCHA 延伸到内网反向隧道",
+    "source": "Microsoft Security Research",
+    "source_type": "模型机构与威胁情报",
+    "content_type": "多阶段入侵与恶意软件分析",
+    "published_at": "2026-08-28",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/",
+    "topics": ["ClickFix", "DLL 侧载", "隐写载荷", "反向隧道"],
+    "summary": "Microsoft 还原 TerminalFix 活动从被入侵网站上的假 Cloudflare 验证，到 PowerShell、DLL 侧载、PNG 隐写、Active Directory 侦察和 Python WebSocket 反向隧道的完整链路。",
+    "highlights": [
+      "用户被诱导把多行命令粘贴进 Windows Terminal；随后合法 LockScreenContentServer.exe 从异常目录侧载恶意 dui70.dll。",
+      "第二阶段从三张 PNG 像素通道提取并拼接载荷，建立 Run key 与每 60 分钟执行的计划任务，再枚举域信任、管理员、用户描述和服务器。",
+      "最终 Python 植入体通过 TLS WebSocket 复用多个 TCP 流，把受害主机变成可访问内部系统的 SOCKS 式代理；文章同时公开哈希、域名和高级狩猎线索。"
+    ],
+    "evidence_basis": "Microsoft Defender 遥测、PowerShell 与 DLL/脚本逆向、进程树、持久化项、网络协议分析、文件哈希、域名及检测规则。",
+    "limitations": "发布方明确未观察到反向隧道后的横向移动、提权、数据窃取或勒索行为；受害范围和归因未完整公开，因此不能把可能的后续动作写成已发生事实。",
+    "commercial_interest": "发布方属于 Microsoft，并推广 Defender XDR、Defender for Endpoint、Security Copilot 与相关安全产品。"
+  },
+  {
+    "id": "microsoft-ai-gateway-compromise-2026",
+    "title": "Microsoft：暴露的 LiteLLM 网关成为模型密钥与控制面的攻击入口",
+    "source": "Microsoft Threat Intelligence",
+    "source_type": "模型机构与威胁情报",
+    "content_type": "AI 基础设施入侵案例",
+    "published_at": "2026-08-26",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points/",
+    "topics": ["LiteLLM", "AI 网关", "凭据窃取", "云工作负载"],
+    "summary": "Microsoft 报告针对暴露 LiteLLM 网关的真实入侵：攻击从网关进程执行命令，读取环境变量中的模型提供商密钥和数据库凭据，并继续部署挖矿、SSH 持久化和中继组件。",
+    "highlights": [
+      "发布方以高置信度判断初始访问来自暴露的 LiteLLM 表面，并关联 CVE-2026-42271 与可绕过主机校验的 CVE-2026-48710 攻击路径。",
+      "遥测显示载荷读取 `/proc/1/environ`，筛选 master、API key、token、password 等字段，并以多种工具回传，说明 AI 网关集中持有的路由和身份材料会放大失陷影响。",
+      "后续行为包括 XMRig/RandomX 准备、访问 LiteLLM 数据库、写入服务账户 `authorized_keys`、隐藏中继与 systemd 伪装持久化。"
+    ],
+    "evidence_basis": "云工作负载遥测、网关进程树、环境变量读取与外传命令、文件与网络痕迹、数据库访问、SSH/systemd 持久化以及公开漏洞链对照。",
+    "limitations": "具体受害组织、样本数量和完整时间线未公开；公开 CVE 链与该事件的初始入口是高置信推断，不等于对每个受影响部署都已复现同一路径。",
+    "commercial_interest": "发布方属于 Microsoft，并推广 Defender for Cloud、Defender XDR 及 AI 工作负载安全能力。"
+  },
+  {
+    "id": "unit42-ai-enabled-malware-state-2026",
+    "title": "Unit 42：405 个 AI 恶意软件样本中只有 12 个进入端点遥测",
+    "source": "Unit 42",
+    "source_type": "威胁情报与咨询",
+    "content_type": "AI 恶意软件样本与遥测研究",
+    "published_at": "2026-08-25",
+    "url": "https://unit42.paloaltonetworks.com/ai-enabled-malware-analysis/",
+    "topics": ["AI 恶意软件", "生产遥测", "VirusTotal", "行为检测"],
+    "summary": "Unit 42 汇总 405 个以 AI 为功能、开发方式或品牌诱饵的样本，并用端点、网络和沙箱遥测区分研究 PoC 与真实生产出现；结果显示公开样本数量远高于实际遭遇量。",
+    "highlights": [
+      "405 个唯一哈希来自 WildFire、VirusTotal Intelligence 和公开研究；只有 12 个出现在非测试 Cortex XDR 端点，约 15—20 个进入 WildFire 会话。",
+      "约 97% 样本只存在于沙箱、研究仓库或安全验证环境；12 个生产端点样本均触发告警，说明现阶段 AI 部分没有消除传统执行行为。",
+      "一类冒充 AI 应用的投递活动触达 50 多个组织，但数据没有显示显著行业或地域集中，发布方将其解释为机会型而非定向分发。"
+    ],
+    "evidence_basis": "405 个 SHA-256 样本、2024-06 至 2025-06 的 WildFire 会话、2024-12 至 2025-06 的非测试端点遥测、告警记录和沙箱判定。",
+    "limitations": "样本纳入标准很宽，既包含真正运行 AI 的恶意代码，也包含品牌滥用和 LLM 生成代码；遥测仅代表 Palo Alto Networks 客户与给定时间窗，不能估计全球流行率。",
+    "commercial_interest": "发布方属于 Palo Alto Networks，并强调 Advanced WildFire、Cortex XDR 与 XSIAM 对样本的检测能力。"
+  },
+  {
+    "id": "unit42-perturbation-probing-2026",
+    "title": "Unit 42：扰动探针用两次前向传播测量大模型安全行为集中度",
+    "source": "Unit 42",
+    "source_type": "安全研究实验室",
+    "content_type": "模型安全机理与诊断方法",
+    "published_at": "2026-08-28",
+    "url": "https://unit42.paloaltonetworks.com/perturbation-probing-llm-safety/",
+    "topics": ["LLM 对齐", "神经元分析", "安全脆弱性", "模型诊断"],
+    "summary": "Unit 42 介绍扰动探针：每个提示只需两次前向传播，定位对拒绝或自我纠正行为具有因果影响的少量前馈神经元，并提出 FFN/Skip 比作为部署前脆弱性指标。",
+    "highlights": [
+      "Qwen3-4B 的 350,208 个前馈神经元中，移除识别出的 50 个（约 0.014%）会让 520 个有害提示中的 80% 改变拒绝格式，并在第二个 200 提示基准复现。",
+      "13 个模型上的 FFN/Skip 比解释了小规模定向修改脆弱性方差的 81%，可作为比较对齐行为是否过度集中于窄路径的候选诊断。",
+      "在 Qwen3.5-2B 上放大 10 个神经元，使 200 个 TruthfulQA 提示的事实自我纠正从 52% 提升到 88%，说明同一方法也可用于定向修复探索。"
+    ],
+    "evidence_basis": "13 个开放权重模型、两个有害提示基准、TruthfulQA、多轮同意偏差任务、神经元消融/放大实验及关联统计；底层论文链接到 arXiv。",
+    "limitations": "实验集中在开放权重模型和特定可观察行为，改变拒绝模板不等于完整安全能力丧失；FFN/Skip 比的跨架构、跨语言和长期训练稳定性仍需独立复现。",
+    "commercial_interest": "发布方属于 Palo Alto Networks，并在文章中推广 Prisma AIRS Runtime Security 与 Unit 42 AI Security Assessment。"
+  },
+  {
+    "id": "talos-ai-soc-model-selection-2026",
+    "title": "Cisco Talos：SOC 模型选择应同时测效果、成本、时延与波动",
+    "source": "Cisco Talos",
+    "source_type": "安全研究实验室",
+    "content_type": "SOC 模型评测方法",
+    "published_at": "2026-08-26",
+    "url": "https://blog.talosintelligence.com/choose-your-fighter-balancing-competing-requirements-to-select-models-for-your-ai-soc/",
+    "topics": ["AI SOC", "日志分析", "模型评测", "成本与一致性"],
+    "summary": "Cisco Talos 在同一日志分析任务上测试 Anthropic 与 OpenAI 的 66 种模型和推理组合，发现不存在单一全面赢家，并提出按组织约束选择 Pareto 方案的可复用评测流程。",
+    "highlights": [
+      "比较维度不仅是任务得分，还包含分析耗时、调用成本和多次运行一致性，避免高平均分掩盖偶发弱结果。",
+      "提高推理强度并非单调提升质量：部分组合成本更高却不改善得分，甚至出现退化，因此不能把 reasoning effort 当作通用质量旋钮。",
+      "作者建议先定义可接受错误、时延和预算，再在自身日志与工作流上重复测试，而不是直接采用公共排行榜或单次演示。"
+    ],
+    "evidence_basis": "一个 SOC 日志分析任务、两家模型提供商、66 种模型/推理组合、多次运行的效果、时间、成本与离散程度对比。",
+    "limitations": "只覆盖一个任务和两家提供商，模型版本、价格与服务时延会变化；文章给出方法而非通用排行榜，不能外推到取证、告警分诊或恶意代码分析。",
+    "commercial_interest": "发布方属于 Cisco；内容与 Talos 研究和 Cisco 安全运营场景相关，但结论包含跨厂商模型比较。"
   }
 ]
