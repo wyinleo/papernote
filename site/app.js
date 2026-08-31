@@ -67,8 +67,15 @@
 
   const dateText = (value) => {
     if (!value) return "";
-    const date = new Date(`${value}T00:00:00+08:00`);
-    return new Intl.DateTimeFormat("zh-CN", { year: "numeric", month: "short", day: "numeric" }).format(date);
+    if (/^\d{4}$/.test(value)) return `${value} 年`;
+    const matched = value.match(/^(\d{4})-(\d{2})(?:-(\d{2}))?/);
+    if (!matched) return value;
+    const [, year, month, day] = matched;
+    const date = new Date(`${year}-${month}-${day || "01"}T00:00:00+08:00`);
+    const options = day
+      ? { year: "numeric", month: "short", day: "numeric" }
+      : { year: "numeric", month: "short" };
+    return new Intl.DateTimeFormat("zh-CN", options).format(date);
   };
 
   const statusLabel = (status = "") => {
@@ -167,7 +174,8 @@
     });
     papers = [...papers].sort((a, b) => {
       if (state.sort === "title") return a.title.localeCompare(b.title);
-      return b.first_seen.localeCompare(a.first_seen) || a.title.localeCompare(b.title);
+      return (b.card_date?.value || "").localeCompare(a.card_date?.value || "")
+        || a.title.localeCompare(b.title);
     });
     return papers;
   }
@@ -213,7 +221,7 @@
         <div class="card-meta">
           <strong>${escapeHtml(paper.week)}</strong>
           <span>${escapeHtml((paper.venues || []).join(" · "))}</span><br>
-          <span>${dateText(paper.first_seen)}</span>
+          <span title="${escapeHtml(paper.card_date?.label || "论文公开时间")}">${dateText(paper.card_date?.value)}</span>
         </div>
         <div class="card-body">
           <h3><button class="paper-title-button" type="button" data-open-paper="${escapeHtml(paper.id)}">${escapeHtml(paper.title)}</button></h3>

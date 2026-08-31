@@ -120,6 +120,36 @@ def validate_public_date(value: str, source: str) -> None:
         )
 
 
+def card_publication_date(
+    public_timeline: str,
+    status: str,
+    venues: list[str],
+) -> dict[str, str]:
+    """Choose a public-facing paper date without exposing ingestion metadata."""
+    entries = re.findall(
+        r"(\d{4}(?:-\d{2}(?:-\d{2})?)?(?: \d{2}:\d{2})?) "
+        r"(预印版本|正式发表)",
+        public_timeline,
+    )
+    status_text = status.casefold()
+    is_accepted = "accepted" in status_text or "prepublication" in status_text
+    preferred_label = "正式发表" if is_accepted else "预印版本"
+    preferred = [date_value for date_value, label in entries if label == preferred_label]
+    if preferred:
+        return {"value": preferred[-1], "label": preferred_label}
+
+    if is_accepted:
+        venue_year = re.search(r"\b(20\d{2})\b", " ".join(venues))
+        if venue_year:
+            return {"value": venue_year.group(1), "label": "接收年份"}
+
+    fallback = [date_value for date_value, label in entries if label == "预印版本"]
+    return {
+        "value": fallback[-1] if fallback else "",
+        "label": "预印版本" if fallback else "",
+    }
+
+
 def load_index() -> list[dict[str, Any]]:
     papers = []
     for line_number, raw in enumerate(INDEX_PATH.read_text(encoding="utf-8").splitlines(), 1):
@@ -606,6 +636,11 @@ def build_payload() -> dict[str, Any]:
         paper["cached"] = bool(details)
         paper["details"] = details
         paper["primary_url"] = (paper.get("urls") or [""])[0]
+        paper["card_date"] = card_publication_date(
+            details.get("public_date", ""),
+            paper.get("status", ""),
+            paper.get("venues") or [],
+        )
 
         week_counts[week] = week_counts.get(week, 0) + 1
         theme = theme_counts.setdefault(theme_id, {"id": theme_id, "label": theme_label, "count": 0})
