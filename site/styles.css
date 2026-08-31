@@ -62,21 +62,12 @@ a { color: inherit; }
   text-decoration: none;
 }
 
-.brand-mark {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  color: var(--surface);
-  background: var(--ink);
-  border-radius: 50%;
-  font-family: Georgia, serif;
-  font-size: 22px;
+.brand strong {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -.035em;
 }
-
-.brand strong, .brand small { display: block; }
-.brand strong { letter-spacing: -.03em; }
-.brand small { margin-top: 1px; color: var(--muted); font-size: 11px; }
 
 .mode-tabs {
   display: flex;
@@ -126,6 +117,10 @@ main {
   margin: 0 auto;
   padding: 0 clamp(20px, 4vw, 64px);
 }
+
+.content,
+.card-list,
+.card-body { min-width: 0; }
 
 .eyebrow {
   margin: 0 0 12px;
@@ -287,6 +282,9 @@ main {
 .card-meta { color: var(--muted); font-size: 12px; line-height: 1.7; }
 .card-meta strong { display: block; margin-bottom: 7px; color: var(--teal); font-weight: 700; }
 .card-body h3 { max-width: 850px; margin: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: clamp(19px, 2vw, 25px); font-weight: 500; line-height: 1.35; }
+.card-body h3,
+.dialog-title,
+.glossary-section dt { overflow-wrap: anywhere; }
 .paper-title-button {
   padding: 0;
   color: inherit;
@@ -501,6 +499,10 @@ main {
 .detail-section { margin-top: 26px; }
 .detail-section h3 { margin: 0 0 9px; color: var(--accent); font-size: 12px; letter-spacing: .1em; }
 .detail-section p { margin: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: 16px; line-height: 1.85; }
+.glossary-section dl { margin: 0; display: grid; gap: 10px; }
+.glossary-section dl div { display: grid; grid-template-columns: minmax(110px, .3fr) minmax(0, 1fr); gap: 18px; }
+.glossary-section dt { font-weight: 700; line-height: 1.7; }
+.glossary-section dd { margin: 0; color: var(--muted); line-height: 1.75; }
 .affiliation-list { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.85; }
 .affiliation-list li + li { margin-top: 6px; }
 .dialog-scholar-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 24px 0 0; padding: 18px 0; border-block: 1px solid var(--line); }
@@ -571,7 +573,7 @@ footer {
   .search:focus-within input { width: auto; }
   .mode-tabs { width: 100%; }
   .mode-tab { flex: 1; padding-inline: 8px; }
-  .workspace { grid-template-columns: 1fr; padding-top: 28px; }
+  .workspace { grid-template-columns: minmax(0, 1fr); padding-top: 28px; }
   .filters { position: static; }
   .filter-list { display: flex; overflow-x: auto; gap: 8px; padding: 2px 0 8px; scrollbar-width: thin; }
   .filter-button { width: auto; min-width: max-content; padding: 8px 11px; border: 1px solid var(--line); border-radius: 999px; }
@@ -579,7 +581,8 @@ footer {
   .cache-note { display: none; }
   .content-header { align-items: stretch; flex-direction: column; gap: 8px; }
   .content-controls { margin-bottom: 12px; flex-wrap: wrap; }
-  .paper-card, .viewpoint-card { grid-template-columns: 1fr; gap: 9px; padding-right: 34px; }
+  .paper-card, .viewpoint-card { grid-template-columns: minmax(0, 1fr); gap: 9px; padding-right: 34px; }
+  .glossary-section dl div { grid-template-columns: 1fr; gap: 1px; }
   .card-meta strong { display: inline; margin-right: 8px; }
   .footer-meta { align-items: flex-start; flex-direction: column; }
   .stats { grid-template-columns: repeat(2, 1fr); }

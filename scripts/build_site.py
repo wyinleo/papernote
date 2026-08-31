@@ -26,6 +26,7 @@ OUTPUT_PATH = ROOT / "site" / "data.js"
 FIELD_ALIASES = {
     "方向": "direction",
     "关键词": "keywords",
+    "名词解释": "glossary",
     "作者与单位": "author_affiliations",
     "单位与作者": "author_affiliations",
     "出处与状态": "venue_status",
@@ -84,6 +85,27 @@ def extract_links(value: str) -> list[dict[str, str]]:
     ]
 
 
+def parse_glossary(value: str | list[str], source: str) -> list[dict[str, str]]:
+    entries = []
+    seen_terms = set()
+    raw_entries = value if isinstance(value, list) else value.split("；")
+    for raw_entry in raw_entries:
+        raw_entry = raw_entry.strip()
+        if not raw_entry:
+            continue
+        term, separator, definition = raw_entry.partition("：")
+        if not separator or not term.strip() or not definition.strip():
+            raise ValueError(f"{source}: glossary entry must use '术语：解释': {raw_entry!r}")
+        normalized_term = term.strip().casefold()
+        if normalized_term in seen_terms:
+            raise ValueError(f"{source}: duplicate glossary term {term.strip()!r}")
+        seen_terms.add(normalized_term)
+        entries.append({"term": term.strip(), "definition": definition.strip()})
+    if not 1 <= len(entries) <= 5:
+        raise ValueError(f"{source}: glossary must contain 1-5 entries, found {len(entries)}")
+    return entries
+
+
 def load_index() -> list[dict[str, Any]]:
     papers = []
     for line_number, raw in enumerate(INDEX_PATH.read_text(encoding="utf-8").splitlines(), 1):
@@ -127,11 +149,23 @@ def parse_weekly_cache() -> dict[str, dict[str, Any]]:
                         )
                 elif current_key and (item := list_item.match(raw_line)):
                     item_text = text_only(item.group(1))
-                    existing = fields.get(current_key, "")
-                    fields[current_key] = "；".join(filter(None, (existing, item_text)))
+                    if current_key == "glossary":
+                        existing = fields.get(current_key)
+                        fields[current_key] = [
+                            *(existing if isinstance(existing, list) else []),
+                            item_text,
+                        ]
+                    else:
+                        existing = fields.get(current_key, "")
+                        fields[current_key] = "；".join(filter(None, (existing, item_text)))
                 elif current_key and raw_line.strip() and not raw_line.startswith(("#", "-", "|")):
                     if isinstance(fields.get(current_key), str):
                         fields[current_key] += " " + text_only(raw_line)
+            if fields.get("glossary"):
+                fields["glossary"] = parse_glossary(
+                    fields["glossary"],
+                    f"{path.relative_to(ROOT)}: {title}",
+                )
             cached[normalize_title(title)] = fields
     return cached
 
@@ -534,6 +568,10 @@ def build_payload() -> dict[str, Any]:
         week = Path(note_path).stem if note_path else iso_week(paper["first_seen"])
         theme_id, theme_label = choose_theme(paper, taxonomy)
         details = cache.get(normalize_title(paper["title"]), {})
+        if not details.get("glossary"):
+            raise ValueError(
+                f"{paper['id']}: cached weekly entry must include 1-5 glossary explanations"
+            )
         if details.get("author_affiliations"):
             details["author_affiliations"] = format_affiliations(
                 parse_affiliations(

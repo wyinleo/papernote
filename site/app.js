@@ -178,6 +178,14 @@
       || `${paper.authors.slice(0, 3).join("、")}${paper.authors.length > 3 ? " 等" : ""}`;
   }
 
+  function glossaryMarkup(entries = []) {
+    if (!entries.length) return "";
+    const rows = entries.map((entry) => `
+      <div><dt>${escapeHtml(entry.term)}</dt><dd>${escapeHtml(entry.definition)}</dd></div>
+    `).join("");
+    return `<section class="detail-section glossary-section"><h3>名词解释</h3><dl>${rows}</dl></section>`;
+  }
+
   function scholarButton(name, extraClass = "") {
     const scholarId = scholarIdsByName.get(name);
     if (!scholarId) return `<span>${escapeHtml(name)}</span>`;
@@ -467,6 +475,7 @@
       </p>
       ${detailSection("方向", details.direction)}
       ${detailSection("关键词", details.keywords)}
+      ${glossaryMarkup(details.glossary)}
       ${affiliationSection(details.author_affiliations)}
       ${detailSection("公开或更新时间", details.public_date)}
       ${detailSection("核心问题", details.question)}
