@@ -492,5 +492,81 @@
     "evidence_basis": "一个 SOC 日志分析任务、两家模型提供商、66 种模型/推理组合、多次运行的效果、时间、成本与离散程度对比。",
     "limitations": "只覆盖一个任务和两家提供商，模型版本、价格与服务时延会变化；文章给出方法而非通用排行榜，不能外推到取证、告警分诊或恶意代码分析。",
     "commercial_interest": "发布方属于 Cisco；内容与 Talos 研究和 Cisco 安全运营场景相关，但结论包含跨厂商模型比较。"
+  },
+  {
+    "id": "microsoft-ascii-smuggling-phishing-2026",
+    "title": "Microsoft：ASCII smuggling 从提示注入迁移到百万级钓鱼规避",
+    "source": "Microsoft Security Research",
+    "source_type": "安全研究与威胁情报",
+    "content_type": "邮件攻击遥测研究",
+    "published_at": "2026-09-03",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/",
+    "topics": ["ASCII smuggling", "Unicode Tags", "钓鱼邮件", "检测规避"],
+    "summary": "Microsoft 发现攻击者把 AI 提示注入研究常用的不可见 Unicode Tag 字符改作钓鱼关键词拆分，并在其邮件遥测中形成持续三个月的高容量活动。",
+    "highlights": [
+      "检测签名在 2026-02-08 约命中 2.1 万封，次日升至超过 130 万封，2 月 11 日超过 230 万封；高容量阶段延续约三个月并呈明显工作日节奏。",
+      "约 96% 的签名命中来自数百个金融主题投递域；攻击并非隐藏给 AI 的指令，而是在 funding 等诱饵词中插入 U+E0000—U+E007F 字符破坏字面匹配和分词。",
+      "最初的宽泛规则会误报英格兰、苏格兰和威尔士旗帜 emoji；排除合法 tag 序列后，罕见字符本身可成为低误报信号，说明规范化必须保留检测可见性。"
+    ],
+    "evidence_basis": "Microsoft Defender for Office 365 签名遥测、2026-02-09 至 06-18 的时间序列、发送域聚类、邮件样本和检测规则迭代。",
+    "limitations": "数据只反映 Microsoft 可见邮件流量与特定签名；日期界定的是该字符技巧的使用期，不是完整活动生命周期。多数邮件被分层防护拦截，不能据此估算实际到达或受害数量。",
+    "commercial_interest": "发布方属于 Microsoft，并推广 Defender for Office 365 与提示注入防护能力。"
+  },
+  {
+    "id": "microsoft-teams-it-support-intrusion-2026",
+    "title": "Microsoft：假冒 IT 支持把 Teams 远程会话升级为企业横向移动",
+    "source": "Microsoft Threat Intelligence",
+    "source_type": "威胁情报",
+    "content_type": "人工操作入侵链分析",
+    "published_at": "2026-09-02",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
+    "topics": ["Microsoft Teams", "远程支持", "Node.js 后门", "WinRM"],
+    "summary": "攻击者通过 Teams 外部协作假冒帮助台，诱导用户授权 Quick Assist 等交互远控，再用合法 Node.js、恶意 MSI 和 WinRM 从单台终端推进到身份基础设施。",
+    "highlights": [
+      "远控建立后，攻击者立即用 PowerShell 从云存储静默安装伪装为 devfix 或 Hotfix 的 MSI，随后下载官方签名的便携 Node.js 运行时执行加密 JavaScript implant。",
+      "持久化位于当前用户 Run 键或 Startup 文件夹，均伪装为 EdgeUpdate；Node.js 在 LocalAppData 运行非标准扩展加载器，绕过只盯无签名二进制或 `.js` 的规则。",
+      "操作员执行主机和 AD 枚举、周期截图与后续载荷，并从普通应用上下文通过 WinRM 向域控制器、证书颁发机构等高价值系统横移。"
+    ],
+    "evidence_basis": "Microsoft 端点、身份和协作遥测，进程树、MSI/脚本样本、注册表与启动项、C2 任务、WinRM 横移及代表性告警。",
+    "limitations": "文章未公开受害组织数、活动起止时间和最终归因；文中称这些行为常先于窃密或勒索，但没有把未观察到的后续目标写成既成事实。",
+    "commercial_interest": "发布方属于 Microsoft，并推广 Defender XDR、Defender for Endpoint、Office 365 和 Entra 控制。"
+  },
+  {
+    "id": "microsoft-counterfeit-installers-china-2026",
+    "title": "Microsoft：动态生成伪造安装包攻击中文用户与在华机构",
+    "source": "Microsoft Security Research",
+    "source_type": "安全研究与威胁情报",
+    "content_type": "恶意软件活动分析",
+    "published_at": "2026-09-01",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/01/counterfeit-installers-system-compromise-tracking-deceptive-software-download-campaign/",
+    "topics": ["伪造软件下载", "动态载荷", "银狐", "中国"],
+    "summary": "一组仿冒常用软件官网的中文下载页按请求动态生成同名不同哈希的安装包，落地自保护与持久化载荷；Microsoft 以中等置信度关联银狐活动。",
+    "highlights": [
+      "已确认设备主要关联跨国机构在华业务和中文用户，涉及医疗、制造、游戏、技术、物流、政府与教育；诱饵仿冒 Razer、Edge、Kaspersky、Calibre、百度网盘等品牌。",
+      "同一 `app_setup.*.zip` 在约 69 秒内出现内容不同的两个副本，且投递 URL 保持不变，证明服务端按请求再生载荷，单靠文件名或固定哈希难以覆盖入口。",
+      "包装器在公共或系统目录生成随机路径，但阶段载荷内容较稳定；后续滥用 TrueUpdate 运行行为、计划任务与阿里云 OSS 拉取下一阶段，并尝试削弱终端防护。"
+    ],
+    "evidence_basis": "Microsoft Defender Experts 跨阶段遥测、FileOriginReferrerUrl、进程树、文件哈希与版本资源、域名和托管基础设施关联、计划任务与网络连接。",
+    "limitations": "受害数量和完整活动窗口未公开；银狐关联为中等置信度且未归因国家行为体。可见样本与 Defender 客户范围不能代表所有中文地区感染。",
+    "commercial_interest": "发布方属于 Microsoft，并推广 SmartScreen、Defender XDR、网络保护、篡改保护和自动攻击中断。"
+  },
+  {
+    "id": "gtig-breeze-comet-brazil-2026",
+    "title": "GTIG：BREEZE COMET 直攻巴西支付系统并用 AI 加速定制脚本",
+    "source": "Google Threat Intelligence Group / Mandiant",
+    "source_type": "威胁情报与事件响应",
+    "content_type": "金融攻击团伙复盘",
+    "published_at": "2026-09-01",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil",
+    "topics": ["BREEZE COMET", "巴西支付系统", "mTLS 凭据", "生成式 AI"],
+    "summary": "BREEZE COMET 从终端银行欺诈转向入侵拥有 Pix、STR 与 Boleto 交易权限的机构，窃取 mTLS 和云凭据、部署多语言后门，并在取得核心应用访问后批量转账。",
+    "highlights": [
+      "入口包括密码喷洒、假冒 IT 支持的语音钓鱼、被入侵市政站点、流氓硬件和 JBoss 漏洞；团伙还扫描 CI/CD 环境中的管道凭据、API key 与高权限云令牌。",
+      "持久化由 LIGHTPAINT、MILDFROST、KICKPLATE、BOATBEAM 等 Java、Nim、Go 后门与 COBALTSPIN 隧道冗余组成；2025 年还用恶意 Kubernetes Pod 窃取云秘密。",
+      "取证显示取得核心金融应用访问后 24—48 小时内执行两轮、数百笔欺诈交易；至少一次盗取数万美元。恢复脚本中的冗长注释和标准化结构支持 AI 辅助开发判断，但不是模型来源的直接证明。"
+    ],
+    "evidence_basis": "自 2024 年起的 Mandiant 事件响应、GTIG 遥测、客户与第三方取证、恶意软件和脚本逆向、基础设施与支付活动时间线。",
+    "limitations": "报告聚焦已调查事件，受害组织和样本总数未公开；拉美和非洲扩张属于基础设施意图推断。AI 作用根据恢复代码特征判断，不能量化其对每次行动的实际贡献。",
+    "commercial_interest": "发布方属于 Google Cloud/ Mandiant，并提供威胁情报、事件响应和安全产品服务。"
   }
 ]

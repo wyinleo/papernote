@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "reference_systems": [
     {
       "name": "ACM Computing Classification System",
@@ -295,7 +295,27 @@
     "cloud-computing": {"label": "公有云计算", "facet": "object"},
     "cross-vm-leakage": {"label": "跨虚拟机泄漏", "facet": "problem"},
     "dns-resolver": {"label": "递归 DNS 解析器", "facet": "object"},
-    "work-profiling": {"label": "工作量剖析", "facet": "method"}
+    "work-profiling": {"label": "工作量剖析", "facet": "method"},
+    "encrypted-database": {"label": "加密数据库", "facet": "object"},
+    "structural-leakage": {"label": "结构泄漏", "facet": "problem"},
+    "inference-attack": {"label": "推断攻击", "facet": "method"},
+    "rpki": {"label": "资源公钥基础设施", "facet": "object"},
+    "ip-leasing": {"label": "IP 地址租赁", "facet": "object"},
+    "route-hijacking": {"label": "路由劫持", "facet": "problem"},
+    "control-flow-hijacking": {"label": "控制流劫持", "facet": "problem"},
+    "audit-logging": {"label": "审计日志", "facet": "artifact"},
+    "hardware-tracing": {"label": "硬件追踪", "facet": "method"},
+    "secret-reachability": {"label": "秘密可达性", "facet": "problem"},
+    "control-flow-integrity": {"label": "控制流完整性", "facet": "method"},
+    "anomaly-detection": {"label": "异常检测", "facet": "method"},
+    "intrusion-detection": {"label": "入侵检测", "facet": "artifact"},
+    "runtime-monitoring": {"label": "运行时监测", "facet": "method"},
+    "uefi": {"label": "UEFI 固件", "facet": "object"},
+    "system-management-mode": {"label": "系统管理模式", "facet": "object"},
+    "web-scraping": {"label": "网页抓取", "facet": "problem"},
+    "memory-encryption": {"label": "内存加密", "facet": "object"},
+    "address-aliasing": {"label": "内存地址别名", "facet": "problem"},
+    "heterogeneous-memory-management": {"label": "异构内存管理", "facet": "object"}
   },
   "primary_domain_overrides": {
     "usenix-sec26-kim-agentic": "ai-security",
@@ -365,6 +385,16 @@
     "ieee-sp26-androutsopoulos-deepsurf": "software-application-security",
     "ieee-sp26-tystahl-cosseter": "software-application-security",
     "ieee-sp26-hertogh-rain": "systems-hardware-security",
-    "ieee-sp26-xu-resolver-profiler": "network-communication-security"
+    "ieee-sp26-xu-resolver-profiler": "network-communication-security",
+    "ieee-sp26-espiritu-leafblower": "systems-hardware-security",
+    "ieee-sp26-li-ip-leasing": "network-communication-security",
+    "ieee-sp26-zhang-appare": "systems-hardware-security",
+    "ieee-sp26-trujillo-register-hiding": "systems-hardware-security",
+    "ieee-sp26-peng-apiecho": "software-application-security",
+    "ieee-sp26-wang-smufuzz": "systems-hardware-security",
+    "ieee-sp26-li-webcloak": "ai-security",
+    "ieee-sp26-de-meulemeester-battering-ram": "systems-hardware-security",
+    "ieee-sp26-roh-ghost": "systems-hardware-security",
+    "ieee-sp26-graf-vmscape": "systems-hardware-security"
   }
 }
