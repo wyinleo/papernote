@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="papernote：浏览安全论文精读、学术关系与有证据评价的行业观点。">
   <title>papernote · 安全研究笔记</title>
-  <link rel="stylesheet" href="./styles.css?v=5">
+  <link rel="stylesheet" href="./styles.css?v=6">
 </head>
 <body>
   <header class="site-header">
@@ -33,10 +33,7 @@
           <span id="resultCount"></span>
         </div>
         <div class="filter-list" id="filterList"></div>
-        <div class="cache-note">
-          <span class="cache-dot" aria-hidden="true"></span>
-          <p><strong>本地缓存</strong><br><span id="cacheStatus">正在读取…</span></p>
-        </div>
+        <section class="distribution-card" id="distributionCard" aria-live="polite"></section>
       </aside>
 
       <div class="content">
@@ -85,7 +82,7 @@
   </footer>
 
   <script src="./data.js?v=3"></script>
-  <script src="./app.js?v=3"></script>
+  <script src="./app.js?v=4"></script>
   <script src="./analytics-config.js?v=1"></script>
   <script src="./analytics.js?v=1"></script>
 </body>

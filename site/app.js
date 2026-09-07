@@ -26,6 +26,7 @@
   const $$ = (selector) => [...document.querySelectorAll(selector)];
   const elements = {
     stats: $("#stats"),
+    distribution: $("#distributionCard"),
     filterTitle: $("#filterTitle"),
     filterList: $("#filterList"),
     resultCount: $("#resultCount"),
@@ -113,8 +114,108 @@
     elements.stats.innerHTML = stats.map(([label, value]) =>
       `<div class="stat"><dt>${label}</dt><dd>${value}</dd></div>`
     ).join("");
-    $("#cacheStatus").textContent = `${data.counts.cached} 篇论文可直接读取中文精读`;
     $("#generatedAt").textContent = new Date(data.generated_at).toLocaleString("zh-CN");
+  }
+
+  const distributionColors = [
+    "#cb694f", "#d9954e", "#d0b562", "#6f9a88",
+    "#668ba2", "#85749a", "#ad6c82", "#7b8f73",
+  ];
+
+  const countBy = (items, labelFor) => {
+    const counts = new Map();
+    items.forEach((item) => {
+      const label = labelFor(item) || "其他";
+      counts.set(label, (counts.get(label) || 0) + 1);
+    });
+    return [...counts].map(([label, count]) => ({ label, count }))
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, "zh-CN"));
+  };
+
+  const compactVenue = (paper) => ((paper.venues || ["其他 / 未标注"])[0] || "其他 / 未标注")
+    .replace("USENIX Security", "USENIX Sec.")
+    .replace(/\b20(\d{2})\b/g, "’$1");
+
+  const viewpointOrganization = (item) => {
+    const source = item.source || "其他";
+    if (source.startsWith("Microsoft ")) return "Microsoft";
+    if (source.startsWith("Google Threat Intelligence")) return "Google / Mandiant";
+    return source;
+  };
+
+  function distributionForMode() {
+    if (state.mode === "viewpoints") {
+      return {
+        kicker: "观点来源",
+        summary: `${data.viewpoints.length} 条观点`,
+        unit: "条",
+        entries: countBy(data.viewpoints, viewpointOrganization),
+      };
+    }
+    if (state.mode === "academic") {
+      const categoryLabels = Object.fromEntries(
+        (data.academic?.categories || []).map((item) => [item.id, item.label])
+      );
+      categoryLabels.security = "安全四大";
+      categoryLabels.software = "软件工程";
+      categoryLabels.ai = "人工智能";
+      const publications = data.academic?.publications || [];
+      return {
+        kicker: "论文领域",
+        summary: `${data.academic?.coverage?.scored_top_venue_papers || 0} 篇纳入顶会统计`,
+        unit: "篇",
+        entries: countBy(publications, (paper) => categoryLabels[paper.venue_group] || "预印 / 其他"),
+      };
+    }
+    return {
+      kicker: "论文来源",
+      summary: `${data.counts.cached}/${data.counts.papers} 篇精读可用`,
+      unit: "篇",
+      entries: countBy(data.papers, compactVenue),
+    };
+  }
+
+  function renderDistribution() {
+    const distribution = distributionForMode();
+    const total = distribution.entries.reduce((sum, item) => sum + item.count, 0);
+    let cursor = 0;
+    const segments = distribution.entries.map((item, index) => {
+      const start = cursor;
+      cursor += total ? item.count / total * 100 : 0;
+      return `${distributionColors[index % distributionColors.length]} ${start.toFixed(2)}% ${cursor.toFixed(2)}%`;
+    });
+    const ariaParts = distribution.entries.map((item) => {
+      const percentage = total ? Math.round(item.count / total * 100) : 0;
+      return `${item.label} ${item.count}${distribution.unit}，占 ${percentage}%`;
+    });
+
+    elements.distribution.innerHTML = `
+      <div class="distribution-head">
+        <div>
+          <p class="distribution-kicker">${escapeHtml(distribution.kicker)}</p>
+          <strong>${escapeHtml(distribution.summary)}</strong>
+        </div>
+        <span>构成</span>
+      </div>
+      <div class="distribution-chart" role="img"
+           aria-label="${escapeHtml(`${distribution.kicker}：${ariaParts.join("；")}`)}"
+           style="background: conic-gradient(${segments.join(", ")})">
+        <span><b>${total}</b><small>${distribution.unit}</small></span>
+      </div>
+      <ol class="distribution-legend">
+        ${distribution.entries.map((item, index) => {
+          const percentage = total ? Math.round(item.count / total * 100) : 0;
+          return `
+            <li>
+              <i style="background:${distributionColors[index % distributionColors.length]}" aria-hidden="true"></i>
+              <span title="${escapeHtml(item.label)}">${escapeHtml(item.label)}</span>
+              <b>${item.count}</b>
+              <small>${percentage}%</small>
+            </li>
+          `;
+        }).join("")}
+      </ol>
+    `;
   }
 
   function groupsForMode() {
@@ -587,6 +688,7 @@
   }
 
   function render() {
+    renderDistribution();
     renderFilters();
     renderContent();
   }
