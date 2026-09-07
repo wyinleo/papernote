@@ -146,9 +146,9 @@
     return shares.map((item) => item.value);
   };
 
-  const compactVenue = (paper) => ((paper.venues || ["其他 / 未标注"])[0] || "其他 / 未标注")
-    .replace("USENIX Security", "USENIX Sec.")
-    .replace(/\b20(\d{2})\b/g, "’$1");
+  const conferenceName = (paper) => ((paper.venues || ["其他 / 未标注"])[0] || "其他 / 未标注")
+    .replace(/\s+20\d{2}\b/g, "")
+    .trim();
 
   const viewpointOrganization = (item) => {
     const source = item.source || "其他";
@@ -185,7 +185,7 @@
       kicker: "论文来源",
       summary: `${data.counts.cached}/${data.counts.papers} 篇精读可用`,
       unit: "篇",
-      entries: countBy(data.papers, compactVenue),
+      entries: countBy(data.papers, conferenceName),
     };
   }
 
