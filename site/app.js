@@ -132,6 +132,20 @@
       .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, "zh-CN"));
   };
 
+  const wholePercentages = (entries, total) => {
+    if (!total) return entries.map(() => 0);
+    const shares = entries.map((item, index) => {
+      const exact = item.count / total * 100;
+      return { index, value: Math.floor(exact), remainder: exact - Math.floor(exact) };
+    });
+    let unassigned = 100 - shares.reduce((sum, item) => sum + item.value, 0);
+    [...shares]
+      .sort((a, b) => b.remainder - a.remainder || a.index - b.index)
+      .slice(0, unassigned)
+      .forEach((item) => { shares[item.index].value += 1; });
+    return shares.map((item) => item.value);
+  };
+
   const compactVenue = (paper) => ((paper.venues || ["其他 / 未标注"])[0] || "其他 / 未标注")
     .replace("USENIX Security", "USENIX Sec.")
     .replace(/\b20(\d{2})\b/g, "’$1");
@@ -178,16 +192,16 @@
   function renderDistribution() {
     const distribution = distributionForMode();
     const total = distribution.entries.reduce((sum, item) => sum + item.count, 0);
+    const percentages = wholePercentages(distribution.entries, total);
     let cursor = 0;
     const segments = distribution.entries.map((item, index) => {
       const start = cursor;
       cursor += total ? item.count / total * 100 : 0;
       return `${distributionColors[index % distributionColors.length]} ${start.toFixed(2)}% ${cursor.toFixed(2)}%`;
     });
-    const ariaParts = distribution.entries.map((item) => {
-      const percentage = total ? Math.round(item.count / total * 100) : 0;
-      return `${item.label} ${item.count}${distribution.unit}，占 ${percentage}%`;
-    });
+    const ariaParts = distribution.entries.map((item, index) =>
+      `${item.label} ${item.count}${distribution.unit}，占 ${percentages[index]}%`
+    );
 
     elements.distribution.innerHTML = `
       <div class="distribution-head">
@@ -204,13 +218,12 @@
       </div>
       <ol class="distribution-legend">
         ${distribution.entries.map((item, index) => {
-          const percentage = total ? Math.round(item.count / total * 100) : 0;
           return `
             <li>
               <i style="background:${distributionColors[index % distributionColors.length]}" aria-hidden="true"></i>
               <span title="${escapeHtml(item.label)}">${escapeHtml(item.label)}</span>
               <b>${item.count}</b>
-              <small>${percentage}%</small>
+              <small>${percentages[index]}%</small>
             </li>
           `;
         }).join("")}
