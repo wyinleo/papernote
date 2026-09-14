@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "reference_systems": [
     {
       "name": "ACM Computing Classification System",
@@ -315,7 +315,23 @@
     "web-scraping": {"label": "网页抓取", "facet": "problem"},
     "memory-encryption": {"label": "内存加密", "facet": "object"},
     "address-aliasing": {"label": "内存地址别名", "facet": "problem"},
-    "heterogeneous-memory-management": {"label": "异构内存管理", "facet": "object"}
+    "heterogeneous-memory-management": {"label": "异构内存管理", "facet": "object"},
+    "information-flow": {"label": "信息流安全", "facet": "problem"},
+    "zero-knowledge": {"label": "零知识证明", "facet": "object"},
+    "constraint-consistency": {"label": "约束一致性", "facet": "problem"},
+    "safety-alignment": {"label": "安全对齐", "facet": "object"},
+    "model-merging": {"label": "模型合并", "facet": "method"},
+    "jailbreak": {"label": "大模型越狱", "facet": "problem"},
+    "guardrail": {"label": "大模型护栏", "facet": "artifact"},
+    "dark-patterns": {"label": "暗黑模式", "facet": "problem"},
+    "malicious-model": {"label": "恶意模型", "facet": "problem"},
+    "model-leaderboard": {"label": "模型排行榜", "facet": "object"},
+    "deep-learning-compiler": {"label": "深度学习编译器", "facet": "object"},
+    "compilation-inconsistency": {"label": "编译不一致", "facet": "problem"},
+    "model-unlearning": {"label": "模型遗忘", "facet": "method"},
+    "form-dependence": {"label": "形式依赖", "facet": "problem"},
+    "password-guessing": {"label": "口令猜测", "facet": "problem"},
+    "generative-model": {"label": "生成模型", "facet": "object"}
   },
   "primary_domain_overrides": {
     "usenix-sec26-kim-agentic": "ai-security",
@@ -395,6 +411,16 @@
     "ieee-sp26-li-webcloak": "ai-security",
     "ieee-sp26-de-meulemeester-battering-ram": "systems-hardware-security",
     "ieee-sp26-roh-ghost": "systems-hardware-security",
-    "ieee-sp26-graf-vmscape": "systems-hardware-security"
+    "ieee-sp26-graf-vmscape": "systems-hardware-security",
+    "ieee-sp26-arquint-diodon": "software-application-security",
+    "ieee-sp26-takahashi-zkfuzz": "software-application-security",
+    "ieee-sp26-zhang-ragorigin": "ai-security",
+    "ieee-sp26-wu-enchtable": "ai-security",
+    "ieee-sp26-wang-jailbreak-guardrails": "ai-security",
+    "ieee-sp26-ersoy-dark-patterns": "ai-security",
+    "ieee-sp26-suri-trojanclimb": "ai-security",
+    "ieee-sp26-chen-compiler-backdoor": "ai-security",
+    "ieee-sp26-ye-llm-unlearning": "ai-security",
+    "ieee-sp26-corrias-maya": "identity-privacy"
   }
 }

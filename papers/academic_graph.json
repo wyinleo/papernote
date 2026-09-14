@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-07T10:13:49+08:00",
+  "generated_at": "2026-09-14T11:42:19+08:00",
   "coverage": {
     "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
     "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程与系统、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
-    "indexed_papers": 78,
-    "papers_with_affiliations": 78,
-    "scored_top_venue_papers": 69
+    "indexed_papers": 88,
+    "papers_with_affiliations": 88,
+    "scored_top_venue_papers": 79
   },
   "categories": [
     {
@@ -26,6 +26,41 @@
     "2025"
   ],
   "institutions": [
+    {
+      "id": "nanyang-technological-university",
+      "name": "Nanyang Technological University",
+      "papers": [
+        "ieee-sp26-li-webcloak",
+        "ieee-sp26-wu-enchtable",
+        "usenix-sec26-guo-pyguard",
+        "usenix-sec26-he-attriguard",
+        "usenix-sec26-liu-malicious-skills"
+      ],
+      "scholars": [
+        "Gelei Deng",
+        "Jiahui Wu",
+        "Lixu Wang",
+        "Tianze Qiu",
+        "Vinay Sachidananda",
+        "Wei Dong",
+        "Wenbo Guo",
+        "XiaoFeng Wang",
+        "Xiaojun Jia",
+        "Xinfeng Li",
+        "Yang Liu",
+        "Yiming Li",
+        "Yiran Zhang"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 5,
+          "software": 0,
+          "ai": 0,
+          "total": 5
+        }
+      },
+      "verified_score": 5
+    },
     {
       "id": "tsinghua-university",
       "name": "清华大学",
@@ -66,28 +101,24 @@
       "verified_score": 5
     },
     {
-      "id": "nanyang-technological-university",
-      "name": "Nanyang Technological University",
+      "id": "eth-zurich",
+      "name": "ETH Zurich",
       "papers": [
-        "ieee-sp26-li-webcloak",
-        "usenix-sec26-guo-pyguard",
-        "usenix-sec26-he-attriguard",
-        "usenix-sec26-liu-malicious-skills"
+        "ieee-sp26-arquint-diodon",
+        "ieee-sp26-graf-vmscape",
+        "ieee-sp26-xu-resolver-profiler",
+        "usenix-sec26-xu-dalens"
       ],
       "scholars": [
-        "Gelei Deng",
-        "Jiahui Wu",
-        "Lixu Wang",
-        "Tianze Qiu",
-        "Vinay Sachidananda",
-        "Wei Dong",
-        "Wenbo Guo",
-        "XiaoFeng Wang",
-        "Xiaojun Jia",
-        "Xinfeng Li",
-        "Yang Liu",
-        "Yiming Li",
-        "Yiran Zhang"
+        "Adrian Perrig",
+        "Ali Hajiabadi",
+        "Jean-Claude Graf",
+        "Kaveh Razavi",
+        "Linard Arquint",
+        "Liwen Xu",
+        "Peter Müller",
+        "Sandro Rüegge",
+        "Zechao Cai"
       ],
       "annual_scores": {
         "2026": {
@@ -203,21 +234,23 @@
       "verified_score": 3
     },
     {
-      "id": "eth-zurich",
-      "name": "ETH Zurich",
+      "id": "purdue-university",
+      "name": "Purdue University",
       "papers": [
-        "ieee-sp26-graf-vmscape",
-        "ieee-sp26-xu-resolver-profiler",
-        "usenix-sec26-xu-dalens"
+        "ieee-sp26-androutsopoulos-deepsurf",
+        "ieee-sp26-ersoy-dark-patterns",
+        "ieee-sp26-tystahl-cosseter"
       ],
       "scholars": [
-        "Adrian Perrig",
-        "Ali Hajiabadi",
-        "Jean-Claude Graf",
-        "Kaveh Razavi",
-        "Liwen Xu",
-        "Sandro Rüegge",
-        "Zechao Cai"
+        "Ananth Shreekumar",
+        "Antonio Bianchi",
+        "Aravind Machiry",
+        "Brandon Lee",
+        "Devin Ersoy",
+        "Georgios C. Androutsopoulos",
+        "Siddharth Muralee",
+        "Sourag Cherupattamoolayil",
+        "Z. Berkay Celik"
       ],
       "annual_scores": {
         "2026": {
@@ -345,6 +378,34 @@
       "verified_score": 3
     },
     {
+      "id": "northeastern-university",
+      "name": "Northeastern University",
+      "papers": [
+        "arxiv-2607-16487-fuzz-emup",
+        "ieee-sp26-suri-trojanclimb",
+        "usenix-sec26-syros-muzzle"
+      ],
+      "scholars": [
+        "Alina Oprea",
+        "Anshuman Suri",
+        "Cristina Nita-Rotaru",
+        "Evan Rose",
+        "Georgios Syros",
+        "Harsh Chaudhari",
+        "William Robertson",
+        "Ziming Zhao"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
       "id": "seoul-national-university",
       "name": "Seoul National University",
       "papers": [
@@ -425,6 +486,32 @@
       "verified_score": 2
     },
     {
+      "id": "columbia-university",
+      "name": "Columbia University",
+      "papers": [
+        "ieee-sp26-chen-compiler-backdoor",
+        "ieee-sp26-takahashi-zkfuzz"
+      ],
+      "scholars": [
+        "Baishakhi Ray",
+        "Hideaki Takahashi",
+        "Jihwan Kim",
+        "Jinjun Peng",
+        "Junfeng Yang",
+        "Simin Chen",
+        "Suman Jana"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
       "id": "distrinet-ku-leuven",
       "name": "DistriNet, KU Leuven",
       "papers": [
@@ -480,6 +567,29 @@
         "Mathias Payer",
         "Qinying Wang",
         "Yi Xiang"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "georgia-tech",
+      "name": "Georgia Institute of Technology",
+      "papers": [
+        "ieee-sp26-ersoy-dark-patterns",
+        "usenix-sec26-kumar-tile"
+      ],
+      "scholars": [
+        "Akshaya Kumar",
+        "Anna Raymaker",
+        "Michael A. Specter",
+        "Muhammad Ibrahim"
       ],
       "annual_scores": {
         "2026": {
@@ -551,30 +661,6 @@
         "Huan Zhao",
         "Zhengxiong Luo",
         "Zhenkai Liang"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2
-    },
-    {
-      "id": "purdue-university",
-      "name": "Purdue University",
-      "papers": [
-        "ieee-sp26-androutsopoulos-deepsurf",
-        "ieee-sp26-tystahl-cosseter"
-      ],
-      "scholars": [
-        "Antonio Bianchi",
-        "Aravind Machiry",
-        "Georgios C. Androutsopoulos",
-        "Siddharth Muralee",
-        "Sourag Cherupattamoolayil"
       ],
       "annual_scores": {
         "2026": {
@@ -710,6 +796,52 @@
       "verified_score": 2
     },
     {
+      "id": "university-of-louisville",
+      "name": "University of Louisville",
+      "papers": [
+        "ieee-sp26-zhang-ragorigin",
+        "usenix-sec26-nguyen-menta"
+      ],
+      "scholars": [
+        "Minghong Fang"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "umass-amherst",
+      "name": "University of Massachusetts Amherst",
+      "papers": [
+        "ieee-sp26-suri-trojanclimb",
+        "usenix-sec26-jeong-network-agent"
+      ],
+      "scholars": [
+        "Abhinav Kumar",
+        "Ali Naseh",
+        "Amir Houmansadr",
+        "Eugene Bagdasarian",
+        "Hyejun Jeong",
+        "Mohammadreza Teymoorianfard",
+        "Yuefeng Peng"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
       "id": "vrije-universiteit-amsterdam",
       "name": "Vrije Universiteit Amsterdam",
       "papers": [
@@ -725,6 +857,26 @@
         "Mahesh Hari Sarma",
         "Mathé Hertogh",
         "Thijs Raymakers"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "renmin-university-china",
+      "name": "中国人民大学",
+      "papers": [
+        "ieee-sp26-wang-jailbreak-guardrails",
+        "usenix-sec26-wang-masleak"
+      ],
+      "scholars": [
+        "Wenxuan Wang"
       ],
       "annual_scores": {
         "2026": {
@@ -755,6 +907,52 @@
         "2026": {
           "security": 1,
           "software": 1,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "nankai-university",
+      "name": "南开大学",
+      "papers": [
+        "ieee-sp26-zhang-ragorigin",
+        "usenix-sec26-guo-pyguard"
+      ],
+      "scholars": [
+        "Baolei Zhang",
+        "Biao Yi",
+        "Chengwei Liu",
+        "Haoran Xin",
+        "Lihai Nie",
+        "Tong Li",
+        "Zheli Liu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
+      "id": "lingnan-university",
+      "name": "嶺南大學",
+      "papers": [
+        "ieee-sp26-wang-jailbreak-guardrails",
+        "usenix-sec26-wang-masleak"
+      ],
+      "scholars": [
+        "Daoyuan Wu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
           "ai": 0,
           "total": 2
         }
@@ -803,29 +1001,30 @@
       "verified_score": 2
     },
     {
-      "id": "northeastern-university",
-      "name": "Northeastern University",
+      "id": "hkust",
+      "name": "香港科技大學",
       "papers": [
-        "arxiv-2607-16487-fuzz-emup",
-        "usenix-sec26-syros-muzzle"
+        "ieee-sp26-wang-jailbreak-guardrails",
+        "usenix-sec26-wang-masleak"
       ],
       "scholars": [
-        "Alina Oprea",
-        "Cristina Nita-Rotaru",
-        "Evan Rose",
-        "Georgios Syros",
-        "William Robertson",
-        "Ziming Zhao"
+        "Liwen Wang",
+        "Shing-Chi Cheung",
+        "Shuai Wang",
+        "Xunguang Wang",
+        "Zhenlan Ji",
+        "Zongjie Li",
+        "Zongyi Lyu"
       ],
       "annual_scores": {
         "2026": {
-          "security": 1,
+          "security": 2,
           "software": 0,
           "ai": 0,
-          "total": 1
+          "total": 2
         }
       },
-      "verified_score": 1
+      "verified_score": 2
     },
     {
       "id": "radboud-university",
@@ -885,6 +1084,50 @@
       "scholars": [
         "David Kaplan",
         "Jagadish Kotra"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "amazon-web-services",
+      "name": "Amazon Web Services",
+      "papers": [
+        "ieee-sp26-arquint-diodon"
+      ],
+      "scholars": [
+        "Daniel Kroening",
+        "Jason R. Koenig",
+        "Joey Dodds",
+        "Samarth Kishor"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "ant-group",
+      "name": "Ant Group",
+      "papers": [
+        "ieee-sp26-wu-enchtable"
+      ],
+      "scholars": [
+        "Cheng Hong",
+        "Jialin Wu",
+        "Kecen Li",
+        "Zhicong Huang"
       ],
       "annual_scores": {
         "2026": {
@@ -1033,6 +1276,25 @@
       "verified_score": 1
     },
     {
+      "id": "florida-international-university",
+      "name": "Florida International University",
+      "papers": [
+        "ieee-sp26-ersoy-dark-patterns"
+      ],
+      "scholars": [
+        "Arjun Arunasalam"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "fraunhofer-aisec",
       "name": "Fraunhofer AISEC",
       "papers": [
@@ -1080,27 +1342,6 @@
       ],
       "scholars": [
         "Tadayoshi Kohno"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
-      "id": "georgia-tech",
-      "name": "Georgia Institute of Technology",
-      "papers": [
-        "usenix-sec26-kumar-tile"
-      ],
-      "scholars": [
-        "Akshaya Kumar",
-        "Anna Raymaker",
-        "Michael A. Specter"
       ],
       "annual_scores": {
         "2026": {
@@ -1246,6 +1487,25 @@
       ],
       "scholars": [
         "Zhengzi Xu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "independent-researcher",
+      "name": "Independent Researcher",
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "scholars": [
+        "Yuxi Chen"
       ],
       "annual_scores": {
         "2026": {
@@ -1550,6 +1810,28 @@
       ],
       "scholars": [
         "Maximilian Günther"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "sapienza-university-rome",
+      "name": "Sapienza University of Rome",
+      "papers": [
+        "ieee-sp26-corrias-maya"
+      ],
+      "scholars": [
+        "Dorjan Hitaj",
+        "Fabio De Gaspari",
+        "Luigi V. Mancini",
+        "William Corrias"
       ],
       "annual_scores": {
         "2026": {
@@ -1869,25 +2151,6 @@
       "verified_score": 1
     },
     {
-      "id": "university-of-louisville",
-      "name": "University of Louisville",
-      "papers": [
-        "usenix-sec26-nguyen-menta"
-      ],
-      "scholars": [
-        "Minghong Fang"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
       "id": "university-of-massachusetts",
       "name": "University of Massachusetts",
       "papers": [
@@ -1895,29 +2158,6 @@
       ],
       "scholars": [
         "Russell Tessier"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
-      "id": "umass-amherst",
-      "name": "University of Massachusetts Amherst",
-      "papers": [
-        "usenix-sec26-jeong-network-agent"
-      ],
-      "scholars": [
-        "Abhinav Kumar",
-        "Amir Houmansadr",
-        "Eugene Bagdasarian",
-        "Hyejun Jeong",
-        "Mohammadreza Teymoorianfard"
       ],
       "annual_scores": {
         "2026": {
@@ -1969,6 +2209,25 @@
       "verified_score": 1
     },
     {
+      "id": "university-of-north-texas",
+      "name": "University of North Texas",
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "scholars": [
+        "Zhuqing Liu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "university-of-south-florida",
       "name": "University of South Florida",
       "papers": [
@@ -1981,6 +2240,25 @@
         "Xiao Han",
         "Yao Liu",
         "Zhuo Lu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "university-of-southern-california",
+      "name": "University of Southern California",
+      "papers": [
+        "ieee-sp26-chen-compiler-backdoor"
+      ],
+      "scholars": [
+        "Yixin He"
       ],
       "annual_scores": {
         "2026": {
@@ -2194,25 +2472,6 @@
       "verified_score": 1
     },
     {
-      "id": "renmin-university-china",
-      "name": "中国人民大学",
-      "papers": [
-        "usenix-sec26-wang-masleak"
-      ],
-      "scholars": [
-        "Wenxuan Wang"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
       "id": "information-engineering-university",
       "name": "中国人民解放军信息工程大学",
       "papers": [
@@ -2281,6 +2540,26 @@
       "verified_score": 1
     },
     {
+      "id": "institute-automation-cas",
+      "name": "中国科学院自动化研究所",
+      "papers": [
+        "ieee-sp26-ye-llm-unlearning"
+      ],
+      "scholars": [
+        "Shu Wu",
+        "Xiaotian Ye"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "advanced-computing-intelligence-engineering-lab",
       "name": "先进计算与智能工程实验室",
       "papers": [
@@ -2288,6 +2567,25 @@
       ],
       "scholars": [
         "Shuitao Gan"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "beijing-university-posts-telecommunications",
+      "name": "北京邮电大学",
+      "papers": [
+        "ieee-sp26-ye-llm-unlearning"
+      ],
+      "scholars": [
+        "Mengqi Zhang"
       ],
       "annual_scores": {
         "2026": {
@@ -2312,25 +2610,6 @@
         "2026": {
           "security": 0,
           "software": 1,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
-      "id": "nankai-university",
-      "name": "南开大学",
-      "papers": [
-        "usenix-sec26-guo-pyguard"
-      ],
-      "scholars": [
-        "Chengwei Liu"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
           "ai": 0,
           "total": 1
         }
@@ -2434,13 +2713,13 @@
       "verified_score": 1
     },
     {
-      "id": "shandong-university-school-cyber-science",
-      "name": "山东大学网络空间安全学院",
+      "id": "shandong-university",
+      "name": "山东大学",
       "papers": [
-        "usenix-sec26-liu-picklecloak"
+        "ieee-sp26-ye-llm-unlearning"
       ],
       "scholars": [
-        "Zizhuang Deng"
+        "Mengqi Zhang"
       ],
       "annual_scores": {
         "2026": {
@@ -2453,13 +2732,13 @@
       "verified_score": 1
     },
     {
-      "id": "lingnan-university",
-      "name": "嶺南大學",
+      "id": "shandong-university-school-cyber-science",
+      "name": "山东大学网络空间安全学院",
       "papers": [
-        "usenix-sec26-wang-masleak"
+        "usenix-sec26-liu-picklecloak"
       ],
       "scholars": [
-        "Daoyuan Wu"
+        "Zizhuang Deng"
       ],
       "annual_scores": {
         "2026": {
@@ -2622,30 +2901,6 @@
         "Junyuan Zhang",
         "Ka-Ho Chow",
         "Zhejun Jiang"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
-      "id": "hkust",
-      "name": "香港科技大學",
-      "papers": [
-        "usenix-sec26-wang-masleak"
-      ],
-      "scholars": [
-        "Liwen Wang",
-        "Shing-Chi Cheung",
-        "Shuai Wang",
-        "Zhenlan Ji",
-        "Zongjie Li",
-        "Zongyi Lyu"
       ],
       "annual_scores": {
         "2026": {
@@ -2844,6 +3099,53 @@
           "year": 2025,
           "venue": "USENIX Security 2025",
           "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
+    },
+    {
+      "id": "antonio-bianchi-purdue",
+      "name": "Antonio Bianchi",
+      "publication_name": "Antonio Bianchi",
+      "homepage": "https://www.cs.purdue.edu/people/faculty/antoniob.html",
+      "profile_source": "https://www.cs.purdue.edu/people/faculty/antoniob.html",
+      "institutions": [
+        "Purdue University"
+      ],
+      "papers": [
+        "ieee-sp26-androutsopoulos-deepsurf",
+        "ieee-sp26-ersoy-dark-patterns",
+        "ieee-sp26-tystahl-cosseter"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 3,
+          "software": 0,
+          "ai": 0,
+          "total": 3
+        }
+      },
+      "verified_score": 3,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "title": "Investigating the Impact of Dark Patterns on LLM-Based Web Agents",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "ieee-sp26-androutsopoulos-deepsurf",
+          "title": "deepSURF: Detecting Memory Safety Vulnerabilities in Rust Through Fuzzing LLM-Augmented Harnesses",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "ieee-sp26-tystahl-cosseter",
+          "title": "COSSETER: GitHub Actions Permission Reduction Using Demand-Driven Static Analysis",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -3047,17 +3349,17 @@
       ]
     },
     {
-      "id": "antonio-bianchi-purdue",
-      "name": "Antonio Bianchi",
-      "publication_name": "Antonio Bianchi",
-      "homepage": "https://www.cs.purdue.edu/people/faculty/antoniob.html",
-      "profile_source": "https://www.cs.purdue.edu/people/faculty/antoniob.html",
+      "id": "alina-oprea",
+      "name": "Alina Oprea",
+      "publication_name": "Alina Oprea",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
       "institutions": [
-        "Purdue University"
+        "Northeastern University"
       ],
       "papers": [
-        "ieee-sp26-androutsopoulos-deepsurf",
-        "ieee-sp26-tystahl-cosseter"
+        "ieee-sp26-suri-trojanclimb",
+        "usenix-sec26-syros-muzzle"
       ],
       "annual_scores": {
         "2026": {
@@ -3070,18 +3372,57 @@
       "verified_score": 2,
       "recent_papers": [
         {
-          "id": "ieee-sp26-androutsopoulos-deepsurf",
-          "title": "deepSURF: Detecting Memory Safety Vulnerabilities in Rust Through Fuzzing LLM-Augmented Harnesses",
+          "id": "ieee-sp26-suri-trojanclimb",
+          "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         },
         {
-          "id": "ieee-sp26-tystahl-cosseter",
-          "title": "COSSETER: GitHub Actions Permission Reduction Using Demand-Driven Static Analysis",
+          "id": "usenix-sec26-syros-muzzle",
+          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
+        }
+      ]
+    },
+    {
+      "id": "amir-houmansadr-umass",
+      "name": "Amir Houmansadr",
+      "publication_name": "Amir Houmansadr",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jeong",
+      "institutions": [
+        "University of Massachusetts Amherst"
+      ],
+      "papers": [
+        "ieee-sp26-suri-trojanclimb",
+        "usenix-sec26-jeong-network-agent"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-suri-trojanclimb",
+          "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "usenix-sec26-jeong-network-agent",
+          "title": "Network-Level Prompt and Trait Leakage in Local Research Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jeong"
         }
       ]
     },
@@ -3161,6 +3502,45 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo"
+        }
+      ]
+    },
+    {
+      "id": "daoyuan-wu-lingnan",
+      "name": "Daoyuan Wu",
+      "publication_name": "Daoyuan Wu",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
+      "institutions": [
+        "嶺南大學"
+      ],
+      "papers": [
+        "ieee-sp26-wang-jailbreak-guardrails",
+        "usenix-sec26-wang-masleak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "title": "SoK: Evaluating Jailbreak Guardrails for Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "usenix-sec26-wang-masleak",
+          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
         }
       ]
     },
@@ -3324,6 +3704,45 @@
           "year": 2025,
           "venue": "USENIX Security 2025",
           "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+        }
+      ]
+    },
+    {
+      "id": "junfeng-yang-columbia",
+      "name": "Junfeng Yang",
+      "publication_name": "Junfeng Yang",
+      "homepage": "https://www.cs.columbia.edu/~junfeng/",
+      "profile_source": "https://www.cs.columbia.edu/~junfeng/",
+      "institutions": [
+        "Columbia University"
+      ],
+      "papers": [
+        "ieee-sp26-chen-compiler-backdoor",
+        "ieee-sp26-takahashi-zkfuzz"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-takahashi-zkfuzz",
+          "title": "zkFuzz: Foundation and Framework for Effective Fuzzing of Zero-Knowledge Circuits",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "ieee-sp26-chen-compiler-backdoor",
+          "title": "Your Compiler is Backdooring Your Model: Understanding and Exploiting Compilation Inconsistency Vulnerabilities in Deep Learning Compilers",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -3574,6 +3993,45 @@
       ]
     },
     {
+      "id": "minghong-fang-louisville",
+      "name": "Minghong Fang",
+      "publication_name": "Minghong Fang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
+      "institutions": [
+        "University of Louisville"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin",
+        "usenix-sec26-nguyen-menta"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "usenix-sec26-nguyen-menta",
+          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
+        }
+      ]
+    },
+    {
       "id": "philipp-beer-tu-wien",
       "name": "Philipp Beer",
       "publication_name": "Philipp Beer",
@@ -3703,6 +4161,45 @@
       ]
     },
     {
+      "id": "shuai-wang-hkust",
+      "name": "Shuai Wang",
+      "publication_name": "Shuai Wang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
+      "institutions": [
+        "香港科技大學"
+      ],
+      "papers": [
+        "ieee-sp26-wang-jailbreak-guardrails",
+        "usenix-sec26-wang-masleak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "title": "SoK: Evaluating Jailbreak Guardrails for Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "usenix-sec26-wang-masleak",
+          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
+        }
+      ]
+    },
+    {
       "id": "wenbo-guo-ntu",
       "name": "Wenbo Guo",
       "publication_name": "Wenbo Guo",
@@ -3743,6 +4240,84 @@
       ]
     },
     {
+      "id": "wenxuan-wang-ruc",
+      "name": "Wenxuan Wang",
+      "publication_name": "Wenxuan Wang",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
+      "institutions": [
+        "中国人民大学"
+      ],
+      "papers": [
+        "ieee-sp26-wang-jailbreak-guardrails",
+        "usenix-sec26-wang-masleak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "title": "SoK: Evaluating Jailbreak Guardrails for Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "usenix-sec26-wang-masleak",
+          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
+        }
+      ]
+    },
+    {
+      "id": "xiaofeng-wang-ntu",
+      "name": "XiaoFeng Wang",
+      "publication_name": "XiaoFeng Wang",
+      "homepage": "",
+      "profile_source": "https://web-cloak.github.io/",
+      "institutions": [
+        "Nanyang Technological University"
+      ],
+      "papers": [
+        "ieee-sp26-li-webcloak",
+        "ieee-sp26-wu-enchtable"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wu-enchtable",
+          "title": "EnchTable: Unified Safety Alignment Transfer in Fine-tuned Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "ieee-sp26-li-webcloak",
+          "title": "WebCloak: Characterizing and Mitigating Threats from LLM-Driven Web Agents as Intelligent Scrapers",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "xibin-zhao-tsinghua",
       "name": "Xibin Zhao",
       "publication_name": "Xibin Zhao",
@@ -3779,6 +4354,45 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao"
+        }
+      ]
+    },
+    {
+      "id": "xinfeng-li-ntu",
+      "name": "Xinfeng Li",
+      "publication_name": "Xinfeng Li",
+      "homepage": "https://letterligo.github.io/",
+      "profile_source": "https://letterligo.github.io/",
+      "institutions": [
+        "Nanyang Technological University"
+      ],
+      "papers": [
+        "ieee-sp26-li-webcloak",
+        "ieee-sp26-wu-enchtable"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wu-enchtable",
+          "title": "EnchTable: Unified Safety Alignment Transfer in Fine-tuned Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "ieee-sp26-li-webcloak",
+          "title": "WebCloak: Characterizing and Mitigating Threats from LLM-Driven Web Agents as Intelligent Scrapers",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -3858,6 +4472,84 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xu-liwen"
+        }
+      ]
+    },
+    {
+      "id": "zhenlan-ji-hkust",
+      "name": "Zhenlan Ji",
+      "publication_name": "Zhenlan Ji",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
+      "institutions": [
+        "香港科技大學"
+      ],
+      "papers": [
+        "ieee-sp26-wang-jailbreak-guardrails",
+        "usenix-sec26-wang-masleak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "title": "SoK: Evaluating Jailbreak Guardrails for Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "usenix-sec26-wang-masleak",
+          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
+        }
+      ]
+    },
+    {
+      "id": "zongjie-li-hkust",
+      "name": "Zongjie Li",
+      "publication_name": "Zongjie Li",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
+      "institutions": [
+        "香港科技大學"
+      ],
+      "papers": [
+        "ieee-sp26-wang-jailbreak-guardrails",
+        "usenix-sec26-wang-masleak"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "title": "SoK: Evaluating Jailbreak Guardrails for Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "usenix-sec26-wang-masleak",
+          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
         }
       ]
     },
@@ -4427,16 +5119,16 @@
       ]
     },
     {
-      "id": "alina-oprea",
-      "name": "Alina Oprea",
-      "publication_name": "Alina Oprea",
+      "id": "ali-naseh-umass",
+      "name": "Ali Naseh",
+      "publication_name": "Ali Naseh",
       "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
+      "profile_source": "https://arxiv.org/abs/2507.08983",
       "institutions": [
-        "Northeastern University"
+        "University of Massachusetts Amherst"
       ],
       "papers": [
-        "usenix-sec26-syros-muzzle"
+        "ieee-sp26-suri-trojanclimb"
       ],
       "annual_scores": {
         "2026": {
@@ -4449,11 +5141,11 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec26-syros-muzzle",
-          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
+          "id": "ieee-sp26-suri-trojanclimb",
+          "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
           "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -4520,37 +5212,6 @@
       ]
     },
     {
-      "id": "amir-houmansadr-umass",
-      "name": "Amir Houmansadr",
-      "publication_name": "Amir Houmansadr",
-      "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jeong",
-      "institutions": [
-        "University of Massachusetts Amherst"
-      ],
-      "papers": [
-        "usenix-sec26-jeong-network-agent"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1,
-      "recent_papers": [
-        {
-          "id": "usenix-sec26-jeong-network-agent",
-          "title": "Network-Level Prompt and Trait Leakage in Local Research Agents",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jeong"
-        }
-      ]
-    },
-    {
       "id": "amit-klein",
       "name": "Amit Klein",
       "publication_name": "Amit Klein",
@@ -4578,6 +5239,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon"
+        }
+      ]
+    },
+    {
+      "id": "ananth-shreekumar-purdue",
+      "name": "Ananth Shreekumar",
+      "publication_name": "Ananth Shreekumar",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2510.18113",
+      "institutions": [
+        "Purdue University"
+      ],
+      "papers": [
+        "ieee-sp26-ersoy-dark-patterns"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "title": "Investigating the Impact of Dark Patterns on LLM-Based Web Agents",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -4768,6 +5460,37 @@
       ]
     },
     {
+      "id": "anshuman-suri-northeastern",
+      "name": "Anshuman Suri",
+      "publication_name": "Anshuman Suri",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.08983",
+      "institutions": [
+        "Northeastern University"
+      ],
+      "papers": [
+        "ieee-sp26-suri-trojanclimb"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-suri-trojanclimb",
+          "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "anton-landerer-ucsb",
       "name": "Anton Landerer",
       "publication_name": "Anton Landerer",
@@ -4830,6 +5553,37 @@
       ]
     },
     {
+      "id": "arjun-arunasalam-fiu",
+      "name": "Arjun Arunasalam",
+      "publication_name": "Arjun Arunasalam",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2510.18113",
+      "institutions": [
+        "Florida International University"
+      ],
+      "papers": [
+        "ieee-sp26-ersoy-dark-patterns"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "title": "Investigating the Impact of Dark Patterns on LLM-Based Web Agents",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "athanasios-theocharis",
       "name": "Athanasios Theocharis",
       "publication_name": "Athanasios Theocharis",
@@ -4857,6 +5611,68 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
+      "id": "baishakhi-ray-columbia",
+      "name": "Baishakhi Ray",
+      "publication_name": "Baishakhi Ray",
+      "homepage": "https://www.cs.columbia.edu/~rayb/",
+      "profile_source": "https://www.cs.columbia.edu/~rayb/",
+      "institutions": [
+        "Columbia University"
+      ],
+      "papers": [
+        "ieee-sp26-chen-compiler-backdoor"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-chen-compiler-backdoor",
+          "title": "Your Compiler is Backdooring Your Model: Understanding and Exploiting Compilation Inconsistency Vulnerabilities in Deep Learning Compilers",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "baolei-zhang-nankai",
+      "name": "Baolei Zhang",
+      "publication_name": "Baolei Zhang",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.13772",
+      "institutions": [
+        "南开大学"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -4892,6 +5708,37 @@
       ]
     },
     {
+      "id": "biao-yi-nankai",
+      "name": "Biao Yi",
+      "publication_name": "Biao Yi",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.13772",
+      "institutions": [
+        "南开大学"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "bofei-chen-fudan",
       "name": "Bofei Chen",
       "publication_name": "Bofei Chen",
@@ -4919,6 +5766,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/chen-bofei"
+        }
+      ]
+    },
+    {
+      "id": "brandon-lee-purdue",
+      "name": "Brandon Lee",
+      "publication_name": "Brandon Lee",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2510.18113",
+      "institutions": [
+        "Purdue University"
+      ],
+      "papers": [
+        "ieee-sp26-ersoy-dark-patterns"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "title": "Investigating the Impact of Dark Patterns on LLM-Based Web Agents",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -5044,6 +5922,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
+      "id": "cheng-hong-ant-group",
+      "name": "Cheng Hong",
+      "publication_name": "Cheng Hong",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2511.09880",
+      "institutions": [
+        "Ant Group"
+      ],
+      "papers": [
+        "ieee-sp26-wu-enchtable"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wu-enchtable",
+          "title": "EnchTable: Unified Safety Alignment Transfer in Fine-tuned Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -5513,6 +6422,37 @@
       ]
     },
     {
+      "id": "daniel-kroening-aws",
+      "name": "Daniel Kroening",
+      "publication_name": "Daniel Kroening",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.00595",
+      "institutions": [
+        "Amazon Web Services"
+      ],
+      "papers": [
+        "ieee-sp26-arquint-diodon"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-arquint-diodon",
+          "title": "The Secrets Must Not Flow: Scaling Security Verification to Large Codebases",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "daniel-weber-cispa",
       "name": "Daniel Weber",
       "publication_name": "Daniel Weber",
@@ -5540,37 +6480,6 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
-        }
-      ]
-    },
-    {
-      "id": "daoyuan-wu-lingnan",
-      "name": "Daoyuan Wu",
-      "publication_name": "Daoyuan Wu",
-      "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
-      "institutions": [
-        "嶺南大學"
-      ],
-      "papers": [
-        "usenix-sec26-wang-masleak"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1,
-      "recent_papers": [
-        {
-          "id": "usenix-sec26-wang-masleak",
-          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
         }
       ]
     },
@@ -5794,6 +6703,37 @@
       ]
     },
     {
+      "id": "devin-ersoy-purdue",
+      "name": "Devin Ersoy",
+      "publication_name": "Devin Ersoy",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2510.18113",
+      "institutions": [
+        "Purdue University"
+      ],
+      "papers": [
+        "ieee-sp26-ersoy-dark-patterns"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "title": "Investigating the Impact of Dark Patterns on LLM-Based Web Agents",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "dimitri-kokkonis",
       "name": "Dimitri Kokkonis",
       "publication_name": "Dimitri Kokkonis",
@@ -5822,6 +6762,37 @@
           "year": 2026,
           "venue": "ASE 2026",
           "url": "https://conf.researchr.org/track/ase-2026/ase-2026-research-track"
+        }
+      ]
+    },
+    {
+      "id": "dorjan-hitaj-sapienza",
+      "name": "Dorjan Hitaj",
+      "publication_name": "Dorjan Hitaj",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2504.16651",
+      "institutions": [
+        "Sapienza University of Rome"
+      ],
+      "papers": [
+        "ieee-sp26-corrias-maya"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-corrias-maya",
+          "title": "MAYA: Addressing Inconsistencies in Generative Password Guessing through a Unified Benchmark",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -6101,6 +7072,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-ruiyi"
+        }
+      ]
+    },
+    {
+      "id": "fabio-de-gaspari-sapienza",
+      "name": "Fabio De Gaspari",
+      "publication_name": "Fabio De Gaspari",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2504.16651",
+      "institutions": [
+        "Sapienza University of Rome"
+      ],
+      "papers": [
+        "ieee-sp26-corrias-maya"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-corrias-maya",
+          "title": "MAYA: Addressing Inconsistencies in Generative Password Guessing through a Unified Benchmark",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -6758,6 +7760,37 @@
       ]
     },
     {
+      "id": "haoran-xin-nankai",
+      "name": "Haoran Xin",
+      "publication_name": "Haoran Xin",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.13772",
+      "institutions": [
+        "南开大学"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "haoyang-hu-hku",
       "name": "Haoyang Hu",
       "publication_name": "Haoyang Hu",
@@ -6820,6 +7853,37 @@
       ]
     },
     {
+      "id": "harsh-chaudhari-northeastern",
+      "name": "Harsh Chaudhari",
+      "publication_name": "Harsh Chaudhari",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.08983",
+      "institutions": [
+        "Northeastern University"
+      ],
+      "papers": [
+        "ieee-sp26-suri-trojanclimb"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-suri-trojanclimb",
+          "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "hemanth-madhavarao-paypal",
       "name": "Hemanth Hegadehalli Madhavarao",
       "publication_name": "Hemanth Hegadehalli Madhavarao",
@@ -6875,6 +7939,37 @@
         {
           "id": "ieee-sp26-hertogh-rain",
           "title": "Rain: Transiently Leaking Data from Public Clouds Using Old Vulnerabilities",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "hideaki-takahashi-columbia",
+      "name": "Hideaki Takahashi",
+      "publication_name": "Hideaki Takahashi",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2504.11961",
+      "institutions": [
+        "Columbia University"
+      ],
+      "papers": [
+        "ieee-sp26-takahashi-zkfuzz"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-takahashi-zkfuzz",
+          "title": "zkFuzz: Foundation and Framework for Effective Fuzzing of Zero-Knowledge Circuits",
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
@@ -7192,6 +8287,37 @@
       ]
     },
     {
+      "id": "jason-r-koenig-aws",
+      "name": "Jason R. Koenig",
+      "publication_name": "Jason R. Koenig",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.00595",
+      "institutions": [
+        "Amazon Web Services"
+      ],
+      "papers": [
+        "ieee-sp26-arquint-diodon"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-arquint-diodon",
+          "title": "The Secrets Must Not Flow: Scaling Security Verification to Large Codebases",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "jean-paul-degabriele",
       "name": "Jean Paul Degabriele",
       "publication_name": "Jean Paul Degabriele",
@@ -7343,6 +8469,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/guo-wenbo"
+        }
+      ]
+    },
+    {
+      "id": "jialin-wu-ant-group",
+      "name": "Jialin Wu",
+      "publication_name": "Jialin Wu",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2511.09880",
+      "institutions": [
+        "Ant Group"
+      ],
+      "papers": [
+        "ieee-sp26-wu-enchtable"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wu-enchtable",
+          "title": "EnchTable: Unified Safety Alignment Transfer in Fine-tuned Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -7504,6 +8661,37 @@
       ]
     },
     {
+      "id": "jihwan-kim-columbia",
+      "name": "Jihwan Kim",
+      "publication_name": "Jihwan Kim",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2504.11961",
+      "institutions": [
+        "Columbia University"
+      ],
+      "papers": [
+        "ieee-sp26-takahashi-zkfuzz"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-takahashi-zkfuzz",
+          "title": "zkFuzz: Foundation and Framework for Effective Fuzzing of Zero-Knowledge Circuits",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "jing-chen-whu",
       "name": "Jing Chen",
       "publication_name": "Jing Chen",
@@ -7566,6 +8754,37 @@
       ]
     },
     {
+      "id": "jinjun-peng-columbia",
+      "name": "Jinjun Peng",
+      "publication_name": "Jinjun Peng",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.11173",
+      "institutions": [
+        "Columbia University"
+      ],
+      "papers": [
+        "ieee-sp26-chen-compiler-backdoor"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-chen-compiler-backdoor",
+          "title": "Your Compiler is Backdooring Your Model: Understanding and Exploiting Compilation Inconsistency Vulnerabilities in Deep Learning Compilers",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "jo-van-bulck-ku-leuven",
       "name": "Jo Van Bulck",
       "publication_name": "Jo Van Bulck",
@@ -7590,6 +8809,37 @@
         {
           "id": "ieee-sp26-de-meulemeester-battering-ram",
           "title": "Battering RAM: Low-Cost Interposer Attacks on Confidential Computing via Dynamic Memory Aliasing",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "joey-dodds-aws",
+      "name": "Joey Dodds",
+      "publication_name": "Joey Dodds",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.00595",
+      "institutions": [
+        "Amazon Web Services"
+      ],
+      "papers": [
+        "ieee-sp26-arquint-diodon"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-arquint-diodon",
+          "title": "The Secrets Must Not Flow: Scaling Security Verification to Large Codebases",
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
@@ -8034,6 +9284,37 @@
       ]
     },
     {
+      "id": "kecen-li-ant-group",
+      "name": "Kecen Li",
+      "publication_name": "Kecen Li",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2511.09880",
+      "institutions": [
+        "Ant Group"
+      ],
+      "papers": [
+        "ieee-sp26-wu-enchtable"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wu-enchtable",
+          "title": "EnchTable: Unified Safety Alignment Transfer in Fine-tuned Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "konrad-hohentanner-aisec",
       "name": "Konrad Hohentanner",
       "publication_name": "Konrad Hohentanner",
@@ -8189,6 +9470,68 @@
       ]
     },
     {
+      "id": "lihai-nie-nankai",
+      "name": "Lihai Nie",
+      "publication_name": "Lihai Nie",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.13772",
+      "institutions": [
+        "南开大学"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "linard-arquint-eth",
+      "name": "Linard Arquint",
+      "publication_name": "Linard Arquint",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.00595",
+      "institutions": [
+        "ETH Zurich"
+      ],
+      "papers": [
+        "ieee-sp26-arquint-diodon"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-arquint-diodon",
+          "title": "The Secrets Must Not Flow: Scaling Security Verification to Large Codebases",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "liwen-wang-hkust",
       "name": "Liwen Wang",
       "publication_name": "Liwen Wang",
@@ -8278,6 +9621,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jannett"
+        }
+      ]
+    },
+    {
+      "id": "luigi-v-mancini-sapienza",
+      "name": "Luigi V. Mancini",
+      "publication_name": "Luigi V. Mancini",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2504.16651",
+      "institutions": [
+        "Sapienza University of Rome"
+      ],
+      "papers": [
+        "ieee-sp26-corrias-maya"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-corrias-maya",
+          "title": "MAYA: Addressing Inconsistencies in Generative Password Guessing through a Unified Benchmark",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -8685,6 +10059,38 @@
       ]
     },
     {
+      "id": "mengqi-zhang-bupt-sdu",
+      "name": "Mengqi Zhang",
+      "publication_name": "Mengqi Zhang",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2506.07795",
+      "institutions": [
+        "北京邮电大学",
+        "山东大学"
+      ],
+      "papers": [
+        "ieee-sp26-ye-llm-unlearning"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-ye-llm-unlearning",
+          "title": "LLM Unlearning Should Be Form-Independent",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "michael-specter-gatech",
       "name": "Michael A. Specter",
       "publication_name": "Michael A. Specter",
@@ -8934,37 +10340,6 @@
       ]
     },
     {
-      "id": "minghong-fang-louisville",
-      "name": "Minghong Fang",
-      "publication_name": "Minghong Fang",
-      "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen",
-      "institutions": [
-        "University of Louisville"
-      ],
-      "papers": [
-        "usenix-sec26-nguyen-menta"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1,
-      "recent_papers": [
-        {
-          "id": "usenix-sec26-nguyen-menta",
-          "title": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
-        }
-      ]
-    },
-    {
       "id": "mohammadreza-teymoorianfard-umass",
       "name": "Mohammadreza Teymoorianfard",
       "publication_name": "Mohammadreza Teymoorianfard",
@@ -9054,6 +10429,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/gegenhuber"
+        }
+      ]
+    },
+    {
+      "id": "muhammad-ibrahim-gatech",
+      "name": "Muhammad Ibrahim",
+      "publication_name": "Muhammad Ibrahim",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2510.18113",
+      "institutions": [
+        "Georgia Institute of Technology"
+      ],
+      "papers": [
+        "ieee-sp26-ersoy-dark-patterns"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "title": "Investigating the Impact of Dark Patterns on LLM-Based Web Agents",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -9585,6 +10991,37 @@
       ]
     },
     {
+      "id": "peter-mueller-eth",
+      "name": "Peter Müller",
+      "publication_name": "Peter Müller",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.00595",
+      "institutions": [
+        "ETH Zurich"
+      ],
+      "papers": [
+        "ieee-sp26-arquint-diodon"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-arquint-diodon",
+          "title": "The Secrets Must Not Flow: Scaling Security Verification to Large Codebases",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "petros-efstathopoulos",
       "name": "Petros Efstathopoulos",
       "publication_name": "Petros Efstathopoulos",
@@ -10052,6 +11489,37 @@
       ]
     },
     {
+      "id": "samarth-kishor-aws",
+      "name": "Samarth Kishor",
+      "publication_name": "Samarth Kishor",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.00595",
+      "institutions": [
+        "Amazon Web Services"
+      ],
+      "papers": [
+        "ieee-sp26-arquint-diodon"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-arquint-diodon",
+          "title": "The Secrets Must Not Flow: Scaling Security Verification to Large Codebases",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "sandro-rueegge-eth",
       "name": "Sandro Rüegge",
       "publication_name": "Sandro Rüegge",
@@ -10301,16 +11769,16 @@
       ]
     },
     {
-      "id": "shuai-wang-hkust",
-      "name": "Shuai Wang",
-      "publication_name": "Shuai Wang",
+      "id": "shu-wu-ia-cas",
+      "name": "Shu Wu",
+      "publication_name": "Shu Wu",
       "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
+      "profile_source": "https://arxiv.org/abs/2506.07795",
       "institutions": [
-        "香港科技大學"
+        "中国科学院自动化研究所"
       ],
       "papers": [
-        "usenix-sec26-wang-masleak"
+        "ieee-sp26-ye-llm-unlearning"
       ],
       "annual_scores": {
         "2026": {
@@ -10323,11 +11791,11 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec26-wang-masleak",
-          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+          "id": "ieee-sp26-ye-llm-unlearning",
+          "title": "LLM Unlearning Should Be Form-Independent",
           "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -10512,6 +11980,37 @@
         {
           "id": "ieee-sp26-roh-ghost",
           "title": "GHost in the Shell: A GPU-to-Host Memory Attack and Its Mitigation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "simin-chen-columbia",
+      "name": "Simin Chen",
+      "publication_name": "Simin Chen",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.11173",
+      "institutions": [
+        "Columbia University"
+      ],
+      "papers": [
+        "ieee-sp26-chen-compiler-backdoor"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-chen-compiler-backdoor",
+          "title": "Your Compiler is Backdooring Your Model: Understanding and Exploiting Compilation Inconsistency Vulnerabilities in Deep Learning Compilers",
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
@@ -10823,6 +12322,37 @@
         {
           "id": "ieee-sp26-roh-ghost",
           "title": "GHost in the Shell: A GPU-to-Host Memory Attack and Its Mitigation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "suman-jana-columbia",
+      "name": "Suman Jana",
+      "publication_name": "Suman Jana",
+      "homepage": "https://www.cs.columbia.edu/~suman/",
+      "profile_source": "https://www.cs.columbia.edu/~suman/",
+      "institutions": [
+        "Columbia University"
+      ],
+      "papers": [
+        "ieee-sp26-takahashi-zkfuzz"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-takahashi-zkfuzz",
+          "title": "zkFuzz: Foundation and Framework for Effective Fuzzing of Zero-Knowledge Circuits",
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
@@ -11450,6 +12980,37 @@
       ]
     },
     {
+      "id": "tong-li-nankai",
+      "name": "Tong Li",
+      "publication_name": "Tong Li",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.13772",
+      "institutions": [
+        "南开大学"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "tong-liu-iie",
       "name": "Tong Liu",
       "publication_name": "Tong Liu",
@@ -11916,16 +13477,16 @@
       ]
     },
     {
-      "id": "wenxuan-wang-ruc",
-      "name": "Wenxuan Wang",
-      "publication_name": "Wenxuan Wang",
+      "id": "william-corrias-sapienza",
+      "name": "William Corrias",
+      "publication_name": "William Corrias",
       "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
+      "profile_source": "https://arxiv.org/abs/2504.16651",
       "institutions": [
-        "中国人民大学"
+        "Sapienza University of Rome"
       ],
       "papers": [
-        "usenix-sec26-wang-masleak"
+        "ieee-sp26-corrias-maya"
       ],
       "annual_scores": {
         "2026": {
@@ -11938,11 +13499,11 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec26-wang-masleak",
-          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+          "id": "ieee-sp26-corrias-maya",
+          "title": "MAYA: Addressing Inconsistencies in Generative Password Guessing through a Unified Benchmark",
           "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -12040,37 +13601,6 @@
       ]
     },
     {
-      "id": "xiaofeng-wang-ntu",
-      "name": "XiaoFeng Wang",
-      "publication_name": "XiaoFeng Wang",
-      "homepage": "",
-      "profile_source": "https://web-cloak.github.io/",
-      "institutions": [
-        "Nanyang Technological University"
-      ],
-      "papers": [
-        "ieee-sp26-li-webcloak"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1,
-      "recent_papers": [
-        {
-          "id": "ieee-sp26-li-webcloak",
-          "title": "WebCloak: Characterizing and Mitigating Threats from LLM-Driven Web Agents as Intelligent Scrapers",
-          "year": 2026,
-          "venue": "IEEE S&P 2026",
-          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
-        }
-      ]
-    },
-    {
       "id": "xiaofang-wang-geely",
       "name": "Xiaofang Wang",
       "publication_name": "Xiaofang Wang",
@@ -12164,16 +13694,16 @@
       ]
     },
     {
-      "id": "xinfeng-li-ntu",
-      "name": "Xinfeng Li",
-      "publication_name": "Xinfeng Li",
-      "homepage": "https://letterligo.github.io/",
-      "profile_source": "https://letterligo.github.io/",
+      "id": "xiaotian-ye-ia-cas",
+      "name": "Xiaotian Ye",
+      "publication_name": "Xiaotian Ye",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2506.07795",
       "institutions": [
-        "Nanyang Technological University"
+        "中国科学院自动化研究所"
       ],
       "papers": [
-        "ieee-sp26-li-webcloak"
+        "ieee-sp26-ye-llm-unlearning"
       ],
       "annual_scores": {
         "2026": {
@@ -12186,8 +13716,8 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "ieee-sp26-li-webcloak",
-          "title": "WebCloak: Characterizing and Mitigating Threats from LLM-Driven Web Agents as Intelligent Scrapers",
+          "id": "ieee-sp26-ye-llm-unlearning",
+          "title": "LLM Unlearning Should Be Form-Independent",
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
@@ -12347,6 +13877,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhao-yizhou"
+        }
+      ]
+    },
+    {
+      "id": "xunguang-wang-hkust",
+      "name": "Xunguang Wang",
+      "publication_name": "Xunguang Wang",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2506.10597",
+      "institutions": [
+        "香港科技大學"
+      ],
+      "papers": [
+        "ieee-sp26-wang-jailbreak-guardrails"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "title": "SoK: Evaluating Jailbreak Guardrails for Large Language Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -12943,6 +14504,37 @@
       ]
     },
     {
+      "id": "yixin-he-usc",
+      "name": "Yixin He",
+      "publication_name": "Yixin He",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.11173",
+      "institutions": [
+        "University of Southern California"
+      ],
+      "papers": [
+        "ieee-sp26-chen-compiler-backdoor"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-chen-compiler-backdoor",
+          "title": "Your Compiler is Backdooring Your Model: Understanding and Exploiting Compilation Inconsistency Vulnerabilities in Deep Learning Compilers",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "yizhou-zhao-tsinghua",
       "name": "Yizhou Zhao",
       "publication_name": "Yizhou Zhao",
@@ -13160,6 +14752,37 @@
       ]
     },
     {
+      "id": "yuefeng-peng-umass",
+      "name": "Yuefeng Peng",
+      "publication_name": "Yuefeng Peng",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2507.08983",
+      "institutions": [
+        "University of Massachusetts Amherst"
+      ],
+      "papers": [
+        "ieee-sp26-suri-trojanclimb"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-suri-trojanclimb",
+          "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "yuekang-li",
       "name": "Yuekang Li",
       "publication_name": "Yuekang Li",
@@ -13346,6 +14969,68 @@
       ]
     },
     {
+      "id": "yuxi-chen-independent",
+      "name": "Yuxi Chen",
+      "publication_name": "Yuxi Chen",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.13772",
+      "institutions": [
+        "Independent Researcher"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "z-berkay-celik-purdue",
+      "name": "Z. Berkay Celik",
+      "publication_name": "Z. Berkay Celik",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2510.18113",
+      "institutions": [
+        "Purdue University"
+      ],
+      "papers": [
+        "ieee-sp26-ersoy-dark-patterns"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "title": "Investigating the Impact of Dark Patterns on LLM-Based Web Agents",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "zachary-espiritu-mongodb",
       "name": "Zachary Espiritu",
       "publication_name": "Zachary Espiritu",
@@ -13435,6 +15120,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/hu-haoyang"
+        }
+      ]
+    },
+    {
+      "id": "zheli-liu-nankai",
+      "name": "Zheli Liu",
+      "publication_name": "Zheli Liu",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.13772",
+      "institutions": [
+        "南开大学"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -13625,16 +15341,16 @@
       ]
     },
     {
-      "id": "zhenlan-ji-hkust",
-      "name": "Zhenlan Ji",
-      "publication_name": "Zhenlan Ji",
+      "id": "zhicong-huang-ant-group",
+      "name": "Zhicong Huang",
+      "publication_name": "Zhicong Huang",
       "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
+      "profile_source": "https://arxiv.org/abs/2511.09880",
       "institutions": [
-        "香港科技大學"
+        "Ant Group"
       ],
       "papers": [
-        "usenix-sec26-wang-masleak"
+        "ieee-sp26-wu-enchtable"
       ],
       "annual_scores": {
         "2026": {
@@ -13647,11 +15363,11 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec26-wang-masleak",
-          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
+          "id": "ieee-sp26-wu-enchtable",
+          "title": "EnchTable: Unified Safety Alignment Transfer in Fine-tuned Large Language Models",
           "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
         }
       ]
     },
@@ -13811,6 +15527,37 @@
       ]
     },
     {
+      "id": "zhuqing-liu-unt",
+      "name": "Zhuqing Liu",
+      "publication_name": "Zhuqing Liu",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2509.13772",
+      "institutions": [
+        "University of North Texas"
+      ],
+      "papers": [
+        "ieee-sp26-zhang-ragorigin"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
       "id": "zizhen-zhu-tsinghua",
       "name": "Zizhen Zhu",
       "publication_name": "Zizhen Zhu",
@@ -13871,37 +15618,6 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong"
-        }
-      ]
-    },
-    {
-      "id": "zongjie-li-hkust",
-      "name": "Zongjie Li",
-      "publication_name": "Zongjie Li",
-      "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen",
-      "institutions": [
-        "香港科技大學"
-      ],
-      "papers": [
-        "usenix-sec26-wang-masleak"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1,
-      "recent_papers": [
-        {
-          "id": "usenix-sec26-wang-masleak",
-          "title": "MASLeak: Investigating and Exposing Intellectual Property Leakage Vulnerabilities in Multi-Agent Systems",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
         }
       ]
     },
@@ -15087,6 +16803,57 @@
       "weight": 2
     },
     {
+      "source": "hkust",
+      "target": "lingnan-university",
+      "papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "year": 2026,
+          "venue_group": "security"
+        },
+        {
+          "id": "usenix-sec26-wang-masleak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 2
+    },
+    {
+      "source": "hkust",
+      "target": "renmin-university-china",
+      "papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "year": 2026,
+          "venue_group": "security"
+        },
+        {
+          "id": "usenix-sec26-wang-masleak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 2
+    },
+    {
+      "source": "lingnan-university",
+      "target": "renmin-university-china",
+      "papers": [
+        {
+          "id": "ieee-sp26-wang-jailbreak-guardrails",
+          "year": 2026,
+          "venue_group": "security"
+        },
+        {
+          "id": "usenix-sec26-wang-masleak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 2
+    },
+    {
       "source": "ruhr-university-bochum",
       "target": "technology-innovation-institute",
       "papers": [
@@ -15169,11 +16936,35 @@
       "weight": 1
     },
     {
+      "source": "amazon-web-services",
+      "target": "eth-zurich",
+      "papers": [
+        {
+          "id": "ieee-sp26-arquint-diodon",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "amd",
       "target": "mit-csail",
       "papers": [
         {
           "id": "ieee-sp26-trujillo-register-hiding",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "ant-group",
+      "target": "nanyang-technological-university",
+      "papers": [
+        {
+          "id": "ieee-sp26-wu-enchtable",
           "year": 2026,
           "venue_group": "security"
         }
@@ -15234,6 +17025,30 @@
       "papers": [
         {
           "id": "usenix-sec26-zhang-resume-injection",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "beijing-university-posts-telecommunications",
+      "target": "institute-automation-cas",
+      "papers": [
+        {
+          "id": "ieee-sp26-ye-llm-unlearning",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "beijing-university-posts-telecommunications",
+      "target": "shandong-university",
+      "papers": [
+        {
+          "id": "ieee-sp26-ye-llm-unlearning",
           "year": 2026,
           "venue_group": "security"
         }
@@ -15481,6 +17296,18 @@
       "weight": 1
     },
     {
+      "source": "columbia-university",
+      "target": "university-of-southern-california",
+      "papers": [
+        {
+          "id": "ieee-sp26-chen-compiler-backdoor",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "cosic-ku-leuven",
       "target": "durham-university",
       "papers": [
@@ -15685,6 +17512,30 @@
       "weight": 1
     },
     {
+      "source": "florida-international-university",
+      "target": "georgia-tech",
+      "papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "florida-international-university",
+      "target": "purdue-university",
+      "papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "fraunhofer-aisec",
       "target": "lmu-munich",
       "papers": [
@@ -15817,6 +17668,18 @@
       "weight": 1
     },
     {
+      "source": "georgia-tech",
+      "target": "purdue-university",
+      "papers": [
+        {
+          "id": "ieee-sp26-ersoy-dark-patterns",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "griffith-university",
       "target": "nanyang-technological-university",
       "papers": [
@@ -15894,30 +17757,6 @@
       "papers": [
         {
           "id": "usenix-sec26-zhang-resume-injection",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "hkust",
-      "target": "lingnan-university",
-      "papers": [
-        {
-          "id": "usenix-sec26-wang-masleak",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "hkust",
-      "target": "renmin-university-china",
-      "papers": [
-        {
-          "id": "usenix-sec26-wang-masleak",
           "year": 2026,
           "venue_group": "security"
         }
@@ -16081,6 +17920,42 @@
       "weight": 1
     },
     {
+      "source": "independent-researcher",
+      "target": "nankai-university",
+      "papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "independent-researcher",
+      "target": "university-of-louisville",
+      "papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "independent-researcher",
+      "target": "university-of-north-texas",
+      "papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "information-engineering-university",
       "target": "jcss-tsinghua-science-city",
       "papers": [
@@ -16136,6 +18011,18 @@
           "id": "arxiv-2607-26719-lily",
           "year": 2026,
           "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "institute-automation-cas",
+      "target": "shandong-university",
+      "papers": [
+        {
+          "id": "ieee-sp26-ye-llm-unlearning",
+          "year": 2026,
+          "venue_group": "security"
         }
       ],
       "weight": 1
@@ -16244,18 +18131,6 @@
           "id": "arxiv-2607-05120-agent-data-injection",
           "year": 2026,
           "venue_group": null
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "lingnan-university",
-      "target": "renmin-university-china",
-      "papers": [
-        {
-          "id": "usenix-sec26-wang-masleak",
-          "year": 2026,
-          "venue_group": "security"
         }
       ],
       "weight": 1
@@ -16429,6 +18304,30 @@
       "weight": 1
     },
     {
+      "source": "nankai-university",
+      "target": "university-of-louisville",
+      "papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "nankai-university",
+      "target": "university-of-north-texas",
+      "papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "nantong-university",
       "target": "singapore-management-university",
       "papers": [
@@ -16532,6 +18431,18 @@
           "id": "arxiv-2607-16487-fuzz-emup",
           "year": 2026,
           "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "northeastern-university",
+      "target": "umass-amherst",
+      "papers": [
+        {
+          "id": "ieee-sp26-suri-trojanclimb",
+          "year": 2026,
+          "venue_group": "security"
         }
       ],
       "weight": 1
@@ -16933,6 +18844,18 @@
       "weight": 1
     },
     {
+      "source": "university-of-louisville",
+      "target": "university-of-north-texas",
+      "papers": [
+        {
+          "id": "ieee-sp26-zhang-ragorigin",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "university-washington",
       "target": "washington-university-st-louis",
       "papers": [
@@ -16970,6 +18893,225 @@
     }
   ],
   "publications": [
+    {
+      "id": "ieee-sp26-takahashi-zkfuzz",
+      "title": "zkFuzz: Foundation and Framework for Effective Fuzzing of Zero-Knowledge Circuits",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "columbia-university"
+      ],
+      "authors": [
+        "hideaki-takahashi-columbia",
+        "jihwan-kim-columbia",
+        "suman-jana-columbia",
+        "junfeng-yang-columbia"
+      ]
+    },
+    {
+      "id": "ieee-sp26-chen-compiler-backdoor",
+      "title": "Your Compiler is Backdooring Your Model: Understanding and Exploiting Compilation Inconsistency Vulnerabilities in Deep Learning Compilers",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "columbia-university",
+        "university-of-southern-california"
+      ],
+      "authors": [
+        "simin-chen-columbia",
+        "jinjun-peng-columbia",
+        "yixin-he-usc",
+        "junfeng-yang-columbia",
+        "baishakhi-ray-columbia"
+      ]
+    },
+    {
+      "id": "ieee-sp26-zhang-ragorigin",
+      "title": "Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "nankai-university",
+        "independent-researcher",
+        "university-of-north-texas",
+        "university-of-louisville"
+      ],
+      "authors": [
+        "baolei-zhang-nankai",
+        "haoran-xin-nankai",
+        "yuxi-chen-independent",
+        "zhuqing-liu-unt",
+        "biao-yi-nankai",
+        "tong-li-nankai",
+        "lihai-nie-nankai",
+        "zheli-liu-nankai",
+        "minghong-fang-louisville"
+      ]
+    },
+    {
+      "id": "ieee-sp26-arquint-diodon",
+      "title": "The Secrets Must Not Flow: Scaling Security Verification to Large Codebases",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "eth-zurich",
+        "amazon-web-services"
+      ],
+      "authors": [
+        "linard-arquint-eth",
+        "samarth-kishor-aws",
+        "jason-r-koenig-aws",
+        "joey-dodds-aws",
+        "daniel-kroening-aws",
+        "peter-mueller-eth"
+      ]
+    },
+    {
+      "id": "ieee-sp26-wang-jailbreak-guardrails",
+      "title": "SoK: Evaluating Jailbreak Guardrails for Large Language Models",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "hkust",
+        "renmin-university-china",
+        "lingnan-university"
+      ],
+      "authors": [
+        "xunguang-wang-hkust",
+        "zhenlan-ji-hkust",
+        "wenxuan-wang-ruc",
+        "zongjie-li-hkust",
+        "daoyuan-wu-lingnan",
+        "shuai-wang-hkust"
+      ]
+    },
+    {
+      "id": "ieee-sp26-corrias-maya",
+      "title": "MAYA: Addressing Inconsistencies in Generative Password Guessing through a Unified Benchmark",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "sapienza-university-rome"
+      ],
+      "authors": [
+        "william-corrias-sapienza",
+        "fabio-de-gaspari-sapienza",
+        "dorjan-hitaj-sapienza",
+        "luigi-v-mancini-sapienza"
+      ]
+    },
+    {
+      "id": "ieee-sp26-ye-llm-unlearning",
+      "title": "LLM Unlearning Should Be Form-Independent",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "institute-automation-cas",
+        "beijing-university-posts-telecommunications",
+        "shandong-university"
+      ],
+      "authors": [
+        "xiaotian-ye-ia-cas",
+        "mengqi-zhang-bupt-sdu",
+        "shu-wu-ia-cas"
+      ]
+    },
+    {
+      "id": "ieee-sp26-ersoy-dark-patterns",
+      "title": "Investigating the Impact of Dark Patterns on LLM-Based Web Agents",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "purdue-university",
+        "florida-international-university",
+        "georgia-tech"
+      ],
+      "authors": [
+        "devin-ersoy-purdue",
+        "brandon-lee-purdue",
+        "ananth-shreekumar-purdue",
+        "arjun-arunasalam-fiu",
+        "muhammad-ibrahim-gatech",
+        "antonio-bianchi-purdue",
+        "z-berkay-celik-purdue"
+      ]
+    },
+    {
+      "id": "ieee-sp26-suri-trojanclimb",
+      "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "northeastern-university",
+        "umass-amherst"
+      ],
+      "authors": [
+        "anshuman-suri-northeastern",
+        "harsh-chaudhari-northeastern",
+        "yuefeng-peng-umass",
+        "ali-naseh-umass",
+        "alina-oprea",
+        "amir-houmansadr-umass"
+      ]
+    },
+    {
+      "id": "ieee-sp26-wu-enchtable",
+      "title": "EnchTable: Unified Safety Alignment Transfer in Fine-tuned Large Language Models",
+      "year": 2026,
+      "venue": "IEEE S&P 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-14",
+      "url": "https://sp2026.ieee-security.org/accepted-papers.html",
+      "institutions": [
+        "ant-group",
+        "nanyang-technological-university"
+      ],
+      "authors": [
+        "jialin-wu-ant-group",
+        "kecen-li-ant-group",
+        "zhicong-huang-ant-group",
+        "xinfeng-li-ntu",
+        "xiaofeng-wang-ntu",
+        "cheng-hong-ant-group"
+      ]
+    },
     {
       "id": "ieee-sp26-li-webcloak",
       "title": "WebCloak: Characterizing and Mitigating Threats from LLM-Driven Web Agents as Intelligent Scrapers",

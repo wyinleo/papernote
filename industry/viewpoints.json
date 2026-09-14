@@ -568,5 +568,100 @@
     "evidence_basis": "自 2024 年起的 Mandiant 事件响应、GTIG 遥测、客户与第三方取证、恶意软件和脚本逆向、基础设施与支付活动时间线。",
     "limitations": "报告聚焦已调查事件，受害组织和样本总数未公开；拉美和非洲扩张属于基础设施意图推断。AI 作用根据恢复代码特征判断，不能量化其对每次行动的实际贡献。",
     "commercial_interest": "发布方属于 Google Cloud/ Mandiant，并提供威胁情报、事件响应和安全产品服务。"
+  },
+  {
+    "id": "gtig-ai-threat-tracker-q2-2026",
+    "title": "GTIG：攻击者从提示辅助转向代理化攻击流水线",
+    "source": "Google Threat Intelligence Group / Mandiant",
+    "source_type": "威胁情报与事件响应",
+    "content_type": "季度对抗性 AI 威胁复盘",
+    "published_at": "2026-09-08",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
+    "topics": ["代理化攻击", "AI 软件供应链", "凭据收集", "模型窃取"],
+    "summary": "GTIG 观察到攻击者把 AI 从单次内容生成扩展为可管理扫描、纠错和凭据收集的代理化工作流，同时更积极地窃取模型、提示、代码和云端算力。",
+    "highlights": [
+      "一个疑似牟利团伙在取得云资源后不到六小时内规划、构建并执行多代理大规模凭据收集活动；代理自动处理扫描、实时故障排除与 IP 轮换。",
+      "UNC6780 通过被盗开发者账户发布木马化 MCP 包、注入组织仓库，并从 CI 进程内存提取 OIDC token，以带有效 SLSA Build 3 证明的身份发布恶意包。",
+      "GTIG 还观察到针对专有模型、源代码、skills、prompts 与研究成果的窃取，以及超过一亿次提示规模的模型蒸馏活动。"
+    ],
+    "evidence_basis": "Mandiant 事件响应、GTIG 威胁行为体跟踪、Google 平台防御遥测、恶意样本与受损基础设施调查。",
+    "limitations": "报告整合多起不同动机活动，未公开完整样本量或每类事件基数；GTIG 明确称尚未在野外观察到完全自治的零日发现与利用流水线，不能把代理化趋势外推为普遍能力。",
+    "commercial_interest": "发布方属于 Google Cloud/Mandiant，并推广 Gemini 防滥用、Google AI Threat Defense、威胁情报与事件响应服务。"
+  },
+  {
+    "id": "microsoft-passkey-cloud-compromise-2026",
+    "title": "Microsoft：Passkey 话术掩护云身份接管与数据收集",
+    "source": "Microsoft Security Research",
+    "source_type": "安全研究与威胁情报",
+    "content_type": "活跃云入侵链分析",
+    "published_at": "2026-09-09",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/09/passkey-themed-social-engineering-leads-identity-cloud-compromise/",
+    "topics": ["Passkey", "AiTM 钓鱼", "MFA 持久化", "Microsoft Graph"],
+    "summary": "攻击者假冒 IT 支持，以更新 passkey、MFA 或 SSO 为由引导受害者进入 AiTM 或设备码认证，再追加自控 MFA、枚举 Graph 并访问邮件与文档。",
+    "highlights": [
+      "活动至少自 2026 年 5 月出现，入口常是打到个人手机的电话或短信；passkey 只是可信话术，真实目标是窃取凭据和会话 token 或让受害者授权设备码。",
+      "初始访问后，攻击者快速注册新的电话、Authenticator 或软件 OTP 因子，并在数分钟内访问 My Apps、Graph、SharePoint、OneDrive、Outlook 与虚拟应用门户。",
+      "单个 Graph API 调用往往正常，检测需要跨身份、应用、token、IP 和时间把目录枚举、权限/MFA 发现、内容定位与下载串成行为链。"
+    ],
+    "evidence_basis": "Microsoft 身份、Graph、SharePoint、OneDrive、Exchange 和端点遥测，用户报告、登录会话与认证方法变更记录。",
+    "limitations": "文章未公开受害账户总数和数据损失规模；部分登录事件只证明资源被请求，不能证明每份文档或附件实际下载。快速轮换的域名和代理基础设施也降低静态 IOC 的完整性。",
+    "commercial_interest": "发布方属于 Microsoft，并推广 Defender、Entra、Conditional Access、身份风险和自动攻击中断能力。"
+  },
+  {
+    "id": "microsoft-ai-invoice-fraud-2026",
+    "title": "Microsoft：AI 辅助模板放大高管冒充发票欺诈",
+    "source": "Microsoft Security Research",
+    "source_type": "安全研究与威胁情报",
+    "content_type": "大规模邮件欺诈活动分析",
+    "published_at": "2026-09-10",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/10/protecting-organizations-ai-assisted-executive-impersonation-invoice-fraud/",
+    "topics": ["高管冒充", "发票欺诈", "生成式 AI", "邮件安全"],
+    "summary": "Microsoft 披露一轮超过百万封的高管冒充邮件：攻击者用仿冒域名、个性化发票和伪造转发对话诱导财务人员发起接近五万美元的 ACH 转账。",
+    "highlights": [
+      "2026 年 8 月 3—5 日检测到超过一百万封邮件，87.7% 投向美国用户；内容同时冒充目标公司 CEO/CFO 与 ServiceNow 高管，叠加品牌化发票和虚构审批对话。",
+      "攻击者在活动前注册 `service-nowinc[.]com` 等相似域，并把收款方式指向自控账户；模板按目标组织和高管替换字段，但发票标识与叙事结构高度一致。",
+      "大量 HTML 注释、规则化分区和统一模板与生成式 AI 辅助开发相符，但文章明确这些特征不能单独证明 AI 生成范围；缺失邮件头和显示名/地址不匹配仍是可见线索。"
+    ],
+    "evidence_basis": "Microsoft Defender for Office 365 邮件遥测、百万级投递时间线、域名注册、HTML 与邮件样本、收款和目标行业分布。",
+    "limitations": "生成式 AI 使用属于基于模板特征的谨慎判断，不是对具体模型或生成比例的直接取证；报告未给出实际转账成功数和损失金额，遥测范围也不等于全球邮件总体。",
+    "commercial_interest": "发布方属于 Microsoft，并推广 Defender for Office 365、Defender XDR、Security Copilot、ZAP 与邮件认证配置。"
+  },
+  {
+    "id": "unit42-spiffe-spire-identity-spoofing-2026",
+    "title": "Unit 42：节点失陷可让 SPIFFE 身份隔离整体坍塌",
+    "source": "Palo Alto Networks Unit 42",
+    "source_type": "安全研究",
+    "content_type": "云原生身份攻击研究",
+    "published_at": "2026-09-10",
+    "url": "https://unit42.paloaltonetworks.com/kubernetes-spiffe-spire-identity-spoofing/",
+    "topics": ["SPIFFE", "SPIRE", "Kubernetes", "工作负载身份"],
+    "summary": "研究展示取得 Kubernetes 节点 root 后，可伪造 SPIRE workload attestor 读取的 cgroup 元数据，让攻击进程获得同节点其他工作负载的合法 SVID。",
+    "highlights": [
+      "SPIRE Agent 从调用进程 PID 的 `/proc` cgroup 和 mount 信息提取 Pod、容器、namespace 与 service account selector，再与缓存注册项匹配并返回 SVID。",
+      "root 攻击者可复制目标 cgroup 路径并让自有进程呈现相同 selector，绕过工作负载隔离；开源工具 Spooffe 自动扫描节点、构造模拟 cgroup 并枚举可取身份。",
+      "短期、密码学签名的身份没有失效，而是签发前的本地证明信任被破坏；因此节点 root 应按同节点全部身份失陷处理，并限制 privileged container、host access 与弱 selector。"
+    ],
+    "evidence_basis": "对 SPIFFE/SPIRE 开源实现与 Kubernetes attestor 的代码分析、实验集群中的 selector/cgroup 操纵、SVID 获取和 Spooffe 工具验证。",
+    "limitations": "Unit 42 明确表示尚未观察到该技术在野外被利用；攻击前提是已取得节点 root，研究不证明远程初始入侵。结论聚焦所测 SPIRE attestor 与同节点信任边界。",
+    "commercial_interest": "发布方属于 Palo Alto Networks，并推广 Cortex XDR、XSIAM、Cortex Cloud Identity Threat Detection 与事件响应服务。"
+  },
+  {
+    "id": "talos-clickfix-browser-google-c2-2026",
+    "title": "Cisco Talos：ClickFix 转入浏览器并滥用 Google Sheets 做 C2",
+    "source": "Cisco Talos",
+    "source_type": "威胁情报",
+    "content_type": "加密货币窃取活动分析",
+    "published_at": "2026-09-08",
+    "url": "https://blog.talosintelligence.com/clickfix-moves-into-the-browser/",
+    "topics": ["ClickFix", "浏览器注入", "Google Sheets", "加密货币窃取"],
+    "summary": "一轮加密货币窃取活动用虚假 API 漏洞报告诱导目标粘贴 JavaScript 或安装 Tampermonkey，再从 Google Visualization API 拉取代码，在浏览器内替换充值地址与剪贴板。",
+    "highlights": [
+      "诱饵投放在 Telegram、DarkForums、Pastebin 和 Google Docs，瞄准希望利用不存在的交易 API 漏洞获利的人；新版借 Tampermonkey 在目标交易站点维持跨会话执行。",
+      "加载器通过无需认证、只读的 Google Visualization API 读取公开 Sheets 中两格混淆 JavaScript，把 C2 隐藏在浏览器到可信 Google 域名的 HTTPS 流量中。",
+      "最终脚本 hook 浏览器 `fetch` API，修改服务端响应与剪贴板中的加密货币地址，并显示伪造 bonus 界面；同一模式可扩展到电商或其他客户侧供应链攻击。"
+    ],
+    "evidence_basis": "Cisco Talos 对多月诱饵、Telegram/论坛投放、Google Docs/Sheets 基础设施、Tampermonkey 与多阶段 JavaScript 的追踪和逆向。",
+    "limitations": "已见活动主要针对特定加密货币社群，文章称对多数企业没有直接特定威胁；对其他行业的供应链影响属于能力推演。用户必须主动粘贴脚本或安装扩展。",
+    "commercial_interest": "发布方属于 Cisco，并提供 Talos 威胁情报及 Cisco 安全产品与事件响应服务。"
   }
 ]
