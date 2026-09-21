@@ -1,5 +1,5 @@
 {
-  "version": "1.7.0",
+  "version": "1.8.0",
   "reference_systems": [
     {
       "name": "ACM Computing Classification System",
@@ -69,6 +69,10 @@
         "passkeys",
         "webauthn",
         "privacy",
+        "face-deanonymization",
+        "consent-compliance",
+        "reconstruction-attack",
+        "privacy-by-design",
         "authorization-bypass",
         "membership-inference",
         "stalking"
@@ -89,6 +93,7 @@
         "java",
         "taint-analysis",
         "patch-mining",
+        "patch-backporting",
         "fuzzing",
         "model-serialization",
         "deserialization",
@@ -96,7 +101,9 @@
         "runtime-containment",
         "rust",
         "memory-safety",
-        "sanitizer"
+        "sanitizer",
+        "information-disclosure",
+        "source-sanitization"
       ]
     },
     {
@@ -116,6 +123,8 @@
         "privilege-escalation",
         "integrity-violation",
         "speculative-execution",
+        "weird-machine",
+        "trusted-execution",
         "linux-kernel",
         "avionics",
         "physical-implant"
@@ -140,7 +149,10 @@
         "ip-fragmentation",
         "tcp-ip",
         "off-path-attack",
-        "weak-verification"
+        "weak-verification",
+        "anonymity-network",
+        "satellite-routing",
+        "network-measurement"
       ]
     }
   ],
@@ -331,7 +343,27 @@
     "model-unlearning": {"label": "模型遗忘", "facet": "method"},
     "form-dependence": {"label": "形式依赖", "facet": "problem"},
     "password-guessing": {"label": "口令猜测", "facet": "problem"},
-    "generative-model": {"label": "生成模型", "facet": "object"}
+    "generative-model": {"label": "生成模型", "facet": "object"},
+    "patch-backporting": {"label": "补丁回移", "facet": "problem"},
+    "face-deanonymization": {"label": "人脸去匿名化", "facet": "problem"},
+    "image-restoration": {"label": "图像恢复", "facet": "method"},
+    "consent-compliance": {"label": "同意合规", "facet": "problem"},
+    "datalog": {"label": "Datalog 规则推理", "facet": "method"},
+    "reconstruction-attack": {"label": "数据重构攻击", "facet": "problem"},
+    "aggregate-statistics": {"label": "聚合统计", "facet": "object"},
+    "integer-programming": {"label": "整数规划", "facet": "method"},
+    "weird-machine": {"label": "怪异机", "facet": "object"},
+    "trusted-execution": {"label": "可信执行环境", "facet": "object"},
+    "longitudinal-study": {"label": "纵向研究", "facet": "method"},
+    "smart-home": {"label": "智能家居", "facet": "object"},
+    "privacy-by-design": {"label": "隐私设计", "facet": "method"},
+    "anonymity-network": {"label": "匿名通信网络", "facet": "object"},
+    "satellite-routing": {"label": "卫星路由", "facet": "method"},
+    "information-disclosure": {"label": "信息泄露", "facet": "problem"},
+    "latex-source": {"label": "LaTeX 源文件", "facet": "object"},
+    "source-sanitization": {"label": "源文件净化", "facet": "method"},
+    "microarchitecture": {"label": "微架构", "facet": "object"},
+    "network-measurement": {"label": "网络测量", "facet": "method"}
   },
   "primary_domain_overrides": {
     "usenix-sec26-kim-agentic": "ai-security",
@@ -421,6 +453,16 @@
     "ieee-sp26-suri-trojanclimb": "ai-security",
     "ieee-sp26-chen-compiler-backdoor": "ai-security",
     "ieee-sp26-ye-llm-unlearning": "ai-security",
-    "ieee-sp26-corrias-maya": "identity-privacy"
+    "ieee-sp26-corrias-maya": "identity-privacy",
+    "ieee-sp26-li-portgpt": "software-application-security",
+    "ieee-sp26-zhai-revelio": "identity-privacy",
+    "ieee-sp26-li-cosmic": "identity-privacy",
+    "ieee-sp26-liu-generate-verify": "identity-privacy",
+    "ieee-sp26-wang-transient-architectural-execution": "systems-hardware-security",
+    "ieee-sp26-dutly-aex-nstep": "systems-hardware-security",
+    "ieee-sp26-reittinger-passkey-field-study": "identity-privacy",
+    "ieee-sp26-he-chinese-smart-home-privacy": "identity-privacy",
+    "ieee-sp26-li-sator": "network-communication-security",
+    "ieee-sp26-pennekamp-hidden-secrets-arxiv": "software-application-security"
   }
 }
