@@ -16,6 +16,8 @@
     academicYear: "all",
     academicInstitution: "",
     dialogTrail: [],
+    filtersExpanded: false,
+    mapFocus: false,
   };
 
   const topicLabels = Object.fromEntries(
@@ -29,6 +31,7 @@
     distribution: $("#distributionCard"),
     filterTitle: $("#filterTitle"),
     filterList: $("#filterList"),
+    filterToggle: $("#filterToggle"),
     resultCount: $("#resultCount"),
     cardList: $("#cardList"),
     contentTitle: $("#contentTitle"),
@@ -44,7 +47,7 @@
   };
 
   const scholarsById = new Map(
-    (data.academic?.scholars || []).map((scholar) => [scholar.id, scholar])
+    (data.scholar_names || data.academic?.scholars || []).map((scholar) => [scholar.id, scholar])
   );
   const scholarIdsByName = new Map();
   scholarsById.forEach((scholar) => {
@@ -52,12 +55,35 @@
       scholarIdsByName.set(name, scholar.id);
     });
   });
-  const scholarIdsByPaperId = new Map(
-    (data.academic?.publications || []).map((publication) => [
-      publication.id,
-      [...new Set(publication.authors || [])],
-    ])
-  );
+  const scholarIdsByPaperId = new Map(Object.entries(data.paper_authors || {}).map(([id, authors]) => [id, [...new Set(authors)]]));
+  const papersById = new Map(data.papers.map(paper => [paper.id, paper]));
+  const fullDetails = new Map();
+  const searchWeeks = new Map();
+  const searchCache = new WeakMap();
+  let academicRequest;
+  let dialogRequest = 0;
+  let contentRequest = 0;
+
+  async function ensureAcademic() {
+    if (data.academic?.institutions) return;
+    if (!academicRequest) academicRequest = window.PAPERNOTE_ASSETS.load(data.assets.academic).then(academic => {
+      data.academic = academic;
+      academic.scholars.forEach(scholar => scholarsById.set(scholar.id, scholar));
+    }).catch(error => { academicRequest = null; throw error; });
+    return academicRequest;
+  }
+
+  function loadContent(task) {
+    const request = ++contentRequest;
+    elements.empty.hidden = true;
+    elements.cardList.innerHTML = '<p class="load-status" role="status">正在加载内容…</p>';
+    task.then(() => { if (request === contentRequest) render(); }).catch(() => {
+      if (request !== contentRequest) return;
+      elements.cardList.innerHTML = '<p class="load-status" role="status">内容加载失败，请检查网络后重试。</p><button type="button" class="filter-toggle" id="retryContent">重新加载</button>';
+      $("#retryContent").addEventListener("click", render);
+    });
+  }
+
 
   const escapeHtml = (value = "") => String(value)
     .replaceAll("&", "&amp;")
@@ -101,20 +127,22 @@
       : (paper.topics || []).map((topic) => topicLabels[topic] || topic);
   };
 
-  const searchable = (item) => JSON.stringify(item).toLocaleLowerCase("zh-CN");
+  const searchable = (item) => {
+    if (!searchCache.has(item)) searchCache.set(item, JSON.stringify(item).toLocaleLowerCase("zh-CN"));
+    return searchCache.get(item);
+  };
 
   function renderStats() {
     const stats = [
       ["收录论文", data.counts.papers],
       ["缓存精读", data.counts.cached],
       ["主领域", data.counts.themes],
-      ["学术单位", data.academic?.institutions?.length || 0],
+      ["学术单位", data.counts.institutions || 0],
       ["行业观点", data.counts.viewpoints],
     ];
     elements.stats.innerHTML = stats.map(([label, value]) =>
       `<div class="stat"><dt>${label}</dt><dd>${value}</dd></div>`
     ).join("");
-    $("#generatedAt").textContent = new Date(data.generated_at).toLocaleString("zh-CN");
   }
 
   const distributionColors = [
@@ -263,7 +291,10 @@
           : state.mode === "academic"
             ? "学科领域"
             : "来源类型";
-    elements.filterList.innerHTML = groups.map((group) => `
+    elements.filterToggle.hidden = groups.length <= 5;
+    elements.filterToggle.setAttribute("aria-expanded", String(state.filtersExpanded));
+    elements.filterToggle.textContent = state.filtersExpanded ? "收起 · 显示前 5 条" : `展开全部 ${groups.length} 条`;
+    elements.filterList.innerHTML = (state.filtersExpanded ? groups : groups.slice(0, 5)).map((group) => `
       <button class="filter-button ${state.group === group.id ? "is-active" : ""}"
               type="button" data-group="${escapeHtml(group.id)}">
         <span>${escapeHtml(group.label)}</span>
@@ -284,7 +315,7 @@
       const inGroup = state.mode === "week"
         ? paper.week === state.group
         : paper.theme === state.group;
-      return inGroup && (!query || searchable(paper).includes(query));
+      return inGroup && (!query || (searchWeeks.get(paper.week)?.[paper.id] || searchable(paper)).includes(query));
     });
     papers = [...papers].sort((a, b) => {
       if (state.sort === "title") return a.title.localeCompare(b.title);
@@ -392,30 +423,101 @@
     return yearMatches && categoryMatches;
   }
 
+  function renderWorldMap(institutions, edges, publications) {
+    const world = window.PAPERNOTE_WORLD || [];
+    const geography = new Map(world.map(country => [country.id, country]));
+    const map = window.PAPERNOTE_MAP.aggregate(institutions, edges, publications, academicPaperMatches,
+      state.mapFocus ? state.academicInstitution : "");
+    const counts = new Map(map.countries.map(country => [country.id, country]));
+    const max = Math.max(1, ...map.countries.map(country => country.count));
+    const countries = [...map.countries].sort((a, b) => b.count - a.count);
+    const routes = map.routes;
+    const countryName = id => geography.get(id)?.name || id;
+    const focusName = institutions.find(item => item.id === state.academicInstitution)?.name || "";
+    return `<p class="map-scope">${state.mapFocus ? `${escapeHtml(focusName)} · 合作关系` : "全部单位 · 合作关系"}${routes.length ? "" : " · 当前范围暂无可定位的合作连线"}</p><div class="world-map-board">
+      <div class="map-summary"><strong>${countries.length}</strong> 个国家 / 地区 <span>·</span> ${map.unmapped} 个单位待补所在地</div>
+      <svg class="world-map" viewBox="0 0 900 380" role="group" aria-label="全球论文分布与合作地图">
+        <g class="map-grid" aria-hidden="true">${[-60, -30, 0, 30, 60].map(lat => `<path d="M0,${(85-lat)*2.5}H900"/>`).join("")}${[-120,-60,0,60,120].map(lon => `<path d="M${(lon+180)*2.5},0V380"/>`).join("")}</g>
+        <g>${world.map(country => {
+          const count = counts.get(country.id)?.count || 0;
+          const fill = count ? `hsl(165 32% ${83 - 52 * (max === 1 ? 1 : Math.sqrt((count - 1) / (max - 1)))}%)` : "#e4e9e2";
+          return `<path class="map-land" d="${country.path}" fill="${fill}" ${count ? `data-map-country="${country.id}" role="button" tabindex="0" aria-label="${escapeHtml(country.name)}：${count} 篇论文"` : ""}><title>${escapeHtml(country.name)} · ${count ? `${count} 篇库内论文` : "暂无已定位论文"}</title></path>`;
+        }).join("")}</g>
+        <g class="map-routes">${routes.map(route => {
+          const a = geography.get(route.source), b = geography.get(route.target);
+          if (!a || !b) return "";
+          const distance = Math.hypot(a.x-b.x,a.y-b.y);
+          const path = `M${a.x},${a.y}Q${(a.x+b.x)/2},${Math.max(8,(a.y+b.y)/2-Math.min(110,distance*.3))} ${b.x},${b.y}`;
+          return `<path data-route-source="${route.source}" data-route-target="${route.target}" d="${path}" style="stroke-width:${Math.min(1.8, 0.45 + 0.3 * Math.sqrt(route.count))}"><title>${escapeHtml(countryName(route.source))} ↔ ${escapeHtml(countryName(route.target))}：${route.count} 篇共同论文；${route.pairs.length} 组单位合作</title></path>`;
+        }).join("")}</g>
+        <g>${countries.filter(country => !geography.get(country.id)?.path).map(country => {
+          const point = geography.get(country.id);
+          if (!point) return "";
+          return `<text class="map-small-country" data-map-country="${country.id}" x="${point.x}" y="${point.y}" tabindex="0" role="button" aria-label="${escapeHtml(point.name)}：${country.count} 篇论文">${escapeHtml(point.name)}</text>`;
+        }).join("")}</g>
+      </svg>
+      <div class="map-legend"><span><i class="no-data"></i>暂无已定位论文</span><span>1 篇</span><i class="color-scale"></i><span>${max} 篇</span><span class="route-key">⌒ 跨国 / 地区合作</span></div>
+    </div>
+    <p class="sr-only map-hover-status" role="status"></p>`;
+  }
+
+  function bindMapHover() {
+    const board = $(".world-map");
+    if (!board) return;
+    const status = $(".map-hover-status");
+    const paths = [...board.querySelectorAll(".map-routes path")];
+    const countries = [...board.querySelectorAll("[data-map-country]")];
+    const routesByCountry = new Map();
+    paths.forEach(path => {
+      new Set([path.dataset.routeSource, path.dataset.routeTarget]).forEach(code => {
+        if (!routesByCountry.has(code)) routesByCountry.set(code, []);
+        routesByCountry.get(code).push(path);
+      });
+    });
+    let active = "";
+    function show(code) {
+      if (code === active) return;
+      (routesByCountry.get(active) || []).forEach(path => path.classList.remove("is-visible"));
+      active = code;
+      const visible = routesByCountry.get(code) || [];
+      visible.forEach(path => path.classList.add("is-visible"));
+      countries.forEach(node => node.classList.toggle("is-selected", node.dataset.mapCountry === code));
+      const name = countries.find(node => node.dataset.mapCountry === code)?.getAttribute("aria-label");
+      status.textContent = code ? `${name || code} · ${visible.length ? `${visible.length} 条合作连线` : "当前范围暂无可定位的合作连线"}` : "";
+    }
+    countries.forEach(node => {
+      node.addEventListener("pointerenter", event => { if (event.pointerType !== "touch") show(node.dataset.mapCountry); });
+      node.addEventListener("pointerleave", event => { if (event.pointerType !== "touch") show(""); });
+      node.addEventListener("focus", () => show(node.dataset.mapCountry));
+      node.addEventListener("blur", () => show(""));
+      node.addEventListener("pointerdown", event => {
+        if (event.pointerType === "touch") { event.preventDefault(); show(active === node.dataset.mapCountry ? "" : node.dataset.mapCountry); }
+      });
+      node.addEventListener("keydown", event => {
+        if (event.key === "Escape") show("");
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); show(node.dataset.mapCountry); }
+      });
+    });
+    board.addEventListener("pointerleave", event => { if (event.pointerType !== "touch") show(""); });
+    board.addEventListener("pointerdown", event => { if (!event.target.closest("[data-map-country]")) show(""); });
+  }
+
   function renderAcademic() {
+    if (!data.academic?.institutions) { loadContent(ensureAcademic()); return; }
     const academic = data.academic || {};
     const query = state.query.toLocaleLowerCase("zh-CN");
+    const matchingIds = new Set((academic.publications || []).filter(academicPaperMatches).map(paper => paper.id));
     const institutions = [...(academic.institutions || [])]
       .filter((item) => !query || searchable(item).includes(query))
       .map((item) => ({ ...item, score: academicScore(item) }))
-      .filter((item) => item.score > 0 || (state.group === "all" && state.academicYear === "all"))
+      .filter((item) => item.papers.some(id => matchingIds.has(id)))
       .sort((a, b) => b.score - a.score || b.papers.length - a.papers.length || a.name.localeCompare(b.name));
     const scholars = [...(academic.scholars || [])]
       .filter((item) => !query || searchable(item).includes(query))
       .map((item) => ({ ...item, score: academicScore(item) }))
-      .filter((item) => item.score > 0 || (state.group === "all" && state.academicYear === "all"))
+      .filter((item) => item.papers.some(id => matchingIds.has(id)))
       .sort((a, b) => b.score - a.score || b.papers.length - a.papers.length || a.name.localeCompare(b.name));
-    const graphNodes = institutions.slice(0, 12);
-    const nodeIds = new Set(graphNodes.map((item) => item.id));
-    const positions = new Map(graphNodes.map((item, index) => {
-      const angle = (Math.PI * 2 * index / Math.max(graphNodes.length, 1)) - Math.PI / 2;
-      const radiusX = graphNodes.length < 5 ? 260 : 340;
-      const radiusY = graphNodes.length < 5 ? 150 : 195;
-      return [item.id, {
-        x: 450 + Math.cos(angle) * radiusX,
-        y: 260 + Math.sin(angle) * radiusY,
-      }];
-    }));
+    const nodeIds = new Set(institutions.map((item) => item.id));
     const edges = (academic.collaborations || []).filter((edge) =>
       nodeIds.has(edge.source)
       && nodeIds.has(edge.target)
@@ -424,6 +526,9 @@
     if (!state.academicInstitution || !institutions.some((item) => item.id === state.academicInstitution)) {
       state.academicInstitution = institutions[0]?.id || "";
     }
+    const countryRanking = window.PAPERNOTE_MAP.aggregate(institutions, [], academic.publications || [], academicPaperMatches).countries
+      .sort((a, b) => b.count - a.count || a.id.localeCompare(b.id));
+    const countryNames = new Map((window.PAPERNOTE_WORLD || []).map(item => [item.id, item.name]));
     const selected = institutions.find((item) => item.id === state.academicInstitution);
     const partners = selected
       ? edges.filter((edge) => edge.source === selected.id || edge.target === selected.id)
@@ -445,55 +550,35 @@
     elements.academicYear.hidden = false;
     elements.empty.hidden = institutions.length > 0;
     elements.cardList.innerHTML = institutions.length ? `
-      <section class="academic-intro">
-        <div>
-          <p class="eyebrow">VERIFIED LOWER BOUND</p>
-          <h3>用已核验论文连接单位、学者与合作关系</h3>
-        </div>
-        <p>${escapeHtml(academic.coverage?.score_definition || "")}</p>
-        <dl>
-          <div><dt>可解析论文</dt><dd>${academic.coverage?.papers_with_affiliations || 0}</dd></div>
-          <div><dt>计分顶会论文</dt><dd>${academic.coverage?.scored_top_venue_papers || 0}</dd></div>
-          <div><dt>合作单位</dt><dd>${academic.institutions?.length || 0}</dd></div>
-        </dl>
-      </section>
-      <section class="network-section" aria-labelledby="networkTitle">
-        <div class="subsection-heading">
-          <div><p class="eyebrow">COLLABORATION MAP</p><h3 id="networkTitle">单位合作网络</h3></div>
-          <p>节点优先展示当前筛选下分数较高的单位；连线粗细表示 papernote 库内共同论文数。</p>
-        </div>
-        <div class="network-board">
-          <svg viewBox="0 0 900 520" role="img" aria-label="学术单位合作连线">
-            ${edges.map((edge) => {
-              const left = positions.get(edge.source);
-              const right = positions.get(edge.target);
-              const weight = edge.papers.filter(academicPaperMatches).length;
-              return `<line x1="${left.x}" y1="${left.y}" x2="${right.x}" y2="${right.y}" style="--weight:${Math.min(weight, 4)}"></line>`;
-            }).join("")}
-          </svg>
-          ${graphNodes.map((item) => {
-            const point = positions.get(item.id);
-            return `<button class="network-node ${item.id === state.academicInstitution ? "is-selected" : ""}"
-              type="button" data-institution="${escapeHtml(item.id)}"
-              style="--x:${point.x / 9}%;--y:${point.y / 5.2}%">
-              <strong>${escapeHtml(item.name)}</strong><span>${item.score} 分 · ${item.papers.length} 篇</span>
-            </button>`;
-          }).join("")}
+      <section class="network-section" aria-label="学术合作关系">
+        <div class="map-controls">
+          <label>查看单位 <select id="mapInstitution" aria-label="查看单位">${institutions.map(item => `<option value="${escapeHtml(item.id)}" ${item.id === state.academicInstitution ? "selected" : ""}>${escapeHtml(item.name)}</option>`).join("")}</select></label>
+          <button type="button" id="mapFocus" aria-pressed="${state.mapFocus}">${state.mapFocus ? "显示全部合作" : "展开该单位的合作"}</button>
         </div>
         ${selected ? `
           <article class="network-detail">
             <div><p class="eyebrow">SELECTED GROUP</p><h3>${escapeHtml(selected.name)}</h3>
-              <p>${selected.score} 分 · ${selected.papers.length} 篇库内论文 · ${selected.scholars.length} 位关联学者</p>
+              <p>${selected.score} 分 · ${selected.papers.filter(id => matchingIds.has(id)).length} 篇当前筛选论文 · ${selected.scholars.length} 位关联学者</p>
             </div>
             <div><strong>关联学者</strong><p>${selected.scholars.slice(0, 16).map((name) => scholarButton(name)).join("、")}</p></div>
-            <div><strong>主要合作单位</strong><p>${partners.length ? partners.slice(0, 8).map((item) => `${escapeHtml(item.name)}（${item.weight}）`).join("、") : "当前筛选下暂无跨单位合作边"}</p></div>
+            <div><strong>主要合作单位</strong><p>${partners.length ? partners.map((item) => `<button class="scholar-link" type="button" data-map-institution="${escapeHtml(item.id)}">${escapeHtml(item.name)}（${item.weight}）</button>`).join("、") : "当前筛选下暂无跨单位合作边"}</p></div>
           </article>` : ""}
+        ${renderWorldMap(institutions, edges, academic.publications || [])}
       </section>
       <section class="rankings">
         <div>
+          <div class="subsection-heading compact"><div><p class="eyebrow">COUNTRIES / REGIONS</p><h3>国家 / 地区排名</h3></div></div>
+          <ol class="ranking-list country-ranking">
+            ${countryRanking.slice(0, 10).map((item, index) => `
+              <li><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHtml(countryNames.get(item.id) || item.id)}</strong>
+              <small>${item.institutions.length} 个单位 · 去重论文数（含预印）</small></div><b>${item.count}</b></li>
+            `).join("")}
+          </ol>
+        </div>
+        <div>
           <div class="subsection-heading compact"><div><p class="eyebrow">INSTITUTIONS</p><h3>单位优先检索序列</h3></div></div>
           <ol class="ranking-list">
-            ${institutions.slice(0, 12).map((item, index) => `
+            ${institutions.slice(0, 10).map((item, index) => `
               <li><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHtml(item.name)}</strong>
               <small>${item.scholars.length} 位学者 · ${item.papers.length} 篇库内论文</small></div><b>${item.score}</b></li>
             `).join("")}
@@ -502,7 +587,7 @@
         <div>
           <div class="subsection-heading compact"><div><p class="eyebrow">SCHOLARS</p><h3>学者优先检索序列</h3></div></div>
           <ol class="ranking-list">
-            ${scholars.slice(0, 12).map((item, index) => `
+            ${scholars.slice(0, 10).map((item, index) => `
               <li><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${scholarButton(item.name, "ranking-scholar-link")}</strong>
               <small>${item.institutions.map(escapeHtml).join(" · ")}</small></div><b>${item.score}</b></li>
             `).join("")}
@@ -510,16 +595,26 @@
         </div>
       </section>
     ` : "";
-    $$(".network-node").forEach((button) => {
-      button.addEventListener("click", () => {
-        state.academicInstitution = button.dataset.institution;
-        renderAcademic();
-      });
+    $("#mapInstitution")?.addEventListener("change", (event) => {
+      state.academicInstitution = event.target.value;
+      state.mapFocus = true;
+      renderAcademic();
     });
+    $("#mapFocus")?.addEventListener("click", () => {
+      state.mapFocus = !state.mapFocus;
+      renderAcademic();
+    });
+    bindMapHover();
+    $$("[data-map-institution]").forEach(button => button.addEventListener("click", () => {
+      state.academicInstitution = button.dataset.mapInstitution;
+      state.mapFocus = true;
+      renderAcademic();
+    }));
     bindScholarLinks(elements.cardList);
   }
 
   function renderContent() {
+    ++contentRequest;
     elements.academicYear.hidden = state.mode !== "academic";
     elements.paperViewTabs.hidden = !["week", "theme"].includes(state.mode);
     if (state.mode === "academic") {
@@ -546,6 +641,17 @@
       return;
     }
 
+    if (state.query) {
+      const weeks = [...new Set(data.papers.filter(paper => state.mode === "week" ? paper.week === state.group : paper.theme === state.group).map(paper => paper.week))];
+      const missing = weeks.filter(week => !searchWeeks.has(week));
+      if (missing.length) {
+        loadContent(Promise.all(missing.map(async week => {
+          const text = await window.PAPERNOTE_ASSETS.load(data.assets.search[week]);
+          searchWeeks.set(week, Object.fromEntries(Object.entries(text).map(([id, value]) => [id, value.toLocaleLowerCase("zh-CN")])));
+        })));
+        return;
+      }
+    }
     const papers = visiblePapers();
     const group = groupsForMode().find((item) => item.id === state.group);
     elements.contentEyebrow.textContent = state.mode === "week" ? "WEEKLY READING" : "TOPIC COLLECTION";
@@ -575,13 +681,13 @@
       const authors = authorText.split("、").filter(Boolean).map((name) => scholarButton(name)).join("、");
       return `<li><strong>${escapeHtml(institution)}</strong>${authors ? `：${authors}` : ""}</li>`;
     });
-    return `<section class="detail-section"><h3>单位与作者</h3><ul class="affiliation-list">${rows.join("")}</ul></section>`;
+    return `<ul class="affiliation-list dialog-affiliations" aria-label="作者所属单位">${rows.join("")}</ul>`;
   }
 
   function renderPaperDialog(id) {
-    const paper = data.papers.find((item) => item.id === id);
+    const paper = papersById.get(id);
     if (!paper) return false;
-    const details = paper.details || {};
+    const details = fullDetails.get(id) || paper.details || {};
     const sourceLinks = details.original_links?.length
       ? details.original_links
       : (paper.urls || []).map((url, index) => ({
@@ -591,14 +697,14 @@
     elements.dialogContent.innerHTML = `
       <p class="eyebrow">${escapeHtml(paper.theme_label)} · ${escapeHtml(paper.week)}</p>
       <h2 class="dialog-title">${escapeHtml(paper.title)}</h2>
+      ${details.author_affiliations ? affiliationSection(details.author_affiliations) : `<p class="dialog-affiliations">${paperAuthorButtons(paper)}</p>`}
       <p class="dialog-byline">
-        ${paperAuthorButtons(paper)}<br>
         ${escapeHtml(details.venue_status || `${(paper.venues || []).join(" · ")} · ${paperStatusLabel(paper)}`)}
       </p>
+      ${details.easycatch?.length ? `<section class="detail-section easycatch"><h3>Easycatch</h3>${details.easycatch.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}</section>` : ""}
       ${detailSection("方向", details.direction)}
       ${detailSection("关键词", details.keywords)}
       ${glossaryMarkup(details.glossary)}
-      ${affiliationSection(details.author_affiliations)}
       ${detailSection("公开或更新时间", details.public_date)}
       ${detailSection("核心问题", details.question)}
       ${detailSection("方法与贡献", details.method)}
@@ -656,9 +762,27 @@
     return true;
   }
 
-  function renderDialogEntity() {
+  async function renderDialogEntity() {
     const current = state.dialogTrail.at(-1);
     if (!current) return;
+    const request = ++dialogRequest;
+    elements.dialogBack.hidden = state.dialogTrail.length < 2;
+    if (!elements.dialog.open) elements.dialog.showModal();
+    elements.dialogContent.innerHTML = '<p role="status">正在加载详情…</p>';
+    try {
+      if (current.type === "scholar") await ensureAcademic();
+      else if (!fullDetails.has(current.id)) {
+        const paper = papersById.get(current.id);
+        if (!paper) throw new Error("Unknown paper");
+        fullDetails.set(current.id, await window.PAPERNOTE_ASSETS.load(paper.details_url));
+      }
+    } catch (error) {
+      if (request !== dialogRequest || !elements.dialog.open) return;
+      elements.dialogContent.innerHTML = '<p role="status">详情加载失败，请检查网络后重试。</p><button type="button" id="retryDetail">重新加载</button>';
+      $("#retryDetail").addEventListener("click", renderDialogEntity);
+      return;
+    }
+    if (request !== dialogRequest || !elements.dialog.open) return;
     const rendered = current.type === "paper"
       ? renderPaperDialog(current.id)
       : renderScholarDialog(current.id);
@@ -700,6 +824,11 @@
     });
   }
 
+  elements.filterToggle.addEventListener("click", () => {
+    state.filtersExpanded = !state.filtersExpanded;
+    renderFilters();
+  });
+
   function render() {
     renderDistribution();
     renderFilters();
@@ -709,6 +838,7 @@
   $$(".mode-tab").forEach((tab) => {
     tab.addEventListener("click", () => {
       state.mode = tab.dataset.section === "papers" ? state.paperMode : tab.dataset.section;
+      state.filtersExpanded = false;
       state.group = groupsForMode()[0]?.id || "all";
       if (state.mode === "academic") state.academicInstitution = "";
       $$(".mode-tab").forEach((item) => item.classList.toggle("is-active", item === tab));
@@ -719,15 +849,19 @@
     tab.addEventListener("click", () => {
       state.paperMode = tab.dataset.mode;
       state.mode = state.paperMode;
+      state.filtersExpanded = false;
       state.group = groupsForMode()[0]?.id || "all";
       $$(".paper-view-tab").forEach((item) => item.classList.toggle("is-active", item === tab));
       render();
     });
   });
 
+  let searchTimer;
   elements.search.addEventListener("input", () => {
     state.query = elements.search.value.trim();
-    renderContent();
+    ++contentRequest;
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(renderContent, 150);
   });
   elements.sort.addEventListener("change", () => {
     state.sort = elements.sort.value;
@@ -756,6 +890,7 @@
   });
   $(".dialog-close").addEventListener("click", () => elements.dialog.close());
   elements.dialog.addEventListener("close", () => {
+    ++dialogRequest;
     state.dialogTrail = [];
     elements.dialogBack.hidden = true;
   });

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="papernote：浏览安全论文精读、学术关系与有证据评价的行业观点。">
   <title>papernote · 安全研究笔记</title>
-  <link rel="stylesheet" href="./styles.css?v=6">
+  <link rel="stylesheet" href="./styles.css?v=12">
 </head>
 <body>
   <header class="site-header">
@@ -33,6 +33,7 @@
           <span id="resultCount"></span>
         </div>
         <div class="filter-list" id="filterList"></div>
+        <button id="filterToggle" class="filter-toggle" type="button" aria-expanded="false" aria-controls="filterList" hidden>展开全部</button>
         <section class="distribution-card" id="distributionCard" aria-live="polite"></section>
       </aside>
 
@@ -71,18 +72,17 @@
 
   <footer>
     <div class="footer-meta">
-      <span class="footer-brand">papernote</span>
-      <span>数据来自仓库缓存 · <span id="generatedAt"></span></span>
+      <span class="footer-brand">PaperNote</span>
+      <nav class="footer-links" aria-label="页脚链接"><a href="./privacy.html">隐私说明</a><a href="https://yamayuki.space/" target="_blank" rel="noreferrer">Yamayuki's Space</a></nav>
     </div>
-    <p class="privacy-note">
-      隐私：本站启用访问统计时，仅使用 GoatCounter 进行无 Cookie 的匿名统计，并尊重浏览器的“请勿跟踪”设置；
-      不在本站展示个人访问记录或访问量。
-    </p>
     <dl class="stats" id="stats"></dl>
   </footer>
 
-  <script src="./data.js?v=3"></script>
-  <script src="./app.js?v=5"></script>
+  <script src="./data.js?v=4"></script>
+  <script src="./world-map.js?v=1"></script>
+  <script src="./academic-map.js?v=2"></script>
+  <script src="./asset-loader.js?v=1"></script>
+  <script src="./app.js?v=12"></script>
   <script src="./analytics-config.js?v=1"></script>
   <script src="./analytics.js?v=1"></script>
 </body>

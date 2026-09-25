@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T09:35:37+08:00",
+  "generated_at": "2026-09-25T16:30:54+08:00",
   "coverage": {
     "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
     "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程与系统、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
@@ -27,8 +27,59 @@
   ],
   "institutions": [
     {
+      "id": "tsinghua-university",
+      "name": "清华大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "北京信息科学与技术国家研究中心",
+        "清华大学",
+        "清华大学网络科学与网络空间研究院"
+      ],
+      "papers": [
+        "ieee-sp26-peng-apiecho",
+        "usenix-sec26-jia-pangolin",
+        "usenix-sec26-li-aliasleap",
+        "usenix-sec26-liu-ios",
+        "usenix-sec26-peng-kintsugi",
+        "usenix-sec26-zhao-waved"
+      ],
+      "scholars": [
+        "Baojun Liu",
+        "Chao Zhang",
+        "Du Wu",
+        "Hai Wan",
+        "Haixin Duan",
+        "Jiatian Hu",
+        "Jiaxu Wang",
+        "Ke Xu",
+        "Ruixuan Li",
+        "Xibin Zhao",
+        "Xuewei Feng",
+        "Yihao Peng",
+        "Yijing Liu",
+        "Yiming Wu",
+        "Yiming Zhang",
+        "Yizhou Zhao",
+        "Yunyi Zhang",
+        "Zizhen Zhu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 6,
+          "software": 0,
+          "ai": 0,
+          "total": 6
+        }
+      },
+      "verified_score": 6
+    },
+    {
       "id": "eth-zurich",
       "name": "ETH Zurich",
+      "country_code": "CHE",
+      "affiliation_names": [
+        "ETH Zurich"
+      ],
       "papers": [
         "ieee-sp26-arquint-diodon",
         "ieee-sp26-dutly-aex-nstep",
@@ -65,6 +116,10 @@
     {
       "id": "nanyang-technological-university",
       "name": "Nanyang Technological University",
+      "country_code": "SGP",
+      "affiliation_names": [
+        "Nanyang Technological University"
+      ],
       "papers": [
         "ieee-sp26-li-webcloak",
         "ieee-sp26-wu-enchtable",
@@ -98,47 +153,12 @@
       "verified_score": 5
     },
     {
-      "id": "tsinghua-university",
-      "name": "清华大学",
-      "papers": [
-        "ieee-sp26-peng-apiecho",
-        "usenix-sec26-li-aliasleap",
-        "usenix-sec26-liu-ios",
-        "usenix-sec26-peng-kintsugi",
-        "usenix-sec26-zhao-waved"
-      ],
-      "scholars": [
-        "Baojun Liu",
-        "Du Wu",
-        "Hai Wan",
-        "Haixin Duan",
-        "Jiatian Hu",
-        "Jiaxu Wang",
-        "Ke Xu",
-        "Ruixuan Li",
-        "Xibin Zhao",
-        "Xuewei Feng",
-        "Yihao Peng",
-        "Yijing Liu",
-        "Yiming Wu",
-        "Yiming Zhang",
-        "Yizhou Zhao",
-        "Yunyi Zhang",
-        "Zizhen Zhu"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 5,
-          "software": 0,
-          "ai": 0,
-          "total": 5
-        }
-      },
-      "verified_score": 5
-    },
-    {
       "id": "ruhr-university-bochum",
       "name": "Ruhr University Bochum",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "Ruhr University Bochum"
+      ],
       "papers": [
         "ieee-sp26-wang-transient-architectural-execution",
         "usenix-sec26-bach-webrtc",
@@ -168,6 +188,10 @@
     {
       "id": "fudan-university",
       "name": "复旦大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "复旦大学"
+      ],
       "papers": [
         "usenix-sec25-liu-agentfuzz",
         "usenix-sec25-shi-xssky",
@@ -215,6 +239,10 @@
     {
       "id": "cispa",
       "name": "CISPA Helmholtz Center for Information Security",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "CISPA Helmholtz Center for Information Security"
+      ],
       "papers": [
         "ieee-sp26-wang-smufuzz",
         "usenix-sec26-pan-fragjam",
@@ -243,8 +271,13 @@
       "verified_score": 3
     },
     {
-      "id": "cosic-ku-leuven",
-      "name": "COSIC, KU Leuven",
+      "id": "ku-leuven",
+      "name": "KU Leuven",
+      "country_code": "BEL",
+      "affiliation_names": [
+        "COSIC, KU Leuven",
+        "DistriNet, KU Leuven"
+      ],
       "papers": [
         "ieee-sp26-de-meulemeester-battering-ram",
         "ieee-sp26-duttagupta-fast-pair",
@@ -252,10 +285,13 @@
       ],
       "scholars": [
         "Bart Preneel",
+        "Dave Singelée",
         "Ingrid Verbauwhede",
         "Jesse De Meulemeester",
+        "Jo Van Bulck",
         "Nikola Antonijević",
         "Sayon Duttagupta",
+        "Seppe Wyns",
         "Tim Vlummens"
       ],
       "annual_scores": {
@@ -271,6 +307,10 @@
     {
       "id": "purdue-university",
       "name": "Purdue University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Purdue University"
+      ],
       "papers": [
         "ieee-sp26-androutsopoulos-deepsurf",
         "ieee-sp26-ersoy-dark-patterns",
@@ -298,38 +338,12 @@
       "verified_score": 3
     },
     {
-      "id": "bnrist",
-      "name": "北京信息科学与技术国家研究中心",
-      "papers": [
-        "usenix-sec26-li-aliasleap",
-        "usenix-sec26-liu-ios",
-        "usenix-sec26-peng-kintsugi"
-      ],
-      "scholars": [
-        "Baojun Liu",
-        "Hai Wan",
-        "Haixin Duan",
-        "Jiatian Hu",
-        "Jiaxu Wang",
-        "Xibin Zhao",
-        "Yihao Peng",
-        "Yijing Liu",
-        "Yiming Zhang",
-        "Zizhen Zhu"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 3,
-          "software": 0,
-          "ai": 0,
-          "total": 3
-        }
-      },
-      "verified_score": 3
-    },
-    {
       "id": "zhejiang-university",
       "name": "浙江大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "浙江大学"
+      ],
       "papers": [
         "ieee-sp26-peng-apiecho",
         "ieee-sp26-wang-smufuzz",
@@ -358,6 +372,10 @@
     {
       "id": "hong-kong-polytechnic-university",
       "name": "香港理工大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "香港理工大学"
+      ],
       "papers": [
         "ieee-sp26-li-webcloak",
         "usenix-sec25-shi-xssky",
@@ -388,6 +406,10 @@
     {
       "id": "northeastern-university",
       "name": "Northeastern University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Northeastern University"
+      ],
       "papers": [
         "arxiv-2607-16487-fuzz-emup",
         "ieee-sp26-suri-trojanclimb",
@@ -416,6 +438,10 @@
     {
       "id": "seoul-national-university",
       "name": "Seoul National University",
+      "country_code": "KOR",
+      "affiliation_names": [
+        "Seoul National University"
+      ],
       "papers": [
         "arxiv-2607-05120-agent-data-injection",
         "ieee-sp26-roh-ghost",
@@ -444,6 +470,10 @@
     {
       "id": "uc-berkeley",
       "name": "University of California, Berkeley",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of California, Berkeley"
+      ],
       "papers": [
         "arxiv-2607-18575-receipt",
         "usenix-sec26-kim-agentic",
@@ -472,6 +502,10 @@
     {
       "id": "arizona-state-university",
       "name": "Arizona State University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Arizona State University"
+      ],
       "papers": [
         "ieee-sp26-zhang-appare",
         "usenix-sec26-zhang-resume-injection"
@@ -494,8 +528,38 @@
       "verified_score": 2
     },
     {
+      "id": "csiro",
+      "name": "CSIRO",
+      "country_code": "AUS",
+      "affiliation_names": [
+        "CSIRO",
+        "Data61 CSIRO"
+      ],
+      "papers": [
+        "usenix-sec26-duong-firmrebugger",
+        "usenix-sec26-nguyen-menta"
+      ],
+      "scholars": [
+        "Alsharif Abuadbba",
+        "Surya Nepal"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
       "id": "carnegie-mellon-university",
       "name": "Carnegie Mellon University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Carnegie Mellon University"
+      ],
       "papers": [
         "ieee-sp26-liu-generate-verify",
         "ieee-sp26-wang-transient-architectural-execution"
@@ -523,6 +587,10 @@
     {
       "id": "columbia-university",
       "name": "Columbia University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Columbia University"
+      ],
       "papers": [
         "ieee-sp26-chen-compiler-backdoor",
         "ieee-sp26-takahashi-zkfuzz"
@@ -547,30 +615,12 @@
       "verified_score": 2
     },
     {
-      "id": "distrinet-ku-leuven",
-      "name": "DistriNet, KU Leuven",
-      "papers": [
-        "ieee-sp26-de-meulemeester-battering-ram",
-        "ieee-sp26-duttagupta-fast-pair"
-      ],
-      "scholars": [
-        "Dave Singelée",
-        "Jo Van Bulck",
-        "Seppe Wyns"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2
-    },
-    {
       "id": "duke-university",
       "name": "Duke University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Duke University"
+      ],
       "papers": [
         "ieee-sp26-liang-graphrag",
         "usenix-sec26-zhang-resume-injection"
@@ -593,6 +643,10 @@
     {
       "id": "epfl",
       "name": "EPFL",
+      "country_code": "CHE",
+      "affiliation_names": [
+        "EPFL"
+      ],
       "papers": [
         "ieee-sp26-wang-smufuzz",
         "usenix-sec26-chen-vulgenie"
@@ -616,6 +670,10 @@
     {
       "id": "georgia-tech",
       "name": "Georgia Institute of Technology",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Georgia Institute of Technology"
+      ],
       "papers": [
         "ieee-sp26-ersoy-dark-patterns",
         "usenix-sec26-kumar-tile"
@@ -637,8 +695,12 @@
       "verified_score": 2
     },
     {
-      "id": "mit-csail",
-      "name": "MIT Computer Science and Artificial Intelligence Laboratory",
+      "id": "mit",
+      "name": "Massachusetts Institute of Technology",
+      "country_code": "USA",
+      "affiliation_names": [
+        "MIT Computer Science and Artificial Intelligence Laboratory"
+      ],
       "papers": [
         "ieee-sp26-trujillo-register-hiding",
         "usenix-sec26-trujillo-tontou"
@@ -660,6 +722,10 @@
     {
       "id": "mpi-security-privacy",
       "name": "Max Planck Institute for Security and Privacy",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "Max Planck Institute for Security and Privacy"
+      ],
       "papers": [
         "ieee-sp26-wang-smufuzz",
         "usenix-sec26-klix-silicon-heist"
@@ -685,6 +751,10 @@
     {
       "id": "national-university-of-singapore",
       "name": "National University of Singapore",
+      "country_code": "SGP",
+      "affiliation_names": [
+        "National University of Singapore"
+      ],
       "papers": [
         "ieee-sp26-luo-agentic-concolic",
         "ieee-sp26-zhang-appare"
@@ -710,6 +780,10 @@
     {
       "id": "tu-wien",
       "name": "TU Wien",
+      "country_code": "AUT",
+      "affiliation_names": [
+        "TU Wien"
+      ],
       "papers": [
         "usenix-sec25-beer-taptrap",
         "usenix-sec26-beer-webview-http"
@@ -738,6 +812,10 @@
     {
       "id": "technology-innovation-institute",
       "name": "Technology Innovation Institute",
+      "country_code": "ARE",
+      "affiliation_names": [
+        "Technology Innovation Institute"
+      ],
       "papers": [
         "usenix-sec26-bach-webrtc",
         "usenix-sec26-merget-opossum"
@@ -760,6 +838,10 @@
     {
       "id": "university-bayreuth",
       "name": "University of Bayreuth",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "University of Bayreuth"
+      ],
       "papers": [
         "usenix-sec25-beer-taptrap",
         "usenix-sec26-beer-webview-http"
@@ -786,6 +868,10 @@
     {
       "id": "university-of-birmingham",
       "name": "University of Birmingham",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "University of Birmingham"
+      ],
       "papers": [
         "ieee-sp26-de-meulemeester-battering-ram",
         "ieee-sp26-hertogh-rain"
@@ -807,6 +893,10 @@
     {
       "id": "university-california-santa-barbara",
       "name": "University of California, Santa Barbara",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of California, Santa Barbara"
+      ],
       "papers": [
         "ieee-sp26-kaya-web-chatbot",
         "usenix-sec26-kim-agentic"
@@ -833,6 +923,10 @@
     {
       "id": "university-of-louisville",
       "name": "University of Louisville",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Louisville"
+      ],
       "papers": [
         "ieee-sp26-zhang-ragorigin",
         "usenix-sec26-nguyen-menta"
@@ -853,6 +947,10 @@
     {
       "id": "umass-amherst",
       "name": "University of Massachusetts Amherst",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Massachusetts Amherst"
+      ],
       "papers": [
         "ieee-sp26-suri-trojanclimb",
         "usenix-sec26-jeong-network-agent"
@@ -879,6 +977,10 @@
     {
       "id": "vrije-universiteit-amsterdam",
       "name": "Vrije Universiteit Amsterdam",
+      "country_code": "NLD",
+      "affiliation_names": [
+        "Vrije Universiteit Amsterdam"
+      ],
       "papers": [
         "ieee-sp26-hertogh-rain",
         "usenix-sec26-koschel-copykat"
@@ -906,6 +1008,10 @@
     {
       "id": "renmin-university-china",
       "name": "中国人民大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "中国人民大学"
+      ],
       "papers": [
         "ieee-sp26-wang-jailbreak-guardrails",
         "usenix-sec26-wang-masleak"
@@ -926,6 +1032,10 @@
     {
       "id": "nanjing-university",
       "name": "南京大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "南京大学"
+      ],
       "papers": [
         "issta26-chen-insecure-memory",
         "usenix-sec26-hu-confundo"
@@ -951,6 +1061,10 @@
     {
       "id": "nankai-university",
       "name": "南开大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "南开大学"
+      ],
       "papers": [
         "ieee-sp26-zhang-ragorigin",
         "usenix-sec26-guo-pyguard"
@@ -975,8 +1089,38 @@
       "verified_score": 2
     },
     {
+      "id": "shandong-university",
+      "name": "山东大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "山东大学",
+        "山东大学网络空间安全学院"
+      ],
+      "papers": [
+        "ieee-sp26-ye-llm-unlearning",
+        "usenix-sec26-liu-picklecloak"
+      ],
+      "scholars": [
+        "Mengqi Zhang",
+        "Zizhuang Deng"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
       "id": "lingnan-university",
       "name": "嶺南大學",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "嶺南大學"
+      ],
       "papers": [
         "ieee-sp26-wang-jailbreak-guardrails",
         "usenix-sec26-wang-masleak"
@@ -997,6 +1141,10 @@
     {
       "id": "city-university-of-hong-kong",
       "name": "香港城市大學",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "香港城市大學"
+      ],
       "papers": [
         "usenix-sec26-he-attriguard",
         "usenix-sec26-hu-confundo"
@@ -1018,6 +1166,10 @@
     {
       "id": "hkust-guangzhou",
       "name": "香港科技大学（广州）",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "香港科技大学（广州）"
+      ],
       "papers": [
         "ieee-sp26-xu-resolver-profiler",
         "usenix-sec26-xu-dalens"
@@ -1038,6 +1190,10 @@
     {
       "id": "hkust",
       "name": "香港科技大學",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "香港科技大學"
+      ],
       "papers": [
         "ieee-sp26-wang-jailbreak-guardrails",
         "usenix-sec26-wang-masleak"
@@ -1064,6 +1220,10 @@
     {
       "id": "radboud-university",
       "name": "Radboud University",
+      "country_code": "NLD",
+      "affiliation_names": [
+        "Radboud University"
+      ],
       "papers": [
         "arxiv-2608-08939-not-a11y",
         "usenix-sec26-vlummens-bridges"
@@ -1090,6 +1250,10 @@
     {
       "id": "uiuc",
       "name": "University of Illinois Urbana-Champaign",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Illinois Urbana-Champaign"
+      ],
       "papers": [
         "arxiv-2607-05120-agent-data-injection",
         "ieee-sp26-zhai-revelio"
@@ -1115,6 +1279,10 @@
     {
       "id": "university-washington",
       "name": "University of Washington",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Washington"
+      ],
       "papers": [
         "arxiv-2607-14611-bad-memory",
         "ieee-sp26-wu-agent-permissions"
@@ -1138,6 +1306,10 @@
     {
       "id": "amd",
       "name": "AMD",
+      "country_code": "",
+      "affiliation_names": [
+        "AMD"
+      ],
       "papers": [
         "ieee-sp26-trujillo-register-hiding"
       ],
@@ -1158,6 +1330,10 @@
     {
       "id": "amazon-web-services",
       "name": "Amazon Web Services",
+      "country_code": "",
+      "affiliation_names": [
+        "Amazon Web Services"
+      ],
       "papers": [
         "ieee-sp26-arquint-diodon"
       ],
@@ -1180,6 +1356,10 @@
     {
       "id": "ant-group",
       "name": "Ant Group",
+      "country_code": "",
+      "affiliation_names": [
+        "Ant Group"
+      ],
       "papers": [
         "ieee-sp26-wu-enchtable"
       ],
@@ -1202,6 +1382,10 @@
     {
       "id": "beijing-institute-technology",
       "name": "Beijing Institute of Technology",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "Beijing Institute of Technology"
+      ],
       "papers": [
         "ieee-sp26-li-sator"
       ],
@@ -1221,6 +1405,10 @@
     {
       "id": "ben-gurion-university",
       "name": "Ben-Gurion University of the Negev",
+      "country_code": "ISR",
+      "affiliation_names": [
+        "Ben-Gurion University of the Negev"
+      ],
       "papers": [
         "usenix-sec25-ayzenshteyn-cheat"
       ],
@@ -1242,6 +1430,10 @@
     {
       "id": "boston-university",
       "name": "Boston University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Boston University"
+      ],
       "papers": [
         "ieee-sp26-liu-generate-verify"
       ],
@@ -1261,6 +1453,10 @@
     {
       "id": "brown-university",
       "name": "Brown University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Brown University"
+      ],
       "papers": [
         "ieee-sp26-espiritu-leafblower"
       ],
@@ -1280,6 +1476,10 @@
     {
       "id": "cdl-astra",
       "name": "CDL AsTra",
+      "country_code": "AUT",
+      "affiliation_names": [
+        "CDL AsTra"
+      ],
       "papers": [
         "usenix-sec26-gegenhuber-transcript"
       ],
@@ -1299,6 +1499,10 @@
     {
       "id": "cea-list",
       "name": "CEA List",
+      "country_code": "FRA",
+      "affiliation_names": [
+        "CEA List"
+      ],
       "papers": [
         "arxiv-2607-26719-lily"
       ],
@@ -1317,27 +1521,12 @@
       "verified_score": 1
     },
     {
-      "id": "csiro",
-      "name": "CSIRO",
-      "papers": [
-        "usenix-sec26-nguyen-menta"
-      ],
-      "scholars": [
-        "Alsharif Abuadbba"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
       "id": "canonical",
       "name": "Canonical Ltd.",
+      "country_code": "",
+      "affiliation_names": [
+        "Canonical Ltd."
+      ],
       "papers": [
         "ieee-sp26-li-portgpt"
       ],
@@ -1355,27 +1544,12 @@
       "verified_score": 1
     },
     {
-      "id": "data61-csiro",
-      "name": "Data61 CSIRO",
-      "papers": [
-        "usenix-sec26-duong-firmrebugger"
-      ],
-      "scholars": [
-        "Surya Nepal"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
       "id": "durham-university",
       "name": "Durham University",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "Durham University"
+      ],
       "papers": [
         "ieee-sp26-de-meulemeester-battering-ram"
       ],
@@ -1395,6 +1569,10 @@
     {
       "id": "florida-international-university",
       "name": "Florida International University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Florida International University"
+      ],
       "papers": [
         "ieee-sp26-ersoy-dark-patterns"
       ],
@@ -1414,6 +1592,10 @@
     {
       "id": "fraunhofer-aisec",
       "name": "Fraunhofer AISEC",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "Fraunhofer AISEC"
+      ],
       "papers": [
         "usenix-sec26-braunsdorf-safeffi"
       ],
@@ -1434,6 +1616,10 @@
     {
       "id": "george-mason-university",
       "name": "George Mason University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "George Mason University"
+      ],
       "papers": [
         "usenix-sec26-pasquini-aiops"
       ],
@@ -1454,6 +1640,10 @@
     {
       "id": "georgetown-university",
       "name": "Georgetown University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Georgetown University"
+      ],
       "papers": [
         "ieee-sp26-wu-agent-permissions"
       ],
@@ -1473,6 +1663,10 @@
     {
       "id": "griffith-university",
       "name": "Griffith University",
+      "country_code": "AUS",
+      "affiliation_names": [
+        "Griffith University"
+      ],
       "papers": [
         "usenix-sec26-liu-malicious-skills"
       ],
@@ -1495,6 +1689,10 @@
     {
       "id": "hebrew-university-jerusalem",
       "name": "Hebrew University of Jerusalem",
+      "country_code": "ISR",
+      "affiliation_names": [
+        "Hebrew University of Jerusalem"
+      ],
       "papers": [
         "usenix-sec26-ben-simhon-dns"
       ],
@@ -1515,6 +1713,10 @@
     {
       "id": "heilbronn-university-applied-sciences",
       "name": "Heilbronn University of Applied Sciences",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "Heilbronn University of Applied Sciences"
+      ],
       "papers": [
         "usenix-sec26-jannett-passkeys"
       ],
@@ -1535,6 +1737,10 @@
     {
       "id": "ibm-research-europe",
       "name": "IBM Research Europe",
+      "country_code": "",
+      "affiliation_names": [
+        "IBM Research Europe"
+      ],
       "papers": [
         "usenix-sec26-koschel-copykat"
       ],
@@ -1559,6 +1765,10 @@
     {
       "id": "imdea-networks",
       "name": "IMDEA Networks Institute",
+      "country_code": "ESP",
+      "affiliation_names": [
+        "IMDEA Networks Institute"
+      ],
       "papers": [
         "usenix-sec26-vlummens-bridges"
       ],
@@ -1580,6 +1790,10 @@
     {
       "id": "ingenio-csic-upv",
       "name": "INGENIO (CSIC-UPV)",
+      "country_code": "ESP",
+      "affiliation_names": [
+        "INGENIO (CSIC-UPV)"
+      ],
       "papers": [
         "ieee-sp26-he-chinese-smart-home-privacy"
       ],
@@ -1599,6 +1813,10 @@
     {
       "id": "imperial-college-london",
       "name": "Imperial College London",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "Imperial College London"
+      ],
       "papers": [
         "ieee-sp26-luo-agentic-concolic"
       ],
@@ -1618,6 +1836,10 @@
     {
       "id": "imperial-global-singapore",
       "name": "Imperial Global Singapore",
+      "country_code": "SGP",
+      "affiliation_names": [
+        "Imperial Global Singapore"
+      ],
       "papers": [
         "usenix-sec26-guo-pyguard"
       ],
@@ -1637,6 +1859,10 @@
     {
       "id": "independent-researcher",
       "name": "Independent Researcher",
+      "country_code": "",
+      "affiliation_names": [
+        "Independent Researcher"
+      ],
       "papers": [
         "ieee-sp26-zhang-ragorigin"
       ],
@@ -1656,6 +1882,10 @@
     {
       "id": "institut-polytechnique-paris",
       "name": "Institut Polytechnique de Paris",
+      "country_code": "FRA",
+      "affiliation_names": [
+        "Institut Polytechnique de Paris"
+      ],
       "papers": [
         "arxiv-2607-26719-lily"
       ],
@@ -1675,6 +1905,10 @@
     {
       "id": "itu-austria",
       "name": "Interdisciplinary Transformation University (IT:U)",
+      "country_code": "AUT",
+      "affiliation_names": [
+        "Interdisciplinary Transformation University (IT:U)"
+      ],
       "papers": [
         "usenix-sec26-gegenhuber-transcript"
       ],
@@ -1694,6 +1928,10 @@
     {
       "id": "kent-state-university",
       "name": "Kent State University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Kent State University"
+      ],
       "papers": [
         "usenix-sec26-karanjai-loginject"
       ],
@@ -1713,6 +1951,10 @@
     {
       "id": "kings-college-london",
       "name": "King's College London",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "King's College London"
+      ],
       "papers": [
         "ieee-sp26-he-chinese-smart-home-privacy"
       ],
@@ -1735,6 +1977,10 @@
     {
       "id": "korea-university",
       "name": "Korea University",
+      "country_code": "KOR",
+      "affiliation_names": [
+        "Korea University"
+      ],
       "papers": [
         "usenix-sec26-kim-timeslice-sandwich"
       ],
@@ -1757,6 +2003,10 @@
     {
       "id": "lmu-munich",
       "name": "Ludwig-Maximilians-Universität München",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "Ludwig-Maximilians-Universität München"
+      ],
       "papers": [
         "usenix-sec26-braunsdorf-safeffi"
       ],
@@ -1778,6 +2028,10 @@
     {
       "id": "mbzuai",
       "name": "Mohamed bin Zayed University of Artificial Intelligence",
+      "country_code": "ARE",
+      "affiliation_names": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
       "papers": [
         "usenix-sec26-chang-retrieval-barrier"
       ],
@@ -1800,6 +2054,10 @@
     {
       "id": "mongodb-research",
       "name": "MongoDB Research",
+      "country_code": "",
+      "affiliation_names": [
+        "MongoDB Research"
+      ],
       "papers": [
         "ieee-sp26-espiritu-leafblower"
       ],
@@ -1821,6 +2079,10 @@
     {
       "id": "mozilla-corporation",
       "name": "Mozilla Corporation",
+      "country_code": "",
+      "affiliation_names": [
+        "Mozilla Corporation"
+      ],
       "papers": [
         "usenix-sec26-syros-muzzle"
       ],
@@ -1841,6 +2103,10 @@
     {
       "id": "netapp",
       "name": "NetApp",
+      "country_code": "",
+      "affiliation_names": [
+        "NetApp"
+      ],
       "papers": [
         "ieee-sp26-espiritu-leafblower"
       ],
@@ -1860,6 +2126,10 @@
     {
       "id": "north-carolina-state-university",
       "name": "North Carolina State University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "North Carolina State University"
+      ],
       "papers": [
         "ieee-sp26-tystahl-cosseter"
       ],
@@ -1882,6 +2152,10 @@
     {
       "id": "northwestern-university",
       "name": "Northwestern University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Northwestern University"
+      ],
       "papers": [
         "ieee-sp26-li-portgpt"
       ],
@@ -1901,6 +2175,10 @@
     {
       "id": "oberlin-college",
       "name": "Oberlin College",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Oberlin College"
+      ],
       "papers": [
         "usenix-sec26-crow-boeing-implant"
       ],
@@ -1920,6 +2198,10 @@
     {
       "id": "paderborn-university",
       "name": "Paderborn University",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "Paderborn University"
+      ],
       "papers": [
         "usenix-sec26-merget-opossum"
       ],
@@ -1940,6 +2222,10 @@
     {
       "id": "paypal",
       "name": "PayPal",
+      "country_code": "",
+      "affiliation_names": [
+        "PayPal"
+      ],
       "papers": [
         "usenix-sec26-karanjai-loginject"
       ],
@@ -1960,6 +2246,10 @@
     {
       "id": "rsac-labs",
       "name": "RSAC Labs",
+      "country_code": "",
+      "affiliation_names": [
+        "RSAC Labs"
+      ],
       "papers": [
         "usenix-sec26-pasquini-aiops"
       ],
@@ -1982,6 +2272,10 @@
     {
       "id": "rwth-aachen-university",
       "name": "RWTH Aachen University",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "RWTH Aachen University"
+      ],
       "papers": [
         "ieee-sp26-pennekamp-hidden-secrets-arxiv"
       ],
@@ -2005,6 +2299,10 @@
     {
       "id": "sba-research",
       "name": "SBA Research",
+      "country_code": "AUT",
+      "affiliation_names": [
+        "SBA Research"
+      ],
       "papers": [
         "usenix-sec26-gegenhuber-transcript"
       ],
@@ -2024,6 +2322,10 @@
     {
       "id": "sapienza-university-rome",
       "name": "Sapienza University of Rome",
+      "country_code": "ITA",
+      "affiliation_names": [
+        "Sapienza University of Rome"
+      ],
       "papers": [
         "ieee-sp26-corrias-maya"
       ],
@@ -2046,6 +2348,10 @@
     {
       "id": "singapore-management-university",
       "name": "Singapore Management University",
+      "country_code": "SGP",
+      "affiliation_names": [
+        "Singapore Management University"
+      ],
       "papers": [
         "issta26-chen-insecure-memory"
       ],
@@ -2066,6 +2372,10 @@
     {
       "id": "suny-binghamton",
       "name": "State University of New York at Binghamton",
+      "country_code": "USA",
+      "affiliation_names": [
+        "State University of New York at Binghamton"
+      ],
       "papers": [
         "usenix-sec26-kim-timeslice-sandwich"
       ],
@@ -2085,6 +2395,10 @@
     {
       "id": "stony-brook-university",
       "name": "Stony Brook University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Stony Brook University"
+      ],
       "papers": [
         "ieee-sp26-liang-graphrag"
       ],
@@ -2109,6 +2423,10 @@
     {
       "id": "swinburne-university-technology",
       "name": "Swinburne University of Technology",
+      "country_code": "AUS",
+      "affiliation_names": [
+        "Swinburne University of Technology"
+      ],
       "papers": [
         "usenix-sec26-nguyen-menta"
       ],
@@ -2132,6 +2450,10 @@
     {
       "id": "tu-darmstadt",
       "name": "TU Darmstadt",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "TU Darmstadt"
+      ],
       "papers": [
         "usenix-sec26-bach-webrtc"
       ],
@@ -2151,6 +2473,10 @@
     {
       "id": "tel-aviv-university",
       "name": "Tel Aviv University",
+      "country_code": "ISR",
+      "affiliation_names": [
+        "Tel Aviv University"
+      ],
       "papers": [
         "ieee-sp26-wang-transient-architectural-execution"
       ],
@@ -2170,6 +2496,10 @@
     {
       "id": "texas-am-university",
       "name": "Texas A&M University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Texas A&M University"
+      ],
       "papers": [
         "usenix-sec26-huang-conset"
       ],
@@ -2190,6 +2520,10 @@
     {
       "id": "telecom-paris",
       "name": "Télécom Paris",
+      "country_code": "FRA",
+      "affiliation_names": [
+        "Télécom Paris"
+      ],
       "papers": [
         "arxiv-2607-26719-lily"
       ],
@@ -2209,6 +2543,10 @@
     {
       "id": "ucla",
       "name": "UCLA",
+      "country_code": "USA",
+      "affiliation_names": [
+        "UCLA"
+      ],
       "papers": [
         "ieee-sp26-li-cosmic"
       ],
@@ -2230,6 +2568,10 @@
     {
       "id": "university-at-buffalo",
       "name": "University at Buffalo",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University at Buffalo"
+      ],
       "papers": [
         "usenix-sec26-huang-conset"
       ],
@@ -2251,6 +2593,10 @@
     {
       "id": "university-of-adelaide",
       "name": "University of Adelaide",
+      "country_code": "AUS",
+      "affiliation_names": [
+        "University of Adelaide"
+      ],
       "papers": [
         "usenix-sec26-duong-firmrebugger"
       ],
@@ -2273,6 +2619,10 @@
     {
       "id": "ualberta-amii",
       "name": "University of Alberta / Alberta Machine Intelligence Institute (Amii)",
+      "country_code": "CAN",
+      "affiliation_names": [
+        "University of Alberta / Alberta Machine Intelligence Institute (Amii)"
+      ],
       "papers": [
         "issta26-chen-insecure-memory"
       ],
@@ -2292,6 +2642,10 @@
     {
       "id": "uc-san-diego",
       "name": "University of California San Diego",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of California San Diego"
+      ],
       "papers": [
         "usenix-sec26-crow-boeing-implant"
       ],
@@ -2315,6 +2669,10 @@
     {
       "id": "uc-davis",
       "name": "University of California, Davis",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of California, Davis"
+      ],
       "papers": [
         "usenix-sec25-liu-agentfuzz"
       ],
@@ -2334,6 +2692,10 @@
     {
       "id": "university-california-irvine",
       "name": "University of California, Irvine",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of California, Irvine"
+      ],
       "papers": [
         "ieee-sp26-wu-agent-permissions"
       ],
@@ -2353,6 +2715,10 @@
     {
       "id": "university-edinburgh",
       "name": "University of Edinburgh",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "University of Edinburgh"
+      ],
       "papers": [
         "ieee-sp26-li-sator"
       ],
@@ -2372,6 +2738,10 @@
     {
       "id": "university-hawaii-manoa",
       "name": "University of Hawaiʻi at Mānoa",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Hawaiʻi at Mānoa"
+      ],
       "papers": [
         "ieee-sp26-li-webcloak"
       ],
@@ -2391,6 +2761,10 @@
     {
       "id": "university-of-houston",
       "name": "University of Houston",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Houston"
+      ],
       "papers": [
         "usenix-sec26-karanjai-loginject"
       ],
@@ -2412,6 +2786,10 @@
     {
       "id": "university-of-massachusetts",
       "name": "University of Massachusetts",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Massachusetts"
+      ],
       "papers": [
         "usenix-sec26-klix-silicon-heist"
       ],
@@ -2431,6 +2809,10 @@
     {
       "id": "unsw",
       "name": "University of New South Wales",
+      "country_code": "AUS",
+      "affiliation_names": [
+        "University of New South Wales"
+      ],
       "papers": [
         "usenix-sec26-liu-malicious-skills"
       ],
@@ -2450,6 +2832,10 @@
     {
       "id": "unc-chapel-hill",
       "name": "University of North Carolina at Chapel Hill",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of North Carolina at Chapel Hill"
+      ],
       "papers": [
         "usenix-sec26-zhang-resume-injection"
       ],
@@ -2470,6 +2856,10 @@
     {
       "id": "university-of-north-texas",
       "name": "University of North Texas",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of North Texas"
+      ],
       "papers": [
         "ieee-sp26-zhang-ragorigin"
       ],
@@ -2489,6 +2879,10 @@
     {
       "id": "university-regensburg",
       "name": "University of Regensburg",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "University of Regensburg"
+      ],
       "papers": [
         "ieee-sp26-reittinger-passkey-field-study"
       ],
@@ -2509,6 +2903,10 @@
     {
       "id": "university-of-south-florida",
       "name": "University of South Florida",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of South Florida"
+      ],
       "papers": [
         "usenix-sec26-zhu-wild"
       ],
@@ -2533,6 +2931,10 @@
     {
       "id": "university-of-southern-california",
       "name": "University of Southern California",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Southern California"
+      ],
       "papers": [
         "ieee-sp26-chen-compiler-backdoor"
       ],
@@ -2552,6 +2954,10 @@
     {
       "id": "university-st-andrews",
       "name": "University of St Andrews",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "University of St Andrews"
+      ],
       "papers": [
         "ieee-sp26-he-chinese-smart-home-privacy"
       ],
@@ -2572,6 +2978,10 @@
     {
       "id": "university-of-stuttgart",
       "name": "University of Stuttgart",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "University of Stuttgart"
+      ],
       "papers": [
         "ieee-sp26-hosseyni-audience-injection"
       ],
@@ -2593,6 +3003,10 @@
     {
       "id": "ut-arlington",
       "name": "University of Texas at Arlington",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Texas at Arlington"
+      ],
       "papers": [
         "ieee-sp26-li-cosmic"
       ],
@@ -2612,6 +3026,10 @@
     {
       "id": "university-toronto",
       "name": "University of Toronto",
+      "country_code": "CAN",
+      "affiliation_names": [
+        "University of Toronto"
+      ],
       "papers": [
         "ieee-sp26-li-cosmic"
       ],
@@ -2633,6 +3051,10 @@
     {
       "id": "university-of-vienna",
       "name": "University of Vienna",
+      "country_code": "AUT",
+      "affiliation_names": [
+        "University of Vienna"
+      ],
       "papers": [
         "usenix-sec26-gegenhuber-transcript"
       ],
@@ -2655,6 +3077,10 @@
     {
       "id": "university-warwick",
       "name": "University of Warwick",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "University of Warwick"
+      ],
       "papers": [
         "ieee-sp26-he-chinese-smart-home-privacy"
       ],
@@ -2674,6 +3100,10 @@
     {
       "id": "university-waterloo",
       "name": "University of Waterloo",
+      "country_code": "CAN",
+      "affiliation_names": [
+        "University of Waterloo"
+      ],
       "papers": [
         "ieee-sp26-li-portgpt"
       ],
@@ -2693,6 +3123,10 @@
     {
       "id": "university-wuppertal",
       "name": "University of Wuppertal",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "University of Wuppertal"
+      ],
       "papers": [
         "usenix-sec26-jannett-passkeys"
       ],
@@ -2712,6 +3146,10 @@
     {
       "id": "universite-paris-saclay",
       "name": "Université Paris-Saclay",
+      "country_code": "FRA",
+      "affiliation_names": [
+        "Université Paris-Saclay"
+      ],
       "papers": [
         "arxiv-2607-26719-lily"
       ],
@@ -2732,6 +3170,10 @@
     {
       "id": "virginia-tech",
       "name": "Virginia Tech",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Virginia Tech"
+      ],
       "papers": [
         "ieee-sp26-li-ip-leasing"
       ],
@@ -2753,6 +3195,10 @@
     {
       "id": "washington-university-st-louis",
       "name": "Washington University in St. Louis",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Washington University in St. Louis"
+      ],
       "papers": [
         "ieee-sp26-wu-agent-permissions"
       ],
@@ -2774,6 +3220,10 @@
     {
       "id": "hireez",
       "name": "hireEZ",
+      "country_code": "",
+      "affiliation_names": [
+        "hireEZ"
+      ],
       "papers": [
         "usenix-sec26-zhang-resume-injection"
       ],
@@ -2793,6 +3243,10 @@
     {
       "id": "in2it",
       "name": "in2it",
+      "country_code": "",
+      "affiliation_names": [
+        "in2it"
+      ],
       "papers": [
         "ieee-sp26-li-cosmic"
       ],
@@ -2812,6 +3266,10 @@
     {
       "id": "shanghai-innovation-institute",
       "name": "上海创智学院",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "上海创智学院"
+      ],
       "papers": [
         "usenix-sec26-luo-agent-dos"
       ],
@@ -2831,6 +3289,10 @@
     {
       "id": "shanghai-university",
       "name": "上海大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "上海大学"
+      ],
       "papers": [
         "usenix-sec26-liu-picklecloak"
       ],
@@ -2850,6 +3312,10 @@
     {
       "id": "zhongguancun-laboratory",
       "name": "中关村实验室",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "中关村实验室"
+      ],
       "papers": [
         "usenix-sec26-zhao-waved"
       ],
@@ -2870,6 +3336,10 @@
     {
       "id": "information-engineering-university",
       "name": "中国人民解放军信息工程大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "中国人民解放军信息工程大学"
+      ],
       "papers": [
         "usenix-sec26-jia-pangolin"
       ],
@@ -2894,6 +3364,10 @@
     {
       "id": "iie-cas",
       "name": "中国科学院信息工程研究所",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "中国科学院信息工程研究所"
+      ],
       "papers": [
         "usenix-sec26-liu-picklecloak"
       ],
@@ -2914,8 +3388,12 @@
       "verified_score": 1
     },
     {
-      "id": "ucas-school-cyber-security",
-      "name": "中国科学院大学网络空间安全学院",
+      "id": "ucas",
+      "name": "中国科学院大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "中国科学院大学网络空间安全学院"
+      ],
       "papers": [
         "usenix-sec26-liu-picklecloak"
       ],
@@ -2938,6 +3416,10 @@
     {
       "id": "institute-automation-cas",
       "name": "中国科学院自动化研究所",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "中国科学院自动化研究所"
+      ],
       "papers": [
         "ieee-sp26-ye-llm-unlearning"
       ],
@@ -2958,6 +3440,10 @@
     {
       "id": "advanced-computing-intelligence-engineering-lab",
       "name": "先进计算与智能工程实验室",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "先进计算与智能工程实验室"
+      ],
       "papers": [
         "usenix-sec26-jia-pangolin"
       ],
@@ -2977,6 +3463,10 @@
     {
       "id": "beijing-university-posts-telecommunications",
       "name": "北京邮电大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "北京邮电大学"
+      ],
       "papers": [
         "ieee-sp26-ye-llm-unlearning"
       ],
@@ -2994,8 +3484,12 @@
       "verified_score": 1
     },
     {
-      "id": "hust-school-cyber-science-engineering",
-      "name": "华中科技大学网络空间安全学院",
+      "id": "hust",
+      "name": "华中科技大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "华中科技大学网络空间安全学院"
+      ],
       "papers": [
         "ieee-sp26-li-portgpt"
       ],
@@ -3017,6 +3511,10 @@
     {
       "id": "nanjing-university-aeronautics-astronautics",
       "name": "南京航空航天大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "南京航空航天大学"
+      ],
       "papers": [
         "issta26-chen-insecure-memory"
       ],
@@ -3036,6 +3534,10 @@
     {
       "id": "nantong-university",
       "name": "南通大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "南通大学"
+      ],
       "papers": [
         "issta26-chen-insecure-memory"
       ],
@@ -3055,6 +3557,10 @@
     {
       "id": "geely-university-of-china",
       "name": "吉利学院",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "吉利学院"
+      ],
       "papers": [
         "usenix-sec26-liu-carjacking"
       ],
@@ -3074,6 +3580,10 @@
     {
       "id": "geely-automobile-research-institute",
       "name": "吉利汽车研究院",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "吉利汽车研究院"
+      ],
       "papers": [
         "usenix-sec26-liu-carjacking"
       ],
@@ -3094,6 +3604,10 @@
     {
       "id": "sichuan-university",
       "name": "四川大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "四川大学"
+      ],
       "papers": [
         "usenix-sec26-guo-pyguard"
       ],
@@ -3113,44 +3627,10 @@
     {
       "id": "skl-cryptography-digital-economy-security",
       "name": "密码技术与数字经济安全全国重点实验室",
-      "papers": [
-        "usenix-sec26-liu-picklecloak"
+      "country_code": "CHN",
+      "affiliation_names": [
+        "密码技术与数字经济安全全国重点实验室"
       ],
-      "scholars": [
-        "Zizhuang Deng"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
-      "id": "shandong-university",
-      "name": "山东大学",
-      "papers": [
-        "ieee-sp26-ye-llm-unlearning"
-      ],
-      "scholars": [
-        "Mengqi Zhang"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
-      "id": "shandong-university-school-cyber-science",
-      "name": "山东大学网络空间安全学院",
       "papers": [
         "usenix-sec26-liu-picklecloak"
       ],
@@ -3170,6 +3650,10 @@
     {
       "id": "skl-mathematical-engineering-advanced-computing",
       "name": "数学工程与先进计算国家重点实验室",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "数学工程与先进计算国家重点实验室"
+      ],
       "papers": [
         "usenix-sec26-jia-pangolin"
       ],
@@ -3188,8 +3672,12 @@
       "verified_score": 1
     },
     {
-      "id": "whu-school-cyber-science-engineering",
-      "name": "武汉大学国家网络安全学院",
+      "id": "wuhan-university",
+      "name": "武汉大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "武汉大学国家网络安全学院"
+      ],
       "papers": [
         "usenix-sec26-xiao-payments"
       ],
@@ -3214,6 +3702,10 @@
     {
       "id": "zhejiang-gongshang-university",
       "name": "浙江工商大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "浙江工商大学"
+      ],
       "papers": [
         "usenix-sec26-li-aliasleap"
       ],
@@ -3234,6 +3726,10 @@
     {
       "id": "zhejiang-sci-tech-university",
       "name": "浙江理工大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "浙江理工大学"
+      ],
       "papers": [
         "usenix-sec26-liu-malicious-skills"
       ],
@@ -3253,6 +3749,10 @@
     {
       "id": "zhejiang-key-lab-big-data-future-ecommerce",
       "name": "浙江省大数据与未来电子商务技术重点实验室",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "浙江省大数据与未来电子商务技术重点实验室"
+      ],
       "papers": [
         "usenix-sec26-li-aliasleap"
       ],
@@ -3270,27 +3770,12 @@
       "verified_score": 1
     },
     {
-      "id": "tsinghua-insc",
-      "name": "清华大学网络科学与网络空间研究院",
-      "papers": [
-        "usenix-sec26-jia-pangolin"
-      ],
-      "scholars": [
-        "Chao Zhang"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
       "id": "jcss-tsinghua-science-city",
       "name": "清华大学网络科学与网络空间研究院—科学城（广州）数字科技集团有限公司系统安全联合研究中心",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "清华大学网络科学与网络空间研究院—科学城（广州）数字科技集团有限公司系统安全联合研究中心"
+      ],
       "papers": [
         "usenix-sec26-jia-pangolin"
       ],
@@ -3310,6 +3795,10 @@
     {
       "id": "hubei-key-lab-distributed-system-security",
       "name": "湖北省分布式系统安全重点实验室",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "湖北省分布式系统安全重点实验室"
+      ],
       "papers": [
         "ieee-sp26-li-portgpt"
       ],
@@ -3331,6 +3820,10 @@
     {
       "id": "jinyinhu-laboratory",
       "name": "金银湖实验室",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "金银湖实验室"
+      ],
       "papers": [
         "ieee-sp26-li-portgpt"
       ],
@@ -3350,6 +3843,10 @@
     {
       "id": "university-of-hong-kong",
       "name": "香港大學",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "香港大學"
+      ],
       "papers": [
         "usenix-sec26-hu-confundo"
       ],
@@ -3372,6 +3869,10 @@
     {
       "id": "clemson-university",
       "name": "Clemson University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Clemson University"
+      ],
       "papers": [
         "arxiv-2607-16487-fuzz-emup"
       ],
@@ -3386,6 +3887,10 @@
     {
       "id": "concordia-university",
       "name": "Concordia University",
+      "country_code": "CAN",
+      "affiliation_names": [
+        "Concordia University"
+      ],
       "papers": [
         "arxiv-2607-20759-issuetrojanbench"
       ],
@@ -3400,6 +3905,10 @@
     {
       "id": "kaust-genai-center",
       "name": "KAUST Center of Excellence for Generative AI",
+      "country_code": "SAU",
+      "affiliation_names": [
+        "KAUST Center of Excellence for Generative AI"
+      ],
       "papers": [
         "arxiv-2607-17986-self-state-attacks"
       ],
@@ -3415,6 +3924,10 @@
     {
       "id": "lambda",
       "name": "Lambda",
+      "country_code": "",
+      "affiliation_names": [
+        "Lambda"
+      ],
       "papers": [
         "arxiv-2607-18063-adaptive-adversaries"
       ],
@@ -3429,6 +3942,10 @@
     {
       "id": "largosoft",
       "name": "Largosoft",
+      "country_code": "",
+      "affiliation_names": [
+        "Largosoft"
+      ],
       "papers": [
         "arxiv-2607-05120-agent-data-injection"
       ],
@@ -3441,6 +3958,10 @@
     {
       "id": "idsia-usi-supsi",
       "name": "Swiss AI Lab IDSIA-USI/SUPSI",
+      "country_code": "CHE",
+      "affiliation_names": [
+        "Swiss AI Lab IDSIA-USI/SUPSI"
+      ],
       "papers": [
         "arxiv-2607-17986-self-state-attacks"
       ],
@@ -3453,6 +3974,10 @@
     {
       "id": "texas-tech-university",
       "name": "Texas Tech University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Texas Tech University"
+      ],
       "papers": [
         "arxiv-2607-16487-fuzz-emup"
       ],
@@ -3465,6 +3990,10 @@
     {
       "id": "university-rochester",
       "name": "University of Rochester",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Rochester"
+      ],
       "papers": [
         "arxiv-2607-16487-fuzz-emup"
       ],
@@ -3477,6 +4006,10 @@
     {
       "id": "zhejiang-university-of-technology",
       "name": "浙江工业大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "浙江工业大学"
+      ],
       "papers": [
         "arxiv-2607-27080-memsecbench"
       ],
@@ -3878,7 +4411,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -3918,7 +4450,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo",
       "institutions": [
-        "MIT Computer Science and Artificial Intelligence Laboratory"
+        "Massachusetts Institute of Technology"
       ],
       "papers": [
         "ieee-sp26-trujillo-register-hiding",
@@ -4035,7 +4567,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -4405,7 +4936,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo",
       "institutions": [
-        "MIT Computer Science and Artificial Intelligence Laboratory"
+        "Massachusetts Institute of Technology"
       ],
       "papers": [
         "ieee-sp26-trujillo-register-hiding",
@@ -4769,7 +5300,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -4848,7 +5378,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -6159,7 +6688,7 @@
       "homepage": "https://www.esat.kuleuven.be/cosic/static_people/bart-preneel.html",
       "profile_source": "https://www.esat.kuleuven.be/cosic/static_people/bart-preneel.html",
       "institutions": [
-        "COSIC, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "ieee-sp26-duttagupta-fast-pair"
@@ -6376,7 +6905,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng",
       "institutions": [
-        "清华大学网络科学与网络空间研究院",
+        "清华大学",
         "清华大学网络科学与网络空间研究院—科学城（广州）数字科技集团有限公司系统安全联合研究中心"
       ],
       "papers": [
@@ -7059,7 +7588,7 @@
       "homepage": "https://www.kuleuven.be/wieiswie/en/person/00041052",
       "profile_source": "https://www.kuleuven.be/wieiswie/en/person/00041052",
       "institutions": [
-        "DistriNet, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "ieee-sp26-duttagupta-fast-pair"
@@ -7341,7 +7870,7 @@
       "homepage": "",
       "profile_source": "https://arxiv.org/abs/2510.22396",
       "institutions": [
-        "华中科技大学网络空间安全学院",
+        "华中科技大学",
         "湖北省分布式系统安全重点实验室",
         "金银湖实验室"
       ],
@@ -8336,7 +8865,7 @@
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
       "institutions": [
         "中国科学院信息工程研究所",
-        "中国科学院大学网络空间安全学院"
+        "中国科学院大学"
       ],
       "papers": [
         "usenix-sec26-liu-picklecloak"
@@ -8460,7 +8989,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yijing",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -9050,7 +9578,7 @@
       "homepage": "",
       "profile_source": "https://sp2026.ieee-security.org/accepted-papers.html",
       "institutions": [
-        "COSIC, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "ieee-sp26-de-meulemeester-battering-ram"
@@ -9329,7 +9857,7 @@
       "homepage": "",
       "profile_source": "https://sp2026.ieee-security.org/accepted-papers.html",
       "institutions": [
-        "COSIC, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "ieee-sp26-de-meulemeester-battering-ram"
@@ -9546,7 +10074,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -9578,7 +10105,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -9641,7 +10167,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xiao",
       "institutions": [
-        "武汉大学国家网络安全学院"
+        "武汉大学"
       ],
       "papers": [
         "usenix-sec26-xiao-payments"
@@ -9703,7 +10229,7 @@
       "homepage": "",
       "profile_source": "https://arxiv.org/abs/2510.22396",
       "institutions": [
-        "华中科技大学网络空间安全学院",
+        "华中科技大学",
         "湖北省分布式系统安全重点实验室"
       ],
       "papers": [
@@ -9766,7 +10292,7 @@
       "homepage": "",
       "profile_source": "https://sp2026.ieee-security.org/accepted-papers.html",
       "institutions": [
-        "DistriNet, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "ieee-sp26-de-meulemeester-battering-ram"
@@ -10234,7 +10760,7 @@
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
       "institutions": [
         "中国科学院信息工程研究所",
-        "中国科学院大学网络空间安全学院"
+        "中国科学院大学"
       ],
       "papers": [
         "usenix-sec26-liu-picklecloak"
@@ -10483,7 +11009,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xiao",
       "institutions": [
-        "武汉大学国家网络安全学院"
+        "武汉大学"
       ],
       "papers": [
         "usenix-sec26-xiao-payments"
@@ -11570,7 +12096,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xiao",
       "institutions": [
-        "武汉大学国家网络安全学院"
+        "武汉大学"
       ],
       "papers": [
         "usenix-sec26-xiao-payments"
@@ -11911,7 +12437,7 @@
       "homepage": "https://www.esat.kuleuven.be/cosic/people/",
       "profile_source": "https://www.esat.kuleuven.be/cosic/people/",
       "institutions": [
-        "COSIC, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "ieee-sp26-duttagupta-fast-pair"
@@ -12594,7 +13120,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xiao",
       "institutions": [
-        "武汉大学国家网络安全学院"
+        "武汉大学"
       ],
       "papers": [
         "usenix-sec26-xiao-payments"
@@ -12936,7 +13462,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xiao",
       "institutions": [
-        "武汉大学国家网络安全学院"
+        "武汉大学"
       ],
       "papers": [
         "usenix-sec26-xiao-payments"
@@ -13091,7 +13617,7 @@
       "homepage": "https://sayon.me/",
       "profile_source": "https://sayon.me/",
       "institutions": [
-        "COSIC, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "ieee-sp26-duttagupta-fast-pair"
@@ -13154,7 +13680,7 @@
       "homepage": "https://distrinet.cs.kuleuven.be/people/SeppeWyns",
       "profile_source": "https://distrinet.cs.kuleuven.be/people/SeppeWyns",
       "institutions": [
-        "DistriNet, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "ieee-sp26-duttagupta-fast-pair"
@@ -13372,7 +13898,7 @@
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
       "institutions": [
         "中国科学院信息工程研究所",
-        "中国科学院大学网络空间安全学院"
+        "中国科学院大学"
       ],
       "papers": [
         "usenix-sec26-liu-picklecloak"
@@ -13993,7 +14519,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
       "institutions": [
-        "Data61 CSIRO"
+        "CSIRO"
       ],
       "papers": [
         "usenix-sec26-duong-firmrebugger"
@@ -14520,7 +15046,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/vlummens",
       "institutions": [
-        "COSIC, KU Leuven"
+        "KU Leuven"
       ],
       "papers": [
         "usenix-sec26-vlummens-bridges"
@@ -14738,7 +15264,7 @@
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
       "institutions": [
         "中国科学院信息工程研究所",
-        "中国科学院大学网络空间安全学院"
+        "中国科学院大学"
       ],
       "papers": [
         "usenix-sec26-liu-picklecloak"
@@ -16104,7 +16630,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yijing",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -16198,7 +16723,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yijing",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -16416,7 +16940,7 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/xiao",
       "institutions": [
-        "武汉大学国家网络安全学院"
+        "武汉大学"
       ],
       "papers": [
         "usenix-sec26-xiao-payments"
@@ -17036,7 +17560,7 @@
       "homepage": "",
       "profile_source": "https://arxiv.org/abs/2510.22396",
       "institutions": [
-        "华中科技大学网络空间安全学院",
+        "华中科技大学",
         "湖北省分布式系统安全重点实验室"
       ],
       "papers": [
@@ -17595,7 +18119,6 @@
       "homepage": "",
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
       "institutions": [
-        "北京信息科学与技术国家研究中心",
         "清华大学"
       ],
       "papers": [
@@ -17628,7 +18151,7 @@
       "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
       "institutions": [
         "密码技术与数字经济安全全国重点实验室",
-        "山东大学网络空间安全学院"
+        "山东大学"
       ],
       "papers": [
         "usenix-sec26-liu-picklecloak"
@@ -18778,45 +19301,6 @@
   ],
   "collaborations": [
     {
-      "source": "bnrist",
-      "target": "tsinghua-university",
-      "papers": [
-        {
-          "id": "usenix-sec26-peng-kintsugi",
-          "year": 2026,
-          "venue_group": "security"
-        },
-        {
-          "id": "usenix-sec26-li-aliasleap",
-          "year": 2026,
-          "venue_group": "security"
-        },
-        {
-          "id": "usenix-sec26-liu-ios",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 3
-    },
-    {
-      "source": "cosic-ku-leuven",
-      "target": "distrinet-ku-leuven",
-      "papers": [
-        {
-          "id": "ieee-sp26-de-meulemeester-battering-ram",
-          "year": 2026,
-          "venue_group": "security"
-        },
-        {
-          "id": "ieee-sp26-duttagupta-fast-pair",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 2
-    },
-    {
       "source": "eth-zurich",
       "target": "hkust-guangzhou",
       "papers": [
@@ -18956,7 +19440,7 @@
     },
     {
       "source": "advanced-computing-intelligence-engineering-lab",
-      "target": "tsinghua-insc",
+      "target": "tsinghua-university",
       "papers": [
         {
           "id": "usenix-sec26-jia-pangolin",
@@ -18980,7 +19464,7 @@
     },
     {
       "source": "amd",
-      "target": "mit-csail",
+      "target": "mit",
       "papers": [
         {
           "id": "ieee-sp26-trujillo-register-hiding",
@@ -19099,30 +19583,6 @@
       "weight": 1
     },
     {
-      "source": "bnrist",
-      "target": "zhejiang-gongshang-university",
-      "papers": [
-        {
-          "id": "usenix-sec26-li-aliasleap",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "bnrist",
-      "target": "zhejiang-key-lab-big-data-future-ecommerce",
-      "papers": [
-        {
-          "id": "usenix-sec26-li-aliasleap",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
       "source": "boston-university",
       "target": "carnegie-mellon-university",
       "papers": [
@@ -19172,7 +19632,7 @@
     },
     {
       "source": "canonical",
-      "target": "hust-school-cyber-science-engineering",
+      "target": "hust",
       "papers": [
         {
           "id": "ieee-sp26-li-portgpt",
@@ -19447,54 +19907,6 @@
       "weight": 1
     },
     {
-      "source": "cosic-ku-leuven",
-      "target": "durham-university",
-      "papers": [
-        {
-          "id": "ieee-sp26-de-meulemeester-battering-ram",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "cosic-ku-leuven",
-      "target": "imdea-networks",
-      "papers": [
-        {
-          "id": "usenix-sec26-vlummens-bridges",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "cosic-ku-leuven",
-      "target": "radboud-university",
-      "papers": [
-        {
-          "id": "usenix-sec26-vlummens-bridges",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "cosic-ku-leuven",
-      "target": "university-of-birmingham",
-      "papers": [
-        {
-          "id": "ieee-sp26-de-meulemeester-battering-ram",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
       "source": "csiro",
       "target": "swinburne-university-technology",
       "papers": [
@@ -19508,18 +19920,6 @@
     },
     {
       "source": "csiro",
-      "target": "university-of-louisville",
-      "papers": [
-        {
-          "id": "usenix-sec26-nguyen-menta",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "data61-csiro",
       "target": "university-of-adelaide",
       "papers": [
         {
@@ -19531,23 +19931,11 @@
       "weight": 1
     },
     {
-      "source": "distrinet-ku-leuven",
-      "target": "durham-university",
+      "source": "csiro",
+      "target": "university-of-louisville",
       "papers": [
         {
-          "id": "ieee-sp26-de-meulemeester-battering-ram",
-          "year": 2026,
-          "venue_group": "security"
-        }
-      ],
-      "weight": 1
-    },
-    {
-      "source": "distrinet-ku-leuven",
-      "target": "university-of-birmingham",
-      "papers": [
-        {
-          "id": "ieee-sp26-de-meulemeester-battering-ram",
+          "id": "usenix-sec26-nguyen-menta",
           "year": 2026,
           "venue_group": "security"
         }
@@ -19596,6 +19984,18 @@
       "papers": [
         {
           "id": "usenix-sec26-zhang-resume-injection",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "durham-university",
+      "target": "ku-leuven",
+      "papers": [
+        {
+          "id": "ieee-sp26-de-meulemeester-battering-ram",
           "year": 2026,
           "venue_group": "security"
         }
@@ -19928,7 +20328,7 @@
     },
     {
       "source": "hubei-key-lab-distributed-system-security",
-      "target": "hust-school-cyber-science-engineering",
+      "target": "hust",
       "papers": [
         {
           "id": "ieee-sp26-li-portgpt",
@@ -19975,7 +20375,7 @@
       "weight": 1
     },
     {
-      "source": "hust-school-cyber-science-engineering",
+      "source": "hust",
       "target": "jinyinhu-laboratory",
       "papers": [
         {
@@ -19987,7 +20387,7 @@
       "weight": 1
     },
     {
-      "source": "hust-school-cyber-science-engineering",
+      "source": "hust",
       "target": "northwestern-university",
       "papers": [
         {
@@ -19999,7 +20399,7 @@
       "weight": 1
     },
     {
-      "source": "hust-school-cyber-science-engineering",
+      "source": "hust",
       "target": "university-waterloo",
       "papers": [
         {
@@ -20036,7 +20436,7 @@
     },
     {
       "source": "iie-cas",
-      "target": "shandong-university-school-cyber-science",
+      "target": "shandong-university",
       "papers": [
         {
           "id": "usenix-sec26-liu-picklecloak",
@@ -20072,10 +20472,22 @@
     },
     {
       "source": "iie-cas",
-      "target": "ucas-school-cyber-security",
+      "target": "ucas",
       "papers": [
         {
           "id": "usenix-sec26-liu-picklecloak",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "imdea-networks",
+      "target": "ku-leuven",
+      "papers": [
+        {
+          "id": "usenix-sec26-vlummens-bridges",
           "year": 2026,
           "venue_group": "security"
         }
@@ -20240,7 +20652,7 @@
     },
     {
       "source": "information-engineering-university",
-      "target": "tsinghua-insc",
+      "target": "tsinghua-university",
       "papers": [
         {
           "id": "usenix-sec26-jia-pangolin",
@@ -20360,7 +20772,7 @@
     },
     {
       "source": "jcss-tsinghua-science-city",
-      "target": "tsinghua-insc",
+      "target": "tsinghua-university",
       "papers": [
         {
           "id": "usenix-sec26-jia-pangolin",
@@ -20448,6 +20860,30 @@
       "papers": [
         {
           "id": "usenix-sec26-kim-timeslice-sandwich",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "ku-leuven",
+      "target": "radboud-university",
+      "papers": [
+        {
+          "id": "usenix-sec26-vlummens-bridges",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "ku-leuven",
+      "target": "university-of-birmingham",
+      "papers": [
+        {
+          "id": "ieee-sp26-de-meulemeester-battering-ram",
           "year": 2026,
           "venue_group": "security"
         }
@@ -20947,7 +21383,7 @@
       "weight": 1
     },
     {
-      "source": "shandong-university-school-cyber-science",
+      "source": "shandong-university",
       "target": "shanghai-university",
       "papers": [
         {
@@ -20959,7 +21395,7 @@
       "weight": 1
     },
     {
-      "source": "shandong-university-school-cyber-science",
+      "source": "shandong-university",
       "target": "skl-cryptography-digital-economy-security",
       "papers": [
         {
@@ -20971,8 +21407,8 @@
       "weight": 1
     },
     {
-      "source": "shandong-university-school-cyber-science",
-      "target": "ucas-school-cyber-security",
+      "source": "shandong-university",
+      "target": "ucas",
       "papers": [
         {
           "id": "usenix-sec26-liu-picklecloak",
@@ -20996,7 +21432,7 @@
     },
     {
       "source": "shanghai-university",
-      "target": "ucas-school-cyber-security",
+      "target": "ucas",
       "papers": [
         {
           "id": "usenix-sec26-liu-picklecloak",
@@ -21020,7 +21456,7 @@
     },
     {
       "source": "skl-cryptography-digital-economy-security",
-      "target": "ucas-school-cyber-security",
+      "target": "ucas",
       "papers": [
         {
           "id": "usenix-sec26-liu-picklecloak",
@@ -21032,7 +21468,7 @@
     },
     {
       "source": "skl-mathematical-engineering-advanced-computing",
-      "target": "tsinghua-insc",
+      "target": "tsinghua-university",
       "papers": [
         {
           "id": "usenix-sec26-jia-pangolin",
@@ -21404,7 +21840,7 @@
       "first_seen": "2026-09-21",
       "url": "https://sp2026.ieee-security.org/accepted-papers.html",
       "institutions": [
-        "hust-school-cyber-science-engineering",
+        "hust",
         "hubei-key-lab-distributed-system-security",
         "northwestern-university",
         "university-waterloo",
@@ -21903,7 +22339,7 @@
       "first_seen": "2026-09-07",
       "url": "https://sp2026.ieee-security.org/accepted-papers.html",
       "institutions": [
-        "mit-csail",
+        "mit",
         "amd"
       ],
       "authors": [
@@ -21923,10 +22359,9 @@
       "first_seen": "2026-09-07",
       "url": "https://sp2026.ieee-security.org/accepted-papers.html",
       "institutions": [
-        "cosic-ku-leuven",
+        "ku-leuven",
         "university-of-birmingham",
-        "durham-university",
-        "distrinet-ku-leuven"
+        "durham-university"
       ],
       "authors": [
         "jesse-de-meulemeester-ku-leuven",
@@ -22072,8 +22507,7 @@
       "first_seen": "2026-08-31",
       "url": "https://sp2026.ieee-security.org/accepted-papers.html",
       "institutions": [
-        "cosic-ku-leuven",
-        "distrinet-ku-leuven"
+        "ku-leuven"
       ],
       "authors": [
         "sayon-duttagupta-ku-leuven",
@@ -22179,7 +22613,7 @@
       "first_seen": "2026-08-24",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xiao",
       "institutions": [
-        "whu-school-cyber-science-engineering"
+        "wuhan-university"
       ],
       "authors": [
         "yongkang-xiao-whu",
@@ -22394,9 +22828,9 @@
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-tong",
       "institutions": [
         "iie-cas",
-        "ucas-school-cyber-security",
+        "ucas",
         "shanghai-university",
-        "shandong-university-school-cyber-science",
+        "shandong-university",
         "skl-cryptography-digital-economy-security"
       ],
       "authors": [
@@ -22418,7 +22852,7 @@
       "first_seen": "2026-08-22",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/trujillo",
       "institutions": [
-        "mit-csail"
+        "mit"
       ],
       "authors": [
         "daniel-trujillo-mit",
@@ -22473,8 +22907,7 @@
       "first_seen": "2026-08-22",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-yihao",
       "institutions": [
-        "tsinghua-university",
-        "bnrist"
+        "tsinghua-university"
       ],
       "authors": [
         "yihao-peng-tsinghua",
@@ -22588,7 +23021,6 @@
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/li-ruixuan",
       "institutions": [
         "tsinghua-university",
-        "bnrist",
         "zhejiang-gongshang-university",
         "zhejiang-key-lab-big-data-future-ecommerce"
       ],
@@ -22697,7 +23129,7 @@
       "institutions": [
         "information-engineering-university",
         "advanced-computing-intelligence-engineering-lab",
-        "tsinghua-insc",
+        "tsinghua-university",
         "jcss-tsinghua-science-city",
         "skl-mathematical-engineering-advanced-computing"
       ],
@@ -22745,7 +23177,7 @@
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong",
       "institutions": [
         "university-of-adelaide",
-        "data61-csiro"
+        "csiro"
       ],
       "authors": [
         "mathew-duong",
@@ -23408,8 +23840,7 @@
       "first_seen": "2026-07-17",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yijing",
       "institutions": [
-        "tsinghua-university",
-        "bnrist"
+        "tsinghua-university"
       ],
       "authors": [
         "yijing-liu-tsinghua",
@@ -23428,7 +23859,7 @@
       "first_seen": "2026-07-17",
       "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/vlummens",
       "institutions": [
-        "cosic-ku-leuven",
+        "ku-leuven",
         "imdea-networks",
         "radboud-university"
       ],

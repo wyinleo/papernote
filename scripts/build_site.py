@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import itertools
 import json
 import re
@@ -21,7 +22,32 @@ VIEWPOINT_SOURCES_PATH = ROOT / "industry" / "sources.json"
 GRAPH_PATH = ROOT / "papers" / "academic_graph.json"
 TAXONOMY_PATH = ROOT / "papers" / "topic_taxonomy.json"
 ENTITY_REGISTRY_PATH = ROOT / "papers" / "entity_registry.json"
+EASYCATCH_PATH = ROOT / "papers" / "easycatch.json"
 OUTPUT_PATH = ROOT / "site" / "data.js"
+
+EASYCATCH_SOURCE_FIELDS = ("question", "method", "method_example", "evidence", "limitations")
+
+
+def easycatch_source_hash(details: dict[str, Any]) -> str:
+    source = {key: details.get(key, "") for key in EASYCATCH_SOURCE_FIELDS}
+    return hashlib.sha256(json.dumps(source, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+
+
+def validated_easycatch(paper_id: str, details: dict[str, Any], entries: dict) -> list[str]:
+    entry = entries.get(paper_id)
+    if not isinstance(entry, dict):
+        raise ValueError(f"{paper_id}: missing Easycatch; follow skills/papernote-easycatch/SKILL.md")
+    paragraphs = entry.get("paragraphs")
+    if (not isinstance(paragraphs, list) or len(paragraphs) != 2
+            or any(not isinstance(p, str) or not p.strip() for p in paragraphs)):
+        raise ValueError(f"{paper_id}: Easycatch requires two nonempty paragraphs")
+    if entry.get("source_sha256") != easycatch_source_hash(details):
+        raise ValueError(f"{paper_id}: stale Easycatch; review changed source before updating its hash")
+    if not isinstance(entry.get("revision"), int) or entry["revision"] < 1:
+        raise ValueError(f"{paper_id}: Easycatch requires a positive revision")
+    if not isinstance(entry.get("skill_version"), int) or entry["skill_version"] < 1:
+        raise ValueError(f"{paper_id}: Easycatch requires a positive skill_version")
+    return paragraphs
 
 FIELD_ALIASES = {
     "方向": "direction",
@@ -271,6 +297,27 @@ def registry_lookup(registry: dict[str, Any], section: str) -> dict[str, dict[st
     return lookup
 
 
+def institution_roots(registry: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    records = {item["id"]: item for item in registry.get("institutions", {}).values()}
+    roots = {}
+    for institution_id, item in records.items():
+        seen = {institution_id}
+        current = item
+        while current.get("parent_id"):
+            parent_id = current["parent_id"]
+            if parent_id not in records or parent_id in seen:
+                raise ValueError(f"Invalid institution parent chain: {institution_id} -> {parent_id}")
+            if not re.match(r"^https?://", current.get("parent_source", "")):
+                raise ValueError(f"Institution parent needs evidence: {current['id']}")
+            parent = records[parent_id]
+            if current.get("country_code") != parent.get("country_code"):
+                raise ValueError(f"Cross-country institution merge requires separate geography: {institution_id}")
+            seen.add(parent_id)
+            current = parent
+        roots[institution_id] = current
+    return roots
+
+
 def validate_entity_registry(registry: dict[str, Any]) -> None:
     """Fail closed on incomplete or unsupported public entity metadata."""
     for source_name, record in registry.get("institutions", {}).items():
@@ -303,6 +350,7 @@ def validate_entity_registry(registry: dict[str, Any]) -> None:
                 f"{ENTITY_REGISTRY_PATH.relative_to(ROOT)}: translated scholar "
                 f"{source_name!r} requires a verification source"
             )
+    institution_roots(registry)
     scholars = registry.get("scholars", {})
     for paper_id, overrides in registry.get("paper_scholar_overrides", {}).items():
         if not isinstance(overrides, dict):
@@ -411,6 +459,9 @@ def build_academic_graph(
     papers: list[dict[str, Any]],
     registry: dict[str, Any],
 ) -> dict[str, Any]:
+    roots = institution_roots(registry)
+    country_codes = {item["id"]: item.get("country_code", "")
+                     for item in registry.get("institutions", {}).values()}
     institutions: dict[str, dict[str, Any]] = {}
     scholars: dict[str, dict[str, Any]] = {}
     collaborations: dict[tuple[str, str], dict[str, Any]] = {}
@@ -425,6 +476,12 @@ def build_academic_graph(
         )
         if not affiliations:
             continue
+        affiliations = [
+            {**row, "source_institution": row["institution"],
+             "institution_id": roots[row["institution_id"]]["id"],
+             "institution": roots[row["institution_id"]]["display_name"]}
+            for row in affiliations
+        ]
         year = publication_year(paper)
         venue_group = accepted_venue_group(paper)
         affiliated_author_ids = list(dict.fromkeys(
@@ -468,10 +525,13 @@ def build_academic_graph(
             entry = institutions.setdefault(institution_id, {
                 "id": institution_id,
                 "name": institution_name,
+                "country_code": country_codes.get(institution_id, ""),
+                "affiliation_names": set(),
                 "papers": set(),
                 "scholars": set(),
                 "annual_scores": {},
             })
+            entry["affiliation_names"].add(row["source_institution"])
             entry["papers"].add(paper["id"])
             entry["scholars"].update(author["name"] for author in row["authors"])
             if venue_group and institution_id not in scored_institutions:
@@ -536,6 +596,8 @@ def build_academic_graph(
             "papers": sorted(node["papers"]),
             "verified_score": sum(item["total"] for item in annual_scores.values()),
         }
+        if "affiliation_names" in node:
+            result["affiliation_names"] = sorted(node["affiliation_names"])
         if collection_key == "institutions":
             recent_papers = sorted(
                 (publication_lookup[paper_id] for paper_id in node["papers"]),
@@ -571,7 +633,7 @@ def build_academic_graph(
     collaboration_rows.sort(key=lambda item: (-item["weight"], item["source"], item["target"]))
 
     years = sorted(
-        {str(item["year"]) for item in publications if item["venue_group"]},
+        {str(item["year"]) for item in publications},
         reverse=True,
     )
     return {
@@ -601,6 +663,13 @@ def build_payload() -> dict[str, Any]:
     taxonomy = load_json(TAXONOMY_PATH)
     registry = load_json(ENTITY_REGISTRY_PATH)
     validate_entity_registry(registry)
+    easycatch = load_json(EASYCATCH_PATH)
+    if easycatch.get("schema_version") != 1 or not isinstance(easycatch.get("papers"), dict):
+        raise ValueError("Invalid Easycatch source schema")
+    easycatch_entries = easycatch["papers"]
+    orphan_ids = set(easycatch_entries) - {paper["id"] for paper in papers}
+    if orphan_ids:
+        raise ValueError(f"Easycatch contains unknown paper IDs: {sorted(orphan_ids)}")
     week_counts: dict[str, int] = {}
     theme_counts: dict[str, dict[str, Any]] = {}
     known_topics = set(taxonomy["topics"])
@@ -634,6 +703,7 @@ def build_payload() -> dict[str, Any]:
         paper["theme"] = theme_id
         paper["theme_label"] = theme_label
         paper["cached"] = bool(details)
+        details["easycatch"] = validated_easycatch(paper["id"], details, easycatch_entries)
         paper["details"] = details
         paper["primary_url"] = (paper.get("urls") or [""])[0]
         paper["card_date"] = card_publication_date(
@@ -689,6 +759,52 @@ def build_payload() -> dict[str, Any]:
     }
 
 
+def write_site_data(payload: dict[str, Any], output: Path) -> dict[str, int]:
+    """Emit a small catalog and content-addressed lazy assets; source data stays intact."""
+    output.parent.mkdir(parents=True, exist_ok=True)
+    asset_dir = output.parent / "data"
+    asset_dir.mkdir(exist_ok=True)
+    sizes: dict[str, int] = {}
+
+    def asset(value: Any, kind: str) -> str:
+        encoded = json.dumps(value, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        name = f"{kind}-{hashlib.sha256(encoded).hexdigest()[:20]}.json"
+        path = asset_dir / name
+        if not path.exists() or path.read_bytes() != encoded:
+            path.write_bytes(encoded)
+        sizes[kind] = sizes.get(kind, 0) + len(encoded)
+        return f"data/{name}"
+
+    academic = {key: value for key, value in payload["academic"].items() if key != "generated_at"}
+    catalog = {**payload, "counts": {**payload["counts"], "institutions": len(academic["institutions"])}}
+    catalog["academic"] = {key: academic[key] for key in ("coverage", "categories", "years")}
+    catalog["scholar_names"] = [
+        {key: scholar[key] for key in ("id", "name", "publication_name")}
+        for scholar in academic["scholars"]
+    ]
+    catalog["paper_authors"] = {paper["id"]: paper["authors"] for paper in academic["publications"]}
+    catalog["assets"] = {"academic": asset(academic, "academic"), "search": {}}
+    catalog["papers"] = []
+    search_weeks: dict[str, dict[str, str]] = {}
+    for paper in payload["papers"]:
+        details = paper["details"]
+        search_weeks.setdefault(paper["week"], {})[paper["id"]] = json.dumps(paper, ensure_ascii=False, separators=(",", ":"))
+        catalog["papers"].append({
+            **paper,
+            "details": {key: details[key] for key in ("question", "recommendation", "keywords", "venue_status") if key in details},
+            "details_url": asset(details, "paper"),
+        })
+    for week, text in search_weeks.items():
+        catalog["assets"]["search"][week] = asset(text, "search")
+    serialized = json.dumps(catalog, ensure_ascii=False, separators=(",", ":"))
+    output.write_text(
+        "/* Generated by scripts/build_site.py. Do not edit by hand. */\n"
+        f"window.PAPERNOTE_DATA={serialized};\n", encoding="utf-8",
+    )
+    sizes["catalog"] = output.stat().st_size
+    return sizes
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
@@ -707,13 +823,8 @@ def main() -> None:
         json.dumps(payload["academic"], ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    serialized = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
-    args.output.write_text(
-        "/* Generated by scripts/build_site.py. Do not edit by hand. */\n"
-        f"window.PAPERNOTE_DATA={serialized};\n",
-        encoding="utf-8",
-    )
+    sizes = write_site_data(payload, args.output)
+    print("Data bytes: " + ", ".join(f"{key}={value}" for key, value in sizes.items()))
     print(
         f"Built {args.output.relative_to(ROOT)}: "
         f"{payload['counts']['papers']} papers, "
