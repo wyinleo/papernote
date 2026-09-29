@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-25T16:30:54+08:00",
+  "generated_at": "2026-09-29T10:32:39+08:00",
   "coverage": {
     "basis": "papernote 已收录且周报中具有可解析“单位与作者”字段的论文",
     "score_definition": "年度评价分数为库内经正式接收核验的网络与信息安全、软件工程与系统、人工智能领域 CCF-A 会议论文数；当前是已核验下界，不代表单位完整产出。",
-    "indexed_papers": 98,
-    "papers_with_affiliations": 98,
-    "scored_top_venue_papers": 89
+    "indexed_papers": 108,
+    "papers_with_affiliations": 108,
+    "scored_top_venue_papers": 99
   },
   "categories": [
     {
@@ -153,6 +153,150 @@
       "verified_score": 5
     },
     {
+      "id": "fudan-university",
+      "name": "复旦大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "复旦大学"
+      ],
+      "papers": [
+        "ccs25-zhang-uabscan",
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky",
+        "usenix-sec26-chen-vulgenie",
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "scholars": [
+        "Bofei Chen",
+        "Chengyuan Zhou",
+        "Feng Xue",
+        "Geng Hong",
+        "Jiaqi Luo",
+        "Ke Li",
+        "Letian Yuan",
+        "Qiyi Zhang",
+        "Shuang Liao",
+        "Songyang Peng",
+        "Tian Chen",
+        "Tianhao Bai",
+        "Tong Bu",
+        "Xudong Pan",
+        "Youkun Shi",
+        "Zhengmin Yu",
+        "Zihan Lin",
+        "刘丰毓",
+        "张源",
+        "张磊",
+        "戴嘉润",
+        "杨珉"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 3,
+          "software": 0,
+          "ai": 0,
+          "total": 3
+        },
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 5
+    },
+    {
+      "id": "uc-berkeley",
+      "name": "University of California, Berkeley",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of California, Berkeley"
+      ],
+      "papers": [
+        "arxiv-2607-18575-receipt",
+        "ase26-ni-triage-nodejs",
+        "neurips25-nie-secodeplt",
+        "usenix-sec26-kim-agentic",
+        "usenix-sec26-zhang-resume-injection"
+      ],
+      "scholars": [
+        "David Wagner",
+        "Dawn Song",
+        "Hao Wang",
+        "Juhee Kim",
+        "Karen Shieh",
+        "Kevin Cheang",
+        "Koushik Sen",
+        "Muxi Lyu",
+        "Yiwei Hou",
+        "Zhun Wang"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        },
+        "2026": {
+          "security": 2,
+          "software": 1,
+          "ai": 0,
+          "total": 3
+        }
+      },
+      "verified_score": 4
+    },
+    {
+      "id": "carnegie-mellon-university",
+      "name": "Carnegie Mellon University",
+      "country_code": "USA",
+      "affiliation_names": [
+        "Carnegie Mellon University"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs",
+        "ieee-sp26-liu-generate-verify",
+        "ieee-sp26-wang-transient-architectural-execution",
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "scholars": [
+        "Andy Zou",
+        "Darion Cassel",
+        "Eileen Xiao",
+        "Fraser Brown",
+        "J. Zico Kolter",
+        "Limin Jia",
+        "Matt Fredrikson",
+        "Min-Chien Hsu",
+        "Nuno Sabino",
+        "Ping-Lun Wang",
+        "Pratiksha Thaker",
+        "Riad S. Wahby",
+        "Riccardo Paccagnella",
+        "Ronghao Ni",
+        "Ruben Martins",
+        "Terrance Liu",
+        "Zhiwei Steven Wu"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        },
+        "2026": {
+          "security": 2,
+          "software": 1,
+          "ai": 0,
+          "total": 3
+        }
+      },
+      "verified_score": 4
+    },
+    {
       "id": "ruhr-university-bochum",
       "name": "Ruhr University Bochum",
       "country_code": "DEU",
@@ -186,55 +330,39 @@
       "verified_score": 4
     },
     {
-      "id": "fudan-university",
-      "name": "复旦大学",
-      "country_code": "CHN",
+      "id": "northeastern-university",
+      "name": "Northeastern University",
+      "country_code": "USA",
       "affiliation_names": [
-        "复旦大学"
+        "Northeastern University"
       ],
       "papers": [
-        "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky",
-        "usenix-sec26-chen-vulgenie",
-        "usenix-sec26-luo-agent-dos"
+        "arxiv-2607-16487-fuzz-emup",
+        "ieee-sp26-suri-trojanclimb",
+        "ndss26-li-ace",
+        "usenix-sec26-syros-muzzle"
       ],
       "scholars": [
-        "Bofei Chen",
-        "Chengyuan Zhou",
-        "Feng Xue",
-        "Geng Hong",
-        "Jiaqi Luo",
-        "Ke Li",
-        "Letian Yuan",
-        "Shuang Liao",
-        "Songyang Peng",
-        "Tian Chen",
-        "Tianhao Bai",
-        "Tong Bu",
-        "Xudong Pan",
-        "Youkun Shi",
-        "Zhengmin Yu",
-        "刘丰毓",
-        "张源",
-        "张磊",
-        "戴嘉润",
-        "杨珉"
+        "Alina Oprea",
+        "Anshuman Suri",
+        "Cristina Nita-Rotaru",
+        "Evan Li",
+        "Evan Rose",
+        "Georgios Syros",
+        "Harsh Chaudhari",
+        "Tushin Mallick",
+        "William Robertson",
+        "Ziming Zhao"
       ],
       "annual_scores": {
         "2026": {
-          "security": 2,
+          "security": 3,
           "software": 0,
           "ai": 0,
-          "total": 2
-        },
-        "2025": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
+          "total": 3
         }
       },
-      "verified_score": 4
+      "verified_score": 3
     },
     {
       "id": "cispa",
@@ -338,6 +466,77 @@
       "verified_score": 3
     },
     {
+      "id": "university-california-santa-barbara",
+      "name": "University of California, Santa Barbara",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of California, Santa Barbara"
+      ],
+      "papers": [
+        "ieee-sp26-kaya-web-chatbot",
+        "neurips25-nie-secodeplt",
+        "usenix-sec26-kim-agentic"
+      ],
+      "scholars": [
+        "Anton Landerer",
+        "Christopher Kruegel",
+        "Giovanni Vigna",
+        "Michelle Zimmermann",
+        "Ruizhe Jiang",
+        "Stijn Pletinckx",
+        "Wenbo Guo",
+        "Yigitcan Kaya",
+        "Yuheng Tang",
+        "Yuzhou Nie"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        },
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 3
+    },
+    {
+      "id": "university-oxford",
+      "name": "University of Oxford",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "University of Oxford"
+      ],
+      "papers": [
+        "neurips25-aichberger-mip-agent",
+        "neurips25-nie-secodeplt",
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "scholars": [
+        "Adel Bibi",
+        "Alasdair Paren",
+        "Guohao Li",
+        "Lukas Aichberger",
+        "Philip Torr",
+        "Xander Davies",
+        "Yarin Gal"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 2,
+          "ai": 1,
+          "total": 3
+        }
+      },
+      "verified_score": 3
+    },
+    {
       "id": "zhejiang-university",
       "name": "浙江大学",
       "country_code": "CHN",
@@ -404,38 +603,6 @@
       "verified_score": 3
     },
     {
-      "id": "northeastern-university",
-      "name": "Northeastern University",
-      "country_code": "USA",
-      "affiliation_names": [
-        "Northeastern University"
-      ],
-      "papers": [
-        "arxiv-2607-16487-fuzz-emup",
-        "ieee-sp26-suri-trojanclimb",
-        "usenix-sec26-syros-muzzle"
-      ],
-      "scholars": [
-        "Alina Oprea",
-        "Anshuman Suri",
-        "Cristina Nita-Rotaru",
-        "Evan Rose",
-        "Georgios Syros",
-        "Harsh Chaudhari",
-        "William Robertson",
-        "Ziming Zhao"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2
-    },
-    {
       "id": "seoul-national-university",
       "name": "Seoul National University",
       "country_code": "KOR",
@@ -468,33 +635,38 @@
       "verified_score": 2
     },
     {
-      "id": "uc-berkeley",
-      "name": "University of California, Berkeley",
+      "id": "uiuc",
+      "name": "University of Illinois Urbana-Champaign",
       "country_code": "USA",
       "affiliation_names": [
-        "University of California, Berkeley"
+        "University of Illinois Urbana-Champaign"
       ],
       "papers": [
-        "arxiv-2607-18575-receipt",
-        "usenix-sec26-kim-agentic",
-        "usenix-sec26-zhang-resume-injection"
+        "arxiv-2607-05120-agent-data-injection",
+        "ieee-sp26-zhai-revelio",
+        "neurips25-nie-secodeplt"
       ],
       "scholars": [
-        "David Wagner",
-        "Dawn Song",
-        "Hao Wang",
-        "Juhee Kim",
-        "Karen Shieh",
-        "Koushik Sen",
-        "Muxi Lyu",
-        "Yiwei Hou"
+        "Bo Li",
+        "Gang Wang",
+        "Haoyu Zhai",
+        "Luyi Xing",
+        "Pirouz Naghavi",
+        "Qingying Hao",
+        "Shuo Wang"
       ],
       "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        },
         "2026": {
-          "security": 2,
+          "security": 1,
           "software": 0,
           "ai": 0,
-          "total": 2
+          "total": 1
         }
       },
       "verified_score": 2
@@ -542,37 +714,6 @@
       "scholars": [
         "Alsharif Abuadbba",
         "Surya Nepal"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2
-    },
-    {
-      "id": "carnegie-mellon-university",
-      "name": "Carnegie Mellon University",
-      "country_code": "USA",
-      "affiliation_names": [
-        "Carnegie Mellon University"
-      ],
-      "papers": [
-        "ieee-sp26-liu-generate-verify",
-        "ieee-sp26-wang-transient-architectural-execution"
-      ],
-      "scholars": [
-        "Eileen Xiao",
-        "Fraser Brown",
-        "Ping-Lun Wang",
-        "Pratiksha Thaker",
-        "Riad S. Wahby",
-        "Riccardo Paccagnella",
-        "Terrance Liu",
-        "Zhiwei Steven Wu"
       ],
       "annual_scores": {
         "2026": {
@@ -836,6 +977,34 @@
       "verified_score": 2
     },
     {
+      "id": "uk-ai-security-institute",
+      "name": "UK AI Security Institute",
+      "country_code": "GBR",
+      "affiliation_names": [
+        "UK AI Security Institute"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt",
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "scholars": [
+        "Jai Patel",
+        "Nate Burnikell",
+        "Robert Kirk",
+        "Xander Davies",
+        "Yarin Gal"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 2,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2
+    },
+    {
       "id": "university-bayreuth",
       "name": "University of Bayreuth",
       "country_code": "DEU",
@@ -879,36 +1048,6 @@
       "scholars": [
         "David Oswald",
         "Marius Muench"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2
-    },
-    {
-      "id": "university-california-santa-barbara",
-      "name": "University of California, Santa Barbara",
-      "country_code": "USA",
-      "affiliation_names": [
-        "University of California, Santa Barbara"
-      ],
-      "papers": [
-        "ieee-sp26-kaya-web-chatbot",
-        "usenix-sec26-kim-agentic"
-      ],
-      "scholars": [
-        "Anton Landerer",
-        "Christopher Kruegel",
-        "Giovanni Vigna",
-        "Michelle Zimmermann",
-        "Stijn Pletinckx",
-        "Wenbo Guo",
-        "Yigitcan Kaya"
       ],
       "annual_scores": {
         "2026": {
@@ -1218,6 +1357,32 @@
       "verified_score": 2
     },
     {
+      "id": "concordia-university",
+      "name": "Concordia University",
+      "country_code": "CAN",
+      "affiliation_names": [
+        "Concordia University"
+      ],
+      "papers": [
+        "arxiv-2607-20759-issuetrojanbench",
+        "issta26-huang-secretron"
+      ],
+      "scholars": [
+        "Ankur Singh",
+        "Jinqiu Yang",
+        "Tse-Hsun (Peter) Chen"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "radboud-university",
       "name": "Radboud University",
       "country_code": "NLD",
@@ -1236,35 +1401,6 @@
         "Kaushal Punjabi",
         "Rahul Deivasigamani",
         "Stjepan Picek"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1
-    },
-    {
-      "id": "uiuc",
-      "name": "University of Illinois Urbana-Champaign",
-      "country_code": "USA",
-      "affiliation_names": [
-        "University of Illinois Urbana-Champaign"
-      ],
-      "papers": [
-        "arxiv-2607-05120-agent-data-injection",
-        "ieee-sp26-zhai-revelio"
-      ],
-      "scholars": [
-        "Gang Wang",
-        "Haoyu Zhai",
-        "Luyi Xing",
-        "Pirouz Naghavi",
-        "Qingying Hao",
-        "Shuo Wang"
       ],
       "annual_scores": {
         "2026": {
@@ -1373,6 +1509,29 @@
         "2026": {
           "security": 1,
           "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "athanor-ai",
+      "name": "Athanor AI",
+      "country_code": "",
+      "affiliation_names": [
+        "Athanor AI"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "scholars": [
+        "Aidan Z. H. Yang"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
           "ai": 0,
           "total": 1
         }
@@ -1544,6 +1703,30 @@
       "verified_score": 1
     },
     {
+      "id": "center-ai-safety",
+      "name": "Center for AI Safety",
+      "country_code": "",
+      "affiliation_names": [
+        "Center for AI Safety"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "scholars": [
+        "Andy Zou",
+        "Dan Hendrycks"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "durham-university",
       "name": "Durham University",
       "country_code": "GBR",
@@ -1555,6 +1738,30 @@
       ],
       "scholars": [
         "David Oswald"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "eurecom",
+      "name": "EURECOM",
+      "country_code": "FRA",
+      "affiliation_names": [
+        "EURECOM"
+      ],
+      "papers": [
+        "ndss26-sacchetti-blerp"
+      ],
+      "scholars": [
+        "Daniele Antonioli",
+        "Tommaso Sacchetti"
       ],
       "annual_scores": {
         "2026": {
@@ -1654,6 +1861,40 @@
         "2026": {
           "security": 1,
           "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "gray-swan-ai",
+      "name": "Gray Swan AI",
+      "country_code": "",
+      "affiliation_names": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "scholars": [
+        "Alexander Grattan",
+        "Andy Zou",
+        "Ayla Croft",
+        "Dan Hendrycks",
+        "Eliot Jones",
+        "J. Zico Kolter",
+        "Mateusz Dziemian",
+        "Matt Fredrikson",
+        "Maxwell Lin",
+        "Micha Nowak",
+        "Nick Winter",
+        "Valent Nathanael"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
           "ai": 0,
           "total": 1
         }
@@ -1926,6 +2167,54 @@
       "verified_score": 1
     },
     {
+      "id": "johannes-kepler-university-linz",
+      "name": "Johannes Kepler University Linz",
+      "country_code": "AUT",
+      "affiliation_names": [
+        "Johannes Kepler University Linz"
+      ],
+      "papers": [
+        "neurips25-aichberger-mip-agent"
+      ],
+      "scholars": [
+        "Lukas Aichberger"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 0,
+          "ai": 1,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "karlsruhe-institute-technology",
+      "name": "Karlsruhe Institute of Technology",
+      "country_code": "DEU",
+      "affiliation_names": [
+        "Karlsruhe Institute of Technology"
+      ],
+      "papers": [
+        "ccs25-todt-bfid"
+      ],
+      "scholars": [
+        "Felix Morsbach",
+        "Julian Todt",
+        "Thorsten Strufe"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "kent-state-university",
       "name": "Kent State University",
       "country_code": "USA",
@@ -2019,6 +2308,30 @@
         "2026": {
           "security": 1,
           "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "mcgill-university",
+      "name": "McGill University",
+      "country_code": "CAN",
+      "affiliation_names": [
+        "McGill University"
+      ],
+      "papers": [
+        "issta26-huang-secretron"
+      ],
+      "scholars": [
+        "Kevin Li",
+        "Lili Wei"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
           "ai": 0,
           "total": 1
         }
@@ -2713,6 +3026,29 @@
       "verified_score": 1
     },
     {
+      "id": "university-chicago",
+      "name": "University of Chicago",
+      "country_code": "USA",
+      "affiliation_names": [
+        "University of Chicago"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt"
+      ],
+      "scholars": [
+        "Bo Li"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "university-edinburgh",
       "name": "University of Edinburgh",
       "country_code": "GBR",
@@ -3193,6 +3529,31 @@
       "verified_score": 1
     },
     {
+      "id": "virtue-ai",
+      "name": "VirtueAI",
+      "country_code": "",
+      "affiliation_names": [
+        "VirtueAI"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt"
+      ],
+      "scholars": [
+        "Bo Li",
+        "Yu Yang",
+        "Yuzhou Nie"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "washington-university-st-louis",
       "name": "Washington University in St. Louis",
       "country_code": "USA",
@@ -3509,6 +3870,33 @@
       "verified_score": 1
     },
     {
+      "id": "nanjing-university-science-technology",
+      "name": "南京理工大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "南京理工大学"
+      ],
+      "papers": [
+        "issta26-wei-linux-config"
+      ],
+      "scholars": [
+        "Gangyan Zeng",
+        "Peng Zhang",
+        "Tongjie Wei",
+        "Xupu Hu",
+        "Zhiwen Hu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
       "id": "nanjing-university-aeronautics-astronautics",
       "name": "南京航空航天大学",
       "country_code": "CHN",
@@ -3520,6 +3908,30 @@
       ],
       "scholars": [
         "Wei Cheng"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "southern-university-science-technology",
+      "name": "南方科技大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "南方科技大学"
+      ],
+      "papers": [
+        "issta26-huang-secretron"
+      ],
+      "scholars": [
+        "Yepang Liu",
+        "Zhengdong Huang"
       ],
       "annual_scores": {
         "2026": {
@@ -3641,6 +4053,29 @@
         "2026": {
           "security": 1,
           "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1
+    },
+    {
+      "id": "shandong-normal-university",
+      "name": "山东师范大学",
+      "country_code": "CHN",
+      "affiliation_names": [
+        "山东师范大学"
+      ],
+      "papers": [
+        "issta26-wei-linux-config"
+      ],
+      "scholars": [
+        "Chen Lyu"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
           "ai": 0,
           "total": 1
         }
@@ -3885,24 +4320,6 @@
       "verified_score": 0
     },
     {
-      "id": "concordia-university",
-      "name": "Concordia University",
-      "country_code": "CAN",
-      "affiliation_names": [
-        "Concordia University"
-      ],
-      "papers": [
-        "arxiv-2607-20759-issuetrojanbench"
-      ],
-      "scholars": [
-        "Ankur Singh",
-        "Jinqiu Yang",
-        "Tse-Hsun (Peter) Chen"
-      ],
-      "annual_scores": {},
-      "verified_score": 0
-    },
-    {
       "id": "kaust-genai-center",
       "name": "KAUST Center of Excellence for Generative AI",
       "country_code": "SAU",
@@ -4036,27 +4453,35 @@
         "复旦大学"
       ],
       "papers": [
+        "ccs25-zhang-uabscan",
         "usenix-sec25-liu-agentfuzz",
         "usenix-sec25-shi-xssky",
         "usenix-sec26-chen-vulgenie",
         "usenix-sec26-luo-agent-dos"
       ],
       "annual_scores": {
-        "2026": {
-          "security": 2,
+        "2025": {
+          "security": 3,
           "software": 0,
           "ai": 0,
-          "total": 2
+          "total": 3
         },
-        "2025": {
+        "2026": {
           "security": 2,
           "software": 0,
           "ai": 0,
           "total": 2
         }
       },
-      "verified_score": 4,
+      "verified_score": 5,
       "recent_papers": [
+        {
+          "id": "ccs25-zhang-uabscan",
+          "title": "Be Aware of What You Let Pass: Demystifying URL-based Authentication Bypass Vulnerability in Java Web Applications",
+          "year": 2025,
+          "venue": "ACM CCS 2025",
+          "url": "https://doi.org/10.1145/3719027.3765199"
+        },
         {
           "id": "usenix-sec26-luo-agent-dos",
           "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
@@ -4070,13 +4495,107 @@
           "year": 2025,
           "venue": "USENIX Security 2025",
           "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        }
+      ]
+    },
+    {
+      "id": "fengyu-liu-fudan",
+      "name": "刘丰毓",
+      "publication_name": "Fengyu Liu",
+      "homepage": "https://lfysec.github.io/",
+      "profile_source": "https://lfysec.github.io/",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "ccs25-zhang-uabscan",
+        "usenix-sec25-liu-agentfuzz",
+        "usenix-sec25-shi-xssky",
+        "usenix-sec26-luo-agent-dos"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 3,
+          "software": 0,
+          "ai": 0,
+          "total": 3
+        },
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 4,
+      "recent_papers": [
+        {
+          "id": "ccs25-zhang-uabscan",
+          "title": "Be Aware of What You Let Pass: Demystifying URL-based Authentication Bypass Vulnerability in Java Web Applications",
+          "year": 2025,
+          "venue": "ACM CCS 2025",
+          "url": "https://doi.org/10.1145/3719027.3765199"
         },
         {
-          "id": "usenix-sec25-liu-agentfuzz",
-          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
+          "id": "usenix-sec26-luo-agent-dos",
+          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+        },
+        {
+          "id": "usenix-sec25-shi-xssky",
+          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
           "year": 2025,
           "venue": "USENIX Security 2025",
-          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
+        }
+      ]
+    },
+    {
+      "id": "alina-oprea",
+      "name": "Alina Oprea",
+      "publication_name": "Alina Oprea",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
+      "institutions": [
+        "Northeastern University"
+      ],
+      "papers": [
+        "ieee-sp26-suri-trojanclimb",
+        "ndss26-li-ace",
+        "usenix-sec26-syros-muzzle"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 3,
+          "software": 0,
+          "ai": 0,
+          "total": 3
+        }
+      },
+      "verified_score": 3,
+      "recent_papers": [
+        {
+          "id": "ndss26-li-ace",
+          "title": "ACE: A Security Architecture for LLM-Integrated App Systems",
+          "year": 2026,
+          "venue": "NDSS 2026",
+          "url": "https://doi.org/10.14722/ndss.2026.230352"
+        },
+        {
+          "id": "ieee-sp26-suri-trojanclimb",
+          "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
+          "year": 2026,
+          "venue": "IEEE S&P 2026",
+          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        },
+        {
+          "id": "usenix-sec26-syros-muzzle",
+          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
         }
       ]
     },
@@ -4128,28 +4647,27 @@
       ]
     },
     {
-      "id": "youkun-shi-fudan",
-      "name": "Youkun Shi",
-      "publication_name": "Youkun Shi",
-      "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
+      "id": "dawn-song",
+      "name": "Dawn Song",
+      "publication_name": "Dawn Song",
+      "homepage": "https://people.eecs.berkeley.edu/~dawnsong/",
+      "profile_source": "https://people.eecs.berkeley.edu/~dawnsong/",
       "institutions": [
-        "复旦大学",
-        "香港理工大学"
+        "University of California, Berkeley"
       ],
       "papers": [
-        "usenix-sec25-liu-agentfuzz",
-        "usenix-sec25-shi-xssky",
-        "usenix-sec26-luo-agent-dos"
+        "neurips25-nie-secodeplt",
+        "usenix-sec26-kim-agentic",
+        "usenix-sec26-zhang-resume-injection"
       ],
       "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
+        "2025": {
+          "security": 0,
+          "software": 1,
           "ai": 0,
           "total": 1
         },
-        "2025": {
+        "2026": {
           "security": 2,
           "software": 0,
           "ai": 0,
@@ -4159,36 +4677,139 @@
       "verified_score": 3,
       "recent_papers": [
         {
-          "id": "usenix-sec26-luo-agent-dos",
-          "title": "Autonomy Comes with Costs: Detecting Denial-of-Service Vulnerabilities Caused by Resource Abusing in LLM-based Agents",
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
+        },
+        {
+          "id": "usenix-sec26-zhang-resume-injection",
+          "title": "Measuring Real-World Prompt Injection Attacks in LLM-based Resume Screening",
           "year": 2026,
           "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo"
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-mohan"
         },
         {
-          "id": "usenix-sec25-shi-xssky",
-          "title": "XSSky: Detecting XSS Vulnerabilities through Local Path-Persistent Fuzzing",
-          "year": 2025,
-          "venue": "USENIX Security 2025",
-          "url": "https://www.usenix.org/system/files/usenixsecurity25-shi-youkun.pdf"
-        },
-        {
-          "id": "usenix-sec25-liu-agentfuzz",
-          "title": "Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents",
-          "year": 2025,
-          "venue": "USENIX Security 2025",
-          "url": "https://www.usenix.org/system/files/usenixsecurity25-liu-fengyu.pdf"
+          "id": "usenix-sec26-kim-agentic",
+          "title": "SoK: Attack and Defense Landscape of Agentic AI Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-juhee-agentic"
         }
       ]
     },
     {
-      "id": "fengyu-liu-fudan",
-      "name": "刘丰毓",
-      "publication_name": "Fengyu Liu",
-      "homepage": "https://lfysec.github.io/",
-      "profile_source": "https://lfysec.github.io/",
+      "id": "wenbo-guo-ntu",
+      "name": "Wenbo Guo",
+      "publication_name": "Wenbo Guo",
+      "homepage": "",
+      "profile_source": "",
       "institutions": [
-        "复旦大学"
+        "Nanyang Technological University",
+        "University of California, Santa Barbara"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt",
+        "usenix-sec26-guo-pyguard",
+        "usenix-sec26-kim-agentic"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        },
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 3,
+      "recent_papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
+        },
+        {
+          "id": "usenix-sec26-guo-pyguard",
+          "title": "Cutting the Gordian Knot: Detecting Malicious PyPI Packages via a Knowledge-Mining Framework",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/guo-wenbo"
+        },
+        {
+          "id": "usenix-sec26-kim-agentic",
+          "title": "SoK: Attack and Defense Landscape of Agentic AI Systems",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-juhee-agentic"
+        }
+      ]
+    },
+    {
+      "id": "yarin-gal-oxford",
+      "name": "Yarin Gal",
+      "publication_name": "Yarin Gal",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "UK AI Security Institute",
+        "University of Oxford"
+      ],
+      "papers": [
+        "neurips25-aichberger-mip-agent",
+        "neurips25-nie-secodeplt",
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 2,
+          "ai": 1,
+          "total": 3
+        }
+      },
+      "verified_score": 3,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        },
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
+        },
+        {
+          "id": "neurips25-aichberger-mip-agent",
+          "title": "MIP against Agent: Malicious Image Patches Hijacking Multimodal OS Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025",
+          "url": "https://doi.org/10.52202/085713-0625"
+        }
+      ]
+    },
+    {
+      "id": "youkun-shi-fudan",
+      "name": "Youkun Shi",
+      "publication_name": "Youkun Shi",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/luo",
+      "institutions": [
+        "复旦大学",
+        "香港理工大学"
       ],
       "papers": [
         "usenix-sec25-liu-agentfuzz",
@@ -4327,45 +4948,6 @@
       ]
     },
     {
-      "id": "alina-oprea",
-      "name": "Alina Oprea",
-      "publication_name": "Alina Oprea",
-      "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
-      "institutions": [
-        "Northeastern University"
-      ],
-      "papers": [
-        "ieee-sp26-suri-trojanclimb",
-        "usenix-sec26-syros-muzzle"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2,
-      "recent_papers": [
-        {
-          "id": "ieee-sp26-suri-trojanclimb",
-          "title": "Exploiting Leaderboards for Large-Scale Distribution of Malicious Models",
-          "year": 2026,
-          "venue": "IEEE S&P 2026",
-          "url": "https://sp2026.ieee-security.org/accepted-papers.html"
-        },
-        {
-          "id": "usenix-sec26-syros-muzzle",
-          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
-        }
-      ]
-    },
-    {
       "id": "amir-houmansadr-umass",
       "name": "Amir Houmansadr",
       "publication_name": "Amir Houmansadr",
@@ -4440,6 +5022,45 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/liu-yijing"
+        }
+      ]
+    },
+    {
+      "id": "cristina-nita-rotaru",
+      "name": "Cristina Nita-Rotaru",
+      "publication_name": "Cristina Nita-Rotaru",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
+      "institutions": [
+        "Northeastern University"
+      ],
+      "papers": [
+        "ndss26-li-ace",
+        "usenix-sec26-syros-muzzle"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ndss26-li-ace",
+          "title": "ACE: A Security Architecture for LLM-Integrated App Systems",
+          "year": 2026,
+          "venue": "NDSS 2026",
+          "url": "https://doi.org/10.14722/ndss.2026.230352"
+        },
+        {
+          "id": "usenix-sec26-syros-muzzle",
+          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
         }
       ]
     },
@@ -4522,17 +5143,17 @@
       ]
     },
     {
-      "id": "dawn-song",
-      "name": "Dawn Song",
-      "publication_name": "Dawn Song",
-      "homepage": "https://people.eecs.berkeley.edu/~dawnsong/",
-      "profile_source": "https://people.eecs.berkeley.edu/~dawnsong/",
+      "id": "evan-rose-northeastern",
+      "name": "Evan Rose",
+      "publication_name": "Evan Rose",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
       "institutions": [
-        "University of California, Berkeley"
+        "Northeastern University"
       ],
       "papers": [
-        "usenix-sec26-kim-agentic",
-        "usenix-sec26-zhang-resume-injection"
+        "ndss26-li-ace",
+        "usenix-sec26-syros-muzzle"
       ],
       "annual_scores": {
         "2026": {
@@ -4545,18 +5166,18 @@
       "verified_score": 2,
       "recent_papers": [
         {
-          "id": "usenix-sec26-zhang-resume-injection",
-          "title": "Measuring Real-World Prompt Injection Attacks in LLM-based Resume Screening",
+          "id": "ndss26-li-ace",
+          "title": "ACE: A Security Architecture for LLM-Integrated App Systems",
           "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-mohan"
+          "venue": "NDSS 2026",
+          "url": "https://doi.org/10.14722/ndss.2026.230352"
         },
         {
-          "id": "usenix-sec26-kim-agentic",
-          "title": "SoK: Attack and Defense Landscape of Agentic AI Systems",
+          "id": "usenix-sec26-syros-muzzle",
+          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
           "year": 2026,
           "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-juhee-agentic"
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
         }
       ]
     },
@@ -5176,46 +5797,6 @@
       ]
     },
     {
-      "id": "wenbo-guo-ntu",
-      "name": "Wenbo Guo",
-      "publication_name": "Wenbo Guo",
-      "homepage": "",
-      "profile_source": "",
-      "institutions": [
-        "Nanyang Technological University",
-        "University of California, Santa Barbara"
-      ],
-      "papers": [
-        "usenix-sec26-guo-pyguard",
-        "usenix-sec26-kim-agentic"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 2,
-          "software": 0,
-          "ai": 0,
-          "total": 2
-        }
-      },
-      "verified_score": 2,
-      "recent_papers": [
-        {
-          "id": "usenix-sec26-guo-pyguard",
-          "title": "Cutting the Gordian Knot: Detecting Malicious PyPI Packages via a Knowledge-Mining Framework",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/guo-wenbo"
-        },
-        {
-          "id": "usenix-sec26-kim-agentic",
-          "title": "SoK: Attack and Defense Landscape of Agentic AI Systems",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/kim-juhee-agentic"
-        }
-      ]
-    },
-    {
       "id": "wenxuan-wang-ruc",
       "name": "Wenxuan Wang",
       "publication_name": "Wenxuan Wang",
@@ -5251,6 +5832,85 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/wang-liwen"
+        }
+      ]
+    },
+    {
+      "id": "william-robertson-northeastern",
+      "name": "William Robertson",
+      "publication_name": "William Robertson",
+      "homepage": "",
+      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
+      "institutions": [
+        "Northeastern University"
+      ],
+      "papers": [
+        "ndss26-li-ace",
+        "usenix-sec26-syros-muzzle"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 2,
+          "software": 0,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "ndss26-li-ace",
+          "title": "ACE: A Security Architecture for LLM-Integrated App Systems",
+          "year": 2026,
+          "venue": "NDSS 2026",
+          "url": "https://doi.org/10.14722/ndss.2026.230352"
+        },
+        {
+          "id": "usenix-sec26-syros-muzzle",
+          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
+          "year": 2026,
+          "venue": "USENIX Security 2026",
+          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
+        }
+      ]
+    },
+    {
+      "id": "xander-davies-aisi-oxford",
+      "name": "Xander Davies",
+      "publication_name": "Xander Davies",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "UK AI Security Institute",
+        "University of Oxford"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt",
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 2,
+          "ai": 0,
+          "total": 2
+        }
+      },
+      "verified_score": 2,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        },
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
         }
       ]
     },
@@ -5735,6 +6395,45 @@
       ]
     },
     {
+      "id": "jinqiu-yang-concordia",
+      "name": "Jinqiu Yang",
+      "publication_name": "Jinqiu Yang",
+      "homepage": "",
+      "profile_source": "https://arxiv.org/abs/2607.20759",
+      "institutions": [
+        "Concordia University"
+      ],
+      "papers": [
+        "arxiv-2607-20759-issuetrojanbench",
+        "issta26-huang-secretron"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-huang-secretron",
+          "title": "Checked-In Secret Detection: Strings Are All You Need",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832207"
+        },
+        {
+          "id": "arxiv-2607-20759-issuetrojanbench",
+          "title": "IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests",
+          "year": 2026,
+          "venue": "arXiv",
+          "url": "https://arxiv.org/abs/2607.20759"
+        }
+      ]
+    },
+    {
       "id": "juhee-kim-ucb-snu",
       "name": "Juhee Kim",
       "publication_name": "Juhee Kim",
@@ -5938,6 +6637,37 @@
       ]
     },
     {
+      "id": "adel-bibi-oxford",
+      "name": "Adel Bibi",
+      "publication_name": "Adel Bibi",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0625",
+      "institutions": [
+        "University of Oxford"
+      ],
+      "papers": [
+        "neurips25-aichberger-mip-agent"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 0,
+          "ai": 1,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-aichberger-mip-agent",
+          "title": "MIP against Agent: Malicious Image Patches Hijacking Multimodal OS Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025",
+          "url": "https://doi.org/10.52202/085713-0625"
+        }
+      ]
+    },
+    {
       "id": "adil-ahmad-asu",
       "name": "Adil Ahmad",
       "publication_name": "Adil Ahmad",
@@ -5965,6 +6695,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "aidan-zh-yang-athanor",
+      "name": "Aidan Z. H. Yang",
+      "publication_name": "Aidan Z. H. Yang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "Athanor AI"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+          "year": 2026,
+          "venue": "ASE 2026",
+          "url": "https://doi.org/10.1145/3832783.3837503"
         }
       ]
     },
@@ -6000,6 +6761,37 @@
       ]
     },
     {
+      "id": "alasdair-paren-oxford",
+      "name": "Alasdair Paren",
+      "publication_name": "Alasdair Paren",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0625",
+      "institutions": [
+        "University of Oxford"
+      ],
+      "papers": [
+        "neurips25-aichberger-mip-agent"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 0,
+          "ai": 1,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-aichberger-mip-agent",
+          "title": "MIP against Agent: Malicious Image Patches Hijacking Multimodal OS Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025",
+          "url": "https://doi.org/10.52202/085713-0625"
+        }
+      ]
+    },
+    {
       "id": "alessandro-sorniotti",
       "name": "Alessandro Sorniotti",
       "publication_name": "Alessandro Sorniotti",
@@ -6027,6 +6819,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/koschel"
+        }
+      ]
+    },
+    {
+      "id": "alexander-grattan-gray-swan",
+      "name": "Alexander Grattan",
+      "publication_name": "Alexander Grattan",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
         }
       ]
     },
@@ -6372,6 +7195,39 @@
       ]
     },
     {
+      "id": "andy-zou-gray-swan",
+      "name": "Andy Zou",
+      "publication_name": "Andy Zou",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Carnegie Mellon University",
+        "Center for AI Safety",
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        }
+      ]
+    },
+    {
       "id": "aniketh-girish-imdea",
       "name": "Aniketh Girish",
       "publication_name": "Aniketh Girish",
@@ -6620,6 +7476,37 @@
       ]
     },
     {
+      "id": "ayla-croft-gray-swan",
+      "name": "Ayla Croft",
+      "publication_name": "Ayla Croft",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        }
+      ]
+    },
+    {
       "id": "baishakhi-ray-columbia",
       "name": "Baishakhi Ray",
       "publication_name": "Baishakhi Ray",
@@ -6740,6 +7627,39 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "bo-li-uiuc-uchicago",
+      "name": "Bo Li",
+      "publication_name": "Bo Li",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0447",
+      "institutions": [
+        "University of Chicago",
+        "University of Illinois Urbana-Champaign",
+        "VirtueAI"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
         }
       ]
     },
@@ -6927,6 +7847,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng"
+        }
+      ]
+    },
+    {
+      "id": "chen-lyu-sdnu",
+      "name": "Chen Lyu",
+      "publication_name": "Chen Lyu",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832243",
+      "institutions": [
+        "山东师范大学"
+      ],
+      "papers": [
+        "issta26-wei-linux-config"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-wei-linux-config",
+          "title": "Inferring 1-Minimal Trigger Configurations for Assessing Linux Kernel CVE Triggerability",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832243"
         }
       ]
     },
@@ -7365,37 +8316,6 @@
       ]
     },
     {
-      "id": "cristina-nita-rotaru",
-      "name": "Cristina Nita-Rotaru",
-      "publication_name": "Cristina Nita-Rotaru",
-      "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
-      "institutions": [
-        "Northeastern University"
-      ],
-      "papers": [
-        "usenix-sec26-syros-muzzle"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1,
-      "recent_papers": [
-        {
-          "id": "usenix-sec26-syros-muzzle",
-          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
-        }
-      ]
-    },
-    {
       "id": "damith-ranasinghe",
       "name": "Damith C. Ranasinghe",
       "publication_name": "Damith C. Ranasinghe",
@@ -7423,6 +8343,38 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/duong"
+        }
+      ]
+    },
+    {
+      "id": "dan-hendrycks-cais",
+      "name": "Dan Hendrycks",
+      "publication_name": "Dan Hendrycks",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Center for AI Safety",
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
         }
       ]
     },
@@ -7520,6 +8472,37 @@
       ]
     },
     {
+      "id": "daniele-antonioli-eurecom",
+      "name": "Daniele Antonioli",
+      "publication_name": "Daniele Antonioli",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.14722/ndss.2026.240121",
+      "institutions": [
+        "EURECOM"
+      ],
+      "papers": [
+        "ndss26-sacchetti-blerp"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ndss26-sacchetti-blerp",
+          "title": "BLERP: BLE Re-Pairing Attacks and Defenses",
+          "year": 2026,
+          "venue": "NDSS 2026",
+          "url": "https://doi.org/10.14722/ndss.2026.240121"
+        }
+      ]
+    },
+    {
       "id": "dario-pasquini",
       "name": "Dario Pasquini",
       "publication_name": "Dario Pasquini",
@@ -7547,6 +8530,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
+      "id": "darion-cassel-cmu",
+      "name": "Darion Cassel",
+      "publication_name": "Darion Cassel",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "Carnegie Mellon University"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+          "year": 2026,
+          "venue": "ASE 2026",
+          "url": "https://doi.org/10.1145/3832783.3837503"
         }
       ]
     },
@@ -8021,6 +9035,37 @@
       ]
     },
     {
+      "id": "eliot-jones-gray-swan",
+      "name": "Eliot Jones",
+      "publication_name": "Eliot Jones",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        }
+      ]
+    },
+    {
       "id": "enzhou-song-ieu",
       "name": "Enzhou Song",
       "publication_name": "Enzhou Song",
@@ -8145,16 +9190,16 @@
       ]
     },
     {
-      "id": "evan-rose-northeastern",
-      "name": "Evan Rose",
-      "publication_name": "Evan Rose",
+      "id": "evan-li-northeastern",
+      "name": "Evan Li",
+      "publication_name": "Evan Li",
       "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
+      "profile_source": "https://doi.org/10.14722/ndss.2026.230352",
       "institutions": [
         "Northeastern University"
       ],
       "papers": [
-        "usenix-sec26-syros-muzzle"
+        "ndss26-li-ace"
       ],
       "annual_scores": {
         "2026": {
@@ -8167,11 +9212,11 @@
       "verified_score": 1,
       "recent_papers": [
         {
-          "id": "usenix-sec26-syros-muzzle",
-          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
+          "id": "ndss26-li-ace",
+          "title": "ACE: A Security Architecture for LLM-Integrated App Systems",
           "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
+          "venue": "NDSS 2026",
+          "url": "https://doi.org/10.14722/ndss.2026.230352"
         }
       ]
     },
@@ -8358,6 +9403,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/klix"
+        }
+      ]
+    },
+    {
+      "id": "felix-morsbach-kit",
+      "name": "Felix Morsbach",
+      "publication_name": "Felix Morsbach",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3719027.3765062",
+      "institutions": [
+        "Karlsruhe Institute of Technology"
+      ],
+      "papers": [
+        "ccs25-todt-bfid"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ccs25-todt-bfid",
+          "title": "BFId: Identity Inference Attacks Utilizing Beamforming Feedback Information",
+          "year": 2025,
+          "venue": "ACM CCS 2025",
+          "url": "https://doi.org/10.1145/3719027.3765062"
         }
       ]
     },
@@ -8575,6 +9651,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "gangyan-zeng-njust",
+      "name": "Gangyan Zeng",
+      "publication_name": "Gangyan Zeng",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832243",
+      "institutions": [
+        "南京理工大学"
+      ],
+      "papers": [
+        "issta26-wei-linux-config"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-wei-linux-config",
+          "title": "Inferring 1-Minimal Trigger Configurations for Assessing Linux Kernel CVE Triggerability",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832243"
         }
       ]
     },
@@ -8854,6 +9961,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/huang-qiqing"
+        }
+      ]
+    },
+    {
+      "id": "guohao-li-oxford",
+      "name": "Guohao Li",
+      "publication_name": "Guohao Li",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0625",
+      "institutions": [
+        "University of Oxford"
+      ],
+      "papers": [
+        "neurips25-aichberger-mip-agent"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 0,
+          "ai": 1,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-aichberger-mip-agent",
+          "title": "MIP against Agent: Malicious Image Patches Hijacking Multimodal OS Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025",
+          "url": "https://doi.org/10.52202/085713-0625"
         }
       ]
     },
@@ -9634,6 +10772,38 @@
       ]
     },
     {
+      "id": "j-zico-kolter-cmu",
+      "name": "J. Zico Kolter",
+      "publication_name": "J. Zico Kolter",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Carnegie Mellon University",
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        }
+      ]
+    },
+    {
       "id": "jaeyoung-chung-snu",
       "name": "Jaeyoung Chung",
       "publication_name": "Jaeyoung Chung",
@@ -9692,6 +10862,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "jai-patel-aisi",
+      "name": "Jai Patel",
+      "publication_name": "Jai Patel",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "UK AI Security Institute"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
         }
       ]
     },
@@ -10566,6 +11767,37 @@
       ]
     },
     {
+      "id": "julian-todt-kit",
+      "name": "Julian Todt",
+      "publication_name": "Julian Todt",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3719027.3765062",
+      "institutions": [
+        "Karlsruhe Institute of Technology"
+      ],
+      "papers": [
+        "ccs25-todt-bfid"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ccs25-todt-bfid",
+          "title": "BFId: Identity Inference Attacks Utilizing Beamforming Feedback Information",
+          "year": 2025,
+          "venue": "ACM CCS 2025",
+          "url": "https://doi.org/10.1145/3719027.3765062"
+        }
+      ]
+    },
+    {
       "id": "jun-shao-zjgsu",
       "name": "Jun Shao",
       "publication_name": "Jun Shao",
@@ -10972,6 +12204,68 @@
       ]
     },
     {
+      "id": "kevin-cheang-berkeley",
+      "name": "Kevin Cheang",
+      "publication_name": "Kevin Cheang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "University of California, Berkeley"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+          "year": 2026,
+          "venue": "ASE 2026",
+          "url": "https://doi.org/10.1145/3832783.3837503"
+        }
+      ]
+    },
+    {
+      "id": "kevin-li-mcgill",
+      "name": "Kevin Li",
+      "publication_name": "Kevin Li",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832207",
+      "institutions": [
+        "McGill University"
+      ],
+      "papers": [
+        "issta26-huang-secretron"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-huang-secretron",
+          "title": "Checked-In Secret Detection: Strings Are All You Need",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832207"
+        }
+      ]
+    },
+    {
       "id": "konrad-hohentanner-aisec",
       "name": "Konrad Hohentanner",
       "publication_name": "Konrad Hohentanner",
@@ -11189,6 +12483,68 @@
       ]
     },
     {
+      "id": "lili-wei-mcgill",
+      "name": "Lili Wei",
+      "publication_name": "Lili Wei",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832207",
+      "institutions": [
+        "McGill University"
+      ],
+      "papers": [
+        "issta26-huang-secretron"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-huang-secretron",
+          "title": "Checked-In Secret Detection: Strings Are All You Need",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832207"
+        }
+      ]
+    },
+    {
+      "id": "limin-jia-cmu",
+      "name": "Limin Jia",
+      "publication_name": "Limin Jia",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "Carnegie Mellon University"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+          "year": 2026,
+          "venue": "ASE 2026",
+          "url": "https://doi.org/10.1145/3832783.3837503"
+        }
+      ]
+    },
+    {
       "id": "linard-arquint-eth",
       "name": "Linard Arquint",
       "publication_name": "Linard Arquint",
@@ -11371,6 +12727,38 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "lukas-aichberger-jku-oxford",
+      "name": "Lukas Aichberger",
+      "publication_name": "Lukas Aichberger",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0625",
+      "institutions": [
+        "Johannes Kepler University Linz",
+        "University of Oxford"
+      ],
+      "papers": [
+        "neurips25-aichberger-mip-agent"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 0,
+          "ai": 1,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-aichberger-mip-agent",
+          "title": "MIP against Agent: Malicious Image Patches Hijacking Multimodal OS Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025",
+          "url": "https://doi.org/10.52202/085713-0625"
         }
       ]
     },
@@ -11592,6 +12980,37 @@
       ]
     },
     {
+      "id": "mateusz-dziemian-gray-swan",
+      "name": "Mateusz Dziemian",
+      "publication_name": "Mateusz Dziemian",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        }
+      ]
+    },
+    {
       "id": "mathew-duong",
       "name": "Mathew Duong",
       "publication_name": "Mathew Duong",
@@ -11681,6 +13100,38 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "matt-fredrikson-cmu",
+      "name": "Matt Fredrikson",
+      "publication_name": "Matt Fredrikson",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Carnegie Mellon University",
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
         }
       ]
     },
@@ -11778,6 +13229,37 @@
       ]
     },
     {
+      "id": "maxwell-lin-gray-swan",
+      "name": "Maxwell Lin",
+      "publication_name": "Maxwell Lin",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        }
+      ]
+    },
+    {
       "id": "meng-wang-cispa",
       "name": "Meng Wang",
       "publication_name": "Meng Wang",
@@ -11868,6 +13350,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "micha-nowak-gray-swan",
+      "name": "Micha Nowak",
+      "publication_name": "Micha Nowak",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
         }
       ]
     },
@@ -12121,6 +13634,37 @@
       ]
     },
     {
+      "id": "min-chien-hsu-cmu",
+      "name": "Min-Chien Hsu",
+      "publication_name": "Min-Chien Hsu",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "Carnegie Mellon University"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+          "year": 2026,
+          "venue": "ASE 2026",
+          "url": "https://doi.org/10.1145/3832783.3837503"
+        }
+      ]
+    },
+    {
       "id": "ming-kang-scu",
       "name": "Ming Kang",
       "publication_name": "Ming Kang",
@@ -12307,6 +13851,37 @@
       ]
     },
     {
+      "id": "nate-burnikell-aisi",
+      "name": "Nate Burnikell",
+      "publication_name": "Nate Burnikell",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "UK AI Security Institute"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        }
+      ]
+    },
+    {
       "id": "neil-gong-duke",
       "name": "Neil Gong",
       "publication_name": "Neil Gong",
@@ -12396,6 +13971,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/nguyen-nguyen"
+        }
+      ]
+    },
+    {
+      "id": "nick-winter-gray-swan",
+      "name": "Nick Winter",
+      "publication_name": "Nick Winter",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
         }
       ]
     },
@@ -12551,6 +14157,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/vlummens"
+        }
+      ]
+    },
+    {
+      "id": "nuno-sabino-cmu",
+      "name": "Nuno Sabino",
+      "publication_name": "Nuno Sabino",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "Carnegie Mellon University"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+          "year": 2026,
+          "venue": "ASE 2026",
+          "url": "https://doi.org/10.1145/3832783.3837503"
         }
       ]
     },
@@ -12803,6 +14440,37 @@
       ]
     },
     {
+      "id": "peng-zhang-njust",
+      "name": "Peng Zhang",
+      "publication_name": "Peng Zhang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832243",
+      "institutions": [
+        "南京理工大学"
+      ],
+      "papers": [
+        "issta26-wei-linux-config"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-wei-linux-config",
+          "title": "Inferring 1-Minimal Trigger Configurations for Assessing Linux Kernel CVE Triggerability",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832243"
+        }
+      ]
+    },
+    {
       "id": "peng-zhou-shu",
       "name": "Peng Zhou",
       "publication_name": "Peng Zhou",
@@ -12892,6 +14560,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/pasquini"
+        }
+      ]
+    },
+    {
+      "id": "philip-torr-oxford",
+      "name": "Philip Torr",
+      "publication_name": "Philip Torr",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0625",
+      "institutions": [
+        "University of Oxford"
+      ],
+      "papers": [
+        "neurips25-aichberger-mip-agent"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 0,
+          "ai": 1,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-aichberger-mip-agent",
+          "title": "MIP against Agent: Malicious Image Patches Hijacking Multimodal OS Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025",
+          "url": "https://doi.org/10.52202/085713-0625"
         }
       ]
     },
@@ -13145,6 +14844,37 @@
       ]
     },
     {
+      "id": "qiyi-zhang-fudan",
+      "name": "Qiyi Zhang",
+      "publication_name": "Qiyi Zhang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3719027.3765199",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "ccs25-zhang-uabscan"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ccs25-zhang-uabscan",
+          "title": "Be Aware of What You Let Pass: Demystifying URL-based Authentication Bypass Vulnerability in Java Web Applications",
+          "year": 2025,
+          "venue": "ACM CCS 2025",
+          "url": "https://doi.org/10.1145/3719027.3765199"
+        }
+      ]
+    },
+    {
       "id": "rabimba-karanjai",
       "name": "Rabimba Karanjai",
       "publication_name": "Rabimba Karanjai",
@@ -13270,6 +15000,68 @@
       ]
     },
     {
+      "id": "robert-kirk-aisi",
+      "name": "Robert Kirk",
+      "publication_name": "Robert Kirk",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "UK AI Security Institute"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
+        }
+      ]
+    },
+    {
+      "id": "ronghao-ni-cmu",
+      "name": "Ronghao Ni",
+      "publication_name": "Ronghao Ni",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "Carnegie Mellon University"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+          "year": 2026,
+          "venue": "ASE 2026",
+          "url": "https://doi.org/10.1145/3832783.3837503"
+        }
+      ]
+    },
+    {
       "id": "rongyi-zhu-stony-brook",
       "name": "Rongyi Zhu",
       "publication_name": "Rongyi Zhu",
@@ -13359,6 +15151,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "ruben-martins-cmu",
+      "name": "Ruben Martins",
+      "publication_name": "Ruben Martins",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "Carnegie Mellon University"
+      ],
+      "papers": [
+        "ase26-ni-triage-nodejs"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+          "year": 2026,
+          "venue": "ASE 2026",
+          "url": "https://doi.org/10.1145/3832783.3837503"
         }
       ]
     },
@@ -13483,6 +15306,37 @@
           "year": 2026,
           "venue": "USENIX Security 2026",
           "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/xiao"
+        }
+      ]
+    },
+    {
+      "id": "ruizhe-jiang-ucsb",
+      "name": "Ruizhe Jiang",
+      "publication_name": "Ruizhe Jiang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0447",
+      "institutions": [
+        "University of California, Santa Barbara"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
         }
       ]
     },
@@ -14885,6 +16739,37 @@
       ]
     },
     {
+      "id": "thorsten-strufe-kit",
+      "name": "Thorsten Strufe",
+      "publication_name": "Thorsten Strufe",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3719027.3765062",
+      "institutions": [
+        "Karlsruhe Institute of Technology"
+      ],
+      "papers": [
+        "ccs25-todt-bfid"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ccs25-todt-bfid",
+          "title": "BFId: Identity Inference Attacks Utilizing Beamforming Feedback Information",
+          "year": 2025,
+          "venue": "ACM CCS 2025",
+          "url": "https://doi.org/10.1145/3719027.3765062"
+        }
+      ]
+    },
+    {
       "id": "tian-chen-fudan",
       "name": "Tian Chen",
       "publication_name": "Tian Chen",
@@ -15195,6 +17080,37 @@
       ]
     },
     {
+      "id": "tommaso-sacchetti-eurecom",
+      "name": "Tommaso Sacchetti",
+      "publication_name": "Tommaso Sacchetti",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.14722/ndss.2026.240121",
+      "institutions": [
+        "EURECOM"
+      ],
+      "papers": [
+        "ndss26-sacchetti-blerp"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ndss26-sacchetti-blerp",
+          "title": "BLERP: BLE Re-Pairing Attacks and Defenses",
+          "year": 2026,
+          "venue": "NDSS 2026",
+          "url": "https://doi.org/10.14722/ndss.2026.240121"
+        }
+      ]
+    },
+    {
       "id": "tong-bu-fudan",
       "name": "Tong Bu",
       "publication_name": "Tong Bu",
@@ -15289,6 +17205,37 @@
       ]
     },
     {
+      "id": "tongjie-wei-njust",
+      "name": "Tongjie Wei",
+      "publication_name": "Tongjie Wei",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832243",
+      "institutions": [
+        "南京理工大学"
+      ],
+      "papers": [
+        "issta26-wei-linux-config"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-wei-linux-config",
+          "title": "Inferring 1-Minimal Trigger Configurations for Assessing Linux Kernel CVE Triggerability",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832243"
+        }
+      ]
+    },
+    {
       "id": "tristan-hornetz",
       "name": "Tristan Hornetz",
       "publication_name": "Tristan Hornetz",
@@ -15320,6 +17267,37 @@
       ]
     },
     {
+      "id": "tushin-mallick-northeastern",
+      "name": "Tushin Mallick",
+      "publication_name": "Tushin Mallick",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.14722/ndss.2026.230352",
+      "institutions": [
+        "Northeastern University"
+      ],
+      "papers": [
+        "ndss26-li-ace"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ndss26-li-ace",
+          "title": "ACE: A Security Architecture for LLM-Integrated App Systems",
+          "year": 2026,
+          "venue": "NDSS 2026",
+          "url": "https://doi.org/10.14722/ndss.2026.230352"
+        }
+      ]
+    },
+    {
       "id": "umar-iqbal-wustl",
       "name": "Umar Iqbal",
       "publication_name": "Umar Iqbal",
@@ -15347,6 +17325,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "valent-nathanael-gray-swan",
+      "name": "Valent Nathanael",
+      "publication_name": "Valent Nathanael",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "Gray Swan AI"
+      ],
+      "papers": [
+        "neurips25-zou-agent-red-team-competition"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-2676"
         }
       ]
     },
@@ -15816,37 +17825,6 @@
       ]
     },
     {
-      "id": "william-robertson-northeastern",
-      "name": "William Robertson",
-      "publication_name": "William Robertson",
-      "homepage": "",
-      "profile_source": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
-      "institutions": [
-        "Northeastern University"
-      ],
-      "papers": [
-        "usenix-sec26-syros-muzzle"
-      ],
-      "annual_scores": {
-        "2026": {
-          "security": 1,
-          "software": 0,
-          "ai": 0,
-          "total": 1
-        }
-      },
-      "verified_score": 1,
-      "recent_papers": [
-        {
-          "id": "usenix-sec26-syros-muzzle",
-          "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks",
-          "year": 2026,
-          "venue": "USENIX Security 2026",
-          "url": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros"
-        }
-      ]
-    },
-    {
       "id": "xiao-han-usf",
       "name": "Xiao Han",
       "publication_name": "Xiao Han",
@@ -16220,6 +18198,37 @@
       ]
     },
     {
+      "id": "xupu-hu-njust",
+      "name": "Xupu Hu",
+      "publication_name": "Xupu Hu",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832243",
+      "institutions": [
+        "南京理工大学"
+      ],
+      "papers": [
+        "issta26-wei-linux-config"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-wei-linux-config",
+          "title": "Inferring 1-Minimal Trigger Configurations for Assessing Linux Kernel CVE Triggerability",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832243"
+        }
+      ]
+    },
+    {
       "id": "yang-liu-ntu",
       "name": "Yang Liu",
       "publication_name": "Yang Liu",
@@ -16464,6 +18473,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "yepang-liu-sustech",
+      "name": "Yepang Liu",
+      "publication_name": "Yepang Liu",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832207",
+      "institutions": [
+        "南方科技大学"
+      ],
+      "papers": [
+        "issta26-huang-secretron"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-huang-secretron",
+          "title": "Checked-In Secret Detection: Strings Are All You Need",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832207"
         }
       ]
     },
@@ -17089,6 +19129,37 @@
       ]
     },
     {
+      "id": "yu-yang-virtue-ai",
+      "name": "Yu Yang",
+      "publication_name": "Yu Yang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0447",
+      "institutions": [
+        "VirtueAI"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
+        }
+      ]
+    },
+    {
       "id": "yuan-tian-ucla",
       "name": "Yuan Tian",
       "publication_name": "Yuan Tian",
@@ -17275,6 +19346,37 @@
       ]
     },
     {
+      "id": "yuheng-tang-ucsb",
+      "name": "Yuheng Tang",
+      "publication_name": "Yuheng Tang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0447",
+      "institutions": [
+        "University of California, Santa Barbara"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
+        }
+      ]
+    },
+    {
       "id": "yuhui-wang-stony-brook",
       "name": "Yuhui Wang",
       "publication_name": "Yuhui Wang",
@@ -17457,6 +19559,38 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "yuzhou-nie-ucsb-virtue",
+      "name": "Yuzhou Nie",
+      "publication_name": "Yuzhou Nie",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0447",
+      "institutions": [
+        "University of California, Santa Barbara",
+        "VirtueAI"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
         }
       ]
     },
@@ -17706,6 +19840,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "zhengdong-huang-sustech",
+      "name": "Zhengdong Huang",
+      "publication_name": "Zhengdong Huang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832207",
+      "institutions": [
+        "南方科技大学"
+      ],
+      "papers": [
+        "issta26-huang-secretron"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-huang-secretron",
+          "title": "Checked-In Secret Detection: Strings Are All You Need",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832207"
         }
       ]
     },
@@ -18020,6 +20185,37 @@
       ]
     },
     {
+      "id": "zhiwen-hu-njust",
+      "name": "Zhiwen Hu",
+      "publication_name": "Zhiwen Hu",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3832243",
+      "institutions": [
+        "南京理工大学"
+      ],
+      "papers": [
+        "issta26-wei-linux-config"
+      ],
+      "annual_scores": {
+        "2026": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "issta26-wei-linux-config",
+          "title": "Inferring 1-Minimal Trigger Configurations for Assessing Linux Kernel CVE Triggerability",
+          "year": 2026,
+          "venue": "ISSTA 2026",
+          "url": "https://doi.org/10.1145/3832243"
+        }
+      ]
+    },
+    {
       "id": "zhou-yang-ualberta",
       "name": "Zhou Yang",
       "publication_name": "Zhou Yang",
@@ -18047,6 +20243,37 @@
           "year": 2026,
           "venue": "ISSTA 2026",
           "url": "https://arxiv.org/abs/2607.17619"
+        }
+      ]
+    },
+    {
+      "id": "zhun-wang-berkeley",
+      "name": "Zhun Wang",
+      "publication_name": "Zhun Wang",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.52202/085713-0447",
+      "institutions": [
+        "University of California, Berkeley"
+      ],
+      "papers": [
+        "neurips25-nie-secodeplt"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 0,
+          "software": 1,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+          "year": 2025,
+          "venue": "NeurIPS 2025 Datasets and Benchmarks",
+          "url": "https://doi.org/10.52202/085713-0447"
         }
       ]
     },
@@ -18109,6 +20336,37 @@
           "year": 2026,
           "venue": "IEEE S&P 2026",
           "url": "https://sp2026.ieee-security.org/accepted-papers.html"
+        }
+      ]
+    },
+    {
+      "id": "zihan-lin-fudan",
+      "name": "Zihan Lin",
+      "publication_name": "Zihan Lin",
+      "homepage": "",
+      "profile_source": "https://doi.org/10.1145/3719027.3765199",
+      "institutions": [
+        "复旦大学"
+      ],
+      "papers": [
+        "ccs25-zhang-uabscan"
+      ],
+      "annual_scores": {
+        "2025": {
+          "security": 1,
+          "software": 0,
+          "ai": 0,
+          "total": 1
+        }
+      },
+      "verified_score": 1,
+      "recent_papers": [
+        {
+          "id": "ccs25-zhang-uabscan",
+          "title": "Be Aware of What You Let Pass: Demystifying URL-based Authentication Bypass Vulnerability in Java Web Applications",
+          "year": 2025,
+          "venue": "ACM CCS 2025",
+          "url": "https://doi.org/10.1145/3719027.3765199"
         }
       ]
     },
@@ -18404,8 +20662,8 @@
           "id": "arxiv-2607-18063-adaptive-adversaries",
           "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.18063"
+          "venue": "Second Workshop on Agents in the Wild: Safety, Security, and Beyond (NeurIPS 2026)",
+          "url": "https://neurips.cc/virtual/2026/poster/139377"
         }
       ]
     },
@@ -18452,8 +20710,8 @@
           "id": "arxiv-2607-18063-adaptive-adversaries",
           "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.18063"
+          "venue": "Second Workshop on Agents in the Wild: Safety, Security, and Beyond (NeurIPS 2026)",
+          "url": "https://neurips.cc/virtual/2026/poster/139377"
         }
       ]
     },
@@ -18524,8 +20782,8 @@
           "id": "arxiv-2607-18063-adaptive-adversaries",
           "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.18063"
+          "venue": "Second Workshop on Agents in the Wild: Safety, Security, and Beyond (NeurIPS 2026)",
+          "url": "https://neurips.cc/virtual/2026/poster/139377"
         }
       ]
     },
@@ -18572,8 +20830,8 @@
           "id": "arxiv-2607-16487-fuzz-emup",
           "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.16487"
+          "venue": "IEEE HOST 2026",
+          "url": "https://doi.org/10.1109/HOST68814.2026.11604975"
         }
       ]
     },
@@ -18646,30 +20904,6 @@
           "year": 2026,
           "venue": "arXiv",
           "url": "https://arxiv.org/abs/2607.05120"
-        }
-      ]
-    },
-    {
-      "id": "jinqiu-yang-concordia",
-      "name": "Jinqiu Yang",
-      "publication_name": "Jinqiu Yang",
-      "homepage": "",
-      "profile_source": "https://arxiv.org/abs/2607.20759",
-      "institutions": [
-        "Concordia University"
-      ],
-      "papers": [
-        "arxiv-2607-20759-issuetrojanbench"
-      ],
-      "annual_scores": {},
-      "verified_score": 0,
-      "recent_papers": [
-        {
-          "id": "arxiv-2607-20759-issuetrojanbench",
-          "title": "IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests",
-          "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.20759"
         }
       ]
     },
@@ -18813,8 +21047,8 @@
           "id": "arxiv-2607-16487-fuzz-emup",
           "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.16487"
+          "venue": "IEEE HOST 2026",
+          "url": "https://doi.org/10.1109/HOST68814.2026.11604975"
         }
       ]
     },
@@ -19173,8 +21407,8 @@
           "id": "arxiv-2607-16487-fuzz-emup",
           "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.16487"
+          "venue": "IEEE HOST 2026",
+          "url": "https://doi.org/10.1109/HOST68814.2026.11604975"
         }
       ]
     },
@@ -19245,8 +21479,8 @@
           "id": "arxiv-2607-16487-fuzz-emup",
           "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.16487"
+          "venue": "IEEE HOST 2026",
+          "url": "https://doi.org/10.1109/HOST68814.2026.11604975"
         }
       ]
     },
@@ -19269,8 +21503,8 @@
           "id": "arxiv-2607-16487-fuzz-emup",
           "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.16487"
+          "venue": "IEEE HOST 2026",
+          "url": "https://doi.org/10.1109/HOST68814.2026.11604975"
         }
       ]
     },
@@ -19293,8 +21527,8 @@
           "id": "arxiv-2607-16487-fuzz-emup",
           "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
           "year": 2026,
-          "venue": "arXiv",
-          "url": "https://arxiv.org/abs/2607.16487"
+          "venue": "IEEE HOST 2026",
+          "url": "https://doi.org/10.1109/HOST68814.2026.11604975"
         }
       ]
     }
@@ -19398,6 +21632,40 @@
           "id": "usenix-sec25-beer-taptrap",
           "year": 2025,
           "venue_group": "security"
+        }
+      ],
+      "weight": 2
+    },
+    {
+      "source": "uc-berkeley",
+      "target": "university-california-santa-barbara",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        },
+        {
+          "id": "usenix-sec26-kim-agentic",
+          "year": 2026,
+          "venue_group": "security"
+        }
+      ],
+      "weight": 2
+    },
+    {
+      "source": "uk-ai-security-institute",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
+        },
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
         }
       ],
       "weight": 2
@@ -19547,6 +21815,30 @@
       "weight": 1
     },
     {
+      "source": "athanor-ai",
+      "target": "carnegie-mellon-university",
+      "papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "athanor-ai",
+      "target": "uc-berkeley",
+      "papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "beijing-institute-technology",
       "target": "university-edinburgh",
       "papers": [
@@ -19680,6 +21972,30 @@
     },
     {
       "source": "carnegie-mellon-university",
+      "target": "center-ai-safety",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "carnegie-mellon-university",
+      "target": "gray-swan-ai",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "carnegie-mellon-university",
       "target": "ruhr-university-bochum",
       "papers": [
         {
@@ -19698,6 +22014,42 @@
           "id": "ieee-sp26-wang-transient-architectural-execution",
           "year": 2026,
           "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "carnegie-mellon-university",
+      "target": "uc-berkeley",
+      "papers": [
+        {
+          "id": "ase26-ni-triage-nodejs",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "carnegie-mellon-university",
+      "target": "uk-ai-security-institute",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "carnegie-mellon-university",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
         }
       ],
       "weight": 1
@@ -19769,6 +22121,42 @@
         {
           "id": "arxiv-2607-26719-lily",
           "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "center-ai-safety",
+      "target": "gray-swan-ai",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "center-ai-safety",
+      "target": "uk-ai-security-institute",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "center-ai-safety",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
           "venue_group": "software"
         }
       ],
@@ -19902,6 +22290,30 @@
           "id": "ieee-sp26-chen-compiler-backdoor",
           "year": 2026,
           "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "concordia-university",
+      "target": "mcgill-university",
+      "papers": [
+        {
+          "id": "issta26-huang-secretron",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "concordia-university",
+      "target": "southern-university-science-technology",
+      "papers": [
+        {
+          "id": "issta26-huang-secretron",
+          "year": 2026,
+          "venue_group": "software"
         }
       ],
       "weight": 1
@@ -20214,6 +22626,30 @@
           "id": "ieee-sp26-ersoy-dark-patterns",
           "year": 2026,
           "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "gray-swan-ai",
+      "target": "uk-ai-security-institute",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "gray-swan-ai",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-zou-agent-red-team-competition",
+          "year": 2025,
+          "venue_group": "software"
         }
       ],
       "weight": 1
@@ -20807,6 +23243,18 @@
       "weight": 1
     },
     {
+      "source": "johannes-kepler-university-linz",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-aichberger-mip-agent",
+          "year": 2025,
+          "venue_group": "ai"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "kent-state-university",
       "target": "paypal",
       "papers": [
@@ -20910,6 +23358,18 @@
           "id": "arxiv-2607-05120-agent-data-injection",
           "year": 2026,
           "venue_group": null
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "mcgill-university",
+      "target": "southern-university-science-technology",
+      "papers": [
+        {
+          "id": "issta26-huang-secretron",
+          "year": 2026,
+          "venue_group": "software"
         }
       ],
       "weight": 1
@@ -21052,6 +23512,18 @@
       "papers": [
         {
           "id": "issta26-chen-insecure-memory",
+          "year": 2026,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "nanjing-university-science-technology",
+      "target": "shandong-normal-university",
+      "papers": [
+        {
+          "id": "issta26-wei-linux-config",
           "year": 2026,
           "venue_group": "software"
         }
@@ -21588,6 +24060,30 @@
     },
     {
       "source": "uc-berkeley",
+      "target": "uiuc",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uc-berkeley",
+      "target": "uk-ai-security-institute",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uc-berkeley",
       "target": "unc-chapel-hill",
       "papers": [
         {
@@ -21600,12 +24096,36 @@
     },
     {
       "source": "uc-berkeley",
-      "target": "university-california-santa-barbara",
+      "target": "university-chicago",
       "papers": [
         {
-          "id": "usenix-sec26-kim-agentic",
-          "year": 2026,
-          "venue_group": "security"
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uc-berkeley",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uc-berkeley",
+      "target": "virtue-ai",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
         }
       ],
       "weight": 1
@@ -21635,6 +24155,102 @@
       "weight": 1
     },
     {
+      "source": "uiuc",
+      "target": "uk-ai-security-institute",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uiuc",
+      "target": "university-california-santa-barbara",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uiuc",
+      "target": "university-chicago",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uiuc",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uiuc",
+      "target": "virtue-ai",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uk-ai-security-institute",
+      "target": "university-california-santa-barbara",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uk-ai-security-institute",
+      "target": "university-chicago",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "uk-ai-security-institute",
+      "target": "virtue-ai",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "university-california-irvine",
       "target": "university-washington",
       "papers": [
@@ -21659,6 +24275,66 @@
       "weight": 1
     },
     {
+      "source": "university-california-santa-barbara",
+      "target": "university-chicago",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "university-california-santa-barbara",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "university-california-santa-barbara",
+      "target": "virtue-ai",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "university-chicago",
+      "target": "university-oxford",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "university-chicago",
+      "target": "virtue-ai",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
+        }
+      ],
+      "weight": 1
+    },
+    {
       "source": "university-of-birmingham",
       "target": "vrije-universiteit-amsterdam",
       "papers": [
@@ -21678,6 +24354,18 @@
           "id": "ieee-sp26-zhang-ragorigin",
           "year": 2026,
           "venue_group": "security"
+        }
+      ],
+      "weight": 1
+    },
+    {
+      "source": "university-oxford",
+      "target": "virtue-ai",
+      "papers": [
+        {
+          "id": "neurips25-nie-secodeplt",
+          "year": 2025,
+          "venue_group": "software"
         }
       ],
       "weight": 1
@@ -21744,6 +24432,239 @@
     }
   ],
   "publications": [
+    {
+      "id": "neurips25-zou-agent-red-team-competition",
+      "title": "Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition",
+      "year": 2025,
+      "venue": "NeurIPS 2025 Datasets and Benchmarks",
+      "venue_group": "software",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.52202/085713-2676",
+      "institutions": [
+        "gray-swan-ai",
+        "uk-ai-security-institute",
+        "carnegie-mellon-university",
+        "university-oxford",
+        "center-ai-safety"
+      ],
+      "authors": [
+        "andy-zou-gray-swan",
+        "maxwell-lin-gray-swan",
+        "eliot-jones-gray-swan",
+        "micha-nowak-gray-swan",
+        "mateusz-dziemian-gray-swan",
+        "nick-winter-gray-swan",
+        "alexander-grattan-gray-swan",
+        "valent-nathanael-gray-swan",
+        "ayla-croft-gray-swan",
+        "xander-davies-aisi-oxford",
+        "jai-patel-aisi",
+        "robert-kirk-aisi",
+        "nate-burnikell-aisi",
+        "yarin-gal-oxford",
+        "dan-hendrycks-cais",
+        "j-zico-kolter-cmu",
+        "matt-fredrikson-cmu"
+      ]
+    },
+    {
+      "id": "neurips25-nie-secodeplt",
+      "title": "SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents",
+      "year": 2025,
+      "venue": "NeurIPS 2025 Datasets and Benchmarks",
+      "venue_group": "software",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.52202/085713-0447",
+      "institutions": [
+        "university-california-santa-barbara",
+        "uc-berkeley",
+        "virtue-ai",
+        "uiuc",
+        "university-chicago",
+        "university-oxford",
+        "uk-ai-security-institute"
+      ],
+      "authors": [
+        "yuzhou-nie-ucsb-virtue",
+        "zhun-wang-berkeley",
+        "yu-yang-virtue-ai",
+        "ruizhe-jiang-ucsb",
+        "yuheng-tang-ucsb",
+        "xander-davies-aisi-oxford",
+        "yarin-gal-oxford",
+        "bo-li-uiuc-uchicago",
+        "wenbo-guo-ntu",
+        "dawn-song"
+      ]
+    },
+    {
+      "id": "neurips25-aichberger-mip-agent",
+      "title": "MIP against Agent: Malicious Image Patches Hijacking Multimodal OS Agents",
+      "year": 2025,
+      "venue": "NeurIPS 2025",
+      "venue_group": "ai",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.52202/085713-0625",
+      "institutions": [
+        "johannes-kepler-university-linz",
+        "university-oxford"
+      ],
+      "authors": [
+        "lukas-aichberger-jku-oxford",
+        "alasdair-paren-oxford",
+        "guohao-li-oxford",
+        "philip-torr-oxford",
+        "yarin-gal-oxford",
+        "adel-bibi-oxford"
+      ]
+    },
+    {
+      "id": "ase26-ni-triage-nodejs",
+      "title": "Learning to Triage Vulnerability Reports from Program Analysis: An Empirical Study in Node.js",
+      "year": 2026,
+      "venue": "ASE 2026",
+      "venue_group": "software",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.1145/3832783.3837503",
+      "institutions": [
+        "carnegie-mellon-university",
+        "athanor-ai",
+        "uc-berkeley"
+      ],
+      "authors": [
+        "ronghao-ni-cmu",
+        "aidan-zh-yang-athanor",
+        "min-chien-hsu-cmu",
+        "nuno-sabino-cmu",
+        "limin-jia-cmu",
+        "ruben-martins-cmu",
+        "darion-cassel-cmu",
+        "kevin-cheang-berkeley"
+      ]
+    },
+    {
+      "id": "issta26-wei-linux-config",
+      "title": "Inferring 1-Minimal Trigger Configurations for Assessing Linux Kernel CVE Triggerability",
+      "year": 2026,
+      "venue": "ISSTA 2026",
+      "venue_group": "software",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.1145/3832243",
+      "institutions": [
+        "nanjing-university-science-technology",
+        "shandong-normal-university"
+      ],
+      "authors": [
+        "tongjie-wei-njust",
+        "peng-zhang-njust",
+        "zhiwen-hu-njust",
+        "xupu-hu-njust",
+        "chen-lyu-sdnu",
+        "gangyan-zeng-njust"
+      ]
+    },
+    {
+      "id": "issta26-huang-secretron",
+      "title": "Checked-In Secret Detection: Strings Are All You Need",
+      "year": 2026,
+      "venue": "ISSTA 2026",
+      "venue_group": "software",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.1145/3832207",
+      "institutions": [
+        "southern-university-science-technology",
+        "mcgill-university",
+        "concordia-university"
+      ],
+      "authors": [
+        "zhengdong-huang-sustech",
+        "kevin-li-mcgill",
+        "jinqiu-yang-concordia",
+        "yepang-liu-sustech",
+        "lili-wei-mcgill"
+      ]
+    },
+    {
+      "id": "ccs25-zhang-uabscan",
+      "title": "Be Aware of What You Let Pass: Demystifying URL-based Authentication Bypass Vulnerability in Java Web Applications",
+      "year": 2025,
+      "venue": "ACM CCS 2025",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.1145/3719027.3765199",
+      "institutions": [
+        "fudan-university"
+      ],
+      "authors": [
+        "qiyi-zhang-fudan",
+        "fengyu-liu-fudan",
+        "zihan-lin-fudan",
+        "yuan-zhang-fudan"
+      ]
+    },
+    {
+      "id": "ndss26-sacchetti-blerp",
+      "title": "BLERP: BLE Re-Pairing Attacks and Defenses",
+      "year": 2026,
+      "venue": "NDSS 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.14722/ndss.2026.240121",
+      "institutions": [
+        "eurecom"
+      ],
+      "authors": [
+        "tommaso-sacchetti-eurecom",
+        "daniele-antonioli-eurecom"
+      ]
+    },
+    {
+      "id": "ccs25-todt-bfid",
+      "title": "BFId: Identity Inference Attacks Utilizing Beamforming Feedback Information",
+      "year": 2025,
+      "venue": "ACM CCS 2025",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.1145/3719027.3765062",
+      "institutions": [
+        "karlsruhe-institute-technology"
+      ],
+      "authors": [
+        "julian-todt-kit",
+        "felix-morsbach-kit",
+        "thorsten-strufe-kit"
+      ]
+    },
+    {
+      "id": "ndss26-li-ace",
+      "title": "ACE: A Security Architecture for LLM-Integrated App Systems",
+      "year": 2026,
+      "venue": "NDSS 2026",
+      "venue_group": "security",
+      "status": "accepted",
+      "first_seen": "2026-09-29",
+      "url": "https://doi.org/10.14722/ndss.2026.230352",
+      "institutions": [
+        "northeastern-university"
+      ],
+      "authors": [
+        "evan-li-northeastern",
+        "tushin-mallick-northeastern",
+        "evan-rose-northeastern",
+        "william-robertson-northeastern",
+        "alina-oprea",
+        "cristina-nita-rotaru"
+      ]
+    },
     {
       "id": "ieee-sp26-wang-transient-architectural-execution",
       "title": "Transient Architectural Execution: From Weird Gates to Weird Programs",
@@ -23615,11 +26536,11 @@
       "id": "arxiv-2607-16487-fuzz-emup",
       "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
       "year": 2026,
-      "venue": "arXiv",
+      "venue": "IEEE HOST 2026",
       "venue_group": null,
-      "status": "preprint-unreviewed",
+      "status": "accepted",
       "first_seen": "2026-07-21",
-      "url": "https://arxiv.org/abs/2607.16487",
+      "url": "https://doi.org/10.1109/HOST68814.2026.11604975",
       "institutions": [
         "clemson-university",
         "texas-tech-university",
@@ -23681,11 +26602,11 @@
       "id": "arxiv-2607-18063-adaptive-adversaries",
       "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
       "year": 2026,
-      "venue": "arXiv",
+      "venue": "Second Workshop on Agents in the Wild: Safety, Security, and Beyond (NeurIPS 2026)",
       "venue_group": null,
-      "status": "preprint-unreviewed",
+      "status": "workshop",
       "first_seen": "2026-07-21",
-      "url": "https://arxiv.org/abs/2607.18063",
+      "url": "https://neurips.cc/virtual/2026/poster/139377",
       "institutions": [
         "lambda"
       ],

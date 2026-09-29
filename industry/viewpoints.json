@@ -758,5 +758,100 @@
     "evidence_basis": "NIST 最终发布的 IR 8587、公开征求意见与联邦网络安全指南制定流程。",
     "limitations": "结果导向表述不会自动解决协议兼容、旧系统迁移和撤销传播延迟；AI 与后量子部分保持高层，具体算法、时间表和互操作测试需要其他标准补充。",
     "commercial_interest": "NIST 为美国政府标准机构，无直接商业产品推广；指南可能影响身份供应商和联邦采购要求。"
+  },
+  {
+    "id": "google-hardening-code-pipelines-2026",
+    "title": "Google Threat Intelligence：以五层防线加固代码与 CI/CD 流水线",
+    "source": "Google Threat Intelligence / Mandiant",
+    "source_type": "威胁情报与安全咨询",
+    "content_type": "软件供应链加固指南",
+    "published_at": "2026-09-24",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/hardening-code-pipelines-and-ci-cd-infrastructure",
+    "topics": ["软件供应链", "CI/CD", "开发端点", "最小权限"],
+    "summary": "指南把开发端点、源码与依赖、CI/CD、制品分发和线上环境连成一条防线，强调不可变引用、一次性 runner、即时凭证与持续策略校验。",
+    "highlights": [
+      "第三方 action 与镜像应固定到完整 commit 或内容摘要，避免可变标签在可信名称下替换制品。",
+      "CI/CD runner 应单次使用并在任务后销毁，自托管 runner 还应限制出站目的地，缩小跨任务污染和外传空间。",
+      "高权限凭证只在需要时按任务注入，线上配置持续对照版本化 IaC，并把端点、仓库、流水线和运行环境的证据联动调查。"
+    ],
+    "evidence_basis": "Mandiant 事件响应、Google Threat Intelligence 对近期软件供应链活动的观察，以及团队整理的纵深防御架构建议。",
+    "limitations": "文章没有公开统一样本集、各类攻击的发生率或每项控制的独立效果量；部分建议属于经验性架构指导，需要按组织环境验证成本和兼容性。",
+    "commercial_interest": "发布方同时提供 Google Cloud、Mandiant 咨询、Model Armor、CSPM/CNAPP 等产品与服务。"
+  },
+  {
+    "id": "talos-closedquorum-autonomous-ai-c2-2026",
+    "title": "Cisco Talos：CLOSEDQUORUM 把商业 LLM 接口变成自治 C2 决策层",
+    "source": "Cisco Talos",
+    "source_type": "威胁情报与恶意软件研究",
+    "content_type": "恶意软件静态分析",
+    "published_at": "2026-09-22",
+    "url": "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/",
+    "topics": ["自治恶意软件", "LLM", "C2", "凭证窃取"],
+    "summary": "一个 Go/Windows 样本顺序查询四家商业 LLM，以多数票选择窃取、注入或持久化动作，把战术决策从专用 C2 指令转给模型。",
+    "highlights": [
+      "样本可查询 DeepSeek、Qwen、Mistral 和 Gemini，并把结构化 JSON 决策映射到 LSASS、浏览器凭证、钱包、进程注入和持久化模块。",
+      "模型结果按多数票聚合，平票由固定提供商顺序决定；Discord webhook 接收决策、推理和加密外传数据。",
+      "检测应组合异常 AI 提供商流量、LSASS 访问、进程注入、WMI 持久化和 Discord 通信，单独封锁模型域名会影响大量合法业务。"
+    ],
+    "evidence_basis": "Cisco Talos CAIRN 项目对 16.4 MB Go/Windows 二进制的静态逆向、开发构建痕迹、论坛关联与能力模块分析。",
+    "limitations": "公开分发样本包含占位 API key 和 webhook，研究者没有观察到完整端到端执行，也没有确认野外部署；开发者与论坛身份关联仍属于基于制品的归因。",
+    "commercial_interest": "发布方属于 Cisco，并发布 CAIRN 研究工具，同时提供 Talos 威胁情报、安全产品与事件响应服务。"
+  },
+  {
+    "id": "unit42-aws-compromised-key-quarantine-2026",
+    "title": "Unit 42：AWS 暴露密钥可在十秒级自动进入隔离策略",
+    "source": "Palo Alto Networks Unit 42",
+    "source_type": "云安全研究",
+    "content_type": "凭证暴露实测与检测工程",
+    "published_at": "2026-09-21",
+    "url": "https://unit42.paloaltonetworks.com/detecting-exposed-aws-iam-credentials/",
+    "topics": ["AWS IAM", "秘密扫描", "凭证隔离", "CloudTrail"],
+    "summary": "受控测试显示公开 GitHub 中的 AWS access key 被发现后，AWS 在约十秒内附加 AWSCompromisedKeyQuarantineV3，并触发多条通知与调查线索。",
+    "highlights": [
+      "公开推送发生 10 秒后，CloudTrail 记录 `AttachUserPolicy`；再过 1 秒 GitHub 发出通知，AWS Health、邮件和 Support case 随后出现。",
+      "隔离策略用显式 Deny 覆盖原有 Allow，并随攻击手法从 EC2、IAM、S3 扩展到 Bedrock、SageMaker、CodeBuild 等服务。",
+      "安全团队可监控策略 ARN、GitHub validity-check 的 ASN 与 user agent，并在隔离后继续撤销、轮换和追查密钥使用。"
+    ],
+    "evidence_basis": "Unit 42 对一次公开 GitHub 暴露的时间线实测、CloudTrail 管理事件，以及 AWSCompromisedKeyQuarantine 历史版本和权限差异分析。",
+    "limitations": "这是单次受控测试，扫描延迟会受推送规模、仓库和通知渠道影响；策略只拒绝列出的高风险动作，不能替代停用密钥、轮换和取证。",
+    "commercial_interest": "发布方属于 Palo Alto Networks，并推广 Cortex Cloud、Idira PAM、Unit 42 评估与事件响应服务。"
+  },
+  {
+    "id": "anthropic-threat-intelligence-september-2026",
+    "title": "Anthropic：AI 滥用从问答辅助扩展到攻击链编排",
+    "source": "Anthropic Threat Intelligence",
+    "source_type": "模型平台威胁情报",
+    "content_type": "平台滥用趋势报告",
+    "published_at": "2026-09-10",
+    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+    "topics": ["AI 滥用", "网络攻击", "多智能体", "非法蒸馏"],
+    "summary": "报告汇总八个月内处置的七类滥用案例，认为网络行动中的 AI 已从内容辅助走向侦察、利用和外传编排，同时扩展到监控、影响行动、武器和模型蒸馏。",
+    "highlights": [
+      "网络案例覆盖 2025 年 12 月至 2026 年 8 月；多智能体框架执行攻击链多个步骤，人工仍选择目标并检查外传。",
+      "一名攻击者对约 30 家 AI 公司重复利用同类沙箱提示注入路径，目标包括生产 API key 和预发布模型，但没有取得 Anthropic 内部系统访问。",
+      "报告称 2026 年 7 月 14 天内观察到归因于 DeepSeek 的 1,210 万次蒸馏交换，并描述 Zhipu 以大量欺诈账户清洗推理轨迹的活动。"
+    ],
+    "evidence_basis": "Anthropic 平台遥测、账户与会话调查、被处置活动、IOC、合作方共享和内部 Generative Threat Group 归因。",
+    "limitations": "案例经过显著性和平台可见性筛选，无法推算所有 AI 滥用的发生率；速度、规模与深度的 uplift 含调查判断，完整原始遥测和跨平台证据未公开。",
+    "commercial_interest": "发布方开发 Claude 模型并运营其 API，报告同时用于说明平台处置和安全控制能力。"
+  },
+  {
+    "id": "openai-path-to-astra-cyber-critical-2026",
+    "title": "OpenAI：Astra 达到临界网络能力后采用分层访问与全轨迹监测",
+    "source": "OpenAI",
+    "source_type": "前沿模型开发机构",
+    "content_type": "模型能力与安全评估",
+    "published_at": "2026-09-01",
+    "url": "https://openai.com/index/path-to-astra/",
+    "topics": ["网络能力", "零日漏洞", "模型监测", "分层访问"],
+    "summary": "OpenAI 按 Preparedness Framework 将 Astra 评为 Critical cybersecurity capability，并说明内部开发隔离、误用防护、全轨迹监测和受限高级访问安排。",
+    "highlights": [
+      "Astra 在公开 ExploitBench 得分 100%，在 20 个近期 V8 漏洞的内部集上以更少 token 达到高于 GPT-5.6 Sol 的任意代码执行率。",
+      "专家评估中，模型形成浏览器沙箱逃逸和操作系统本地提权链，并在一条利用链中发现两个正在协调披露的零日。",
+      "网络越狱评测拒绝率从 GPT-5.6 Sol 的 59% 提升到 91.5%；高级网络工作先面向少量测试者，再通过 Daybreak Blue 扩展防御使用。"
+    ],
+    "evidence_basis": "OpenAI 的公开与内部基准、专家主导的浏览器和操作系统评估、红队测试以及 Preparedness Framework 分级。",
+    "limitations": "内部漏洞集、目标系统和完整轨迹未公开，零日尚在披露，91.5% 拒绝率依赖私有攻击集和判定口径；结果由模型开发方自行报告。",
+    "commercial_interest": "发布方开发并提供 GPT-6 Astra 与 Daybreak Blue，安全结论直接影响模型发布、访问和商业采用。"
   }
 ]

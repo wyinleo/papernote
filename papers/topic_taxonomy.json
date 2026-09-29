@@ -363,7 +363,11 @@
     "latex-source": {"label": "LaTeX 源文件", "facet": "object"},
     "source-sanitization": {"label": "源文件净化", "facet": "method"},
     "microarchitecture": {"label": "微架构", "facet": "object"},
-    "network-measurement": {"label": "网络测量", "facet": "method"}
+    "network-measurement": {"label": "网络测量", "facet": "method"},
+    "bluetooth-low-energy": {"label": "低功耗蓝牙", "facet": "object"},
+    "hardcoded-secret": {"label": "硬编码秘密", "facet": "problem"},
+    "vulnerability-triage": {"label": "漏洞告警分诊", "facet": "method"},
+    "adversarial-patch": {"label": "对抗图像补丁", "facet": "problem"}
   },
   "primary_domain_overrides": {
     "usenix-sec26-kim-agentic": "ai-security",
@@ -463,6 +467,16 @@
     "ieee-sp26-reittinger-passkey-field-study": "identity-privacy",
     "ieee-sp26-he-chinese-smart-home-privacy": "identity-privacy",
     "ieee-sp26-li-sator": "network-communication-security",
-    "ieee-sp26-pennekamp-hidden-secrets-arxiv": "software-application-security"
+    "ieee-sp26-pennekamp-hidden-secrets-arxiv": "software-application-security",
+    "ccs25-todt-bfid": "identity-privacy",
+    "ccs25-zhang-uabscan": "software-application-security",
+    "ndss26-li-ace": "ai-security",
+    "ndss26-sacchetti-blerp": "mobile-iot-security",
+    "issta26-wei-linux-config": "systems-hardware-security",
+    "issta26-huang-secretron": "software-application-security",
+    "ase26-ni-triage-nodejs": "software-application-security",
+    "neurips25-zou-agent-red-team-competition": "ai-security",
+    "neurips25-nie-secodeplt": "ai-security",
+    "neurips25-aichberger-mip-agent": "ai-security"
   }
 }
