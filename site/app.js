@@ -139,6 +139,7 @@
       ["主领域", data.counts.themes],
       ["学术单位", data.counts.institutions || 0],
       ["行业观点", data.counts.viewpoints],
+      ["累计访问量", data.counts.visits ?? "—"],
     ];
     elements.stats.innerHTML = stats.map(([label, value]) =>
       `<div class="stat"><dt>${label}</dt><dd>${value}</dd></div>`

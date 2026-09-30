@@ -549,7 +549,7 @@ footer {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   margin: 26px 0 0;
   border-top: 1px solid rgba(255, 253, 247, .24);
 }
@@ -660,5 +660,3 @@ footer {
 .easycatch h3 { color: var(--teal); font-size: 15px; letter-spacing: .02em; }
 .easycatch p + p { margin-top: 12px; }
 @media (max-width: 700px) { .easycatch { padding: 16px; } }
-
-.traffic-chart { display: block; width: 100%; max-width: 900px; height: auto; margin: 24px auto 0; }

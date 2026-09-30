@@ -777,6 +777,8 @@ def write_site_data(payload: dict[str, Any], output: Path) -> dict[str, int]:
 
     academic = {key: value for key, value in payload["academic"].items() if key != "generated_at"}
     catalog = {**payload, "counts": {**payload["counts"], "institutions": len(academic["institutions"])}}
+    history = json.loads((ROOT / "assets" / "traffic-history.json").read_text(encoding="utf-8"))
+    catalog["counts"]["visits"] = sum(history.values())
     catalog["academic"] = {key: academic[key] for key in ("coverage", "categories", "years")}
     catalog["scholar_names"] = [
         {key: scholar[key] for key in ("id", "name", "publication_name")}
@@ -824,7 +826,6 @@ def main() -> None:
         encoding="utf-8",
     )
     sizes = write_site_data(payload, args.output)
-    (args.output.parent / "traffic.svg").write_bytes((ROOT / "assets" / "traffic.svg").read_bytes())
     print("Data bytes: " + ", ".join(f"{key}={value}" for key, value in sizes.items()))
     print(
         f"Built {args.output.relative_to(ROOT)}: "
