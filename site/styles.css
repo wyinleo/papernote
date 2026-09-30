@@ -660,3 +660,5 @@ footer {
 .easycatch h3 { color: var(--teal); font-size: 15px; letter-spacing: .02em; }
 .easycatch p + p { margin-top: 12px; }
 @media (max-width: 700px) { .easycatch { padding: 16px; } }
+
+.traffic-chart { display: block; width: 100%; max-width: 900px; height: auto; margin: 24px auto 0; }

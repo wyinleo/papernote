@@ -45,10 +45,11 @@ def fetch_stats(
     token: str,
     today: dt.date,
     *,
+    start: dt.date | None = None,
     urlopen=urllib.request.urlopen,
     sleep=time.sleep,
 ) -> dict:
-    start = today - dt.timedelta(days=CHART_DAYS - 1)
+    start = start or today - dt.timedelta(days=CHART_DAYS - 1)
     end = today + dt.timedelta(days=1)
     query = urllib.parse.urlencode(
         {
@@ -90,19 +91,28 @@ def fetch_stats(
     raise AssertionError("unreachable")
 
 
-def daily_series(payload: dict, today: dt.date) -> list[tuple[dt.date, int]]:
-    start = today - dt.timedelta(days=CHART_DAYS - 1)
+def daily_series(payload: dict, today: dt.date, start: dt.date | None = None) -> list[tuple[dt.date, int]]:
+    start = start or today - dt.timedelta(days=CHART_DAYS - 1)
     values: dict[dt.date, int] = {}
-    for item in payload.get("stats", []):
-        day_text = item.get("day")
-        if not day_text:
-            continue
-        day = dt.date.fromisoformat(day_text[:10])
-        values[day] = int(item.get("daily") or sum(item.get("hourly") or []))
+    for item in payload["stats"]:
+        day = dt.date.fromisoformat(item["day"][:10])
+        value = item.get("daily")
+        values[day] = int(value if value is not None else sum(item.get("hourly") or []))
     return [
         (start + dt.timedelta(days=offset), values.get(start + dt.timedelta(days=offset), 0))
-        for offset in range(CHART_DAYS)
+        for offset in range((today - start).days + 1)
     ]
+
+
+def cumulative_series(history: dict[str, int]) -> list[tuple[dt.date, int]]:
+    total = 0
+    series = []
+    for day, count in sorted(history.items()):
+        if count < 0:
+            raise ValueError("Daily traffic must be non-negative")
+        total += count
+        series.append((dt.date.fromisoformat(day), total))
+    return series
 
 
 def render_svg(series: list[tuple[dt.date, int]], updated_at: dt.datetime) -> str:
@@ -123,7 +133,7 @@ def render_svg(series: list[tuple[dt.date, int]], updated_at: dt.datetime) -> st
         + line_points
         + f" {LEFT + plot_width},{TOP + plot_height}"
     )
-    total = sum(values)
+    total = values[-1] if values else 0
     start_label = series[0][0].strftime("%m-%d")
     middle_label = series[len(series) // 2][0].strftime("%m-%d")
     end_label = series[-1][0].strftime("%m-%d")
@@ -143,11 +153,11 @@ def render_svg(series: list[tuple[dt.date, int]], updated_at: dt.datetime) -> st
         )
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-labelledby="title desc">
-  <title id="title">papernote 最近 30 天访问趋势</title>
-  <desc id="desc">过去 30 天共 {total} 次访问，单日最高 {max(values, default=0)} 次。</desc>
+  <title id="title">papernote 累计访问趋势</title>
+  <desc id="desc">自 {series[0][0].isoformat()} 起累计 {total} 次访问。</desc>
   <rect width="{WIDTH}" height="{HEIGHT}" rx="12" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="{LEFT}" y="31" fill="#24292f" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="18" font-weight="600">papernote · 最近 30 天访问趋势</text>
-  <text x="{LEFT}" y="55" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12">过去 30 天 {total} 次访问 · 更新于 {update_label}</text>
+  <text x="{LEFT}" y="31" fill="#24292f" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="18" font-weight="600">papernote · 累计访问趋势</text>
+  <text x="{LEFT}" y="55" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="12">自 {series[0][0].isoformat()} 起累计 {total} 次访问 · 更新于 {update_label}</text>
   <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">{''.join(grid)}</g>
   <polygon points="{area_points}" fill="#2da44e" fill-opacity="0.12"/>
   <polyline points="{line_points}" fill="none" stroke="#1a7f37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
@@ -161,9 +171,15 @@ def render_svg(series: list[tuple[dt.date, int]], updated_at: dt.datetime) -> st
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=Path("assets/traffic.svg"))
+    parser.add_argument("--history", type=Path, default=Path("assets/traffic-history.json"))
     parser.add_argument("--fixture", type=Path, help="Read API JSON from a local fixture")
     parser.add_argument("--today", type=dt.date.fromisoformat, default=dt.datetime.now(dt.timezone.utc).date())
     args = parser.parse_args()
+
+    history = json.loads(args.history.read_text()) if args.history.exists() else {}
+    start = args.today - dt.timedelta(days=CHART_DAYS - 1)
+    if history:
+        start = max(dt.date.fromisoformat(min(history)), min(start, dt.date.fromisoformat(max(history))))
 
     if args.fixture:
         payload = json.loads(args.fixture.read_text(encoding="utf-8"))
@@ -174,9 +190,12 @@ def main() -> None:
             raise SystemExit("GOATCOUNTER_CODE is missing or invalid")
         if not token:
             raise SystemExit("GOATCOUNTER_API_TOKEN is missing")
-        payload = fetch_stats(site_code, token, args.today)
+        payload = fetch_stats(site_code, token, args.today, start=start)
 
-    series = daily_series(payload, args.today)
+    history.update({day.isoformat(): value for day, value in daily_series(payload, args.today, start)})
+    series = cumulative_series(history)
+    args.history.parent.mkdir(parents=True, exist_ok=True)
+    args.history.write_text(json.dumps(history, indent=2) + "\n", encoding="utf-8")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(
         render_svg(series, dt.datetime.now(dt.timezone.utc)),

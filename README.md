@@ -28,9 +28,11 @@ python3 -m http.server 8000 -d site
 
 推送到 `main` 后，[`.github/workflows/pages.yml`](.github/workflows/pages.yml) 会校验数据、生成网页缓存并发布 `site/` 到 GitHub Pages。部署前请确保 `python3 scripts/build_site.py --check` 通过。
 
-访问趋势由 GoatCounter 的无 Cookie 聚合统计生成，站点尊重浏览器的“请勿跟踪”设置，不公开个人访问记录。页脚的“隐私说明”链接提供完整说明，另有 Yamayuki's Space 入口。
+累计访问量从现有记录的起点（2026-08-30）开始逐日累加，每日自动更新，README 与网站底部显示同一张图。每日汇总保存在 `assets/traffic-history.json`，超过 30 天的记录继续保留；重复更新会覆盖对应日期，避免重复累计。该起点之前的数据未纳入统计。
 
-![Papernote 最近 30 天访问趋势](assets/traffic.svg)
+访问趋势由 GoatCounter 的无 Cookie 聚合统计生成，站点尊重浏览器的“请勿跟踪”设置，不公开个人访问记录。页脚的“隐私说明”链接提供完整说明。
+
+![Papernote 累计访问趋势](assets/traffic.svg)
 
 ## 内容说明
 

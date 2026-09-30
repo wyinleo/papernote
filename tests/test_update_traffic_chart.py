@@ -91,5 +91,27 @@ class FetchStatsTests(unittest.TestCase):
         self.assertEqual(attempts, traffic.MAX_FETCH_ATTEMPTS)
 
 
+class CumulativeTests(unittest.TestCase):
+    def test_keeps_old_days_and_replaces_repeated_dates(self):
+        history = {"2026-08-01": 10, "2026-09-29": 2}
+        payload = {"stats": [{"day": "2026-09-29", "daily": 3}]}
+        for _ in range(2):
+            history.update({day.isoformat(): count for day, count in traffic.daily_series(
+                payload, dt.date(2026, 9, 30), dt.date(2026, 9, 29))})
+        series = traffic.cumulative_series(history)
+        self.assertEqual([count for _, count in series], [10, 13, 13])
+        svg = traffic.render_svg(series, dt.datetime.now(dt.timezone.utc))
+        self.assertIn("累计 13 次访问", svg)
+
+    def test_explicit_zero_is_preserved(self):
+        series = traffic.daily_series({"stats": [{"day": "2026-09-30", "daily": 0, "hourly": [3]}]},
+                                      dt.date(2026, 9, 30), dt.date(2026, 9, 30))
+        self.assertEqual(series[0][1], 0)
+
+    def test_missing_stats_does_not_erase_history(self):
+        with self.assertRaises(KeyError):
+            traffic.daily_series({}, dt.date(2026, 9, 30))
+
+
 if __name__ == "__main__":
     unittest.main()
