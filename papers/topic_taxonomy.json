@@ -1,5 +1,5 @@
 {
-  "version": "1.8.0",
+  "version": "1.9.0",
   "reference_systems": [
     {
       "name": "ACM Computing Classification System",
@@ -477,6 +477,16 @@
     "ase26-ni-triage-nodejs": "software-application-security",
     "neurips25-zou-agent-red-team-competition": "ai-security",
     "neurips25-nie-secodeplt": "ai-security",
-    "neurips25-aichberger-mip-agent": "ai-security"
+    "neurips25-aichberger-mip-agent": "ai-security",
+    "ccs25-hao-syzspec": "systems-hardware-security",
+    "ndss26-wu-email-aliases": "identity-privacy",
+    "ndss26-migliorelli-pcplost": "systems-hardware-security",
+    "usenix-sec26-liu-wormholes": "software-application-security",
+    "issta26-tegegn-illusion-success": "mobile-iot-security",
+    "issta26-alecci-secrets-unlocked": "mobile-iot-security",
+    "ase26-xu-defensive-capability": "software-application-security",
+    "acl26-pham-parasite": "ai-security",
+    "icml26-ye-role-confusion": "ai-security",
+    "cvpr26-chen-dualmirage": "ai-security"
   }
 }

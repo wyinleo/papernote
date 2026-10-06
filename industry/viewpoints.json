@@ -853,5 +853,100 @@
     "evidence_basis": "OpenAI 的公开与内部基准、专家主导的浏览器和操作系统评估、红队测试以及 Preparedness Framework 分级。",
     "limitations": "内部漏洞集、目标系统和完整轨迹未公开，零日尚在披露，91.5% 拒绝率依赖私有攻击集和判定口径；结果由模型开发方自行报告。",
     "commercial_interest": "发布方开发并提供 GPT-6 Astra 与 Daybreak Blue，安全结论直接影响模型发布、访问和商业采用。"
+  },
+  {
+    "id": "microsoft-zimbra-cve-2026-73570",
+    "title": "Microsoft：特制邮件可触发 Zimbra 未认证命令注入",
+    "source": "Microsoft Security Research",
+    "source_type": "威胁情报与安全研究",
+    "content_type": "在野漏洞利用分析",
+    "published_at": "2026-09-30",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/",
+    "topics": ["Zimbra", "命令注入", "邮件服务器", "在野利用"],
+    "summary": "Microsoft 跟踪到 CVE-2026-73570 的在野利用：安装可选 SNMP 组件并启用通知的互联网可达 Zimbra 服务器，会因特制邮件在未认证条件下执行命令。",
+    "highlights": [
+      "攻击输入经 SMTP 进入 SNMP 通知处理，可让嵌入命令以 zimbra 服务账户权限执行，不需要用户交互。",
+      "已观察行为包括 JSP web shell、反向 shell、提权、持久化、邮箱与认证数据收集，以及归档和传输。",
+      "Zimbra 10.1.20 于 2026 年 7 月 20 日包含修复；Microsoft 在修复发布和 8 月 13 日公开披露之间观察到针对同一路径的活动。"
+    ],
+    "evidence_basis": "Microsoft Threat Intelligence 对多个已确认入侵环境的遥测和事件调查，以及 Zimbra 修复与 CVE 公开时间线。",
+    "limitations": "文章把多起事件的行为合成一条攻击链，没有一台主机必然出现全部阶段；未公布全球受害数量，利用前提还要求可选 zimbra-snmp 包和 SNMP 通知同时启用。",
+    "commercial_interest": "发布方同时提供 Microsoft Defender 产品，文中包含相应检测与防护说明。"
+  },
+  {
+    "id": "unit42-opertraitors-kubernetes-2026",
+    "title": "Unit 42：Kubernetes operator 的文档能力与实际 RBAC 存在落差",
+    "source": "Palo Alto Networks Unit 42",
+    "source_type": "云原生安全研究",
+    "content_type": "权限分析工具与漏洞案例",
+    "published_at": "2026-09-29",
+    "url": "https://unit42.paloaltonetworks.com/agentic-ai-kubernetes-operator-risks/",
+    "topics": ["Kubernetes", "Operator", "RBAC", "最小权限"],
+    "summary": "OperTraitor 读取本地集群和 OperatorHub 的 operator RBAC 配置，用 LLM 对照文档功能并生成风险分，以发现默认注册表中过时或过度授权的非人身份。",
+    "highlights": [
+      "工具从 YAML 清单提取实际权限，对照说明文档，并按所需与已授予权限差异给出 1—10 分。",
+      "文章称略多于 5% 的受测 operator 请求过量权限，部分权限可形成隐式 cluster-admin 路径。",
+      "两个案例包括 IBM Turbonomic Prometurbo 的 CVE-2026-6389（CVSS 8.8），以及集群级 secret 读取和 RBAC 修改能力。"
+    ],
+    "evidence_basis": "Unit 42 对 OperatorHub 和本地 operator 清单的自动扫描、LLM 权限解释、人工案例复核及协调披露。",
+    "limitations": "风险分依赖模型对文档和权限的解释，不能代替版本核对与可利用性验证；部分 operator 已停止维护，披露联系缺少回应，文章未公开全部过量权限样本。",
+    "commercial_interest": "发布方属于 Palo Alto Networks，并推广 Cortex Cloud、Unit 42 AI Security Assessment 和 Frontier AI Defense 服务。"
+  },
+  {
+    "id": "anthropic-cvd-dashboard-october-2026",
+    "title": "Anthropic：AI 辅助开源漏洞披露进入大规模人工分诊阶段",
+    "source": "Anthropic Frontier Red Team",
+    "source_type": "模型开发机构安全研究",
+    "content_type": "协调漏洞披露看板",
+    "published_at": "2026-10-02",
+    "url": "https://red.anthropic.com/2026/cvd/",
+    "topics": ["漏洞发现", "开源软件", "人工分诊", "协调披露"],
+    "summary": "Anthropic 公布 Claude 辅助发现开源漏洞的可核验看板，区分候选、外部公司审查、维护者确认、补丁和公开编号，显示人工分诊已经成为主要瓶颈。",
+    "highlights": [
+      "看板记录 29,439 个候选、6,123 个外部安全公司审查项和 5,674 个确认项，外审真阳性率为 92.7%。",
+      "共向维护者报告 6,157 项，其中 5,103 项获确认、516 项已合入上游补丁；已分配 219 个 CVE 与 365 个 GHSA。",
+      "每项披露先发布 SHA-3-512 承诺，窗口关闭后揭示项目和细节，历史快照与机器可读载荷可用于核对统计变化。"
+    ],
+    "evidence_basis": "Anthropic CVD 看板、六家外部安全研究公司的人审结果、维护者响应、上游补丁、CVE/GHSA 记录和加密承诺账本。",
+    "limitations": "4,824 项由 Anthropic 直接报告，未全部经过外部公司复核且可能含误报；补丁和编号存在报告时延，候选数、确认数与独立漏洞数的口径不能混用。",
+    "commercial_interest": "发布方开发 Claude 与 Mythos 系列模型，看板用于展示其模型安全研究与披露能力。"
+  },
+  {
+    "id": "openai-coordinated-distillation-campaign-2026",
+    "title": "OpenAI：协调式模型蒸馏活动利用跨会话推理提取路径",
+    "source": "OpenAI",
+    "source_type": "模型平台安全研究",
+    "content_type": "滥用活动调查与处置",
+    "published_at": "2026-09-30",
+    "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+    "topics": ["模型蒸馏", "推理提取", "平台滥用", "归因"],
+    "summary": "OpenAI 披露一场以跨会话重放和转写受保护推理为核心的协调活动，并通过账户处置、流式输出检查和跨租户推理保护在 7 月底完成中断。",
+    "highlights": [
+      "活动始于 2026 年 7 月 1 日，7 月 24—25 日出现约 16,000 次相关请求，涉及 4,000 多名用户；扩展集群超过 15,000 名用户。",
+      "核心活动被归因于与 Moonshot AI 有关联的人员，OpenAI 同时说明无法确认所有操作者属于同一主体。",
+      "处置包括限制欺诈账户、加强注册和基础设施控制、拦截可能暴露推理的流式输出，并向 Frontier Model Forum 和政府渠道共享信息。"
+    ],
+    "evidence_basis": "OpenAI 的账户、请求模式、跨模型和跨会话遥测，外部研究者负责任披露，以及平台在 2026 年 7 月实施的控制。",
+    "limitations": "16,000 是尝试次数，无法代表成功提取；文章未公开原始日志、成功率或完整归因证据。事件没有突破加密、数据库，也没有直接访问存储的用户对话。",
+    "commercial_interest": "发布方运营被攻击的模型和 API，结论同时用于说明其推理保护与平台处置能力。"
+  },
+  {
+    "id": "nist-cswp36g-false-base-station-2026",
+    "title": "NIST：5G 假基站草案用六个实验场景检查终端反应",
+    "source": "NIST NCCoE",
+    "source_type": "政府标准与实施研究机构",
+    "content_type": "初始公开草案与测试床报告",
+    "published_at": "2026-09-30",
+    "url": "https://www.nist.gov/news-events/news/2026/09/draft-5g-white-paper-now-available-false-base-station",
+    "topics": ["5G", "假基站", "拒绝服务", "测试床"],
+    "summary": "NIST NCCoE 的 CSWP 36G 初稿在运营 5G 安全测试床上模拟六类假基站场景，观察终端响应，并讨论标准和设备可配置保护。",
+    "highlights": [
+      "假基站模仿合法无线接入网，诱导终端连接，可能造成服务降级、隐私泄露和位置跟踪。",
+      "六个场景在 NCCoE 5G Security Lab 中模拟，用于识别受测设备响应与现有保护的改进空间。",
+      "5G 标准增强了订户保护，拒绝服务仍是残余风险；新闻页邀请在 2026 年 10 月 31 日前提交意见。"
+    ],
+    "evidence_basis": "NIST NCCoE 运营 5G 测试床、六个模拟 FBS 场景和 CSWP 36G 初始公开草案。",
+    "limitations": "这是公开征求意见中的初稿，结论受测试床、设备和配置范围限制，不能直接代表所有运营商网络、基带实现或真实攻击环境。",
+    "commercial_interest": "NIST 为美国政府标准机构，无直接商业产品推广；草案可能影响运营商、设备厂商和后续标准实践。"
   }
 ]
