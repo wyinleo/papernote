@@ -175,9 +175,10 @@
     return shares.map((item) => item.value);
   };
 
-  const conferenceName = (paper) => ((paper.venues || ["其他 / 未标注"])[0] || "其他 / 未标注")
-    .replace(/\s+20\d{2}\b/g, "")
-    .trim();
+  const conferenceName = (paper) => paper.venue_series
+    || ((paper.venues || ["其他 / 未标注"])[0] || "其他 / 未标注")
+      .replace(/\s+20\d{2}\b/g, "")
+      .trim();
 
   const viewpointOrganization = (item) => {
     const source = item.source || "其他";

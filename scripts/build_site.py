@@ -85,10 +85,40 @@ TOP_VENUE_GROUPS = {
     },
 }
 
+# Canonical conference-series labels used by the visitor-facing source chart.
+# Track and workshop qualifiers remain in ``venues`` for paper details and do
+# not affect the stricter accepted-paper scoring performed above.
+VENUE_SERIES_PATTERNS = (
+    ("USENIX Security", (r"\busenix security\b",)),
+    ("IEEE S&P", (r"\bieee s&p\b", r"\bieee symposium on security and privacy\b")),
+    ("CCS", (r"\bacm ccs\b", r"\bcomputer and communications security\b", r"\bccs\b")),
+    ("NDSS", (r"\bndss\b",)),
+    ("ICSE", (r"\bicse\b",)),
+    ("FSE", (r"\bfse\b",)),
+    ("ASE", (r"\base\b",)),
+    ("ISSTA", (r"\bissta\b",)),
+    ("NeurIPS", (r"\bneurips\b", r"\bneural information processing systems\b")),
+    ("ICML", (r"\bicml\b",)),
+    ("AAAI", (r"\baaai\b",)),
+    ("IJCAI", (r"\bijcai\b",)),
+    ("ACL", (r"\bacl\b",)),
+    ("CVPR", (r"\bcvpr\b",)),
+)
+
 
 def normalize_title(value: str) -> str:
     value = value.casefold().replace("’", "'").replace("–", "-").replace("—", "-")
     return " ".join(re.findall(r"[\w]+", value, flags=re.UNICODE))
+
+
+def venue_series_name(venues: list[str]) -> str:
+    """Collapse tracks and aliases into one conference-series display label."""
+    primary = str((venues or ["其他 / 未标注"])[0] or "其他 / 未标注").strip()
+    normalized = primary.casefold()
+    for label, patterns in VENUE_SERIES_PATTERNS:
+        if any(re.search(pattern, normalized) for pattern in patterns):
+            return label
+    return re.sub(r"\s+20\d{2}\b", "", primary).strip()
 
 
 def text_only(value: str) -> str:
@@ -711,6 +741,7 @@ def build_payload() -> dict[str, Any]:
             paper.get("status", ""),
             paper.get("venues") or [],
         )
+        paper["venue_series"] = venue_series_name(paper.get("venues") or [])
 
         week_counts[week] = week_counts.get(week, 0) + 1
         theme = theme_counts.setdefault(theme_id, {"id": theme_id, "label": theme_label, "count": 0})
